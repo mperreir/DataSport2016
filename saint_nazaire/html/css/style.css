@@ -1,0 +1,25 @@
+/* just a sample css rule to show that everything works */
+#container{
+  width: 960px;
+  margin: 0 auto;
+  background-color: #DDDDDD;
+}
+
+header, footer{
+  text-align: center;
+  background-color: #0066CC;
+  color: white;
+  padding: 10px;
+}
+
+header + p {
+  text-align: center;
+  display:block;
+  height: 600px;
+  line-height: 600px;
+}
+
+footer p
+{
+  font-size: small;
+}
