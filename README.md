@@ -17,7 +17,7 @@ The nine projects where proposed by different local and national media:
 - [Comité Régional Olympique et Sportif][10]
 - [Direction régionale de la jeunesse et des sports ][11]
 - [Fédération Sportive et culturelle de France][12]
-- [Ouest Médias][13]
+- [France 3][13]
 - [Ville de Rezé][14]
 - [Ville de Saint-Nazaire][15]
 
@@ -33,6 +33,6 @@ The nine projects where proposed by different local and national media:
   [10]: http://paysdelaloire.franceolympique.com/
   [11]: http://pays-de-la-loire.drdjscs.gouv.fr/
   [12]: http://www.fscf-loireatlantique.fr/
-  [13]: http://www.ouestmedias.com/
+  [13]: http://www.france3.fr/
   [14]: http://www.reze.fr/
   [15]: http://www.mairie-saintnazaire.fr/

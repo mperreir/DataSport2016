@@ -10,7 +10,7 @@ var app = express()
 var app_names = [];
 
 var ds2016_names = ['cd_ffct', 'cd_tennis_de_table', 'creps',
- 								'cros', 'drdjscs', 'fscf', 'ouest_medias',
+ 								'cros', 'drdjscs', 'fscf', 'france_3'
 								'reze', 'saint_nazaire'];
 
 app_names.push.apply(app_names, ds2016_names);
