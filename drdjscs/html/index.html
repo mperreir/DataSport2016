@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
+<html lang="fr" ng-app="hyblabApp" ng-controller="MainCtrl"> <!-- Notre page est en français -->
     <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
         <meta charset="utf-8">
@@ -18,7 +18,7 @@
 
         <!-- l'entête de la page: titre, barre de recherche -->
         <header>
-        <h1>Hyblab 2016</h1>
+        <h1>Hyblab 2016 and {{x}}</h1>
         </header>
 
         <!-- Le contenu du site -->
@@ -29,15 +29,18 @@
         <p>Copyright Hyblab team 2016</p>
         </footer>
         </div>
-        
-        
-        <!-- Bootstrap script -->
+               
+        <!-- Bootstrap script & Jquery-->
+        <script src="js/modules/jquery/jquery-1.12.1.js"></script>
         <script src="js/modules/bootstrap/bootstrap.js"></script>
-        
-        
+           
         <!-- Main Angular script -->
-        <script src="js//modules/angularjs/angular.js"></script>
-        
+        <script src="js/modules/angularjs/angular.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/services.js"></script>
         
     </body>
 </html>
