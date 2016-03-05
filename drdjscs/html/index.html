@@ -18,12 +18,12 @@
 
         <!-- l'entête de la page: titre, barre de recherche -->
         <header>
-        <h1>Hyblab 2016 and {{x}}</h1>
+            <a href="#pageone">Hyblab 2016 and {{x}}</a>
         </header>
 
         <!-- Le contenu du site -->
-        <p>replace this content by your web app !</p>
-
+        <div ng-view>
+        </div>
         <!-- Notre pied de page -->
         <footer>
         <p>Copyright Hyblab team 2016</p>
@@ -36,11 +36,17 @@
            
         <!-- Main Angular script -->
         <script src="js/modules/angularjs/angular.js"></script>
+        <script src="js/modules/ngroute/angular-route.js"></script>
+        
+        <!-- Angular App script -->
         <script src="js/app.js"></script>
         <script src="js/config.js"></script>
         <script src="js/controllers.js"></script>
         <script src="js/directives.js"></script>
         <script src="js/services.js"></script>
+        
+        <!-- Other app script -->
+        <script src="js/modules/d3js/d3.js"></script>
         
     </body>
 </html>
