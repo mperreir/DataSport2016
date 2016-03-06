@@ -10,8 +10,17 @@ app.controller('MainCtrl', function ($scope) {
 
 /*Intro controller*/
 
-app.controller('IntroCtrl', function ($scope) {
+app.controller('IntroCtrl', ['$scope', '$http', function ($scope, $http) {
     
+  $scope.someVar = [];
+  $http.get('hyblabData/data.json').success(function(data) {
+       console.log('success');
+        $scope.someVar = data;
+        //console.log(data);
+        //console.log($scope.someVar);
+    });
+    console.log($scope.someVar);
+   
     $scope.y = "yue chun";
     
     $scope.salesData = [
@@ -29,7 +38,7 @@ app.controller('IntroCtrl', function ($scope) {
     
     $scope.transitionState = "active"
     $scope.cards = ["H1", 'h2', '55', 'aa'];
-});
+}]);
 
 /*Page one controller*/
 

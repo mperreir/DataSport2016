@@ -78,26 +78,38 @@ app.directive("linearChart", function($window) {
 
 app.directive('hyblab', function ($window) {
     return {
-        restrict: 'E',
+        restrict: 'EA',
         template: "<svg width='500' height='1000'></svg>",
         link: function(scope, elem, attrs) {
-            
         var d3 = $window.d3;
         var rawSvg=elem.find('svg');
         var svg = d3.select(rawSvg[0]);
-            
+      
         function init () {
         var dataArray = [20, 40, 52, 60];
+        //Passing Json to directive
+        var someVar=scope[attrs.someVar];
+        console.log(JSON.stringify(scope.someVar));
+            //end
+        var width = 500;
+        var height = 500;
+        var widthScale = d3.scale.linear()
+                        .domain([0,60])
+                        .range([0, width]);
         
-                
+        var color = d3.scale.linear()
+                    .domain([0, 60])
+                    .range(['red', 'blue']);
+            
         var bars = svg.selectAll("rect")
                     .data(dataArray)
                     .enter()
                         .append("rect")
-                        .attr("width", function (d) {return d*10;})
+                        .attr("width", function (d) {return widthScale(d);})
                         .attr("height", 50)
-                        .attr("y", function (d, i) {return i*i*100;})
+                        .attr("y", function (d, i) {return i*100;})
                         .attr("x", function (d, i) {return 0;})
+                        .attr("fill", function(d) {return color(d);});
         }
         init();
             
