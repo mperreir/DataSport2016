@@ -20,7 +20,7 @@ app.directive("linearChart", function($window) {
                    .domain([salesDataToPlot[0].hour, salesDataToPlot[salesDataToPlot.length-1].hour])
                    .range([padding + 5, rawSvg.attr("width") - padding]);
 
-               yScale = d3.scale.linear()
+               yScale = d3.scale.quantile()
                    .domain([0, d3.max(salesDataToPlot, function (d) {
                        return d.sales;
                    })])
@@ -36,7 +36,7 @@ app.directive("linearChart", function($window) {
                    .orient("left")
                    .ticks(5);
 
-               lineFun = d3.svg.line()
+               lineFun = d3.svg.area()
                    .x(function (d) {
                        return xScale(d.hour);
                    })
@@ -79,8 +79,26 @@ app.directive("linearChart", function($window) {
 app.directive('hyblab', function ($window) {
     return {
         restrict: 'E',
-        template: '<h1>Welcome To Hyblab 2016</h1>',
+        template: "<svg width='850' height='200'></svg>",
         link: function(scope, elem, attrs) {
+            
+        var d3 = $window.d3;
+        var rawSvg=elem.find('svg');
+        var svg = d3.select(rawSvg[0]);
+            
+        function init () {
+        var dataArray = [20, 40, 52, 60];
+        
+                
+        var bars = svg.selectAll("rect")
+                    .data(dataArray)
+                    .enter()
+                        .append("rect")
+                        .attr("width", function (d) {return d*10;})
+                        .attr("height", 50)
+                        .attr("y", function (d, i) {return i *100;})
+        }
+        init();
             
         }
     }
