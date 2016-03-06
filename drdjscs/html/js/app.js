@@ -4,7 +4,8 @@
         'ngRoute',
         'ngAnimate',
         'snapscroll',
-        'swipe'
+        'swipe',
+        'chart.js'
     ])
 })();
 
