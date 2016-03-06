@@ -8,7 +8,7 @@ Equipe : nom de votre équipe
 
 Patricipants :
 - EDNA :
-- Polytech :
+- Polytech : Jonathan Yue Chun, Fanny Qian, Pauwell D'Almeida
 - STAPS :
 
 # Installation
