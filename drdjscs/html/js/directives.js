@@ -79,7 +79,7 @@ app.directive("linearChart", function($window) {
 app.directive('hyblab', function ($window) {
     return {
         restrict: 'E',
-        template: "<svg width='850' height='200'></svg>",
+        template: "<svg width='500' height='1000'></svg>",
         link: function(scope, elem, attrs) {
             
         var d3 = $window.d3;
@@ -96,7 +96,8 @@ app.directive('hyblab', function ($window) {
                         .append("rect")
                         .attr("width", function (d) {return d*10;})
                         .attr("height", 50)
-                        .attr("y", function (d, i) {return i *100;})
+                        .attr("y", function (d, i) {return i*i*100;})
+                        .attr("x", function (d, i) {return 0;})
         }
         init();
             
