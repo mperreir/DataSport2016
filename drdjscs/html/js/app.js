@@ -1,6 +1,10 @@
 (function () {
     angular.module('hyblabApp', [
         //List of dependency
-        'ngRoute'
+        'ngRoute',
+        'ngAnimate',
+        'snapscroll',
+        'swipe'
     ])
 })();
+

@@ -26,13 +26,23 @@ app.controller('IntroCtrl', function ($scope) {
     {hour: 9,sales: 55},
     {hour: 10,sales: 30}
   ];
+    
+    $scope.transitionState = "active"
+    $scope.cards = ["H1", 'h2', '55', 'aa'];
 });
 
 /*Page one controller*/
 
 app.controller('PageOneCtrl', function ($scope) {
     
-    $scope.z = "page tw0"; 
+    $scope.z = "page tw0";
+    $scope.a = false;
+    $scope.setTrue = function () {
+        $scope.a = true;
+    };
+    $scope.setFalse = function () {
+        $scope.a = false;
+    };
 });
 
 /*Page two controller*/

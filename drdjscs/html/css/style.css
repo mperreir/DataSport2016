@@ -45,3 +45,24 @@ h1{
 {
   stroke-dasharray: 1, 2;
 }
+
+/*DELAY*/
+/* starting animations */
+.my-special-animation.ng-enter {
+  -webkit-animation:0.5s red-to-blue;
+  animation:0.5s red-to-blue;
+}
+
+.my-slide-container {
+  position:relative;
+}
+
+.my-slide-animation.ng-enter, .my-slide-animation.ng-leave {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:600px;
+}
+
+
