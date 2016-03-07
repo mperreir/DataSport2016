@@ -1,21 +1,19 @@
-<div class="animated zoomIn">
+<div> 
+    <button ng-click="update1996()"><h3>1996</h3></button>
+    <button ng-click="update1997()"><h3>1997</h3></button>
+    <button ng-click="update1998()"><h3>1998</h3></button>
+
+    <canvas id="line2" class="chart chart-line" chart-data="firstGraphData"
+      chart-labels="labels2" chart-legend="true" chart-series="firstGraphLegend"
+      chart-click="onClick">
+    </canvas>      
+</div>
+<div class="animated zoomIn" style="width: 500px;">
     <h1><strong>Team TOUT NEUF!!!</strong></h1>
-
-
-<div linear-chart chart-data="salesData"></div>
-<hyblab barchartData="someVar"></hyblab>
-    
-
-<div>
-   {{someVar}}
-
-</div>
-<canvas id="bar" class="chart chart-bar"
-  chart-data="data" chart-labels="labels"> chart-series="series"
-</canvas>
-</div>
-<div>
- 
-  
-</div>
-    
+    <div linear-chart chart-data="salesData"></div>
+    <hyblab barchartData="someVar"></hyblab>
+    <div>{{someVar}}</div>
+    <canvas id="bar" class="chart chart-bar"
+          chart-data="data" chart-labels="labels"> chart-series="series"
+    </canvas>
+</div>    
