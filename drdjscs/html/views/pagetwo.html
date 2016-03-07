@@ -1,7 +1,18 @@
-<div class="animated rollIn">
-   <canvas id="base" class="chart-base" chart-type="type"
-  chart-data="data" chart-labels="labels" chart-legend="true">
-</canvas> 
-    <hyblab></hyblab>
+ 
+<div>
+ <p class="description">Click on the "show"-link to see the content.</p>
+  <a href="" ng-click="showme=true">ZoomIn</a>
+  <a ng-click="showme=false">ZoomOut</a> 
+    
+    
+<canvas ng-hide="showme" id="line" class="chart chart-line" chart-data="data"
+  chart-labels="labels2" chart-legend="true" chart-series="series"
+  chart-click="onClick">
+</canvas>
+<canvas ng-show="showme" id="line2" class="chart chart-line" chart-data="data2"
+  chart-labels="labels3" chart-legend="true" chart-series="series"
+  chart-click="onClick">
+</canvas>    
+    
     
 </div>

@@ -79,4 +79,21 @@ app.controller('PageTwoCtrl', function ($scope) {
       $scope.type = $scope.type === 'PolarArea' ?
         'Pie' : 'PolarArea';
     };
+    $scope.labels2 = [];
+    for (var i = 1996; i < 2015; i++){
+        $scope.labels2.push(i.toString());
+    }
+  $scope.series = ['Series A', 'Series B'];
+  $scope.data = [
+    [12 ,11, 11, 8, 5, 7, 3, 10, 7, 7, 3, 11, 9, 14, 10, 10, 9, 14, 19, 28]
+  ];
+    $scope.labels3 = ["1996", "1997", "1998"];
+    $scope.data2 = [[0,12, 11, 11]];
+    
+    var addData = function () {
+        $scope.data = $scope.data*2;
+    }
+  $scope.onClick = function (points, evt) {
+    console.log(points, evt);
+  };
 });
