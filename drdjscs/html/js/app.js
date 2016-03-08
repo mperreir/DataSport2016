@@ -7,7 +7,8 @@
         'swipe',
         'chart.js',
         'scroll-animate-directive',
-        'leaflet-directive'
+        'nvd3'
+
     ])
 })();
 

@@ -5,44 +5,87 @@ var app = angular.module('hyblabApp');
 app.controller('MainCtrl', function ($scope) {
     
     $scope.x = "Jonathan Yue Chun";
+    
    
 });
 
 /*Intro controller*/
 
 app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
+
+     $scope.options = {
+            chart: {
+                type: 'multiChart',
+                height: 450,
+                margin : {
+                    top: 30,
+                    right: 60,
+                    bottom: 50,
+                    left: 70
+                },
+                color: d3.scale.category10().range(),
+                //useInteractiveGuideline: true,
+                duration: 1000,
+                xAxis: {
+                    tickFormat: function(d){
+                        return d3.format(',f')(d);
+                    }
+                },
+                yAxis1: {
+                    tickFormat: function(d){
+                        return d3.format(',.1f')(d);
+                    }
+                },
+                yAxis2: {
+                    tickFormat: function(d){
+                        return d3.format(',.1f')(d);
+                    }
+                }
+            }
+        };
+
+        
+
+        
     /*FIRST GRAPH*/
-    $scope.firstGraphLegend = ['DDJS'];
+    $scope.firstGraphLegend = ['DDJS', 'Chômage'];
     $scope.someVar = [];
-    $scope.firstGraphData = [[]];
+    $scope.firstGraphData = [[], []];
     $scope.labels2 = [];
     $http.get('hyblabData/data.json').success(function(data) {
         console.log('success');   
         $scope.someVar = data;
-        $timeout(firstGraphInit, 500);
+        $scope.data = data;
+        $timeout(firstGraphInit, 100);
     });
+    
+    
+    /*END*/
+    
+    //INIT FIRSTGRAPH
     function firstGraphInit () {
         //console.log(JSON.stringify($scope.someVar))
         //console.log($scope.someVar[0].annee);
         
         for (var i = 0; i < $scope.someVar.length; i++) {
             //console.log($scope.someVar[i].annee + " " + $scope.someVar[i].creation);
-            $scope.labels2.push($scope.someVar[i].annee.toString());
+            $scope.labels2.push($scope.someVar[i].annee);
             $scope.firstGraphData[0].push($scope.someVar[i].creation);
+            //$scope.firstGraphData[1].push($scope.someVar[i].chomage);
         }
     };
     
     $scope.update1996 = function () {    
-        $scope.labels2 = ["1996"];
+        $scope.labels2 = [1996];
         $scope.graphInformation = $scope.textList[0].text;
     }
     $scope.update1997 = function () {
-        $scope.labels2 = ["1996", "1997"];
+        $scope.labels2 = [1996, 1997];
         $scope.graphInformation = $scope.textList[1].text;
     }
     $scope.update1998 = function () {
         
-        $scope.labels2 = ["1996", "1997", "1998"];
+        $scope.labels2 = [1996, 1997, 1998];
         $scope.graphInformation = $scope.textList[2].text;
     };
     $scope.onClick = function () {
@@ -52,6 +95,11 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         }; 
     }
 
+    /*END*/
+    
+  
+    
+    
     /*END*/
     
     /*DYNAMIC TEXT*/
@@ -79,6 +127,11 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     };
     /*END*/
     
+    /*TWO GRAPH*/
+    
+
+
+    
    
     $scope.y = "yue chun";
     
@@ -102,10 +155,10 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
     $scope.series = ['Series A', 'Series B'];
 
-    $scope.data = [
+    /*$scope.data = [
     [65, 59, 80, 81, 56, 55, 40],
     [28, 48, 40, 19, 86, 27, 90]
-    ];
+    ];*/
     
 }]);
 
@@ -146,35 +199,7 @@ app.controller('PageTwoCtrl', function ($scope) {
     $scope.data2 = [[12,12, 11, 11]];
     $scope.temp = [1,2,3,4,5,6,7,8,9,10,11,12,13];
     $scope.click = false;
-    /*$scope.onClick = function (points, evt) {
-         console.log(points, evt);
-        if ($scope.click == true) {
-            
-            first();
-            console.log("true");
-            
-        } else {
-            second();
-            console.log("false");
-        };
-        
-  };
     
-    function first () {
-        $scope.labels2 = ["1996", "1997", "1998"];
-        $scope.click = false;
-        console.log($scope.labels2);
-    }
-    
-    function second () {
-        $scope.click = true;  
-               
-        $scope.labels2 = [];
-        for (var i = 1996; i < 2015; i++){
-        $scope.labels2.push(i.toString());
-        };
-        console.log($scope.labels2);
-    };*/
     $scope.onClick = function () {
         $scope.labels2 = [];
         for (var i = 1996; i < 2015; i++){
@@ -192,8 +217,9 @@ app.controller('PageTwoCtrl', function ($scope) {
         
         $scope.labels2 = ["1996", "1997", "1998"];  
     };
-        
 });
+
+
 
 
 
