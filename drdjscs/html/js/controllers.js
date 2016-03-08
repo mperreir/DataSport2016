@@ -51,6 +51,7 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
             $scope.labels2.push(i.toString());
         }; 
     }
+
     /*END*/
     
     /*DYNAMIC TEXT*/
@@ -193,4 +194,6 @@ app.controller('PageTwoCtrl', function ($scope) {
     };
         
 });
+
+
 

@@ -6,7 +6,8 @@
         'snapscroll',
         'swipe',
         'chart.js',
-        'scroll-animate-directive'
+        'scroll-animate-directive',
+        'leaflet-directive'
     ])
 })();
 
