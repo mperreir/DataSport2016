@@ -5,7 +5,7 @@ var app = angular.module('hyblabApp');
 app.controller('MainCtrl', function ($scope) {
     
     $scope.x = "Jonathan Yue Chun";
-    
+   
 });
 
 /*Intro controller*/
@@ -34,13 +34,16 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     
     $scope.update1996 = function () {    
         $scope.labels2 = ["1996"];
+        $scope.graphInformation = $scope.textList[0].text;
     }
     $scope.update1997 = function () {
         $scope.labels2 = ["1996", "1997"];
+        $scope.graphInformation = $scope.textList[1].text;
     }
     $scope.update1998 = function () {
         
-        $scope.labels2 = ["1996", "1997", "1998"];  
+        $scope.labels2 = ["1996", "1997", "1998"];
+        $scope.graphInformation = $scope.textList[2].text;
     };
     $scope.onClick = function () {
         $scope.labels2 = [];
@@ -50,7 +53,30 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     }
     /*END*/
     
+    /*DYNAMIC TEXT*/
+    $scope.textList = [
+        {id: 1, text: "This is a test!"},
+        {id: 2, text: "Hope you like it :)"},
+        {id: 3, text: "thank you for trying me ^^"},
+        {id: 4, text: "'<h1>'Hello'</h1>'"}
+    ];
+    $scope.graphInformation = "Some random Text";
     
+    /*END*/
+    
+    /*TEST*/
+    
+    $scope.graph = {'width': 500, 'height': 500};
+    $scope.circles = [
+    {'x': 15, 'y': 20, 'r':30},
+    {'x': 35, 'y': 60, 'r':20},
+    {'x': 55, 'y': 10, 'r':40},
+    ];
+    var updt = function () {
+        $scope.circles = $scope.circles*2;
+        console.log($scope.circles);
+    };
+    /*END*/
     
    
     $scope.y = "yue chun";
@@ -95,7 +121,7 @@ app.controller('PageOneCtrl', function ($scope) {
         $scope.a = false;
     };
     $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-  $scope.data = [300, 500, 100];
+    $scope.data = [300, 500, 100];
     
     $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
   $scope.data = [300, 500, 100];
@@ -167,3 +193,4 @@ app.controller('PageTwoCtrl', function ($scope) {
     };
         
 });
+

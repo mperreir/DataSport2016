@@ -5,7 +5,8 @@
         'ngAnimate',
         'snapscroll',
         'swipe',
-        'chart.js'
+        'chart.js',
+        'scroll-animate-directive'
     ])
 })();
 
