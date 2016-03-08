@@ -35,40 +35,55 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                 color: d3.scale.category10().range(),
                 //useInteractiveGuideline: true,
                 duration: 1000,
+                useInteractiveGuideline: true,
+                dispatch: {
+                    stateChange: function(e){ console.log("stateChange"); },
+                    changeState: function(e){ console.log("changeState"); },
+                    tooltipShow: function(e){ console.log("tooltipShow"); },
+                    tooltipHide: function(e){ console.log("tooltipHide"); }
+                },
                 xAxis: {
+                    axisLabel: 'Période de 1997 - 2015',
                     tickFormat: function(d){
                         return d3.format(',f')(d);
                     }
                 },
                 yAxis1: {
+                    axisLabel: 'Création d\'emplois',
                     tickFormat: function(d){
                         return d3.format(',.1f')(d);
                     }
                 },
                 yAxis2: {
+                    axisLabel: 'Chômage en pourcentage',
                     tickFormat: function(d){
                         return d3.format(',.1f')(d);
                     }
                 }
-            }
+            },
+            title: {
+                enable: true,
+                html: '<h2>Comparaison entre création d\'emplois et chômage</h2>'
+            },
+            subtitle: {
+                enable: true,
+                html: '<p style="color: red;">Données sur le pays de la loire Atlantique</p>'
+            },
+            css: {
+                    'text-align': 'center',
+                    'margin': '10px 13px 0px 7px'
+                }
         };
         $scope.events = {
-            
-           chart: {
+            someEvent1: function(e, scope){
+                /* do smth, scope - is internal directive scope */
+                alert("hello");
+            },
+            someEvent2: function(e, scope){
+                /* do smth, scope - is internal directive scope */
+            },
+        };
 
-            // general chart and tooltip events
-                dispatch: {
-                    stateChange: function(e){ console.log('stateChange') },
-                    changeState: function(e){ console.log('changeState') },
-                    tooltipShow: function(e){ console.log('tooltipShow') },
-                    tooltipHide: function(e){ console.log('tooltipHide') },
-                    renderEnd: function(e){ console.log('renderEnd') }
-                }
-
-            }
-            
-        }
- 
     $scope.update1996 = function () {    
         $scope.data = $scope.zoomData[0];
         $scope.graphInformation = $scope.textList[0].text;
@@ -91,6 +106,33 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     ];
     $scope.graphInformation = "Some random Text";
     
+    
+    $scope.hello = function () {
+        $scope.update1998();
+    }
+    
+    
+    
+    $scope.options2 = {
+            chart: {
+                type: 'sunburstChart',
+                height: 450,
+                color: d3.scale.category20c(),
+                duration: 250
+            }
+        };
+
+        $scope.data2 = [{
+            "name": "ZoomInOrOut",
+            "children": [
+
+                {"name": "1997-1998", "size": 3938},
+                {"name": "198-2005", "size": 3812},
+                {"name": "HierarchicalCluster", "size": 6714},
+                {"name": "MergeEdge", "size": 743}
+                
+            ]
+        }];
 
  
 }]);

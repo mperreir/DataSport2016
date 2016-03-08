@@ -1,33 +1,37 @@
-<div>   
-    <nvd3 options='options' data='data' events=events></nvd3>    
-</div>
-
-
-<div class="box3" ani-view="500">
-    
-    <h1>PLEASE SCROLL ME!!</h1>
-    
-</div>
-
-<div class="animated slideInRight my-chart">
-      
-
-
-<div class="box2" ani-scroll="10"> 
-    <button ng-click="update1996()"><h3>1996-1998</h3></button>
-    <button ng-click="update1998()"><h3>1998-2005</h3></button>
-    <button ng-click="reset()"><h3>1998</h3></button>
-    <div>
-        <h3 class="animated fadeIn">{{graphInformation}}</h3>
-    </div>
-   
-    
-</div>
-
-
-
-</div>
-
 <div class="container">
-    <div svg-map></div>
+    <div>   
+        <nvd3 class="with-3d-shadow with-transitions" options='options' data='data'></nvd3>    
+    </div>
+
+
+    <div class="box3" ani-view="500">
+
+        <h1>PLEASE SCROLL ME!!</h1>
+
+    </div>
+
+    <div class="animated slideInRight my-chart">
+
+    <div>   
+        <nvd3 ng-click=hello() class="with-3d-shadow with-transitions" options='options2' data='data2' events=events></nvd3>    
+    </div>
+
+
+
+    <div class="box2" ani-scroll="10"> 
+        <button ng-click="update1996()"><h3>1996-1998</h3></button>
+        <button ng-click="update1998()"><h3>1998-2005</h3></button>
+        <button ng-click="reset()"><h3>reset</h3></button>
+        <div>
+            <h3 class="animated fadeIn">{{graphInformation}}</h3>
+        </div>   
+    </div>
+
+
+
+    </div>
+
+    <div class="container">
+        <div svg-map></div>
+    </div>
 </div>
