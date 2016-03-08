@@ -1,21 +1,52 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-        <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div id="container">
-    <header>
-      <h1>Hyblab 2016 - Le vélo</h1>
-    </header>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bandeau des partenaires</title>
+  <style type="text/css">
+    html{
+      background-color: #F0F0F0;
+    }
+    body{
+      width: 960px;
+      margin: 0 auto;
+      background-color: white;
 
-    <p>COUCOU !</p>
+    }
+    #bandeau {
+      padding: 8px;
+    }
+
+    #bandeau li{
+      list-style-type: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 12px;
+    }
 
 
-    <footer>
-      <div id="bandeau">
+    #bandeau img{
+      height: 46px;
+    }
+
+    #bandeau #datasport{
+      margin: 20px 0;
+      height: 100px;
+      float: left;
+    }
+
+    #bandeau ul{
+      text-align: center;
+    }
+
+    #bandeau .institutionnel
+    {
+      height: 48px;
+    }
+  </style>
+</head>
+<body>
+  <div id="bandeau">
   <!-- Logo Datasport -->
     <a href="http://www.hyblab.fr/"><img id="datasport" src="img/Hyblab DataSport.png" alt="Hyblab DataSport"></a>
     <!-- Les organisateurs -->
@@ -38,7 +69,5 @@
       <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="img/Nantes-metropole.png" alt="Nantes Métropole"></a></li>
     </ul>
   </div>
-    </footer>
-    </div>
-  </body>
+</body>
 </html>

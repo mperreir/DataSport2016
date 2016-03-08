@@ -5,7 +5,7 @@
   background-color: #DDDDDD;
 }
 
-header, footer{
+header{
   text-align: center;
   background-color: #0066CC;
   color: white;
@@ -22,4 +22,39 @@ header + p {
 footer p
 {
   font-size: small;
+}
+
+footer{
+
+    background-color: white; 
+    
+}
+#bandeau {
+      padding: 8px;
+}
+
+#bandeau li{
+      list-style-type: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 12px;
+}
+
+
+#bandeau img{
+      height: 46px;
+}
+
+#bandeau #datasport{
+      margin: 20px 0;
+      height: 100px;
+      float: left;
+}
+
+#bandeau ul{
+      text-align: center;
+}
+
+#bandeau .institutionnel{
+  height: 48px;
 }
