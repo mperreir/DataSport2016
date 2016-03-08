@@ -1,5 +1,5 @@
 <div>   
-    <nvd3 options='options' data='data'></nvd3>    
+    <nvd3 options='options' data='data' events=events></nvd3>    
 </div>
 
 
@@ -9,49 +9,25 @@
     
 </div>
 
-<!--div class="animated slideInRight my-chart">
-      <linechart data="data2" options="options2"></linechart>
-</div>
-<div class="container">
-    <div svg-map></div>
-</div>
+<div class="animated slideInRight my-chart">
+      
+
 
 <div class="box2" ani-scroll="10"> 
-    <button ng-click="update1996()"><h3>1996</h3></button>
-    <button ng-click="update1997()"><h3>1997</h3></button>
-    <button ng-click="update1998()"><h3>1998</h3></button>
+    <button ng-click="update1996()"><h3>1996-1998</h3></button>
+    <button ng-click="update1998()"><h3>1998-2005</h3></button>
+    <button ng-click="reset()"><h3>1998</h3></button>
     <div>
         <h3 class="animated fadeIn">{{graphInformation}}</h3>
     </div>
-    <canvas id="line2" class="chart chart-line" chart-data="firstGraphData"
-      chart-labels="labels2" chart-legend="true" chart-series="firstGraphLegend"
-      chart-click="onClick" chart-options="{
-        scaleShowHorizontalLines: true,
-        scaleShowVerticalLines: false,
-        tooltipTemplate: '<%= value %>' + ' création d\'emplois',
-        responsive: true
-    }">
-    </canvas>
+   
     
 </div>
-<div class="box" style="width: 500px;" ani-scroll="500">
-    <h1><strong>Team TOUT NEUF!!!</strong></h1>
-    <div linear-chart chart-data="salesData"></div>
-    <hyblab barchartData="someVar"></hyblab>
-    <div>{{someVar}}</div>
-</div> 
-<div class="container box4" ani-scroll="1000">
-    <canvas id="bar" class="chart chart-bar"
-          chart-data="data" chart-labels="labels"> chart-series="series"
-    </canvas>
+
+
+
 </div>
 
-<div>
-    <svg ng-attr-height="{graph.height}" ng-attr-width="{graph.width}">
-        <circle ng-repeat="circle in circles" 
-        ng-attr-cx="{{circle.x}}" 
-        ng-attr-cy="{{circle.y}}" 
-        ng-attr-r= "{{circle.r}}">
-    </circle>
-    </svg>
-</div-->
+<div class="container">
+    <div svg-map></div>
+</div>
