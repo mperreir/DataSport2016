@@ -79,7 +79,7 @@ app.directive("linearChart", function($window) {
 app.directive('hyblab', function ($window) {
     return {
         restrict: 'EA',
-        template: "<svg width='500' height='1000'><g></g></svg>",
+        template: "<svg width='500' height='500'><g></g></svg>",
         link: function(scope, elem, attrs) {
         var d3 = $window.d3;
         var rawSvg=elem.find('g');  //svg before
@@ -136,3 +136,25 @@ app.directive('hyblab', function ($window) {
     }
 });
 
+
+
+app.directive('svgMap', ['$compile', function ($compile) {
+    return {
+        restrict: 'A',
+        templateUrl: 'map/france.svg',
+        link: function (scope, element, attrs) {
+
+        }
+    }
+}]);
+
+app.directive('region', ['$compile', function ($compile) {
+    return {
+        restrict: 'A',
+        scope: {
+        },
+        link: function (scope, element, attrs) {
+    
+        }
+    }
+}]);

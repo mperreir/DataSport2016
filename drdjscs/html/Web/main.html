@@ -12,25 +12,41 @@
         <!-- Other css -->
         <link rel="stylesheet" href="css/animate/animate.css">
         <link rel="stylesheet" href="js/modules/chartjs/angular-chart.css">
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     </head>
     <body>
         <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
         <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
         <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
         <div id="container">
-
-        <!-- l'entête de la page: titre, barre de recherche -->
         <header class="animated bounce">
-            <a href="#pageone">Hyblab 2016 and {{x}}</a>
+            <div class="logoLeft">
+                 <h1>Hyblab</h1>
+             </div>
         </header>
+        <div class="wrapper">
+        <div class="sideBar">
+            <div class="infos">
+                
+                <div class="description">
+                    <h1>Contrat Emploi Consolidé</h1>
+                    <p>Destiné aux personnes en difficultés sur le marché du travail, ou ne pouvant pas bénéficier d'une formation à l'issu d'un Contrat Emploi Solidarité.</p>
+
+                </div>
+                <div class="btn btnEnsavoir"><a href="main.html">En savoir plus...</a></div>
+            </div>
+        </div>
+
+    </div>
+        <!-- l'entête de la page: titre, barre de recherche -->
+   
 
         <!-- Le contenu du site -->
-        <div ng-view>
-        </div>
+       
         <!-- Notre pied de page -->
         <footer>
-        <p>Team Tous Neuf</p>
+        
         </footer>
         </div>
                
@@ -57,8 +73,6 @@
         <script src="js/modules/angular-swipe-master/dist/angular-swipe.js"></script>
         <script src="js/modules/Chart.js/Chart.js"></script>
         <script src="js/modules/chartjs/angular-chart.js"></script>
-        <script src="js/modules/scroll-animate-directive-master/src/scroll-animate-directive.js"></script>
-        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-        <script src="js/modules/angular-leaflet-directive-master/dist/angular-leaflet-directive.js"></script>
+        
     </body>
 </html>

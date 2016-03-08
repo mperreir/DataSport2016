@@ -18,3 +18,18 @@ app.config(function($routeProvider){
             redirectTo: '/intro'
         })
 });
+
+app.config (['ChartJsProvider', function (ChartJsProvider) {
+    // Configure all charts
+    ChartJsProvider.setOptions ({
+        colours: ['#FF5252', '#FF8A80', '#5D6369', '#5DA6E6'],
+        responsive: true 
+    });
+    // Configure all line charts
+    
+    ChartJsProvider.setOptions('Line', {
+      datasetFill: true,
+      showtoolTips: false
+    });
+    
+}]);
