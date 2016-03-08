@@ -26,8 +26,10 @@ app.config (['ChartJsProvider', function (ChartJsProvider) {
         responsive: true 
     });
     // Configure all line charts
+    
     ChartJsProvider.setOptions('Line', {
-      datasetFill: false
+      datasetFill: true,
+      showtoolTips: false
     });
     
 }]);
