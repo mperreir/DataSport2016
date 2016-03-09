@@ -11,27 +11,33 @@ path {
 
 </style>
 <body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.js" charset="utf-8"></script>
+<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.js"></script>
 <script>
 
 var width = 960,
     height = 600;
+    
+var projection = d3.geo.conicConformal() // Lambert-93
+          .center([-1.454071, 47.279229]) // On centre la carte sur la France
+          .scale(2000)
+          .translate([width / 2, height / 2]);
 
 var path = d3.geo.path()
-    .projection(null);
+    .projection(projection);
+    
+    
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-d3.json("Rezemap.geojson", function(error, reze) {
+d3.json('communes.json', function(error, geojson) {
   if (error) return console.error(error);
 
-  /*svg.append("path")
-      .datum(topojson.mesh(reze))
-      .attr("d", path);*/
+  svg.append("path")
+      .datum({type: "FeatureCollection", features: features})
+      .attr("d", path);
 });
 
 </script>
-

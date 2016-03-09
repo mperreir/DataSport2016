@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highmaps Example</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+#container {
+    height: 500px; 
+    min-width: 310px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+		</style>
+		<script type="text/javascript">
+$(function () {
+
+    $.getJSON('communes.json', function (geojson) {
+
+        // Initiate the chart
+        $('#container').highcharts('Map', {
+
+            title : {
+                text : 'GeoJSON in Highmaps'
+            },
+
+            legend: {
+                enabled : false
+            },
+            
+            credits:{
+                enabled: false
+            },
+
+            series : [{
+                mapData: geojson
+            }]
+        });
+    });
+});
+		</script>
+	</head>
+	<body>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+
+
+<div id="container" style="min-width: 310px; max-width: 400px"></div>
+
+	</body>
+</html>
