@@ -23,11 +23,6 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         $scope.pieData = data;
         $scope.pieDynamicData = data[0];
     });
-    /*
-    $(document).on("click", "nvd3 svg", function(e) {
-     console.log (e);
-     console.log (e.target.__data__);
-    });*/
     
     $scope.options = {
             chart: {
@@ -39,21 +34,8 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                     bottom: 50,
                     left: 70
                 },
-                "zoom": {
-          "enabled": true,
-          "scaleExtent": [
-            1,
-            10
-          ],
-          "useFixedDomain": false,
-          "useNiceScale": false,
-          "horizontalOff": false,
-          "verticalOff": false,
-          "unzoomEventType": "dblclick.zoom"
-        }
-      ,
                 color: d3.scale.category10().range(),
-                //useInteractiveGuideline: true,
+                useInteractiveGuideline: true,
                 duration: 1000,
                 useInteractiveGuideline: true,
                 dispatch: {
@@ -94,16 +76,7 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                     'margin': '10px 13px 0px 7px'
             }*/
         };
-        $scope.events = {
-            someEvent1: function(e, scope){
-                /* do smth, scope - is internal directive scope */
-                alert("hello");
-            },
-            someEvent2: function(e, scope){
-                /* do smth, scope - is internal directive scope */
-            },
-        };
-
+        
     $scope.update19961998 = function () {    
         $scope.data = $scope.zoomData[0];
         $scope.pieDynamicData = $scope.pieData[1];
@@ -147,78 +120,28 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         {id: 4, text: "'<h1>'Hello'</h1>'"}
     ];
     $scope.graphInformation = "Some random Text";
-    
-    
-    $scope.hello = function () {
-        $scope.update1998();
-    }
-    
-      $scope.pieOptions = {
-            chart: {
-                type: 'pieChart',
-                height: 500,
-                x: function(d){return d.key;},
-                y: function(d){return d.y;},
-                showLabels: true,
-                duration: 500,
-                labelThreshold: 0.01,
-                labelSunbeamLayout: true,
-                legend: {
-                    margin: {
-                        top: 5,
-                        right: 35,
-                        bottom: 5,
-                        left: 0
-                    }
+        
+    $scope.pieOptions = {
+        chart: {
+            type: 'pieChart',
+            height: 300,
+            width: 300,
+            x: function(d){return d.key;},
+            y: function(d){return d.y;},
+            showLabels: true,
+            duration: 500,
+            labelThreshold: 0.01,
+            labelSunbeamLayout: true,
+            legend: {
+                margin: {
+                    top: 5,
+                    right: 35,
+                    bottom: 5,
+                    left: 0
                 }
             }
-        };
-    /*
-    $scope.options3 = {
-      "chart": {
-        "type": "scatterChart",
-        "height": 450,
-        "color": [
-          "#1f77b4",
-          "#ff7f0e",
-          "#2ca02c",
-          "#d62728",
-          "#9467bd",
-          "#8c564b",
-          "#e377c2",
-          "#7f7f7f",
-          "#bcbd22",
-          "#17becf"
-        ],
-        "scatter": {
-          "onlyCircles": false
-        },
-        "showDistX": true,
-        "showDistY": true,
-        "duration": 350,
-        "xAxis": {
-          "axisLabel": "X Axis"
-        },
-        "yAxis": {
-          "axisLabel": "Y Axis",
-          "axisLabelDistance": -5
-        },
-        "zoom": {
-          "enabled": true,
-          "scaleExtent": [
-            1,
-            10
-          ],
-          "useFixedDomain": false,
-          "useNiceScale": false,
-          "horizontalOff": false,
-          "verticalOff": false,
-          "unzoomEventType": "dblclick.zoom"
         }
-      }
-}*/
-
- 
+    }; 
 }]);
 
 /*Page one controller*/
@@ -232,6 +155,7 @@ app.controller('PageTwoCtrl', function ($scope) {
   
     
 });
+
 
 
 
