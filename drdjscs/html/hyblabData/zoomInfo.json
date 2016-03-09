@@ -1,0 +1,12 @@
+[
+	{
+		"id": 0,
+		"periode": "1997-2005",
+		"info": "helloworld"
+	},
+	{
+		"id": 1,
+		"periode": "2055-6666",
+		"info": "aaaa"
+	}
+]
