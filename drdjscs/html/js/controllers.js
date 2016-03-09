@@ -21,8 +21,13 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     $http.get('hyblabData/zoomData.json').success (function(data) {
          $scope.zoomData = data;
     });
-     
-     $scope.options = {
+    /*
+    $(document).on("click", "nvd3 svg", function(e) {
+     console.log (e);
+     console.log (e.target.__data__);
+    });*/
+    
+    $scope.options = {
             chart: {
                 type: 'multiChart',
                 height: 450,
@@ -84,12 +89,32 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
             },
         };
 
-    $scope.update1996 = function () {    
+    $scope.update19961998 = function () {    
         $scope.data = $scope.zoomData[0];
         $scope.graphInformation = $scope.textList[0].text;
     }
-    $scope.update1998 = function () {
+    $scope.update19972005 = function () {
         $scope.data = $scope.zoomData[1];
+        $scope.graphInformation = $scope.textList[1].text;
+    }
+    $scope.update20052010 = function () {    
+        $scope.data = $scope.zoomData[2];
+        $scope.graphInformation = $scope.textList[2].text;
+    }
+    $scope.update19972002 = function () {
+        $scope.data = $scope.zoomData[3];
+        $scope.graphInformation = $scope.textList[1].text;
+    }
+    $scope.update20102015 = function () {    
+        $scope.data = $scope.zoomData[4];
+        $scope.graphInformation = $scope.textList[0].text;
+    }
+    $scope.update20042015 = function () {
+        $scope.data = $scope.zoomData[6];
+        $scope.graphInformation = $scope.textList[1].text;
+    }
+    $scope.update20092013 = function () {
+        $scope.data = $scope.zoomData[8];
         $scope.graphInformation = $scope.textList[1].text;
     }
     $scope.reset = function () {
@@ -139,6 +164,12 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                 height: 450,
                 color: d3.scale.category20c(),
                 duration: 250
+            },
+            dispatch: {
+                elementClick: function(e){ console.log("elementClick"); },
+                changeState: function(e){ console.log("changeState"); },
+                tooltipShow: function(e){ console.log("tooltipShow"); },
+                tooltipHide: function(e){ console.log("tooltipHide"); }
             }
         };
 
