@@ -18,7 +18,7 @@ $(document).ready(function() {
 }); 
 
 window.onload = function () {
-    var ele = document.getElementById("scrollable");
+    var ele = document.getElementById("outerSliderWrapper");
     ele.addEventListener("wheel", scrollEvent);
     
 };
