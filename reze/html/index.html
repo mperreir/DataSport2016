@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr"> <!-- Notre page est en français -->
-  <head>
+ 
+    
+    
+    
+    <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
+   
     <title>Hyblab 2016</title>
+      
     <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
+        
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.js"></script>
+      <script src="js/jQuery.js"></script>
+        
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullPage').fullpage({
+        sectionsColor: [ '#4BBFC3','#f2f2f2', '#7BAABE', '#4BBFC3', '#000','#7BAABE'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage'],
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+        navigation: true,
+        navigationPosition: 'right',
+        css3:true,
+        loopHorizontal: false
+      });
+    });
+    </script>
+
+ 
   </head>
+    
+    
+    
+    
+    
   <body>
+  
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
     <div id="container">
-
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
-
+        
+    <div id="fullPage" >
     <!-- Le contenu du site -->
-    <div>
-        <a href="#/googleMap.html">
-        </a>    
-    </div>
+    <div class ="section" id="section0" >Slide1  </div>  
+    <div class ="section" id="section1" >Slide1  </div>  
+    <div class ="section" id="section2" >Slide1  </div>  
+    <div class ="section" id="section3" >Slide1  </div>  
+    <div class ="section" id="section4" >Slide1  </div>  
+    <div class ="section" id="section5" >Slide1  </div>  
+    <div class ="section" id="section6" >Slide1  </div>  
+</div>
+    
 
     <!-- Notre pied de page -->
     <footer>
