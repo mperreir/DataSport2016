@@ -17,7 +17,7 @@ Clément Aupiais, Maxime Béneteau
 
 # Installation
 
-git clone (liens)
+git clone https://github.com/MadDoxXimba/DataSport2016.git
 
 # Informations complémentaires
 
