@@ -111,7 +111,27 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         $scope.update1998();
     }
     
-    
+    $scope.options3 = {
+            chart: {
+                type: 'multiBarHorizontalChart',
+                height: 450,
+                x: function(d){return d.label;},
+                y: function(d){return d.value;},
+                //yErr: function(d){ return [-Math.abs(d.value * Math.random() * 0.3), Math.abs(d.value * Math.random() * 0.3)] },
+                showControls: true,
+                showValues: true,
+                duration: 500,
+                xAxis: {
+                    showMaxMin: false
+                },
+                yAxis: {
+                    axisLabel: 'Values',
+                    tickFormat: function(d){
+                        return d3.format(',.2f')(d);
+                    }
+                }
+            }
+        };
     
     $scope.options2 = {
             chart: {

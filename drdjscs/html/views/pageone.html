@@ -1,18 +1,8 @@
-<div class="animated tada">
+<div class="animated tada" ng-controller="IntroCtrl">
     <div>
         <a href="#intro">Intro</a>
         <a href="#pageone">PageOne</a>
         <a href="#pagetwo">PageTwo</a>
     </div>
-
-
-    <div>
-       <a href="#pagetwo"><h1>Got to page two</h1></a>
-<canvas id="pie" class="chart chart-pie"
-  chart-data="data" chart-labels="labels">
-</canvas> 
-</div>
-<canvas id="doughnut" class="chart chart-doughnut"
-  chart-data="data" chart-labels="labels">
-</canvas> 
+<nvd3 options="options3" data="data"></nvd3>
 </div>
