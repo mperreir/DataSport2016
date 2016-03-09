@@ -4,15 +4,44 @@
         <meta charset="utf-8">
         <title>Hyblab 2016</title>
         <link rel="stylesheet" href="css/style.css">
+        <style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.node {
+  border: solid 1px white;
+  font: 10px sans-serif;
+  line-height: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
+}
+
+</style>
     </head>
     <body>
         <div id="container">
             <header>
                 <h1>Hyblab 2016 - Le vélo</h1>
             </header>
-
-            <p>COUCOU !</p>
-
+            
+            <section id="dataviz1">
+                <form>
+                    <label><input type="radio" name="mode" value="size" checked> Size</label>
+                    <label><input type="radio" name="mode" value="count"> Count</label>
+                </form>
+            </section>
 
             <footer>
                 <div id="bandeau">
@@ -39,6 +68,7 @@
                 </div>
             </footer>
         </div>
-        <script src = "js/script.js"></script>
+        <script src="js/d3.min.js" charset="utf-8"></script>
+        <script src="js/dataviz1.js"></script>
     </body>
 </html>

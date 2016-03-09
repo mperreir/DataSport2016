@@ -1,0 +1,73 @@
+{
+    "name": "flare",
+    "children": [
+        {
+        "name": "2014",
+        "children": [
+            {"name":"ALSACE","size":"2278"},
+            {"name":"AQUITAINE","size":"5217"},
+            {"name":"AUVERGNE","size":"2943"},
+            {"name":"BOURGOGNE","size":"3342"},
+            {"name":"BRETAGNE","size":"11387"},
+            {"name":"CHAMPAGNE ARDENNE","size":"2080"},
+            {"name":"CORSE","size":"932"},
+            {"name":"COTE D'AZUR","size":"3973"},
+            {"name":"FRANCHE-COMPTE","size":"3472"},
+            {"name":"ILE-DE-FRANCE","size":"7938"},
+            {"name":"LANGUEDOC ROUSSILLON","size":"4615"},
+            {"name":"LIMOUSIN","size":"1684"},
+            {"name":"LORRAINE","size":"3257"},
+            {"name":"MIDI-PYRENNES","size":"4710"},
+            {"name":"NORD PAS DE CALAIS","size":"4280"},
+            {"name":"NORMANDIE","size":"7484"},
+            {"name":"PAYS DE LA LOIRE","size":"10248"},
+            {"name":"PICARDIE","size":"2818"},
+            {"name":"POITOU CHARENTES","size":"3324"},
+            {"name":"PROVENCE","size":"6429"},
+            {"name":"REGION CENTRE","size":"6593"},
+            {"name":"RHONE ALPES","size":"13707"},
+            {"name":"GUADELOUPE","size":"2186"},
+            {"name":"GUYANE","size":"637"},
+            {"name":"LA REUNION","size":"1653"},
+            {"name":"MARTINIQUE","size":"1523"},
+            {"name":"MAYOTTE","size":"49"},
+            {"name":"NOUVELLE CALEDONIE","size":"392"},
+            {"name":"POLYNESIE","size":"206"}
+        ]
+        },
+        {
+        "name": "2015",
+        "children": [
+            {"name":"ALSACE","size":"2159"},
+            {"name":"AQUITAINE","size":"5005"},
+            {"name":"AUVERGNE","size":"3107"},
+            {"name":"BOURGOGNE","size":"3257"},
+            {"name":"BRETAGNE","size":"11260"},
+            {"name":"CHAMPAGNE ARDENNE","size":"2032"},
+            {"name":"CORSE","size":"914"},
+            {"name":"COTE D'AZUR","size":"3618"},
+            {"name":"FRANCHE-COMPTE","size":"3341"},
+            {"name":"ILE-DE-FRANCE","size":"7940"},
+            {"name":"LANGUEDOC ROUSSILLON","size":"4541"},
+            {"name":"LIMOUSIN","size":"1644"},
+            {"name":"LORRAINE","size":"3192"},
+            {"name":"MIDI-PYRENNES","size":"4603"},
+            {"name":"NORD PAS DE CALAIS","size":"3885"},
+            {"name":"NORMANDIE","size":"6927"},
+            {"name":"PAYS DE LA LOIRE","size":"10303"},
+            {"name":"PICARDIE","size":"2564"},
+            {"name":"POITOU CHARENTES","size":"3155"},
+            {"name":"PROVENCE","size":"6013"},
+            {"name":"REGION CENTRE","size":"6401"},
+            {"name":"RHONE ALPES","size":"12831"},
+            {"name":"GUADELOUPE","size":"2096"},
+            {"name":"GUYANE","size":"411"},
+            {"name":"LA REUNION","size":"1307"},
+            {"name":"MARTINIQUE","size":"1295"},
+            {"name":"MAYOTTE","size":"65"},
+            {"name":"NOUVELLE CALEDONIE","size":"55"},
+            {"name":"POLYNESIE","size":""}
+        ]
+        }
+    ]
+}

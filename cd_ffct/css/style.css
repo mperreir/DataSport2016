@@ -58,3 +58,7 @@ footer{
 #bandeau .institutionnel{
   height: 48px;
 }
+
+div span {
+    vertical-align: middle;
+}
