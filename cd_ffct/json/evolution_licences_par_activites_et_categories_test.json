@@ -1,0 +1,71 @@
+{
+    "name": "Cyclisme",
+    "children":[
+        {
+            "name": "Route",
+            "children": [
+                {"name": "ELITE PROFESSIONNEL", "size":5},
+                {"name": "1ERE CATEGORIE", "size":30},
+                {"name": "2EME CATEGORIE", "size":62},
+                {"name": "3EME CATEGORIE", "size":137},
+                {"name": "JUNIOR", "size":71},
+                {"name": "PASS'CYCLISME OPEN", "size":210},
+                {"name": "PASS'CYCLISME", "size":472},
+                {"name": "CADET", "size":133},
+                {"name": "MINIME", "size":125},
+                {"name": "BENJAMIN", "size":95},
+                {"name": "PUPILLE", "size":72},
+                {"name": "POUSSIN", "size":53},
+                {"name": "PRELICENCIE", "size":18},
+                {"name": "PASS'SPORT NATURE", "size":4},
+                {"name": "PASS'CYCLOSPORTIVE", "size":136},
+                {"name": "PASS'SPORT URBAIN", "size":null},
+                {"name": "PASS'LOISIR", "size":325}
+            ]
+        },
+        {
+            "name": "VTT",
+            "children": [
+                {"name": "ELITE PROFESSIONNEL", "size":null},
+                {"name": "1ERE CATEGORIE", "size":null},
+                {"name": "2EME CATEGORIE", "size":1},
+                {"name": "3EME CATEGORIE", "size":9},
+                {"name": "JUNIOR", "size":10},
+                {"name": "PASS'CYCLISME OPEN", "size":3},
+                {"name": "PASS'CYCLISME", "size":19},
+                {"name": "CADET", "size":34},
+                {"name": "MINIME", "size":31},
+                {"name": "BENJAMIN", "size":26},
+                {"name": "PUPILLE", "size":16},
+                {"name": "POUSSIN", "size":7},
+                {"name": "PRELICENCIE", "size":null},
+                {"name": "PASS'SPORT NATURE", "size":29},
+                {"name": "PASS'CYCLOSPORTIVE", "size":2},
+                {"name": "PASS'SPORT URBAIN", "size":null},
+                {"name": "PASS'LOISIR", "size":52}
+            ]
+        },
+        {
+            "name": "BMX",
+            "children": [
+                {"name": "ELITE PROFESSIONNEL", "size":null},
+                {"name": "1ERE CATEGORIE", "size":1},
+                {"name": "2EME CATEGORIE", "size":3},
+                {"name": "3EME CATEGORIE", "size":20},
+                {"name": "JUNIOR", "size":16},
+                {"name": "PASS'CYCLISME OPEN", "size":3},
+                {"name": "PASS'CYCLISME", "size":70},
+                {"name": "CADET", "size":69},
+                {"name": "MINIME", "size":96},
+                {"name": "BENJAMIN", "size":121},
+                {"name": "PUPILLE", "size":130},
+                {"name": "POUSSIN", "size":117},
+                {"name": "PRELICENCIE", "size":35},
+                {"name": "PASS'SPORT NATURE", "size":null},
+                {"name": "PASS'CYCLOSPORTIVE", "size":null},
+                {"name": "PASS'SPORT URBAIN", "size":null},
+                {"name": "PASS'LOISIR", "size":33}
+            ]
+        }
+    ]
+}

@@ -1,8 +1,10 @@
-/* just a sample css rule to show that everything works */
-#container{
-  width: 960px;
-  margin: 0 auto;
-  background-color: #DDDDDD;
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: #f7f5ed;
 }
 
 header{
@@ -61,4 +63,42 @@ footer{
 
 div span {
     vertical-align: middle;
+}
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.node {
+  border: solid 1px white;
+  font: 10px sans-serif;
+  line-height: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
+}
+
+
+
+
+
+
+.node circle {
+  cursor: pointer;
+  stroke: #3182bd;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+line.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
 }

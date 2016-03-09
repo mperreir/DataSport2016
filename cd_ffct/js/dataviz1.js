@@ -11,7 +11,7 @@ var treemap = d3.layout.treemap()
     .sticky(true)
     .value(function(d) { return d.size; });
 
-var div = d3.select("body").append("div")
+var div = d3.select("#dataviz1")
     .style("position", "relative")
     .style("width", (width + margin.left + margin.right) + "px")
     .style("height", (height + margin.top + margin.bottom) + "px")
