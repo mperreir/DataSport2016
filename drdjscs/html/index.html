@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/animate/animate.css">
         <link rel="stylesheet" href="js/modules/chartjs/angular-chart.css">
         <link rel="stylesheet" href="js/modules/nvd3/build/nv.d3.css">
+        
     </head>
     <body>
         <div  ng-app="hyblabApp" ng-controller="MainCtrl">
@@ -31,11 +32,19 @@
             </div>
             <!-- Notre pied de page -->
             </div>
-            <footer>
+            <!--footer>
             <p>Team Tous Neuf</p>
-            </footer>
+            </footer-->
         </div>
-        <div>
+        
+        <style>
+        #map {
+        width: 400px;
+        height: 400px;
+        background-color: #CCC;
+      }
+    </style>
+        <div id="map">
         <!-- PAUWEL -->
         </div>
                
@@ -65,5 +74,7 @@
         <script src="js/modules/scroll-animate-directive-master/src/scroll-animate-directive.js"></script>
         <script src="js/modules/nvd3/build/nv.d3.js"></script>
        <script src="js/modules/angular-nvd3/dist/angular-nvd3.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
