@@ -13,13 +13,17 @@ app.controller('MainCtrl', function ($scope) {
 
 app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
     $scope.fix;
-    $http.get('hyblabData/data.json').success(function(data) {
+    $http.get('hyblabData/data.json').success (function(data) {
         $scope.data = data;
         $scope.fix = data;
     });
     
     $http.get('hyblabData/zoomData.json').success (function(data) {
-         $scope.zoomData = data;
+        $scope.zoomData = data;
+    });
+    $http.get('hyblabData/pieData.json').success (function(data) {
+        $scope.pieData = data;
+        $scope.pieDynamicData = data[0];
     });
     /*
     $(document).on("click", "nvd3 svg", function(e) {
@@ -91,10 +95,12 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
 
     $scope.update19961998 = function () {    
         $scope.data = $scope.zoomData[0];
+        $scope.pieDynamicData = $scope.pieData[1];
         $scope.graphInformation = $scope.textList[0].text;
     }
     $scope.update19972005 = function () {
         $scope.data = $scope.zoomData[1];
+        $scope.pieDynamicData = $scope.pieData[0];
         $scope.graphInformation = $scope.textList[1].text;
     }
     $scope.update20052010 = function () {    
@@ -136,54 +142,26 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         $scope.update1998();
     }
     
-    $scope.options3 = {
+      $scope.pieOptions = {
             chart: {
-                type: 'multiBarHorizontalChart',
-                height: 450,
-                x: function(d){return d.label;},
-                y: function(d){return d.value;},
-                //yErr: function(d){ return [-Math.abs(d.value * Math.random() * 0.3), Math.abs(d.value * Math.random() * 0.3)] },
-                showControls: true,
-                showValues: true,
+                type: 'pieChart',
+                height: 500,
+                x: function(d){return d.key;},
+                y: function(d){return d.y;},
+                showLabels: true,
                 duration: 500,
-                xAxis: {
-                    showMaxMin: false
-                },
-                yAxis: {
-                    axisLabel: 'Values',
-                    tickFormat: function(d){
-                        return d3.format(',.2f')(d);
+                labelThreshold: 0.01,
+                labelSunbeamLayout: true,
+                legend: {
+                    margin: {
+                        top: 5,
+                        right: 35,
+                        bottom: 5,
+                        left: 0
                     }
                 }
             }
-        };
-    
-    $scope.options2 = {
-            chart: {
-                type: 'sunburstChart',
-                height: 450,
-                color: d3.scale.category20c(),
-                duration: 250
-            },
-            dispatch: {
-                elementClick: function(e){ console.log("elementClick"); },
-                changeState: function(e){ console.log("changeState"); },
-                tooltipShow: function(e){ console.log("tooltipShow"); },
-                tooltipHide: function(e){ console.log("tooltipHide"); }
-            }
-        };
-
-        $scope.data2 = [{
-            "name": "ZoomInOrOut",
-            "children": [
-
-                {"name": "1997-1998", "size": 3938},
-                {"name": "198-2005", "size": 3812},
-                {"name": "HierarchicalCluster", "size": 6714},
-                {"name": "MergeEdge", "size": 743}
-                
-            ]
-        }];
+        };    
 
  
 }]);
