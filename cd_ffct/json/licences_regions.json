@@ -1,5 +1,5 @@
 {
-    "AVRIL 2014":[
+    "a2014":[
         {"COMITES":"ALSACE  ","NB_LICENCES":"2 278"},
         {"COMITES":"AQUITAINE","NB_LICENCES":"5 217"},
         {"COMITES":"AUVERGNE","NB_LICENCES":"2 943"},
@@ -30,7 +30,7 @@
         {"COMITES":"NOUVELLE CALEDONIE","NB_LICENCES":"392"},
         {"COMITES":"POLYNESIE","NB_LICENCES":"206"}
     ],
-    "AVRIL 2015":[
+    "a2015":[
         {"COMITES":"ALSACE  ","NB_LICENCES":"2 159"},
         {"COMITES":"AQUITAINE","NB_LICENCES":"5 005"},
         {"COMITES":"AUVERGNE","NB_LICENCES":"3 107"},
