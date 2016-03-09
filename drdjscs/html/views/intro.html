@@ -4,22 +4,21 @@
 <div>
     <h1>PLEASE SCROLL ME!!</h1>
 </div>
-<div class="animated slideInRight my-chart">
-    <div>   
-        <nvd3 ng-click class="with-3d-shadow with-transitions" options='options2' data='data2' events=events></nvd3>    
-    </div>
-    <nvd3 options="pieOptions" data="pieDynamicData"></nvd3>
-    <div> 
-        <button ng-click="update19961998()"><h3>1997-1998</h3></button>
-        <button ng-click="update19972005()"><h3>1997-2005</h3></button>
-        <button ng-click="update20052010()"><h3>20052010</h3></button>
-        <button ng-click="update19972002()"><h3>update19972002</h3></button>
-        <button ng-click="update20102015()"><h3>update20102015</h3></button>
-        <button ng-click="update20042015()"><h3>update20042015</h3></button>
-        <button ng-click="update20092013()"><h3>update20092013</h3></button>
-        <button ng-click="reset()"><h3>reset</h3></button>
-        <div>
-            <h3 class="animated fadeIn">{{graphInformation}}</h3>
-        </div>   
-    </div>
+
+<div>   
+    <nvd3 ng-click class="with-3d-shadow with-transitions" options='options2' data='data2' events=events></nvd3>    
+</div>
+<nvd3 options="pieOptions" data="pieDynamicData"></nvd3>
+<div> 
+    <button ng-click="update19961998()"><h3>1997-1998</h3></button>
+    <button ng-click="update19972005()"><h3>1997-2005</h3></button>
+    <button ng-click="update20052010()"><h3>20052010</h3></button>
+    <button ng-click="update19972002()"><h3>update19972002</h3></button>
+    <button ng-click="update20102015()"><h3>update20102015</h3></button>
+    <button ng-click="update20042015()"><h3>update20042015</h3></button>
+    <button ng-click="update20092013()"><h3>update20092013</h3></button>
+    <button ng-click="reset()"><h3>reset</h3></button>
+    <div>
+        <h3 class="animated fadeIn">{{graphInformation}}</h3>
+    </div>   
 </div>

@@ -3,9 +3,7 @@ var app = angular.module('hyblabApp');
 /*Whole page Controller*/
 
 app.controller('MainCtrl', function ($scope) {
-    
-    $scope.x = "Jonathan Yue Chun";
-    
+      
    
 });
 
@@ -41,6 +39,19 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                     bottom: 50,
                     left: 70
                 },
+                "zoom": {
+          "enabled": true,
+          "scaleExtent": [
+            1,
+            10
+          ],
+          "useFixedDomain": false,
+          "useNiceScale": false,
+          "horizontalOff": false,
+          "verticalOff": false,
+          "unzoomEventType": "dblclick.zoom"
+        }
+      ,
                 color: d3.scale.category10().range(),
                 //useInteractiveGuideline: true,
                 duration: 1000,
@@ -77,11 +88,11 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
             subtitle: {
                 enable: true,
                 html: '<p style="color: red;">Données sur le pays de la loire Atlantique</p>'
-            },
+            }/*,
             css: {
                     'text-align': 'center',
                     'margin': '10px 13px 0px 7px'
-                }
+            }*/
         };
         $scope.events = {
             someEvent1: function(e, scope){
@@ -161,7 +172,51 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                     }
                 }
             }
-        };    
+        };
+    /*
+    $scope.options3 = {
+      "chart": {
+        "type": "scatterChart",
+        "height": 450,
+        "color": [
+          "#1f77b4",
+          "#ff7f0e",
+          "#2ca02c",
+          "#d62728",
+          "#9467bd",
+          "#8c564b",
+          "#e377c2",
+          "#7f7f7f",
+          "#bcbd22",
+          "#17becf"
+        ],
+        "scatter": {
+          "onlyCircles": false
+        },
+        "showDistX": true,
+        "showDistY": true,
+        "duration": 350,
+        "xAxis": {
+          "axisLabel": "X Axis"
+        },
+        "yAxis": {
+          "axisLabel": "Y Axis",
+          "axisLabelDistance": -5
+        },
+        "zoom": {
+          "enabled": true,
+          "scaleExtent": [
+            1,
+            10
+          ],
+          "useFixedDomain": false,
+          "useNiceScale": false,
+          "horizontalOff": false,
+          "verticalOff": false,
+          "unzoomEventType": "dblclick.zoom"
+        }
+      }
+}*/
 
  
 }]);
