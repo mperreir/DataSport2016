@@ -10,7 +10,6 @@ app.controller('MainCtrl', function ($scope) {
 /*Intro controller*/
 
 app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
-    $scope.fix;
     $http.get('hyblabData/data.json').success (function(data) {
         $scope.data = data;
         $scope.fix = data;
@@ -47,7 +46,7 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                 xAxis: {
                     axisLabel: 'Période de 1997 - 2015',
                     tickFormat: function(d){
-                        return d3.format(',f')(d);
+                        return d3.format('f')(d);
                     }
                 },
                 yAxis1: {
@@ -141,7 +140,75 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                 }
             }
         }
-    }; 
+    };
+    
+    $scope.pourcentage = 0.05;
+    
+    $http.get('hyblabData/proportions_aides_disciplines.json').success (function(data) {
+        $scope.fixPieData = data;
+        $scope.pieList = [];
+        $scope.pieData = [];
+        
+        var reducePieList = [];
+        var reducePieData = [];
+        var temp = 0;
+        for (var i = 0; i < data.length; i++) {
+            $scope.pieList.push(data[i].name);
+            $scope.pieData.push(data[i].value);
+            reducePieList.push(data[i].name);
+            reducePieData.push(data[i].value);
+            if (data[i].value < $scope.pourcentage) {
+                reducePieList.pop();
+                reducePieData.pop();
+                temp += data[i].value;
+            }
+        }
+        reducePieData.push(temp);
+        reducePieList.push("Autres");
+        $scope.introPieListReduce = reducePieList;
+        $scope.introPieDataReduce = reducePieData;
+        $scope.introPieList = $scope.pieList;
+        $scope.introPieData = $scope.pieData;        
+    });
+    
+    $scope.incr = function() {
+        $scope.pourcentage += 0.01;
+        updatePie();
+    }
+    
+    $scope.decr = function() {
+        $scope.pourcentage -= 0.01;
+        updatePie();
+    }
+    
+    function updatePie() {
+        var reducePieList = [];
+        var reducePieData = [];
+        var autres = 0;
+        for (var i =0; i < $scope.pieList.length; i++) {
+                reducePieList.push($scope.pieList[i]);
+                reducePieData.push($scope.pieData[i]);
+                if ($scope.pieData[i] < $scope.pourcentage) {
+                    reducePieData.pop();
+                    reducePieList.pop();
+                    autres += $scope.pieData[i];
+                }
+        }
+        reducePieList.push("Autres");
+        reducePieData.push(autres);
+        $scope.introPieListReduce = reducePieList;
+        $scope.introPieDataReduce = reducePieData;
+    }
+    
+    $scope.introPieChartOptions = {        
+        animationSteps : 25,
+        animateRotate : true,
+        animateScale : true,
+        percentageInnerCutout : 1,
+        animationEasing : "easeInOutQuart"
+    }
+    
+    
 }]);
 
 /*Page one controller*/
