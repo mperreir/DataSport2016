@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -20,18 +19,26 @@
 		</style>
 		<script type="text/javascript">
 $(function () {
-
-    $.getJSON('communes.json', function (geojson) {
-
-        // Initiate the chart
-        $('#container').highcharts('Map', {
+    var location = [{
+                        name: "aa",
+                        code: "1"                        
+                    },
+                   {
+                       name: "ab",
+                        code: "2"
+                   }];
+    var locjson;
+    $.getJSON('locations.json', function(loc){locjson = loc;    });
+    $.getJSON('Rezemap.json', function (geojson) {
+        
+            $('#container').highcharts('Map', {
 
             title : {
                 text : 'GeoJSON in Highmaps'
             },
 
             legend: {
-                enabled : false
+                enabled : true
             },
             
             credits:{
@@ -40,15 +47,38 @@ $(function () {
 
             series : [{
                 mapData: geojson
-            }]
+            },
+                      {
+                type: 'mapbubble',
+                data: location,
+                mapData: locjson,
+                dataLabels: {
+                    enabled: true,
+                    format: 'aaaa'
+                },
+                name: 'Cities',
+                joinBy: ['code','code'],
+                point:{events:{
+                    click: clickk
+                }}
+            }
+            ]
+            
         });
-    });
+        });
+        // Initiate the chart
+        
+
+    
+    function clickk(){
+        alert(this.name);
+    }
 });
 		</script>
 	</head>
 	<body>
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
 
 <div id="container" style="min-width: 310px; max-width: 400px"></div>
 
