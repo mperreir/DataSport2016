@@ -26,15 +26,15 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     $scope.options = {
             chart: {
                 type: 'multiChart',
-                height: 380,
-                width:900,
+                height: 340,
+                
                 margin : {
                     top: 30,
                     right: 60,
                     bottom: 50,
                     left: 70
                 },
-                color: d3.scale.category10().range(colors,colors[1]),
+                color:  ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
 
                 useInteractiveGuideline: true,
                 duration: 4000,
@@ -113,7 +113,7 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         {id: 3, text: "thank you for trying me ^^"},
         {id: 4, text: "'<h1>'Hello'</h1>'"}
     ];
-    $scope.graphInformation = "Some random Text";
+    //$scope.graphInformation = "Some random Text";
         
     $scope.pieOptions = {
         chart: {

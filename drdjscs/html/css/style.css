@@ -5,7 +5,7 @@
 }
 a{
 	text-decoration: none;
-	color:white;
+	color: inherit;
 }
 p,h1,h2,h3{
 	
@@ -24,16 +24,50 @@ body{
 }
 header{
 	padding:40px;
+	width:900px;
 }
 header h1{
 	color:#6591AA;
 	font-weight:200;
 }
+li{
+	list-style: none;
+}
+.menuRight{
+	    float: right;
+	    margin-right:30px;
+}
+.menuRight ul li img{
+	width:32px;
+}
+.menuRight ul li{
+	display:inline-block;
+	text-align: center;
+	padding:20px;
+	font-size:12px	;
+}
+.mainContent{
+	width:950px;
+	text-align: center;
+	margin-top:50px;
+}
+.btnTimeline{
+	border:1px solid rgba(0,0,0,0.2);
+	width:auto;
+	padding:10px 20px 10px 20px;
+	display: inline-block;
+	font-size:12px;
+	border-radius:2px;
+}
+.btnTimeline:hover{
+	cursor:pointer;
+}
 .line{
 	width:100%;
 	height:1px;
-	background: rgba(0,0,0,0.3);
+	background: rgba(0,0,0,0.1);
 }
+
 .logoLeft{
 	float:left;
 }
@@ -50,10 +84,11 @@ header h1{
 	padding-top:150px;
 }
 .btn{
-	background:#6591AA;
+	border:1.5px solid #00af9B;
+	color:#00af9B;
 	width:100px;
 	height:auto;
-	color:white;
+	
 	text-align: center;
 	border-radius:100px;
 	padding:10px 35px 10px 35px;
@@ -65,6 +100,8 @@ margin-top:50px;
 .btnEnsavoir{
 	margin:0 auto;
 	width:150px;
+	position:absolute;
+	bottom:200px;
 }
 .btnExplorer:hover{
 	cursor:pointer;
@@ -76,9 +113,7 @@ margin-top:50px;
 	height:100vh;
 	width:300px;
 	background:white;
-	position:fixed;
-	top:0;
-	right:0;
+	float:right;
 
 }
 .description {
@@ -98,25 +133,39 @@ btnExplorer:hover{
 	padding:30px;
 	padding-top: 50px;
 	height:100vh;
-	width:320px;
+	width:290px;
 	background:white;
 	position:fixed;
 	top:0;
 	right:0;
 
 }
+
 .description {
 	margin-bottom:20px;
 }
 .description h1{
-	font-size:14px;
+	font-size:22px;
 	margin-bottom:10px;
 }
 
 .description p {
+	font-size:15px;
 	line-height: 25px;
 }
+.numbersData{
+	margin-top:20px;
+}
+.numbersData h1{
+	font-size:36px;
+	color:#00AF9B;
+}
+.numbersData h2{
+	color:#AAAEAF;
+	font-size:14px;
+	font-weight:400;
 
+}
 /*END*/
 
 /*CLEMENT*/

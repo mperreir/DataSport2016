@@ -1,25 +1,25 @@
+ <div class="mainContent">
 <div class="deuxCourbes">
     <div>   
         <nvd3 class="with-3d-shadow with-transitions" options='options' data='data'></nvd3>    
     </div>
-<!--     <button ng-click="incr()">+</button>
-    <button ng-click="decr()">-</button> -->
+    </div>
+<!--     <div ng-click="incr()">+</div>
+    <div ng-click="decr()">-</div> -->
 <!--     <h4>{{pourcentage}}</h4> -->
 <!--     <canvas id="pie" class="chart chart-pie"
     chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce">
     </canvas>   -->
-    <div>
-        <h1>PLEASE SCROLL ME!!</h1>
-    </div>
-    <div> 
-        <button ng-click="update19961998()"><h3>1997-1998</h3></button>
-        <button ng-click="update19972005()"><h3>1997-2005</h3></button>
-        <button ng-click="update20052010()"><h3>20052010</h3></button>
-        <button ng-click="update19972002()"><h3>update19972002</h3></button>
-        <button ng-click="update20102015()"><h3>update20102015</h3></button>
-        <button ng-click="update20042015()"><h3>update20042015</h3></button>
-        <button ng-click="update20092013()"><h3>update20092013</h3></button>
-        <button ng-click="reset()"><h3>reset</h3></button>
+    
+    <div class="aideTimeline"> 
+        <div class="btnTimeline" ng-click="update19961998()"><h3>1997-1998</h3></div>
+        <div class="btnTimeline" ng-click="update19972005()"><h3>1997-2005</h3></div>
+        <div class="btnTimeline" ng-click="update20052010()"><h3>2005-2010</h3></div>
+        <div  class="btnTimeline" ng-click="update19972002()"><h3>1997-2002</h3></div>
+        <div  class="btnTimeline" ng-click="update20102015()"><h3>2010-2015</h3></div>
+        <div  class="btnTimeline" ng-click="update20042015()"><h3>2004-2015</h3></div>
+        <div  class="btnTimeline" ng-click="update20092013()"><h3>2009-2013</h3></div>
+        <div  class="btnTimeline" ng-click="reset()"><h3>reset</h3></div>
         <div>
             <h3 class="animated fadeIn">{{graphInformation}}</h3>
         </div>   
