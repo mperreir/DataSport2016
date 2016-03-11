@@ -9,7 +9,10 @@ path {
   stroke-linecap: round;
 }
     
-
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
 </style>
 <body>
 <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -33,22 +36,23 @@ var path = d3.geo.path()
 var svg = d3.select("#container").append("svg")
     //.attr("width", width)
     //.attr("height", height)
-    .attr("viewBox","0 0 960 600").attr("preserveAspectRatio","none");
+    .attr("viewBox","0 0 960 600").attr("preserveAspectRatio","none").attr("id","svg");
 
 d3.json('regions.geojson', function(error, geojson) {
   if (error) return console.error(error);
 
-  svg.append("g").call(d3.behavior.zoom().scaleExtent([100, 100000]).on("zoom", zoom))
-  .append("g")
-            .selectAll("path")
+  svg1 = svg.append("g").call(d3.behavior.zoom().scaleExtent([1, 5]).on("zoom", zoom)).append("g");
+  svg1.append("rect").attr("width",width).attr("height",height).attr("class", "overlay");
+            svg1.selectAll("path")
             .data(geojson.features)
             .enter().append("path")
             .attr("d", path);
     //svg.attr("style", "width: 50%; height: 50%;");
-    function zoom() {
-  svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-}
-});
+    
 
+});
+function zoom() {
+    console.log("ss");
+  svg1.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")")};
 </script>
 
