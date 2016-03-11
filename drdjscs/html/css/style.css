@@ -244,9 +244,14 @@ btnExplorer:hover{
 	font-weight:400;
 
 }
-.selected {
-    fill: red;
-}
+/*
+//POUR POSITIONER LES LEGENDS
+.nv-series:nth-child(1){ transform: translate(0, 0); }
+.nv-series:nth-child(2){ transform: translate(0, 20px); }
+
+
+.nv-legend{ transform: translate(200px, 50px); }
+*/
 /*END*/
 
 /*CLEMENT*/

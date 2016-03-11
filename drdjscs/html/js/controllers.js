@@ -54,26 +54,25 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
               yAxis2: {
                   
               },
-              useInteractiveGuideline: false,            
-              tooltip: {
-                contentGenerator: function (e) {
-                  var series = e.series[0];
-                  if (series.value === null) return;
-                  
-                  var temp = "";
-                  if (series.originalKey == "chomage"){
-                      temp = " POURCENT DE CHÔMEUR ";
-                  }  else {
-                      temp = " EMPLOI CRÉES ";
+              useInteractiveGuideline: true,
+              tooltip: true,
+              interactiveLayer: {
+                  tooltip: {
+                    contentGenerator: function (e) {
+                      var series = e.series[0];
+                      if (series.value === null) return;
+                      console.log(series);
+                      var temp = "";
+                      if (series.originalKey == "chomage"){
+                          temp = " POURCENT DE CHÔMEUR ";
+                      }  else {
+                          temp = " EMPLOI CRÉES ";
+                      }
+                      //console.log(e);
+                      return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
+                    } 
                   }
-                    
-                    
-                  //console.log(e);
-                  return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
-
-                  
-                } 
-              }
+                }
             }
         };
         
