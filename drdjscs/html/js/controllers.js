@@ -23,7 +23,7 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         $scope.pieDynamicData = data[0];
     });
     var colors = ["#00AF9B","#3C78F"];
-    $scope.options = {
+    /*$scope.options = {
             chart: {
                 type: 'multiChart',
                 height: 340,
@@ -95,11 +95,42 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                     "</table>";
                 } 
               }
-           /*,
-            css: {
-                    'text-align': 'center',
-                    'margin': '10px 13px 0px 7px'
-            }*/
+        };*/
+    
+    $scope.options = {
+            chart: {
+              type: 'multiChart',
+              height: 340,
+              margin : {
+                  top: 30,
+                  right: 60,
+                  bottom: 50,
+                  left: 70
+              },
+              x: function(d){ return d.x; },
+              y: function(d){ return d.y; },
+              colors: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
+              xAxis: {
+                  //axisLabel: 'Time (ms)'
+              },
+              yAxis: {
+                  //axisLabel: 'Voltage (v)',
+                  tickFormat: function(d){
+                      return d3.format('.02f')(d);
+                  },
+                  axisLabelDistance: -10
+              },
+              useInteractiveGuideline: false,
+              tooltip: {
+                contentGenerator: function (e) {
+                  //var series = e.series[0];
+                  //console.log(e);
+                  //if (series.value === null) return;
+                  return "hello";
+                  
+                } 
+              }
+            }
         };
         
     $scope.update19961998 = function () {    
@@ -248,9 +279,3 @@ app.controller('PageTwoCtrl', function ($scope) {
   
     
 });
-
-
-
-
-
-
