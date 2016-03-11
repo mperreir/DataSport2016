@@ -16,12 +16,20 @@
             
             <!-- Première page - Accueil -->
             <div class="section">
-                <p>Première page - Accueil</p>
+                <h1>Les pratiques du vélo en Loire-Atlantique</h1>
+                <img src="img/homepage/chaine.png" alt="chaine"/>
+                <img src="img/homepage/lampe.png" alt="lampe"/>
+                <img src="img/homepage/pedale.png" alt="pédale"/>
+                <img src="img/homepage/roue.png" alt="roue"/>
+                <img src="img/homepage/selle.png" alt="selle"/>
+                <img src="img/homepage/sonette.png" alt="sonette"/>
             </div>
             
             <!-- Deuxième page - Edito -->
             <div class="section">
-                <p>Deuxième page - Edito</p>
+                <p>Aujourd'hui, on peut constater une grande popularité du vélo. La Loire Atlantique est au cœur de ce phénomène : elle développe des pistes cyclables, des parkings à vélo, des événements cycliques et des parcours aménagés. Les usages sont divers : de l'usage quotidien à la compétition sportive en passant par le cyclo-tourisme, cette pratique propose des alternatives pour tous les passionnés.</p>
+                <p>Besoin d'un guide ? Nous vous proposons ici de découvrir des chiffres clés sur les pratiques du vélo en Loire Atlantique.</p>
+                <p>Vous sentez vous d'humeur compétitive ? Ou préférez vous découvrir le patrimoine de la Loire Atlantique à vélo grâce au cyclo-tourisme ?</p>
             </div>
             
             <!-- Troisième page - Dataviz1 : Treemap régions -->
@@ -31,8 +39,10 @@
             </div>
             
             <!-- Quatrième page - Dataviz2 : Collapsible Force Layout -->
-            <div class="section">
-                <div id="dataviz2">
+            <div id="dataviz2_section" class="section">
+                <div id="pieChart">
+                </div>
+                <div id="barChart">
                 </div>
             </div>
             
@@ -45,24 +55,24 @@
                 <footer>
                     <div id="bandeau">
                         <!-- Logo Datasport -->
-                        <a href="http://www.hyblab.fr/"><img id="datasport" src="img/Hyblab DataSport.png" alt="Hyblab DataSport"></a>
+                        <a href="http://www.hyblab.fr/"><img id="datasport" src="img/banniere/Hyblab DataSport.png" alt="Hyblab DataSport"></a>
                         <!-- Les organisateurs -->
                         <ul>
-                            <li><a href="http://www.ouestmedialab.fr/"><img src="img/LogoOML.png" alt="Ouest Médialab"></a></li>
-                            <li><a href="http://www.lecolededesign.com/"><img src="img/logo-EDNA.png" alt="Ecole de Design"></a></li>
-                            <li><a href="http://www.univ-nantes.fr/"><img src="img/logo_univ_nantes.png" alt="Université de Nantes"></a></li>
-                            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="img/logo_polytech.png" alt="Polytech Nantes"></a></li>
-                            <li><a href="http://www.iutlaroche.univ-nantes.fr/"><img src="img/logo_iut.png" alt="IUT La Roche sur Yon"></a></li>
-                            <li><a href="http://www.la-joliverie.com/"><img src="img/logo_joliverie.png" alt="la Joliverie"></a></li>
+                            <li><a href="http://www.ouestmedialab.fr/"><img src="img/banniere/LogoOML.png" alt="Ouest Médialab"></a></li>
+                            <li><a href="http://www.lecolededesign.com/"><img src="img/banniere/logo-EDNA.png" alt="Ecole de Design"></a></li>
+                            <li><a href="http://www.univ-nantes.fr/"><img src="img/banniere/logo_univ_nantes.png" alt="Université de Nantes"></a></li>
+                            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="img/banniere/logo_polytech.png" alt="Polytech Nantes"></a></li>
+                            <li><a href="http://www.iutlaroche.univ-nantes.fr/"><img src="img/banniere/logo_iut.png" alt="IUT La Roche sur Yon"></a></li>
+                            <li><a href="http://www.la-joliverie.com/"><img src="img/banniere/logo_joliverie.png" alt="la Joliverie"></a></li>
                         </ul>
                         <!-- Les autres logos -->
                         <ul>
                             <!-- Logo de votre partenaire -->
                             <li><a href="http://www.creps-pdl.sports.gouv.fr/"><img src="img/partenaires/CREPS/LOGO CREPS transparent.png" alt="CREPS"></a></li>
                             <!-- Partenaires institutionnels -->
-                            <li><a href="http://www.paysdelaloire.fr/"><img class="institutionnel" src="img/Region-pays-de-la-loire-300x300.jpg" alt="Pays de La Loire"></a></li>
-                            <li><a href="http://www.territoires-innovation.paysdelaloire.fr/"><img class="institutionnel" src="img/PDL-Territoires-dInnovation.png" alt="Territoire d'innovation"></a></li>
-                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="img/Nantes-metropole.png" alt="Nantes Métropole"></a></li>
+                            <li><a href="http://www.paysdelaloire.fr/"><img class="institutionnel" src="img/banniere/Region-pays-de-la-loire-300x300.jpg" alt="Pays de La Loire"></a></li>
+                            <li><a href="http://www.territoires-innovation.paysdelaloire.fr/"><img class="institutionnel" src="img/banniere/PDL-Territoires-dInnovation.png" alt="Territoire d'innovation"></a></li>
+                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="img/banniere/Nantes-metropole.png" alt="Nantes Métropole"></a></li>
                         </ul>
                     </div>
                 </footer>
@@ -70,10 +80,13 @@
         </div>
         
         <!-- Scripts JS -->
+        <!-- Librairies -->
         <script src="lib/jquery/jquery-2.2.1.min.js" charset="utf-8"></script>
-        <script src="lib/d3/d3.min.js" charset="utf-8"></script>
         <script type="text/javascript" src="lib/fullpage/vendors/jquery.slimscroll.min.js"></script>
         <script type="text/javascript" src="lib/fullpage/jquery.fullPage.js"></script>
+        <script src="lib/d3/d3.min.js" charset="utf-8"></script>
+        <script src="lib/d3pie/d3pie.min.js"></script>
+        <!-- Scripts perso -->
         <script src="js/script.js"></script>
         <script src="js/dataviz1.js"></script>
         <script src="js/dataviz2.js"></script>

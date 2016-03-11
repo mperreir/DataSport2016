@@ -60,7 +60,7 @@ footer{
 #bandeau .institutionnel{
   height: 48px;
 }
-
+/*
 div span {
     vertical-align: middle;
 }
@@ -79,10 +79,32 @@ form {
   position: absolute;
   text-indent: 2px;
 }
+*/
+
+
+/* dataviz2 */
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+
+#pieChart, #barChart {
+    display: inline-block;
+}
 
 
 
-
+#home {
+    position: fixed;
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+}
 
 
 .node circle {

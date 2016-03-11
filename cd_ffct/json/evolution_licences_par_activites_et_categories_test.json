@@ -1,6 +1,6 @@
 {
     "name": "Cyclisme",
-    "children":[
+    "children": [
         {
             "name": "Route",
             "children": [
