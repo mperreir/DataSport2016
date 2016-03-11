@@ -19,7 +19,7 @@ affichageHover.append("p").attr("id", "infosCalcul").text("Surfaces calculées e
 
 var margin = {top: 20, right: 0, bottom: 0, left: 0},
     width = 635,
-    height = 357,
+    height = window.innerHeight - 182,
     formatNumber = d3.format(",d"),
     transitioning;
 
@@ -105,11 +105,14 @@ d3.json("json/licences_regions_test.json", function(root) {
   }
 
   function display(d) {
+      
+    // zone de retour dans l'arbre
     grandparent
         .datum(d.parent)
         .on("click", transition)
       .select("text")
-        .text(name(d));
+        .text(name(d))
+      .select("#titreDataviz1");
 
     var g1 = svg.insert("g", ".grandparent")
         .datum(d)
@@ -119,6 +122,7 @@ d3.json("json/licences_regions_test.json", function(root) {
         .data(d._children)
       .enter().append("g");
 
+      // aller en profondeur dans l'arbre
     g.filter(function(d) { return d._children; })
         .classed("children", true)
         .on("click", transition);
@@ -147,7 +151,9 @@ d3.json("json/licences_regions_test.json", function(root) {
     function transition(d) {
       if (transitioning || !d) return;
       transitioning = true;
-
+        console.log("click");
+        // changement du titre
+        d3.select("#titreDataviz1").text("ET AU SEIN DES PAYS DE LA LOIRE, LA LOIRE-ATLANTIQUE SE TROUVE 1RE AVEC 3 346 LICENCIÉS");
       var g2 = display(d),
           t1 = g1.transition().duration(750),
           t2 = g2.transition().duration(750);
@@ -157,7 +163,7 @@ d3.json("json/licences_regions_test.json", function(root) {
       y.domain([d.y, d.y + d.dy]);
 
       // Enable anti-aliasing during the transition.
-      svg.style("shape-rendering", null);
+     // svg.style("shape-rendering", null);
 
       // Draw child nodes on top of parent nodes.
       svg.selectAll(".depth").sort(function(a, b) { return a.depth - b.depth; });
@@ -201,6 +207,12 @@ d3.json("json/licences_regions_test.json", function(root) {
     
     // affiche le nombre de licenciés dans la région
     d3.selectAll(".parent").on("mouseover", function(d){
+        d3.select("#nbLicenciesRegion").text(d.value);
+        d3.select("#nomRegion").text(d.name);
+    });
+    
+    // affiche le nombre de licenciés dans le département
+    d3.selectAll("rect.child").on("mouseover", function(d){
         d3.select("#nbLicenciesRegion").text(d.value);
         d3.select("#nomRegion").text(d.name);
     });

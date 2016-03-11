@@ -106,9 +106,6 @@ text {
     font-size: 12px;
 }
 
-.grandparent text {
-  font-weight: bold;
-}
 
 rect {
   fill: #9BC8D9;
@@ -117,7 +114,7 @@ rect {
 
 rect.parent,
 .grandparent rect {
-  stroke-width: 2px;
+  stroke-width: 1px;
 }
 
 .grandparent rect {
@@ -139,17 +136,19 @@ rect.parent,
 }
 
 .children:hover rect.child {
-  fill: #bbb;
+/*  fill: #bbb;*/
+    fill: black;
 }
 
 #dataviz1 {
     width: 800px;
     margin-left: 80px;
     margin-right: -80px;
+    height: 100%;
 }
 
 #titreDataviz1 {
-    width: 550px;
+    width: 600px;
     font-size: 26px;
     font-style: italic;
     font-weight: bold;
@@ -184,12 +183,12 @@ rect.parent,
     font-weight: bold;
 }
 
-p#nomRegion {
+#nomRegion {
     margin-top: 30px;
     font-size: 15px;
 }
 
-p#infosCalcul{
+#infosCalcul{
     color: #494949;
     font-size: 15px;
     font-style: italic;
