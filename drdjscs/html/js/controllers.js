@@ -100,6 +100,7 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     $scope.options = {
             chart: {
               type: 'multiChart',
+              transitionDuration: 1000,
               height: 340,
               margin : {
                   top: 30,
@@ -107,29 +108,37 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                   bottom: 50,
                   left: 70
               },
-              x: function(d){ return d.x; },
+              x: function(d){ console.log(d.y); return d.x; },
               y: function(d){ return d.y; },
               colors: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
               xAxis: {
                   //axisLabel: 'Time (ms)'
+                  showMaxMin: false,
+                  staggerLabels: true
               },
               yAxis: {
                   //axisLabel: 'Voltage (v)',
+                  showMaxMin: false,
                   tickFormat: function(d){
                       return d3.format('.02f')(d);
                   },
                   axisLabelDistance: -10
               },
               useInteractiveGuideline: false,
+              clipVoronoi: false,
               tooltip: {
                 contentGenerator: function (e) {
                   //var series = e.series[0];
                   //console.log(e);
                   //if (series.value === null) return;
+                    console.log(e.series);
                   return "hello";
                   
                 } 
-              }
+              },
+              callback: function(){
+                  d3.selectAll('.nvd3.nv-legend g').style('fill', "red");
+                }
             }
         };
         
@@ -137,35 +146,43 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         $scope.data = $scope.zoomData[0];
         $scope.pieDynamicData = $scope.pieData[1];
         $scope.graphInformation = $scope.textList[0].text;
+        $scope.titre = "1996 à 1998...";
     }
     $scope.update19972005 = function () {
         $scope.data = $scope.zoomData[1];
         $scope.pieDynamicData = $scope.pieData[0];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.titre = "1997 à 2005...";
     }
     $scope.update20052010 = function () {    
         $scope.data = $scope.zoomData[2];
         $scope.graphInformation = $scope.textList[2].text;
+        $scope.titre = "2005 à 2010...";
     }
     $scope.update19972002 = function () {
         $scope.data = $scope.zoomData[3];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.titre = "1997 à 2002...";
     }
     $scope.update20102015 = function () {    
         $scope.data = $scope.zoomData[4];
         $scope.graphInformation = $scope.textList[0].text;
+        $scope.titre = "2010 à 2015...";
     }
     $scope.update20042015 = function () {
         $scope.data = $scope.zoomData[6];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.titre = "2004 à 2015...";
     }
     $scope.update20092013 = function () {
         $scope.data = $scope.zoomData[8];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.titre = "2009 à 2013...";
     }
     $scope.reset = function () {
         $scope.data = $scope.fix;
         $scope.graphInformation = $scope.textList[2].text;
+        $scope.titre = "1996 à maintenant...";
     };
   
     /*DYNAMIC TEXT*/
@@ -264,6 +281,9 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         percentageInnerCutout : 1,
         animationEasing : "easeInOutQuart"
     }
+    
+    $scope.titre = "1997 à maintenant...";
+    
     
     
 }]);
