@@ -4,13 +4,29 @@ Média : nom de votre média
 
 Sujet : description du sujet
 
-Equipe : nom de votre équipe
+Equipe : TeamToutNeuf
 
 Patricipants :
-- EDNA :
+- EDNA : 
+Salomé Raffi, Ophélie Prioux, Emma Heulet, 
+Amandine Vahé, Marianne Etienvre
 - Polytech : Jonathan Yue Chun, Fanny Qian, Pauwell D'Almeida
-- STAPS :
+- STAPS : 
+Clément Aupiais, Maxime Béneteau
+-Com: Tiphaine Saint-Félix
 
 # Installation
 
+git clone https://github.com/MadDoxXimba/DataSport2016.git
+
 # Informations complémentaires
+
+se placer dans le dossier ddrdjscs et faire des modifications que dans ce fichier là
+
+commandes:
+
+git status
+git pull
+git add (un fichier)
+git commit -m (un message en string)
+git push

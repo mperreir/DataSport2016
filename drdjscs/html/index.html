@@ -13,31 +13,42 @@
         <link rel="stylesheet" href="css/animate/animate.css">
         <link rel="stylesheet" href="js/modules/chartjs/angular-chart.css">
         <link rel="stylesheet" href="js/modules/nvd3/build/nv.d3.css">
+        
     </head>
     <body>
         <div  ng-app="hyblabApp" ng-controller="MainCtrl">
             <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
             <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
             <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-            <div id="container">
 
             <!-- l'entête de la page: titre, barre de recherche -->
-            <header class="animated bounce">
-                <a href="#pageone">Hyblab 2016 and {{x}}</a>
+            <header>
+                <a href="#pageone">Hyblab 2016</a>
             </header>
 
             <!-- Le contenu du site -->
             <div ng-view>
             </div>
             <!-- Notre pied de page -->
-            </div>
-            <footer>
+        </div>
+            <!--footer>
             <p>Team Tous Neuf</p>
-            </footer>
-        </div>
-        <div>
-        <!-- PAUWEL -->
-        </div>
+
+            </footer-->
+    <!-- PAUWEL -->   
+    <style>
+        #map {
+        width: 400px;
+        height: 400px;
+        background-color: #CCC;
+      }
+    </style>
+        <div id="map">
+            
+        </div>div>
+
+       
+       
                
         <!-- Bootstrap script & Jquery-->
         <script src="js/modules/jquery/jquery-1.12.1.js"></script>
@@ -65,5 +76,7 @@
         <script src="js/modules/scroll-animate-directive-master/src/scroll-animate-directive.js"></script>
         <script src="js/modules/nvd3/build/nv.d3.js"></script>
        <script src="js/modules/angular-nvd3/dist/angular-nvd3.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
