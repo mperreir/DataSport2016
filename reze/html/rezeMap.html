@@ -8,11 +8,13 @@ path {
   stroke-linejoin: round;
   stroke-linecap: round;
 }
+    
 
 </style>
 <body>
 <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.js"></script>
+    <div id="container" style="height: 100%;min-height: 400px;"></div>
 <script>
 
 var width = 960,
@@ -28,16 +30,25 @@ var path = d3.geo.path()
     
     
 
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
+var svg = d3.select("#container").append("svg")
+    //.attr("width", width)
+    //.attr("height", height)
+    .attr("viewBox","0 0 960 600").attr("preserveAspectRatio","none");
 
-d3.json('communes.json', function(error, geojson) {
+d3.json('regions.geojson', function(error, geojson) {
   if (error) return console.error(error);
 
-  svg.append("path")
-      .datum({type: "FeatureCollection", features: features})
-      .attr("d", path);
+  svg.append("g").call(d3.behavior.zoom().scaleExtent([100, 100000]).on("zoom", zoom))
+  .append("g")
+            .selectAll("path")
+            .data(geojson.features)
+            .enter().append("path")
+            .attr("d", path);
+    //svg.attr("style", "width: 50%; height: 50%;");
+    function zoom() {
+  svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+}
 });
 
 </script>
+
