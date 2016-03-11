@@ -23,86 +23,9 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         $scope.pieDynamicData = data[0];
     });
     
-    /*$scope.options = {
-            chart: {
-                type: 'multiChart',
-                height: 340,
-                margin : {
-                    top: 30,
-                    right: 60,
-                    bottom: 50,
-                    left: 70
-                },
-                color:  ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
-
-                useInteractiveGuideline: true,
-                duration: 4000,
-                useInteractiveGuideline: true,
-                dispatch: {
-                    stateChange: function(e){ console.log("stateChange"); },
-                    changeState: function(e){ console.log("changeState"); },
-                    tooltipShow: function(e){ console.log("tooltipShow"); },
-                    tooltipHide: function(e){ console.log("tooltipHide"); }
-                },
-                xAxis: {
-                    //axisLabel: 'Période de 1997 - 2015',
-                    tickFormat: function(d){
-                        return d3.format('f')(d);
-                    }
-                },
-                yAxis1: {
-                    //axisLabel: 'Création d\'emplois',
-                    tickFormat: function(d){
-                        return d3.format(',.1f')(d);
-                    }
-                },
-                yAxis2: {
-                    //axisLabel: 'Chômage en pourcentage',
-                    tickFormat: function(d){
-                        return d3.format(',.1f')(d);
-                    }
-                }
-            },
-            tooltip: {
-                contentGenerator: function (e) {
-                  var series = e.series[0];
-                  if (series.value === null) return;
-                  
-                  var rows = 
-                    "<tr>" +
-                      "<td class='key'>" + 'Time: ' + "</td>" +
-                      "<td class='x-value'>" + e.value + "</td>" + 
-                    "</tr>" +
-                    "<tr>" +
-                      "<td class='key'>" + 'Voltage: ' + "</td>" +
-                      "<td class='x-value'><strong>" + (series.value?series.value.toFixed(2):0) + "</strong></td>" +
-                    "</tr>";
-
-                  var header = 
-                    "<thead>" + 
-                      "<tr>" +
-                        "<td class='legend-color-guide'><div style='background-color: red;" + series.color + ";'></div></td>" +
-                        "<td class='key'><strong>" + series.key + "</strong></td>" +
-                      "</tr>" + 
-                    "</thead>";
-                    
-                  return "<table>" +
-                      header +
-                      "<tbody>" + 
-                        rows + 
-                      "</tbody>" +
-                    "</table>";
-                } 
-              }
-        };*/
-    
     $scope.options = {
             chart: {
               type: 'multiChart',
-
-           
-              
-
               height: 340,
               margin : {
                   top: 30,
@@ -110,11 +33,10 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                   bottom: 50,
                   left: 70
               },
-              x: function(d){ console.log(d.y); return d.x; },
+              x: function(d){ return d.x; },
               y: function(d){ return d.y; },
               transitionDuration: 100,
               color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
-
               xAxis: {
                   //axisLabel: 'Time (ms)'
 
@@ -122,31 +44,28 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                   // staggerLabels: true
 
               },
-              yAxis: {
-                  //axisLabel: 'Voltage (v)',
+              yAxis1: {
                   showMaxMin: false,
                   tickFormat: function(d){
                       return d3.format('.02f')(d);
                   },
-                  axisLabelDistance: -300
+                  axisLabelDistance: 300
               },
-              useInteractiveGuideline: false,
-              interpolate:'basis',
-            
+              yAxis2: {
+                  
+              },
+              useInteractiveGuideline: false,            
               tooltip: {
                 contentGenerator: function (e) {
-                  //var series = e.series[0];
-                  //console.log(e);
-                  //if (series.value === null) return;
+                  var series = e.series[0];
+                  console.log(e);
+                  if (series.value === null) return;
 
                   return "<div class='toolTip'><h2>22</h2><p>EMPLOI CRÉES</p><h1>en 1996</h1></div>";
 
                   
                 } 
-              },
-              callback: function(){
-                  d3.selectAll('.nvd3.nv-legend g').style('fill', "red");
-                }
+              }
             }
         };
         
@@ -292,7 +211,35 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     
     $scope.titre = "1997 à maintenant...";
     
-    
+    $scope.optionBarChart = {
+        chart: {
+            type: 'multiBarChart',
+            height: 450,
+            margin : {
+                top: 20,
+                right: 20,
+                bottom: 45,
+                left: 45
+            },
+            clipEdge: true,
+            duration: 500,
+            stacked: true,
+            xAxis: {
+                axisLabel: 'BarChart',
+                showMaxMin: false,
+                tickFormat: function(d){
+                    return d3.format(',f')(d);
+                }
+            },
+            yAxis: {
+                axisLabel: 'Y Axis',
+                axisLabelDistance: -20,
+                tickFormat: function(d){
+                    return d3.format(',.1f')(d);
+                }
+            }
+        }    
+    }
     
 }]);
 

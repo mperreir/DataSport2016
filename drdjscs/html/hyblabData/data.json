@@ -1,6 +1,6 @@
 [
 	{
-		"key": "Pourcentage de chômage",
+		"key": "chomage",
 		"values" : [
 			  {
 				"x": 1997,
@@ -80,10 +80,12 @@
 			  }			  
 		],
 		  "type": "area",
+          "originalKey": "chomage",
+          "seriesIndex": 0,
 		  "yAxis": 1
 	},
 	{
-		"key": "Courbe de création d'emplois",
+		"key": "creation",
 		"values": [
 		  {
 			"x": 1997,
@@ -163,6 +165,8 @@
 		  }
 	  ],
 	  "type": "area",
+      "originalKey": "creation",
+      "seriesIndex": 1,
 	  "yAxis": 2
 	}
 ]
