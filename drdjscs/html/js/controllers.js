@@ -59,8 +59,9 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                 contentGenerator: function (e) {
                   var series = e.series[0];
                   console.log(e);
+                  console.log(series);
                   if (series.value === null) return;
-
+                  
                   return "<div class='toolTip'><h2>22</h2><p>EMPLOI CRÉES</p><h1>en 1996</h1></div>";
 
                   
@@ -222,20 +223,20 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                 left: 45
             },
             clipEdge: true,
-            duration: 500,
+            duration: 4000,
             stacked: true,
             xAxis: {
                 axisLabel: 'BarChart',
                 showMaxMin: false,
                 tickFormat: function(d){
-                    return d3.format(',f')(d);
+                    return d3.format('f')(d);
                 }
             },
             yAxis: {
                 axisLabel: 'Y Axis',
                 axisLabelDistance: -20,
                 tickFormat: function(d){
-                    return d3.format(',.1f')(d);
+                    return d3.format('.1f')(d);
                 }
             }
         }    
