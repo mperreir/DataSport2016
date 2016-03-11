@@ -7,13 +7,12 @@
         <!-- Déclaration de la feuille de style du document-->
         <link rel="stylesheet" href="css/style.css">
         <!-- Bootstrap css -->
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css">
+       <!--  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css"> -->
         <!-- Other css -->
         <link rel="stylesheet" href="css/animate/animate.css">
         <link rel="stylesheet" href="js/modules/chartjs/angular-chart.css">
         <link rel="stylesheet" href="js/modules/nvd3/build/nv.d3.css">
-        
     </head>
     <body>
         <div  ng-app="hyblabApp" ng-controller="MainCtrl">
@@ -22,12 +21,29 @@
             <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
 
             <!-- l'entête de la page: titre, barre de recherche -->
-            <header>
-                <a href="#pageone">Hyblab 2016</a>
-            </header>
+          <header>
+                <div class="logoLeft">
+                     <h1>Hyblab</h1>
+                </div>
+         <div class="infosRight">
+            <img src="icons/twitter.svg">
+        </div>
+        </header>   
+               <div class="sideBar">
+            <div class="infos">
+                
+                <div class="description">
+                    <h1>Qu'est-ce que c'est?</h1>
+                    <p>La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région. L’objectif étant d’aider à la création de 600 nouveaux emplois sur le territoire national sur 4 ans (+ 23,5% par rapport à 2012).</p>
 
+                </div>
+                <div class="line lineSide"></div>
+                <div class="btn btnEnsavoir"><a href="main.html">En savoir plus...</a></div>
+            </div>
+        </div>
             <!-- Le contenu du site -->
             <div ng-view>
+
             </div>
             <!-- Notre pied de page -->
         </div>

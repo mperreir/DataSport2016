@@ -14,7 +14,7 @@ p,h1,h2,h3{
 
 
 html{
-	background:#F0F2EB;
+	background:#FCFCFC;
 	padding:0;
 	margin:0;
 }
@@ -28,6 +28,11 @@ header{
 header h1{
 	color:#6591AA;
 	font-weight:200;
+}
+.line{
+	width:100%;
+	height:1px;
+	background: rgba(0,0,0,0.3);
 }
 .logoLeft{
 	float:left;
@@ -84,7 +89,33 @@ margin-top:50px;
 	margin-bottom:10px;
 
 }
+btnExplorer:hover{
+	cursor:pointer;
 
+}
+.sideBar{
+	border-left:1px solid #DEE2E2;
+	padding:30px;
+	padding-top: 50px;
+	height:100vh;
+	width:320px;
+	background:white;
+	position:fixed;
+	top:0;
+	right:0;
+
+}
+.description {
+	margin-bottom:20px;
+}
+.description h1{
+	font-size:14px;
+	margin-bottom:10px;
+}
+
+.description p {
+	line-height: 25px;
+}
 
 /*END*/
 
