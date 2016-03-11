@@ -102,6 +102,7 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
               transitionDuration: 100,
               transition: 10000,
               duration: 100000,
+              interpolate:basic,
               height: 340,
               margin : {
                   top: 30,
@@ -112,7 +113,7 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
               x: function(d){ return d.x; },
               y: function(d){ return d.y; },
               transitionDuration: 100,
-              color: ['rgba(0, 175, 155, 1)','rgba(0, 175, 155, 1)'],
+              color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
 
               xAxis: {
                   //axisLabel: 'Time (ms)'
