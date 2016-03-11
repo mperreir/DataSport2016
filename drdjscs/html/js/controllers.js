@@ -58,11 +58,18 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
               tooltip: {
                 contentGenerator: function (e) {
                   var series = e.series[0];
-                  console.log(e);
-                  console.log(series);
                   if (series.value === null) return;
                   
-                  return "<div class='toolTip'><h2>22</h2><p>EMPLOI CRÉES</p><h1>en 1996</h1></div>";
+                  var temp = "";
+                  if (series.originalKey == "chomage"){
+                      temp = " POURCENT DE CHÔMEUR ";
+                  }  else {
+                      temp = " EMPLOI CRÉES ";
+                  }
+                    
+                    
+                  //console.log(e);
+                  return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
 
                   
                 } 
@@ -238,9 +245,29 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                 tickFormat: function(d){
                     return d3.format('.1f')(d);
                 }
+
+            },
+            dispatch: {
+              tooltipShow: function(e){ console.log('! tooltip SHOW !')},
+              tooltipHide: function(e){console.log('! tooltip HIDE !')},
+              beforeUpdate: function(e){ console.log('! before UPDATE !')}
+            },
+            multibar: {
+              dispatch: {
+                //chartClick: function(e) {console.log("! chart Click !")},
+                elementClick: function(e) {
+                    console.log("! element Click !");
+                    $scope.optionBarChart.color = "red";
+                },
+                //elementDblClick: function(e) {console.log("! element Double Click !")},
+                //elementMouseout: function(e) {console.log("! element Mouseout !")},
+                //elementMouseover: function(e) {console.log("! element Mouseover !")}
+              }
             }
-        }    
+        
+        }
     }
+    
     
 }]);
 

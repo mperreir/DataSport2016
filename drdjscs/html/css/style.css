@@ -244,6 +244,9 @@ btnExplorer:hover{
 	font-weight:400;
 
 }
+.selected {
+    fill: red;
+}
 /*END*/
 
 /*CLEMENT*/
