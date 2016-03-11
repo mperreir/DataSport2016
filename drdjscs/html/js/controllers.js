@@ -27,7 +27,6 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
             chart: {
                 type: 'multiChart',
                 height: 340,
-                
                 margin : {
                     top: 30,
                     right: 60,
