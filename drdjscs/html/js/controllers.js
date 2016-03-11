@@ -118,8 +118,8 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
               xAxis: {
                   //axisLabel: 'Time (ms)'
 
-                  showMaxMin: false,
-                  staggerLabels: true
+                  // showMaxMin: false,
+                  // staggerLabels: true
 
               },
               yAxis: {
@@ -131,7 +131,8 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                   axisLabelDistance: -300
               },
               useInteractiveGuideline: false,
-              clipVoronoi: false,
+              interpolate:'basis',
+            
               tooltip: {
                 contentGenerator: function (e) {
                   //var series = e.series[0];
