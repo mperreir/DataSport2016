@@ -22,8 +22,8 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         $scope.pieData = data;
         $scope.pieDynamicData = data[0];
     });
-    var colors = ["#00AF9B","#3C78F"];
-    $scope.options = {
+    
+    /*$scope.options = {
             chart: {
                 type: 'multiChart',
                 height: 340,
@@ -94,11 +94,48 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                     "</table>";
                 } 
               }
-           /*,
-            css: {
-                    'text-align': 'center',
-                    'margin': '10px 13px 0px 7px'
-            }*/
+        };*/
+    
+    $scope.options = {
+            chart: {
+              type: 'multiChart',
+              transitionDuration: 100,
+              transition: 10000,
+              duration: 100000,
+              height: 340,
+              margin : {
+                  top: 30,
+                  right: 60,
+                  bottom: 50,
+                  left: 70
+              },
+              x: function(d){ return d.x; },
+              y: function(d){ return d.y; },
+              transitionDuration: 100,
+              color: ['rgba(0, 175, 155, 1)','rgba(0, 175, 155, 1)'],
+
+              xAxis: {
+                  //axisLabel: 'Time (ms)'
+
+              },
+              yAxis: {
+                  //axisLabel: 'Voltage (v)',
+                  tickFormat: function(d){
+                      return d3.format('.02f')(d);
+                  },
+                  axisLabelDistance: -300
+              },
+              useInteractiveGuideline: false,
+              tooltip: {
+                contentGenerator: function (e) {
+                  //var series = e.series[0];
+                  //console.log(e);
+                  //if (series.value === null) return;
+                  return "<div class='toolTip'><h2>22</h2><p>EMPLOI CRÉES</p><h1>en 1996</h1></div>";
+                  
+                } 
+              }
+            }
         };
         
     $scope.update19961998 = function () {    
@@ -153,7 +190,7 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
             x: function(d){return d.key;},
             y: function(d){return d.y;},
             showLabels: true,
-            duration: 500,
+            // duration: 500,
             labelThreshold: 0.01,
             labelSunbeamLayout: true,
             legend: {
@@ -247,9 +284,3 @@ app.controller('PageTwoCtrl', function ($scope) {
   
     
 });
-
-
-
-
-
-
