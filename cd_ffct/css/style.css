@@ -1,10 +1,13 @@
+body {
+    color: #494949;
+}
 #container {
     width: 960px;
     margin: 0 auto;
 }
 
 .section {
-    background-color: #f7f5ed;
+    background-color: #FFFFDF;
 }
 
 header{
@@ -80,11 +83,6 @@ form {
   text-indent: 2px;
 }
 
-
-
-
-
-
 .node circle {
   cursor: pointer;
   stroke: #3182bd;
@@ -101,4 +99,115 @@ line.link {
   fill: none;
   stroke: #9ecae1;
   stroke-width: 1.5px;
+}
+
+text {
+    font-family: "source sans pro";
+    font-size: 12px;
+}
+
+.grandparent text {
+  font-weight: bold;
+}
+
+rect {
+  fill: #9BC8D9;
+  stroke: #fff;
+}
+
+rect.parent,
+.grandparent rect {
+  stroke-width: 2px;
+}
+
+.grandparent rect {
+  fill: orange;
+}
+
+.grandparent:hover rect {
+  fill: #ee9700;
+}
+
+.children rect.parent,
+.grandparent rect {
+  cursor: pointer;
+}
+
+.children rect.parent {
+    fill: #F56D34;
+    opacity: .9;
+}
+
+.children:hover rect.child {
+  fill: #bbb;
+}
+
+#dataviz1 {
+    width: 800px;
+    margin-left: 80px;
+    margin-right: -80px;
+}
+
+#titreDataviz1 {
+    width: 550px;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-family: "source sans pro";    
+}
+
+#titreDataviz1 p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#infos_licencies {
+    display: inline-block;
+    float: right;
+    width: 150px;
+    color: #C56534;
+    font-family: "source sans pro";
+    text-align: center;
+    
+}
+
+.nombreLicencies {
+    
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.texteLicencies {
+
+    font-size: 29px;
+    font-weight: bold;
+}
+
+p#nomRegion {
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+p#infosCalcul{
+    color: #494949;
+    font-size: 15px;
+    font-style: italic;
+    text-align: left;
+    margin-top: 30px;
+}
+
+#dataviz1 p {
+   
+    margin-top:0px;
+    margin-bottom:0px; 
+}
+
+#sep {
+    
+    border-color: #C56534;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border: 1px solid;
+    width: 90px;
 }
