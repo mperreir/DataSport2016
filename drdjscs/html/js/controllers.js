@@ -63,7 +63,38 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                         return d3.format(',.1f')(d);
                     }
                 }
-            }
+            },
+            tooltip: {
+                contentGenerator: function (e) {
+                  var series = e.series[0];
+                  if (series.value === null) return;
+                  
+                  var rows = 
+                    "<tr>" +
+                      "<td class='key'>" + 'Time: ' + "</td>" +
+                      "<td class='x-value'>" + e.value + "</td>" + 
+                    "</tr>" +
+                    "<tr>" +
+                      "<td class='key'>" + 'Voltage: ' + "</td>" +
+                      "<td class='x-value'><strong>" + (series.value?series.value.toFixed(2):0) + "</strong></td>" +
+                    "</tr>";
+
+                  var header = 
+                    "<thead>" + 
+                      "<tr>" +
+                        "<td class='legend-color-guide'><div style='background-color: red;" + series.color + ";'></div></td>" +
+                        "<td class='key'><strong>" + series.key + "</strong></td>" +
+                      "</tr>" + 
+                    "</thead>";
+                    
+                  return "<table>" +
+                      header +
+                      "<tbody>" + 
+                        rows + 
+                      "</tbody>" +
+                    "</table>";
+                } 
+              }
            /*,
             css: {
                     'text-align': 'center',

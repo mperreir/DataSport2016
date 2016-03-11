@@ -27,11 +27,21 @@ header{
 	width:900px;
 }
 header h1{
-	color:#6591AA;
-	font-weight:200;
+	color:black;
+	font-weight:600;
+}
+header h2{
+	opacity:0.5;
+	color:black;
+	font-weight:400;
+	font-size:16px;
 }
 li{
 	list-style: none;
+}
+ul{
+	padding:0;
+	margin:0;
 }
 .menuRight{
 	    float: right;
@@ -43,7 +53,7 @@ li{
 .menuRight ul li{
 	display:inline-block;
 	text-align: center;
-	padding:20px;
+	padding-right:20px;
 	font-size:12px	;
 }
 .mainContent{
@@ -55,9 +65,21 @@ li{
 	border:1px solid rgba(0,0,0,0.2);
 	width:auto;
 	padding:10px 20px 10px 20px;
-	display: inline-block;
+	margin-top:5px;
 	font-size:12px;
 	border-radius:2px;
+}
+.aide1{
+	width:200px;
+	margin-left:200px;
+}
+.aide2{
+	width:500px;
+	margin-left:500px;
+}
+.aide3{
+	width:800px;
+	margin-left:0px;
 }
 .btnTimeline:hover{
 	cursor:pointer;
@@ -95,13 +117,12 @@ li{
 }
 .btnExplorer{
 margin:0 auto;
-margin-top:50px;
+margin-top:150px;
 }
 .btnEnsavoir{
 	margin:0 auto;
 	width:150px;
-	position:absolute;
-	bottom:200px;
+	margin-top:80px;
 }
 .btnExplorer:hover{
 	cursor:pointer;
