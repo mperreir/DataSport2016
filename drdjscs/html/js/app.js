@@ -8,7 +8,6 @@
         'chart.js',
         'scroll-animate-directive',
         'nvd3'
-
     ])
 })();
 
