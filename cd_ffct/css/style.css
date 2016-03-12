@@ -121,7 +121,7 @@ rect.parent,
 }
 
 .grandparent rect {
-    fill: orange;
+    
 }
 
 .grandparent:hover rect {
@@ -140,13 +140,13 @@ rect.parent,
 
 .children:hover rect.child {
     /*  fill: #bbb;*/
-    fill: black;
+
 }
 
 #dataviz1 {
-    width: 800px;
-    margin-left: 80px;
-    margin-right: -80px;
+    width: 840px;
+    margin-left: 60px;
+    margin-right: -60px;
     height: 100%;
 }
 
@@ -169,7 +169,7 @@ rect.parent,
 #infos_licencies {
     display: inline-block;
     float: right;
-    width: 150px;
+    width: 190px;
     color: #C56534;
     font-family: "source sans pro";
     text-align: center;
@@ -188,7 +188,7 @@ rect.parent,
 }
 
 #nomRegion {
-    margin-top: 30px;
+    
     font-size: 15px;
 }
 
