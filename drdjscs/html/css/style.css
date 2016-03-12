@@ -248,16 +248,16 @@ btnExplorer:hover{
 /*test*/
 
 .animation-container {
-    position: absolute;
+    position: relative;
     width: 400px;
-    height: 2500px;
+    height: 1000px;
     left: 50%;
     margin-top: 60px;
     margin-left: -200px;
 }
 
 .rocket {
-    background: url("images/rocket2.png") center top no-repeat;
+    /*background: url("images/rocket2.png") center top no-repeat;*/
     height: 700px;
     width: 400px;
     position: fixed;
@@ -265,7 +265,7 @@ btnExplorer:hover{
 }
 
 .fire {
-    background: url("images/fire.gif") center top no-repeat;
+    /*background: url("images/fire.gif") center top no-repeat;*/
     height: 400px;
     width: 400px;
     position: fixed;
@@ -288,6 +288,10 @@ btnExplorer:hover{
 .cloud-2 {
     z-index: 3;
     margin-left: -275px;
+}
+.cloud-3 {
+    z-index: 3;
+    margin-left: -550px;
 }
 
 

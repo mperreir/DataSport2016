@@ -49,7 +49,7 @@
                 <div class="line lineSide"></div>
                 <div class="blocData">
                     <div class="numbersData">
-                        <h1>25</h1>
+                        <h1>[[emploisCreer]]</h1>
                         <h2>EMPLOI CRÉES</h2>
 
                     </div>
@@ -60,7 +60,32 @@
             </div>
         </div>
             <!-- Le contenu du site -->
-           
+        <div class="animation-container" ng-controller="ScrollerController">
+        <h1>Notre histoire :</h1>
+        <div class="rocket" scroll-behavior animations="[[{ 2: {translateY: [0, -875]} }]]"></div>
+        <div class="fire" scroll-behavior animations="[[{
+                0: {opacity: [0, 1]},
+                2: {translateY: [0, -875]}
+            }]]">
+            <h1 class="animated bounce infinite">HYBLAB DDRJSCS</h1>
+        </div>
+        <div class="cloud" scroll-behavior animations="[[{
+                1: {opacity: [0, 1]},
+                2: {rotate: [0, 360], opacity: [1, 0] }
+            }]]">
+        </div>
+        <div class="cloud cloud-2" scroll-behavior animations="[[{
+                1: { opacity: [0, 1]},
+                2: {rotate: [0, 360], opacity: [1, 0] }
+            }]]">
+        </div>
+        <div class="cloud cloud-3" scroll-behavior animations="[[{
+                1: { opacity: [0, 1]},
+                2: {rotate: [0, 360], opacity: [1, 0] }
+            }]]">
+        </div>
+        </div>
+
             <div ng-view>
 
             </div>
@@ -77,9 +102,9 @@
         background-color: #CCC;
       }
     </style>
-    <!--   <div id="map">
+    <div id="map">
             
-    </div-->
+    </div>
        
        
                

@@ -8,13 +8,13 @@ app.service("scrolleryConfig", function() {
     var steps = [
         {
             name: "fireAppear",
-            start: 0,
+            start: 400,
             duration: 200
         },
         {
             name: "smokeAppear",
             start: 100,
-            duration: 200
+            duration: 400
         },
         {
             name: "rocketLaunch",

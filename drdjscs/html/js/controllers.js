@@ -2,14 +2,14 @@ var appHyblab = angular.module('hyblabApp');
 
 /*Whole page Controller*/
 
-appHyblab.controller('MainCtrl', function ($scope) {
+appHyblab.controller('IntroCtrl', function ($scope) {
       
    
 });
 
 /*Intro controller*/
 
-appHyblab.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
+appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
     $http.get('hyblabData/data.json').success (function(data) {
         $scope.data = data;
         $scope.fix = data;
@@ -108,13 +108,23 @@ appHyblab.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($sco
                   d3.selectAll('.nvd3.nv-legend g').style('fill', "red")
             }}
         };
-        
+    
+    var listCreation = [23, 11, 8, 5, 7, 3, 10, 7, 7, 3, 11, 9, 14, 10, 10, 9, 14, 19, 28];
+    $scope.emploisCreer = "Informations: "
+    function emplois(start, end) {
+        $scope.emploisCreer = 0;
+        for (var i = start; i < end; i++) {
+            $scope.emploisCreer += listCreation[i];
+        }
+    };
+    
     $scope.update19961998 = function () {    
         $scope.data = $scope.zoomData[0];
         $scope.pieDynamicData = $scope.pieData[1];
         $scope.graphInformation = $scope.textList[0].text;
         $scope.barData = $scope.zoomBarData[0];
-        $scope.titre = "1996 à 1998...";
+        $scope.titre = "1997 à 1998...";
+        emplois(0,1);
     }
     $scope.update19972005 = function () {
         $scope.data = $scope.zoomData[1];
@@ -122,42 +132,49 @@ appHyblab.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($sco
         $scope.graphInformation = $scope.textList[1].text;
         $scope.barData = $scope.zoomBarData[1];
         $scope.titre = "1997 à 2005...";
+        emplois(0,8);
     }
     $scope.update20052010 = function () {    
         $scope.data = $scope.zoomData[2];
         $scope.graphInformation = $scope.textList[2].text;
         $scope.barData = $scope.zoomBarData[2];
         $scope.titre = "2005 à 2010...";
+        emplois(8, 13);
     }
     $scope.update19972002 = function () {
         $scope.data = $scope.zoomData[3];
         $scope.graphInformation = $scope.textList[1].text;
         $scope.barData = $scope.zoomBarData[3];
         $scope.titre = "1997 à 2002...";
+        emplois(0, 4);
     }
     $scope.update20102015 = function () {    
         $scope.data = $scope.zoomData[4];
         $scope.graphInformation = $scope.textList[0].text;
         $scope.barData = $scope.zoomBarData[4];
         $scope.titre = "2010 à 2015...";
+        emplois(13, 18);
     }
     $scope.update20042015 = function () {
         $scope.data = $scope.zoomData[6];
         $scope.graphInformation = $scope.textList[1].text;
         $scope.barData = $scope.zoomBarData[6];
         $scope.titre = "2004 à 2015...";
+        emplois(7, 18);
     }
     $scope.update20092013 = function () {
         $scope.data = $scope.zoomData[7];
         $scope.graphInformation = $scope.textList[1].text;
         $scope.barData = $scope.zoomBarData[7];
         $scope.titre = "2009 à 2013...";
+        emplois(12, 16);
     }
     $scope.reset = function () {
         $scope.data = $scope.fix;
         $scope.graphInformation = $scope.textList[2].text;
         $scope.barData = $scope.zoomBarFixData;
         $scope.titre = "1996 à maintenant...";
+        $scope.emploisCreer = "Information: ";
     };
   
     /*DYNAMIC TEXT*/
