@@ -1,15 +1,15 @@
-var app = angular.module('hyblabApp');
+var appHyblab = angular.module('hyblabApp');
 
 /*Whole page Controller*/
 
-app.controller('MainCtrl', function ($scope) {
+appHyblab.controller('MainCtrl', function ($scope) {
       
    
 });
 
 /*Intro controller*/
 
-app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
+appHyblab.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
     $http.get('hyblabData/data.json').success (function(data) {
         $scope.data = data;
         $scope.fix = data;
@@ -303,12 +303,12 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
 
 /*Page one controller*/
 
-app.controller('PageOneCtrl', function ($scope) {
+appHyblab.controller('PageOneCtrl', function ($scope) {
     
 });
 /*Page two controller*/
 
-app.controller('PageTwoCtrl', function ($scope) {
+appHyblab.controller('PageTwoCtrl', function ($scope) {
   
     
 });

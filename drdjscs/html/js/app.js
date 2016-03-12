@@ -7,7 +7,8 @@
         'swipe',
         'chart.js',
         'scroll-animate-directive',
-        'nvd3'
+        'nvd3',
+        'angular-scrollery'
     ])
 })();
 

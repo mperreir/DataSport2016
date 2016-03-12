@@ -1,6 +1,25 @@
+<div class="animation-container" ng-controller="ScrollerController">
+    <div class="rocket" scroll-behavior animations="[[{ 2: {translateY: [0, -875]} }]]"></div>
+    <div class="fire" scroll-behavior animations="[[{
+            0: {opacity: [0, 1]},
+            2: {translateY: [0, -875]}
+        }]]"></div>
+    <div class="cloud" scroll-behavior animations="[[{
+            1: {opacity: [0, 1]},
+            2: {rotate: [0, 360], opacity: [1, 0] }
+        }]]"></div>
+    <div class="cloud cloud-2" scroll-behavior animations="[[{
+            1: { opacity: [0, 1]},
+            2: {rotate: [0, 360], opacity: [1, 0] }
+        }]]"></div>
+</div>
+
+
+
+
 <div class="mainContent">
 <div>
-    <p>{{titre}}</p>
+    <p>[[titre]]</p>
 </div>
 <a href="#pageone">PageOne</a>
 <div class="deuxCourbes">
@@ -10,7 +29,7 @@
     </div>
    <div ng-click="incr()">+</div>
     <div ng-click="decr()">-</div>
-     <h4>{{pourcentage}}</h4> 
+     <h4>[[pourcentage]]</h4> 
   <canvas id="pie" class="chart chart-pie"
     chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce">
     </canvas>  
@@ -25,10 +44,11 @@
         <div  class="btnTimeline" ng-click="update20092013()"><h3>2009-2013</h3></div>
      <div  class="btnTimeline" ng-click="reset()"><h3>reset</h3></div>
         <div>
-            <h3 class="animated fadeIn">{{graphInformation}}</h3>
+            <h3 class="animated fadeIn">[[graphInformation]]</h3>
         </div>   
     </div>  
 </div>
 <div>   
     <nvd3 class="with-3d-shadow with-transitions" options='optionBarChart' data='barData'></nvd3>    
 </div>
+
