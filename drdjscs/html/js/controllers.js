@@ -52,7 +52,12 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     $http.get('hyblabData/dataBar.json').success(function (data) {
         
         $scope.barData = data;
-        
+        $scope.zoomBarFixData = data;
+    });
+    
+    $http.get('hyblabData/zoomDataBar.json').success(function (data) {
+       $scope.zoomBarData = data; 
+       
     });
     
     $scope.options = {
@@ -108,42 +113,50 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         $scope.data = $scope.zoomData[0];
         $scope.pieDynamicData = $scope.pieData[1];
         $scope.graphInformation = $scope.textList[0].text;
+        $scope.barData = $scope.zoomBarData[0];
         $scope.titre = "1996 à 1998...";
     }
     $scope.update19972005 = function () {
         $scope.data = $scope.zoomData[1];
         $scope.pieDynamicData = $scope.pieData[0];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.barData = $scope.zoomBarData[1];
         $scope.titre = "1997 à 2005...";
     }
     $scope.update20052010 = function () {    
         $scope.data = $scope.zoomData[2];
         $scope.graphInformation = $scope.textList[2].text;
+        $scope.barData = $scope.zoomBarData[2];
         $scope.titre = "2005 à 2010...";
     }
     $scope.update19972002 = function () {
         $scope.data = $scope.zoomData[3];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.barData = $scope.zoomBarData[3];
         $scope.titre = "1997 à 2002...";
     }
     $scope.update20102015 = function () {    
         $scope.data = $scope.zoomData[4];
         $scope.graphInformation = $scope.textList[0].text;
+        $scope.barData = $scope.zoomBarData[4];
         $scope.titre = "2010 à 2015...";
     }
     $scope.update20042015 = function () {
         $scope.data = $scope.zoomData[6];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.barData = $scope.zoomBarData[6];
         $scope.titre = "2004 à 2015...";
     }
     $scope.update20092013 = function () {
         $scope.data = $scope.zoomData[8];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.barData = $scope.zoomBarData[8];
         $scope.titre = "2009 à 2013...";
     }
     $scope.reset = function () {
         $scope.data = $scope.fix;
         $scope.graphInformation = $scope.textList[2].text;
+        $scope.barData = $scope.zoomBarFixData;
         $scope.titre = "1996 à maintenant...";
     };
   
