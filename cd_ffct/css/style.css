@@ -1,6 +1,10 @@
+/*  **************************************************  */
+/*                      Général                         */
+/*  **************************************************  */
 body {
     color: #494949;
 }
+
 #container {
     width: 960px;
     margin: 0 auto;
@@ -10,129 +14,123 @@ body {
     background-color: #FFFFDF;
 }
 
-header{
-  text-align: center;
-  background-color: #0066CC;
-  color: white;
-  padding: 10px;
+/*
+footer {
+    background-color: white;
 }
+*/
 
-header + p {
-  text-align: center;
-  display:block;
-  height: 600px;
-  line-height: 600px;
-}
-
-footer p
-{
-  font-size: small;
-}
-
-footer{
-
-    background-color: white; 
-    
-}
-#bandeau {
-      padding: 8px;
-}
-
-#bandeau li{
-      list-style-type: none;
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0 12px;
-}
-
-
-#bandeau img{
-      height: 46px;
-}
-
-#bandeau #datasport{
-      margin: 20px 0;
-      height: 100px;
-      float: left;
-}
-
-#bandeau ul{
-      text-align: center;
-}
-
-#bandeau .institutionnel{
-  height: 48px;
-}
-
-/* dataviz2 */
-.arc text {
-  font: 10px sans-serif;
-  text-anchor: middle;
-}
-
-.arc path {
-  stroke: #fff;
-}
-
-
-#pieChart, #barChart {
-    display: inline-block;
-}
-
-
-
+/*  **************************************************  */
+/*                      Bouton home                     */
+/*  **************************************************  */
 #home {
     position: fixed;
-    background-color: blue;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    border: 0;
+    
+    /* Transformation */
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+#home:hover {
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/*  **************************************************  */
+/*                      Bandeau                         */
+/*  **************************************************  */
+#bandeau {
+    padding: 8px;
+}
+
+#bandeau li {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 12px;
+}
+
+#bandeau img {
+    height: 46px;
+}
+
+#bandeau #datasport {
+    margin: 20px 0;
     height: 100px;
-    width: 100px;
+    float: left;
 }
 
-.node circle {
-  cursor: pointer;
-  stroke: #3182bd;
-  stroke-width: 1.5px;
+#bandeau ul {
+    text-align: center;
 }
 
-.node text {
-  font: 10px sans-serif;
-  pointer-events: none;
-  text-anchor: middle;
+#bandeau .institutionnel {
+    height: 48px;
 }
 
-line.link {
-  fill: none;
-  stroke: #9ecae1;
-  stroke-width: 1.5px;
-}
-
+/*  **************************************************  */
+/*                      Dataviz1                        */
+/*  **************************************************  */
 text {
     font-family: "source sans pro";
     font-size: 12px;
 }
 
-
-rect {
-  fill: #9BC8D9;
-  stroke: #fff;
+rect.child,
+rect.parent {
+    fill: #9BC8D9;
+    stroke: #fff;
 }
 
 rect.parent,
 .grandparent rect {
-  stroke-width: 1px;
+    stroke-width: 1px;
 }
 
 .grandparent rect {
-  fill: orange;
+    fill: orange;
 }
 
 .grandparent:hover rect {
-  fill: #ee9700;
+    fill: #ee9700;
 }
 
 .children rect.parent,
 .grandparent rect {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .children rect.parent {
@@ -141,7 +139,7 @@ rect.parent,
 }
 
 .children:hover rect.child {
-/*  fill: #bbb;*/
+    /*  fill: #bbb;*/
     fill: black;
 }
 
@@ -158,7 +156,7 @@ rect.parent,
     font-style: italic;
     font-weight: bold;
     text-align: left;
-    font-family: "source sans pro";    
+    font-family: "source sans pro";
 }
 
 #titreDataviz1 p {
@@ -173,7 +171,6 @@ rect.parent,
     color: #C56534;
     font-family: "source sans pro";
     text-align: center;
-    
 }
 
 .nombreLicencies {
@@ -193,7 +190,7 @@ rect.parent,
     font-size: 15px;
 }
 
-#infosCalcul{
+#infosCalcul {
     color: #494949;
     font-size: 15px;
     font-style: italic;
@@ -202,16 +199,21 @@ rect.parent,
 }
 
 #dataviz1 p {
-   
-    margin-top:0px;
-    margin-bottom:0px; 
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #sep {
-    
     border-color: #C56534;
     margin-top: 16px;
     margin-bottom: 16px;
     border: 1px solid;
     width: 90px;
+}
+
+/*  **************************************************  */
+/*                      Dataviz2                        */
+/*  **************************************************  */
+#pieChart, #barChart {
+    display: inline-block;
 }

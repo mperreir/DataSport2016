@@ -1,6 +1,7 @@
 "use strict";
 
 d3.json("json/evolution_licences_par_activites_et_categories_test.json", function(error, json) {
+    if (error) { throw error; }
     
     var color = [
         ["#2484c1", "#1060a1"],
@@ -11,57 +12,32 @@ d3.json("json/evolution_licences_par_activites_et_categories_test.json", functio
     /*  **************************************************  */
     /*                      Dataset                         */
     /*  **************************************************  */
-    if (error) {
-        throw error;
-    }
+    var dataSet = json.children;
     
-    var datasetPieChart = new Array();
-    
+    var initPieChart = [];
     // Pour chaque type d'activité (Route, VTT, BMX)
-    for (var i = 0; i < json.children.length; i++) {
-        var data = new Object();
-        data.label = json.children[i].name;
+    for (var i = 0; i < dataSet.length; i++) {
+        var data = {};
+        data.label = dataSet[i].label;
         data.value = 0;
         data.color = color[i][0];
         
-        // Pour chacune des catégories (ELITE PROFESSIONNEL, 1ERE CATEGORIE, ...)
-        for (var j = 0; j < json.children[i].children.length; j++) {
-            data.value += json.children[i].children[j].size;
+        // Calcul de la valeur associée à l'activité (somme des licenciés des différentes catégories)
+        for (var j = 0; j < dataSet[i].children.length; j++) {
+            data.value += dataSet[i].children[j].value;
         }
         
-        // Affectation au dataset
-        datasetPieChart[i] = data;
+        initPieChart.push(data);
     }
     
-    var datasetBarChart_init = new Object();
-    datasetBarChart_init.label = "init";
-    datasetBarChart_init.values = new Array();
-    for (var j = 0; j < json.children[0].children.length; j++) {
-        var o = new Object();
-        o.label = json.children[0].children[j].name;
-        o.value = 0;
-        datasetBarChart_init.values[j] = o;
-    }
-    
-    
-    var datasetBarChart = new Array();
-    
-    // Pour chaque type d'activité (Route, VTT, BMX)
-    for (var i = 0; i < json.children.length; i++) {
-        var data = new Object();
-        data.label = json.children[i].name;
-        data.values = new Array();
-        
-        // Pour chacune des catégories (ELITE PROFESSIONNEL, 1ERE CATEGORIE, ...)
-        for (var j = 0; j < json.children[i].children.length; j++) {
-            var o = new Object();
-            o.label = json.children[i].children[j].name;
-            o.value = json.children[i].children[j].size;
-            data.values[j] = o;
-        }
-        
-        // Affectation au dataset
-        datasetBarChart[i] = data;
+    // On crée un tableau contenant le nom de toutes les catégories
+    // et on associe à ces catégories la valeur 0 lorsqu'aucune activité n'est sélectionnée (lorsque la page est chargée)
+    var initBarChart = []
+    for (var i = 0; i < dataSet[0].children.length; i++) {
+        var data = {};
+        data.label = dataSet[0].children[i].label;
+        data.value = 0;
+        initBarChart.push(data);
     }
     
     
@@ -97,7 +73,7 @@ d3.json("json/evolution_licences_par_activites_et_categories_test.json", functio
             "pieOuterRadius": "100%"
         },
         "data": {
-            "content": datasetPieChart,
+            "content": initPieChart,
         },
         "labels": {
             "outer": {
@@ -141,8 +117,8 @@ d3.json("json/evolution_licences_par_activites_et_categories_test.json", functio
     
     function clickSegment(d) {
         for (var i = 0; i < json.children.length; i++) {
-            if (json.children[i].name == d.data.label) {
-                hist.update(datasetBarChart[i], color[i]);
+            if (dataSet[i].label == d.data.label) {
+                hist.update(dataSet[i].children, color[i]);
                 break;
             }
         }
@@ -152,7 +128,7 @@ d3.json("json/evolution_licences_par_activites_et_categories_test.json", functio
     /*  **************************************************  */
     /*                      BarChart                        */
     /*  **************************************************  */
-    function histogram(id, data) {
+    function histogram(id, datas) {
         
         var hist = {};
         var histColor = "";
@@ -166,21 +142,21 @@ d3.json("json/evolution_licences_par_activites_et_categories_test.json", functio
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
         
         var x = d3.scale.ordinal().rangeRoundBands([0, width, 0.1])
-            .domain(data.values.map(function(d) { return d.label; })); // Nom
+            .domain(datas.map(function(d) { return d.label; }));
         
         svg.append("g").attr("class", "x axis")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.svg.axis().scale(x).orient("bottom"))
-        .selectAll("text")  
+            .selectAll("text")  
             .style("text-anchor", "end")
             .attr("dx", "-.8em")
             .attr("dy", ".15em")
             .attr("transform", "rotate(-65)" );
         
         var y = d3.scale.linear().range([height, 0])
-            .domain([0, d3.max(data.values, function(d) { return d.value; })]); // nombre
+            .domain([0, d3.max(datas, function(d) { return d.value; })]);
         
-        var bars = svg.selectAll(".bar").data(data.values).enter()
+        var bars = svg.selectAll(".bar").data(datas).enter()
             .append("g").attr("class", "bar");
         
         bars.append("rect")
@@ -204,11 +180,11 @@ d3.json("json/evolution_licences_par_activites_et_categories_test.json", functio
             d3.select(this).attr("fill", histColor[0]);
         }
         
-        hist.update = function(data, color) {
+        hist.update = function(datas, color) {
             histColor = color;
-            y.domain([0, d3.max(data.values, function(d) { return d.value; })]);
+            y.domain([0, d3.max(datas, function(d) { return d.value; })]);
             
-            var bars = svg.selectAll(".bar").data(data.values);
+            var bars = svg.selectAll(".bar").data(datas);
             bars.select("rect").transition().duration(500)
                 .attr("y", function(d) {return y(d.value); })
                 .attr("height", function(d) { return height - y(d.value); })
@@ -222,5 +198,5 @@ d3.json("json/evolution_licences_par_activites_et_categories_test.json", functio
         return hist;
     }
     
-    var hist = histogram("#barChart", datasetBarChart_init);
+    var hist = histogram("#barChart", initBarChart);
 });
