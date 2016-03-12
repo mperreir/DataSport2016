@@ -148,9 +148,9 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         $scope.titre = "2004 à 2015...";
     }
     $scope.update20092013 = function () {
-        $scope.data = $scope.zoomData[8];
+        $scope.data = $scope.zoomData[7];
         $scope.graphInformation = $scope.textList[1].text;
-        $scope.barData = $scope.zoomBarData[8];
+        $scope.barData = $scope.zoomBarData[7];
         $scope.titre = "2009 à 2013...";
     }
     $scope.reset = function () {
@@ -244,9 +244,10 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                 bottom: 45,
                 left: 45
             },
-            clipEdge: true,
+            clipEdge: false,
             duration: 4000,
             stacked: true,
+            color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
             xAxis: {
                 axisLabel: 'BarChart',
                 showMaxMin: false,
