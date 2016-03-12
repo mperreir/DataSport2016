@@ -5,14 +5,14 @@ var divDataviz1 = d3.select("#dataviz1");
 divDataviz1.style("height", window.innerHeight - 120 +"px");
 //Ajout du titre au dessus de la dataviz1
 var titre = divDataviz1.append("div").attr("id", "titreDataviz1");
-titre.append("p").text("EN FRANCE, ON RETROUVE LES PAYS DE LA LOIRE EN 3 POSITION AVEC 10 303 LICENCIÉS");
+titre.append("p");
 
 var affichageHover = divDataviz1.append("div").attr("id", "infos_licencies");
 affichageHover.append("p").attr("class", "nombreLicencies").attr("id", "nbLicenciesRegion").text("10 303");
 affichageHover.append("p").attr("class", "texteLicencies").text("LICENCIÉS");
 affichageHover.append("hr").attr("id", "sep");
-affichageHover.append("p").attr("class", "nombreLicencies").text("42.3%");
-affichageHover.append("p").attr("class", "texteLicencies").text("DES LICENCIÉS EN FRANCE");
+affichageHover.append("p").attr("class", "nombreLicencies").attr("id", "pourcentLabelLicencies").text("42.3%");
+affichageHover.append("p").attr("class", "texteLicencies").attr("id", "pourcentLabel").text("DES LICENCIÉS EN FRANCE");
 affichageHover.append("p").attr("id", "nomRegion").text("PAYS-DE-LA-LOIRE");
 affichageHover.append("p").attr("id", "infosCalcul").text("Surfaces calculées en proportion au nombre de licenciés en 2015 par rapport à la population totale de chacune des régions françaises");
 
@@ -64,7 +64,7 @@ d3.json("json/licences_regions_test.json", function(root) {
   accumulate(root);
   layout(root);
   display(root);
-
+    console.log(root.children[0].name);
   function initialize(root) {
     root.x = root.y = 0;
     root.dx = width;
@@ -136,8 +136,7 @@ d3.json("json/licences_regions_test.json", function(root) {
     g.append("rect")
         .attr("class", "parent")
         .call(rect)
-      .append("title")
-        .text(function(d) { return formatNumber(d.value); });
+      .append("title");
 
     g.append("text")
         .attr("dy", ".75em")
@@ -154,6 +153,7 @@ d3.json("json/licences_regions_test.json", function(root) {
         console.log("click");
         // changement du titre
         d3.select("#titreDataviz1").text("ET AU SEIN DES PAYS DE LA LOIRE, LA LOIRE-ATLANTIQUE SE TROUVE 1RE AVEC 3 346 LICENCIÉS");
+        d3.select("#pourcentLabel").text("DES LICENCIÉS DE LA RÉGION");
       var g2 = display(d),
           t1 = g1.transition().duration(750),
           t2 = g2.transition().duration(750);
@@ -205,10 +205,44 @@ d3.json("json/licences_regions_test.json", function(root) {
         : d.name;
   }
     
+     var datasetTreemap = new Array();
+    
+    // Pour chaque région
+    for (var i = 0; i < root.children.length; i++) {
+        var data = new Object();
+        data.label = root.children[i].name;
+        data.value = root.children[i].value;
+
+        // Affectation au dataset
+        datasetTreemap[i] = data;
+        
+    }
+    
+    var sommeLicences = 0;
+    // calcul du nombre total de licenciés en France
+    for(var i = 0; i < datasetTreemap.length; i++){
+        sommeLicences += datasetTreemap[i].value;
+    }
+    
+    console.log("somme licences : "+sommeLicences);
+    
+    var pourcent = 0;  
+    var pdl;
+    
+    for(var i = 0; i < datasetTreemap.length; i++){
+        if(datasetTreemap[i].name == "PAYS-DE-LA-LOIRE"){
+            pdl = datasetTreemap[i];
+            break;
+        }                    
+    }
+    
+     d3.select("#titreDataviz1").text("EN FRANCE, ON RETROUVE LES PAYS DE LA LOIRE EN 3 POSITION AVEC "+ nbLicencesLA +" LICENCIÉS");
     // affiche le nombre de licenciés dans la région
     d3.selectAll(".parent").on("mouseover", function(d){
         d3.select("#nbLicenciesRegion").text(d.value);
         d3.select("#nomRegion").text(d.name);
+        pourcent = Math.round((d.value / sommeLicences *100)*100)/100;
+        d3.select("#pourcentLabelLicencies").text(pourcent + "%");
     });
     
     // affiche le nombre de licenciés dans le département
@@ -216,5 +250,7 @@ d3.json("json/licences_regions_test.json", function(root) {
         d3.select("#nbLicenciesRegion").text(d.value);
         d3.select("#nomRegion").text(d.name);
     });
+    
+   
     
 });
