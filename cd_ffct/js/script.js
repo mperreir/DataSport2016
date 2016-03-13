@@ -6,8 +6,9 @@ $(document).ready(function() {
         anchors: ['1', '2', '3', '4', '5', '6', '7', '8'],
         navigation: true,
         navigationPosition: 'right',
-        css3:true,
-        scrollBar:true
+        css3: true,
+        scrollBar: true,
+        verticalCentered: false
     });
     
     // Bouton home

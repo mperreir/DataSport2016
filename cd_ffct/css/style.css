@@ -69,36 +69,74 @@ footer {
     to { transform: rotate(360deg); }
 }
 
+
 /*  **************************************************  */
-/*                      Bandeau                         */
+/*                      Accueil                         */
 /*  **************************************************  */
-#bandeau {
-    padding: 8px;
+#accueil h1 {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "source sans pro";
+    
+    position: absolute;
+    padding: 0;
+    margin: 0;
 }
 
-#bandeau li {
-    list-style-type: none;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 12px;
+#chaine {
+    position: absolute;
+    margin: 38px 538px 359px 48px;
 }
 
-#bandeau img {
-    height: 46px;
+#lampe {
+    position: absolute;
+    margin: 312px 31px 38px 800px;
 }
 
-#bandeau #datasport {
-    margin: 20px 0;
-    height: 100px;
-    float: left;
+#pedale {
+    position: absolute;
+    margin: 243px 757px 55px 49px;
 }
 
-#bandeau ul {
-    text-align: center;
+#roue {
+    position: absolute;
+    margin: 180px 393px 43px 250px;
 }
 
-#bandeau .institutionnel {
-    height: 48px;
+#selle {
+    position: absolute;
+    margin: 154px 78px 230px 615px;
+}
+
+#sonette {
+    position: absolute;
+    margin: 337px 203px 49px 590px;
+}
+
+
+/*  **************************************************  */
+/*                      Edito                           */
+/*  **************************************************  */
+#edito {
+    text-transform: uppercase;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-family: "source sans pro";
+    
+    padding: 60px 80px 60px 80px;
+}
+
+#edito p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#edito a {
+    color: #F56D34;
 }
 
 /*  **************************************************  */
@@ -214,6 +252,72 @@ rect.parent,
 /*  **************************************************  */
 /*                      Dataviz2                        */
 /*  **************************************************  */
-#pieChart, #barChart {
+#dataviz2 h1 {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-family: "source sans pro";
+    text-transform: uppercase;
+}
+
+#pieChart {
+    height: 329px;
+    width: 329px;
+    margin: auto;
+}
+
+#pieChart text {
+    /* Impossible de sélectionner le texte dans le pieChart
+    empeche le texte de se surligner quand on clique deux fois par erreur dessus */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+
+.arc text {
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+
+
+
+
+/*  **************************************************  */
+/*                      Bandeau                         */
+/*  **************************************************  */
+#bandeau {
+    padding: 8px;
+}
+
+#bandeau li {
+    list-style-type: none;
     display: inline-block;
+    vertical-align: middle;
+    margin: 0 12px;
+}
+
+#bandeau img {
+    height: 46px;
+}
+
+#bandeau #datasport {
+    margin: 20px 0;
+    height: 100px;
+    float: left;
+}
+
+#bandeau ul {
+    text-align: center;
+}
+
+#bandeau .institutionnel {
+    height: 48px;
 }
