@@ -114,8 +114,9 @@
 </g>
 </svg>
         </div>
+        <div>Reze</div>
         <div id="container2" style="width:35%; float:left;">
-            <div id="infos" style="background: #FF0000; oppacity: 0; width: 50%; height: 30%;margin: 25%;">
+            <div id="infos" style="background: #FF0000; opacity: 0; width: 50%; height: 30%;margin: 25%;">
                 <a>
                     doen dsfwf s ewg erg sdg a
                 </a>
@@ -125,15 +126,6 @@
     
     <script>
         $("#container2").height($("#container1").height());
-        
-        var colors = 
-            [
-                {id: "r", color: "#ff3652"},
-                {id: "g", color: "#42ff97"},
-                {id: "b", color: "#004cff"},
-                {id: "y", color: "#ffff00"},
-                {id: "d", color: "#ff3e00"}
-            ];
         
         
         var svg = d3.select("#svg").attr("preserveAspectRatio","none");
@@ -149,24 +141,38 @@
         function mouseOverHandler(e){
             //var loc = cursorPoint(e);
             //console.log(loc);
-            //d3.select("#"+this.id).attr("stroke-width",50);
-            
+            $("#infos").css("opacity",0);
+            $("#infos").css("visibility","visible");
+            var fill = $(this).parent().attr("fill");
+            $("#infos").css("background", fill);
+            $("#infos").animate({opacity: 1},1000);
+            //afficher les donnees....
         };
         
         function mouseOutHandler(){
             
             //d3.select("#"+this.id).attr("transform","translate(0,0)scale(1)");
-            console.log(this);
+            //console.log(this);
+            $("#infos").css("opacity",0);
+            $("#infos").stop();
+            $("#infos").css("visibility","hidden");
         };
-        
+        var currentCircle;
        function clickHandler(){
            //console.log(this.id);
+           //var currentCircle;
            if(this.id){
                var fill = $(this).parent().attr("fill");
+               if(typeof currentCircle != "undefined"){
+                   console.log(currentCircle);
+                   $(currentCircle).attr("r",7.8);
+               }
+                  
                $("#infos").css("visibility","visible");
                $("#infos").css("background", fill);
                d3.selectAll("circle").attr("fill","#c0c0c0");
-               d3.select("#" + this.id).attr("fill", fill).attr("r",9);
+               d3.select("#" + this.id).attr("fill", fill).attr("r",10);
+               currentCircle = this;
            }
            else{
                $("#infos").css("visibility","hidden");
