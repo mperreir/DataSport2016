@@ -5,17 +5,19 @@ var divDataviz1 = d3.select("#dataviz1");
 divDataviz1.style("height", window.innerHeight - 120 +"px");
 //Ajout du titre au dessus de la dataviz1
 var titre = divDataviz1.append("div").attr("id", "titreDataviz1");
-titre.append("p").text("EN FRANCE, ON RETROUVE LES PAYS DE LA LOIRE EN 3 POSITION AVEC 10 303 LICENCIÉS");
+titre.append("p");
 
+// création de la div qui contiendra les infos à droite de la dataviz
 var affichageHover = divDataviz1.append("div").attr("id", "infos_licencies");
-affichageHover.append("p").attr("class", "nombreLicencies").attr("id", "nbLicenciesRegion").text("10 303");
+affichageHover.append("p").attr("class", "nombreLicencies").attr("id", "nbLicenciesRegion");
 affichageHover.append("p").attr("class", "texteLicencies").text("LICENCIÉS");
 affichageHover.append("hr").attr("id", "sep");
-affichageHover.append("p").attr("class", "nombreLicencies").text("42.3%");
-affichageHover.append("p").attr("class", "texteLicencies").text("DES LICENCIÉS EN FRANCE");
-affichageHover.append("p").attr("id", "nomRegion").text("PAYS-DE-LA-LOIRE");
+affichageHover.append("p").attr("class", "nombreLicencies").attr("id", "pourcentLabelLicencies");
+affichageHover.append("p").attr("class", "texteLicencies").attr("id", "pourcentLabel").text("DES LICENCIÉS EN FRANCE");
+affichageHover.append("p").attr("id", "nomRegion");
 affichageHover.append("p").attr("id", "infosCalcul").text("Surfaces calculées en proportion au nombre de licenciés en 2015 par rapport à la population totale de chacune des régions françaises");
-
+//ajout des margin du nom de la région survolée
+d3.select("#nomRegion").style("margin-top", "30px").style("margin-bottom", "50px");
 
 var margin = {top: 20, right: 0, bottom: 0, left: 0},
     width = 635,
@@ -111,8 +113,7 @@ d3.json("json/licences_regions_test.json", function(root) {
         .datum(d.parent)
         .on("click", transition)
       .select("text")
-        .text(name(d))
-      .select("#titreDataviz1");
+        .text(name(d));
 
     var g1 = svg.insert("g", ".grandparent")
         .datum(d)
@@ -136,9 +137,9 @@ d3.json("json/licences_regions_test.json", function(root) {
     g.append("rect")
         .attr("class", "parent")
         .call(rect)
-      .append("title")
-        .text(function(d) { return formatNumber(d.value); });
+      .append("title");
 
+      // renseigne le nom des régions dans le treemap
     g.append("text")
         .attr("dy", ".75em")
         .text(function(d) { if(d.name.length > 10)
@@ -149,11 +150,10 @@ d3.json("json/licences_regions_test.json", function(root) {
         .style("fill","#FFFFDF");
       
     function transition(d) {
-      if (transitioning || !d) return;
+        if (transitioning || !d) return;
+        
       transitioning = true;
-        console.log("click");
-        // changement du titre
-        d3.select("#titreDataviz1").text("ET AU SEIN DES PAYS DE LA LOIRE, LA LOIRE-ATLANTIQUE SE TROUVE 1RE AVEC 3 346 LICENCIÉS");
+        
       var g2 = display(d),
           t1 = g1.transition().duration(750),
           t2 = g2.transition().duration(750);
@@ -163,7 +163,7 @@ d3.json("json/licences_regions_test.json", function(root) {
       y.domain([d.y, d.y + d.dy]);
 
       // Enable anti-aliasing during the transition.
-     // svg.style("shape-rendering", null);
+        svg.style("shape-rendering", null);
 
       // Draw child nodes on top of parent nodes.
       svg.selectAll(".depth").sort(function(a, b) { return a.depth - b.depth; });
@@ -176,11 +176,20 @@ d3.json("json/licences_regions_test.json", function(root) {
       t2.selectAll("text").call(text).style("fill-opacity", 1);
       t1.selectAll("rect").call(rect);
       t2.selectAll("rect").call(rect);
-
+        
+        function majDataDept(){
+            
+            // changement du titre
+            d3.select("#titreDataviz1").html("ET AU SEIN DES PAYS DE LA LOIRE, LA LOIRE-ATLANTIQUE SE TROUVE 1<sup>re</sup> AVEC 3 346 LICENCIÉS");
+            d3.select("#pourcentLabel").text("DES LICENCIÉS DE LA RÉGION");
+        }
+        
+        
       // Remove the old node when the transition is finished.
       t1.remove().each("end", function() {
         svg.style("shape-rendering", "crispEdges");
         transitioning = false;
+          majDataDept();
       });
     }
 
@@ -205,16 +214,61 @@ d3.json("json/licences_regions_test.json", function(root) {
         : d.name;
   }
     
+     var datasetTreemap = new Array();
+    
+    // Pour chaque région
+    for (var i = 0; i < root.children.length; i++) {
+        var data = new Object();
+        data.label = root.children[i].name;
+        data.value = root.children[i].value;
+
+        // Affectation au dataset
+        datasetTreemap[i] = data;
+        
+    }
+    
+    var sommeLicences = 0;
+    // calcul du nombre total de licenciés en France
+    for(var i = 0; i < datasetTreemap.length; i++){
+        sommeLicences += datasetTreemap[i].value;
+    }
+    
+    var pourcent = 0;  
+    var pdl;
+    
+    for(var i = 0; i < datasetTreemap.length; i++){
+        if(datasetTreemap[i].label == "PAYS-DE-LA-LOIRE"){
+            pdl = datasetTreemap[i];            
+            break;
+        }                    
+    }
+    
+    //calcul du pourcentage des pays de la loire pour afficher au début
+    pourcent = Math.round((pdl.value / sommeLicences *100)*100)/100;
+    
+    //màj des données à afficher initialement
+    function majData(){
+        d3.select("#titreDataviz1").html("EN FRANCE, ON RETROUVE LES " + pdl.label + " EN 3<sup>e</sup> POSITION AVEC " + pdl.value + " LICENCIÉS");
+        d3.select("#pourcentLabelLicencies").text(pourcent+"%");
+        d3.select("#nbLicenciesRegion").text(pdl.value);
+        d3.select("#nomRegion").text(pdl.label);
+    }
+    
+    majData();
     // affiche le nombre de licenciés dans la région
-    d3.selectAll(".parent").on("mouseover", function(d){
+    d3.selectAll("rect.parent").on("mouseover", function(d){
         d3.select("#nbLicenciesRegion").text(d.value);
         d3.select("#nomRegion").text(d.name);
+        pourcent = Math.round((d.value / sommeLicences *100)*100)/100;
+        d3.select("#pourcentLabelLicencies").text(pourcent + "%");
     });
     
     // affiche le nombre de licenciés dans le département
-    d3.selectAll("rect.child").on("mouseover", function(d){
+   /* d3.selectAll("rect.child").on("mouseover", function(d){
+        console.log("hover");
         d3.select("#nbLicenciesRegion").text(d.value);
         d3.select("#nomRegion").text(d.name);
-    });
+    });*/
+    
     
 });
