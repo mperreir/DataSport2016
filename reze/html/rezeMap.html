@@ -1,58 +1,222 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-
-path {
-  fill: none;
-  stroke: #000;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
-    
+    infos{
+        
+    }
 .overlay {
   fill: none;
   pointer-events: all;
 }
 </style>
-<body>
+<body style="">
 <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.js"></script>
-    <div id="container" style="height: 100%;min-height: 400px;"></div>
-<script>
-
-var width = 960,
-    height = 600;
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <div>
+        <div id="container1" style="width:65%; float:left;">
+            <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1190.6 841.9" enable-background="new 0 0 1190.6 841.9" xml:space="preserve">
+<g id="stades">
+	<polygon fill="#231F20" stroke="#414141" stroke-width="3" stroke-miterlimit="10" points="534.2,286.8 669.6,198.5 747.3,196.4 
+		732.9,241.6 760,255.4 740.5,278.3 724.4,317.8 659.4,379.3 620.8,400.1 590.7,400.1 540.6,347.9 536.3,331.8 542.7,307.2 	"/>
+	<polygon fill="#231F20" stroke="#414141" stroke-width="3" stroke-miterlimit="10" points="743.9,162.4 760,159 755.8,146.3 
+		853,119.6 859.4,115.7 893.7,150.5 927.7,184.9 943.8,214.6 950.2,250.3 961.2,271.5 925.2,294.4 907.8,294.4 933.6,343.7 
+		919.6,341.5 903.5,349.2 895.4,346.6 868.7,367.9 852.6,367.9 810.1,333.1 800.4,313.5 785.5,289.8 775.3,288.9 763.4,277.5 
+		760,255.4 732.9,241.6 747.3,196.4 	"/>
+	<polygon fill="#231F20" stroke="#414141" stroke-width="3" stroke-miterlimit="10" points="854.7,463.4 833.9,471.4 825,454.5 
+		795.7,485 769.8,506.2 786.8,547 760,540.6 743.9,544.9 718.9,536 706.1,524.9 690,521.9 686.6,526.6 673,527 673,513.9 650.5,491 
+		653.9,471.4 624.6,449.8 609.8,426 590.7,400.1 620.8,400.1 659.4,379.3 724.4,317.8 740.5,278.3 760,255.4 763.4,277.5 
+		775.3,288.9 785.5,289.8 800.4,313.5 810.1,333.1 852.6,367.9 	"/>
+	<polygon fill="#231F20" stroke="#414141" stroke-width="3" stroke-miterlimit="10" points="915.4,439.6 948.9,463.8 951.1,469.3 
+		987.1,469.3 1004.1,461.7 1017.7,433.2 1056.7,401.2 1064.4,385.7 1087.3,401.2 1087.3,395.9 1109.4,382.7 1113.2,348.8 
+		1052.9,333.1 1014.3,319.9 986.3,304.6 961.2,271.5 925.2,294.4 907.8,294.4 933.6,343.7 919.6,341.5 903.5,349.2 895.4,346.6 
+		868.7,367.9 852.6,367.9 854.7,463.4 854.7,474.8 	"/>
+	<polygon fill="#231F20" stroke="#414141" stroke-width="3" stroke-miterlimit="10" points="670.9,551.7 684.1,597.5 684.1,613.6 
+		669.2,613.6 698.9,678.6 687,708.7 746.9,744.8 746.9,755 752.8,755 754.9,764.3 752,764.3 752.8,772 762.2,787.7 775.7,783.8 
+		783.8,797 927.3,772.4 946.8,749.5 943.4,742.7 962.9,722.3 960.8,720.6 976.5,703.6 980.8,707.9 985.4,703.2 982.9,699 
+		1003.7,674.3 1003.7,666.3 1008.4,651.8 1031.7,640.8 1038.5,648 1058.4,628.1 1064,629.3 1066.5,617.5 1066.5,614.1 1069.9,606 
+		1075.4,607.7 1106,563.1 1101.3,519.4 1087.3,499.9 1086,493.1 1066.1,460.4 1087.3,401.2 1064.4,385.7 1056.7,401.2 1017.7,433.2 
+		1004.1,461.7 987.1,469.3 951.1,469.3 948.9,463.8 915.4,439.6 854.7,474.8 854.7,463.4 833.9,471.4 825,454.5 795.7,485 
+		769.8,506.2 786.8,547 760,540.6 743.9,544.9 718.9,536 706.1,524.9 690,521.9 686.6,526.6 673,527 	"/>
+	<polygon fill="#231F20" stroke="#414141" stroke-width="3" stroke-miterlimit="10" points="534.2,286.8 532.5,271.5 541.4,240.1 
+		541.4,214.2 528.7,196.4 521.1,183.6 475.6,170.1 564.4,133.1 611.9,128.9 716.3,147.1 755.8,146.3 760,159 743.9,162.4 
+		747.3,196.4 669.6,198.5 	"/>
+	<polygon fill="#231F20" stroke="#414141" stroke-width="3" stroke-miterlimit="10" points="319.9,136.1 330.5,136.1 433.6,105.1 
+		459.1,87.3 481.2,87.3 503.2,95.8 501.5,78.8 575.3,66.5 584.3,70.3 590.7,68.6 680.2,74.6 712.9,74.6 722.7,78 736.3,76.7 
+		747.7,80.1 753.3,78.8 777.9,79.7 816.9,83.9 820.7,104.7 834,124.8 755.8,146.3 716.3,147.1 611.9,128.9 564.4,133.1 518.8,152.1 
+		510,142.1 499.8,148.4 488.8,128.9 475.6,146.7 453.2,168.4 408.6,185.3 309.7,185.3 322,139.5 	"/>
+</g>
+<g id="espaces_sportifs_de_plein_air_en_accès_libre" fill="#42FF97">
+	<circle id="espace1" fill="#42FF97" cx="468.8" cy="100.2" r="7.8"/>
+	<circle id="espace2" fill="#42FF97" cx="420.4" cy="123.3" r="7.8"/>
+	<circle id="espace3" fill="#42FF97" cx="582.7" cy="174.5" r="7.8"/>
+	<circle id="espace4" fill="#42FF97" cx="652.8" cy="155.2" r="7.8"/>
+	<circle id="espace5" fill="#42FF97" cx="599.8" cy="231" r="7.8"/>
+	<circle id="espace6" fill="#42FF97" cx="582.7" cy="287.9" r="7.8"/>
+	<circle id="espace7" fill="#42FF97" cx="574.8" cy="322" r="7.8"/>
+	<circle id="espace8" fill="#42FF97" cx="659.7" cy="265.1" r="7.8"/>
+	<circle id="espace9" fill="#42FF97" cx="689.9" cy="250.6" r="7.8"/>
+	<circle id="espace10" fill="#42FF97" cx="709" cy="249.9" r="7.8"/>
+	<circle id="espace11" fill="#42FF97" cx="709" cy="268.3" r="7.8"/>
+	<circle id="espace12" fill="#42FF97" cx="694.8" cy="313.7" r="7.8"/>
+	<circle id="espace13" fill="#42FF97" cx="748.5" cy="298.3" r="7.8"/>
+	<circle id="espace14" fill="#42FF97" cx="793.2" cy="277.6" r="7.8"/>
+	<circle id="espace15" fill="#42FF97" cx="751.7" cy="184.8" r="7.8"/>
+	<circle id="espace16" fill="#42FF97" cx="854.7" cy="165" r="7.8"/>
+	<circle id="espace17" fill="#42FF97" cx="872.5" cy="131.1" r="7.8"/>
+	<circle id="espace18" fill="#42FF97" cx="932.6" cy="227.8" r="7.8"/>
+	<circle id="espace19" fill="#42FF97" cx="864.9" cy="253.1" r="7.8"/>
+	<circle id="espace20" fill="#42FF97" cx="787.8" cy="365.2" r="7.8"/>
+	<circle id="espace21" fill="#42FF97" cx="703.4" cy="459.9" r="7.8"/>
+	<circle id="espace22" fill="#42FF97" cx="848.9" cy="432" r="7.8"/>
+	<circle id="espace23" fill="#42FF97" cx="876.9" cy="451.3" r="7.8"/>
+	<circle id="espace24" fill="#42FF97" cx="923" cy="416" r="7.8"/>
+	<circle id="espace25" fill="#42FF97" cx="967.4" cy="394.2" r="7.8"/>
+	<circle id="espace26" fill="#42FF97" cx="1016" cy="318.8" r="7.8"/>
+	<circle id="espace27" fill="#42FF97" cx="1043.3" cy="338.5" r="7.8"/>
+	<circle id="espace28" fill="#42FF97" cx="868.5" cy="572.6" r="7.8"/>
+	<circle id="espace29" fill="#42FF97" cx="980" cy="621.4" r="7.8"/>
+	<circle id="espace30" fill="#42FF97" cx="999.8" cy="611.6" r="7.8"/>
+	<circle id="espace31" fill="#42FF97" cx="812.3" cy="524.2" r="7.8"/>
+	<circle id="espace32" fill="#42FF97" cx="794.4" cy="541.4" r="7.8"/>
+	<circle id="espace33" fill="#42FF97" cx="706.8" cy="571.8" r="7.8"/>
+</g>
+<g id="Gymanes_ou_complexes_couverts_multisalles" fill="#FF3652">
+	<circle id="gymane1" fill="#FF3652" cx="575.5" cy="160.3" r="7.8"/>
+	<circle id="gymane2" fill="#FF3652" cx="585.6" cy="271.5" r="7.8"/>
+	<circle id="gymane3" fill="#FF3652" cx="557.4" cy="335" r="7.8"/>
+	<circle id="gymane4" fill="#FF3652" cx="694.8" cy="326.7" r="7.8"/>
+	<circle id="gymane5" fill="#FF3652" cx="759.3" cy="174.5" r="7.8"/>
+	<circle id="gymane6" fill="#FF3652" cx="875.2" cy="249.9" r="7.8"/>
+	<circle id="gymane7" fill="#FF3652" cx="810.9" cy="276.1" r="7.8"/>
+	<circle id="gymane8" fill="#FF3652" cx="719.3" cy="253.3" r="7.8"/>
+	<circle id="gymane9" fill="#FF3652" cx="694.8" cy="326.7" r="7.8"/>
+	<circle id="gymane10" fill="#FF3652" cx="701.2" cy="365.2" r="7.8"/>
+	<circle id="gymane11" fill="#FF3652" cx="804.5" cy="366.2" r="7.8"/>
+	<circle id="gymane12" fill="#FF3652" cx="841.1" cy="424.6" r="7.8"/>
+	<circle id="gymane13" fill="#FF3652" cx="836.4" cy="566.2" r="7.8"/>
+	<circle id="gymane14" fill="#FF3652" cx="921.1" cy="402" r="7.8"/>
+</g>
+<g id="Équipements_sportifs_spécialisés" fill="#004CFF">
+	<circle id="equip1" fill="#004CFF" cx="434.7" cy="114.9" r="7.8"/>
+	<circle id="equip2" fill="#004CFF" cx="607.7" cy="305.9" r="7.8"/>
+	<circle id="equip3" fill="#004CFF" cx="793.2" cy="196.9" r="7.8"/>
+	<circle id="equip4" fill="#004CFF" cx="980" cy="580.4" r="7.8"/>
+	<circle id="equip5" fill="#004CFF" cx="1012.5" cy="594.5" r="7.8"/>
+</g>
+<g id="Stades" fill="#FF3E00">
+	<circle id="stade1" fill="#FF3E00" cx="958" cy="586" r="7.8"/>
+	<circle id="stade2" fill="#FF3E00" cx="569.5" cy="285.5" r="7.8"/>
+</g>
+<g id="Piscine_et_Patinoire" fill="#FFFF00">
+	<circle id="piscine1" fill="#FFFF00" cx="551.7" cy="288.9" r="7.8"/>
+	<circle id="piscine2" fill="#FFFF00" cx="595.3" cy="282.8" r="7.8"/>
+</g>
+</svg>
+        </div>
+        <div id="container2" style="width:35%; float:left;">
+            <div id="infos" style="background: #FF0000; oppacity: 0; width: 50%; height: 30%;margin: 25%;">
+                <a>
+                    doen dsfwf s ewg erg sdg a
+                </a>
+            </div>
+        </div>
+    </div>
     
-var projection = d3.geo.conicConformal() // Lambert-93
-          .center([-1.454071, 47.279229]) // On centre la carte sur la France
-          .scale(2000)
-          .translate([width / 2, height / 2]);
+    <script>
+        $("#container2").height($("#container1").height());
+        
+        var colors = 
+            [
+                {id: "r", color: "#ff3652"},
+                {id: "g", color: "#42ff97"},
+                {id: "b", color: "#004cff"},
+                {id: "y", color: "#ffff00"},
+                {id: "d", color: "#ff3e00"}
+            ];
+        
+        
+        var svg = d3.select("#svg").attr("preserveAspectRatio","none");
+        svg1 = svg.selectAll("polygon").call(d3.behavior.zoom().scaleExtent([1, 2]).on("zoom", zoom)).on("click",clickHandler);
+        var i = 1;
+        svg2 = svg.selectAll("circle").call(d3.behavior.zoom().scaleExtent([1, 2]).on("zoom", zoom)).on("mouseover",mouseOverHandler).on("mouseout",mouseOutHandler).on("click",clickHandler);
+        function zoom() {
+            console.log("translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+            svg1.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+            svg2.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+        }; 
+        
+        function mouseOverHandler(e){
+            //var loc = cursorPoint(e);
+            //console.log(loc);
+            //d3.select("#"+this.id).attr("stroke-width",50);
+            
+        };
+        
+        function mouseOutHandler(){
+            
+            //d3.select("#"+this.id).attr("transform","translate(0,0)scale(1)");
+            console.log(this);
+        };
+        
+       function clickHandler(){
+           //console.log(this.id);
+           if(this.id){
+               var fill = $(this).parent().attr("fill");
+               $("#infos").css("visibility","visible");
+               $("#infos").css("background", fill);
+               d3.selectAll("circle").attr("fill","#c0c0c0");
+               d3.select("#" + this.id).attr("fill", fill).attr("r",9);
+           }
+           else{
+               $("#infos").css("visibility","hidden");
+               d3.selectAll("circle").attr("fill",$(this).parent().attr("fill")).attr("r",7.8);
+           }
+       };
 
-var path = d3.geo.path()
-    .projection(projection);
+    </script>
     
     
+<!--<script>
+var path = d3.geo.path();
+    var data = [{
+        name: "aa",
+        longitude: -1.5,
+        latitude: 47.1
+    }]
 
+		  var projection = d3.geo.conicConformal() // Lambert-93
+		          .center([-1.454071, 47.279229]) // On centre la carte sur la France
+		          .scale(20000)
+		          .translate([960 / 2, 600 / 2]);
+
+		  path.projection(projection);
 var svg = d3.select("#container").append("svg")
-    //.attr("width", width)
-    //.attr("height", height)
     .attr("viewBox","0 0 960 600").attr("preserveAspectRatio","none").attr("id","svg");
 
-d3.json('regions.geojson', function(error, geojson) {
+d3.json('Rezemap.json', function(error, geojson) {
   if (error) return console.error(error);
 
   svg1 = svg.append("g").call(d3.behavior.zoom().scaleExtent([1, 5]).on("zoom", zoom)).append("g");
-  svg1.append("rect").attr("width",width).attr("height",height).attr("class", "overlay");
+  svg1.append("rect").attr("width",960).attr("height",600).attr("class", "overlay");
             svg1.selectAll("path")
             .data(geojson.features)
             .enter().append("path")
             .attr("d", path);
-    //svg.attr("style", "width: 50%; height: 50%;");
-    
+    svg.attr("style", "width: 50%; height: 50%;");
+    svg1.selectAll("circle")
+    .data(data).enter().append("circle").attr("transform", function(d) {
+            return "translate("+projection([d.longitude, d.latitude])+")";
+        }).style("fill", "red")
+        .style("fill-opacity", 1)
+        .style("stroke", "red")
+        .style("stroke-width", "0.5px")
+        .style("stroke-opacity", 1).attr("r",15);
 
 });
 function zoom() {
     console.log("ss");
-  svg1.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")")};
-</script>
+  svg1.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")")
+};
+</script>-->
 
