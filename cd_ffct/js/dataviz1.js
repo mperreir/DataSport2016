@@ -19,9 +19,10 @@ affichageHover.append("p").attr("id", "infosCalcul").text("Surfaces calculées e
 //ajout des margin du nom de la région survolée
 d3.select("#nomRegion").style("margin-top", "30px").style("margin-bottom", "50px");
 
-var margin = {top: 20, right: 0, bottom: 0, left: 0},
-    width = 635,
-    height = window.innerHeight - 182,
+
+var margin = {top: 20, right: 20, bottom: 20, left: 20},
+    width = width = 500 - margin.left - margin.right,
+    height = window.innerHeight - 182 - margin.top - margin.bottom,
     formatNumber = d3.format(",d"),
     transitioning;
 

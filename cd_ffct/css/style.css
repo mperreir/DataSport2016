@@ -12,13 +12,19 @@ body {
 
 .section {
     background-color: #FFFFDF;
+    padding: 60px 60px 60px 60px;
 }
 
-/*
-footer {
-    background-color: white;
+.section h1 {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-family: "source sans pro";
+    text-transform: uppercase;
+    
+    margin: 0;
 }
-*/
 
 /*  **************************************************  */
 /*                      Bouton home                     */
@@ -254,21 +260,6 @@ rect.parent,
 /*  **************************************************  */
 /*                      Dataviz2                        */
 /*  **************************************************  */
-#dataviz2 h1 {
-    font-size: 26px;
-    font-style: italic;
-    font-weight: bold;
-    text-align: left;
-    font-family: "source sans pro";
-    text-transform: uppercase;
-}
-
-#pieChart {
-    height: 329px;
-    width: 329px;
-    margin: auto;
-}
-
 #pieChart text {
     /* Impossible de sélectionner le texte dans le pieChart
     empeche le texte de se surligner quand on clique deux fois par erreur dessus */
@@ -276,8 +267,6 @@ rect.parent,
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-
-
 
 .arc text {
   font: 10px sans-serif;
@@ -287,9 +276,6 @@ rect.parent,
 .arc path {
   stroke: #fff;
 }
-
-
-
 
 
 /*  **************************************************  */

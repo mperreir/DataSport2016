@@ -2,7 +2,7 @@
     "label": "Cyclisme",
     "children": [
         {
-            "label": "Route",
+            "label": "ROUTE",
             "children": [
                 {"label": "ELITE PROFESSIONNEL", "value":5},
                 {"label": "1ERE CATEGORIE", "value":30},
