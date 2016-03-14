@@ -59,7 +59,14 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
        $scope.zoomBarData = data; 
        
     });
-    
+
+    function updtOpt () {
+        if ($scope.options.chart.type == 'multiChart'){
+            $scope.options.chart.type = 'multiBarHorizontalChart';
+        } else {
+            $scope.options.chart.type = 'multiChart';
+        }
+    }
     $scope.options = {
             chart: {
               type: 'multiChart',
@@ -204,7 +211,8 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                     bottom: 5,
                     left: 0
                 }
-            }
+            },
+        tooltipFillColor: "rgba(100,100,0,0.8)"
         }
     };
     

@@ -24,13 +24,13 @@ appHyblab.config (['ChartJsProvider', function (ChartJsProvider) {
     // Configure all charts
     ChartJsProvider.setOptions ({
         colours: ['#FF5252', '#FF8A80', '#5D6369', '#5DA6E6'],
-        responsive: true 
+        responsive: true,
+        tooltipFillColor: "rgba(100,100,0,0.8)"
     });
     // Configure all line charts
     
     ChartJsProvider.setOptions('Line', {
-      datasetFill: true,
-      showtoolTips: false
+        datasetFill: true
     });
     
 }]);

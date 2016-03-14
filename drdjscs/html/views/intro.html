@@ -2,7 +2,7 @@
 <div>
     <p>[[titre]]</p>
 </div>
-<a href="#pageone">PageOne</a>
+<a href="#pageone" ng-click="updtOpt()">PageOne</a>
 <div class="deuxCourbes">
     <div>   
         <nvd3 class="with-3d-shadow with-transitions" options='options' data='data'></nvd3>    
@@ -33,3 +33,11 @@
     <nvd3 class="with-3d-shadow with-transitions" options='optionBarChart' data='barData'></nvd3>    
 </div>
 
+<flippy
+  class="fancy"
+  flip="['click', 'mouseenter']"
+  flip-back="['click', 'mouseleave']"
+  duration="800"
+  timing-function="ease-in-out">
+    <h1>HELLO</h1>
+</flippy>
