@@ -14,6 +14,13 @@
         <link rel="stylesheet" href="js/modules/chartjs/angular-chart.css">
         <link rel="stylesheet" href="js/modules/nvd3/build/nv.d3.css">
         <link rel="stylesheet" href="css/style.css">
+        
+        <!-- PAUWEL-->
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.15.0/mapbox-gl.js'></script>
+        <script src='./js/loire-atlantique.json'></script>
+        <script src='./js/associations.json'></script>
+        <!-- FIN PAUWEL -->
+        
     </head>
     <body>
         <div  ng-app="hyblabApp" ng-controller="MainCtrl">
@@ -97,8 +104,8 @@
     <!-- PAUWEL -->   
     <style>
         #map {
-        width: 400px;
-        height: 400px;
+        width: 700px;
+        height: 700px;
         background-color: #CCC;
 
       }
@@ -138,9 +145,72 @@
         <script src="js/modules/scroll-animate-directive-master/src/scroll-animate-directive.js"></script>
         <script src="js/modules/nvd3/build/nv.d3.js"></script>
         <script src="js/modules/angular-nvd3/dist/angular-nvd3.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
         <script src="js/script.js"></script>
         <script src="js/modules/angular-scrollery-master/src/angular-scrollery.js"></script>
         <script src="js/modules/angular-scrollery-master/src/angular-scrollery-config.js"></script>
+        
+        <!-- SCRIPT CARTE -->
+		
+            <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtZWJpcmJ5IiwiYSI6IkwwUXRVY28ifQ.ksZug_5n6Zyr-N0EqjfL9Q';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/gamebirby/cilnjnjif0035c4kncaeq95ex',
+        center: [-1.54,47.248],
+        zoom: 8
+    });
+
+    map.on('style.load', function () {
+
+        /////////////// CHARGEMENT DES POINTS /////////////////////
+
+        map.addSource("markers", association);
+
+        map.addLayer({
+            "id": "markers",
+            "type": "symbol",
+            "source": "markers",
+            "layout": {
+                "icon-image": "{marker-symbol}-15",
+                "text-field": "{title}",
+                "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                "text-offset": [0, 0.6],
+                "text-anchor": "top"
+            }
+        });
+-->
+        ///////////// FIN CHARGEMENT DES POINTS ///////////////////
+
+
+        ///////////// CHARGEMENT DES CONTOURS DE LA LOIRE ATLANTIQUE //////////////////////
+        var data_loire_atlantique = {
+            "type":"geojson"
+        };
+
+        data_loire_atlantique.data = loire_atlantique;
+
+        map.addSource("loire",data_loire_atlantique);
+
+        map.addLayer({
+            'id': 'contours',
+            'type': 'line',
+            'source': 'loire',
+            'source-layer': 'contour',
+            'layout': {
+                'line-join': 'round',
+                'line-cap': 'round'
+            },
+            'paint': {
+                'line-color': '#2e2818',
+                'line-width': 2
+            }
+        });
+        ///////////// FIN CHARGEMENT DES CONTOURS DE LA LOIRE ATLANTIQUE ///////////////////    
+
+
+
+    });
+    </script>
+        
     </body>
 </html>
