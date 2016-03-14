@@ -11,3 +11,6 @@
     ])
 })();
 
+jQuery(document).ready(function($) {
+    
+});

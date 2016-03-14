@@ -117,7 +117,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         };
     
     var listCreation = [23, 11, 8, 5, 7, 3, 10, 7, 7, 3, 11, 9, 14, 10, 10, 9, 14, 19, 28];
-    $scope.emploisCreer = "Informations: "
+    $scope.emploisCreer = "180"
     function emplois(start, end) {
         $scope.emploisCreer = 0;
         for (var i = start; i < end; i++) {
@@ -180,18 +180,18 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.data = $scope.fix;
         $scope.graphInformation = $scope.textList[2].text;
         $scope.barData = $scope.zoomBarFixData;
-        $scope.titre = "1996 à maintenant...";
-        $scope.emploisCreer = "Information: ";
+        $scope.titre = "1997 à maintenant...";
+        emplois(0, 18);
     };
   
     /*DYNAMIC TEXT*/
     $scope.textList = [
-        {id: 1, text: "This is a test!"},
-        {id: 2, text: "Hope you like it :)"},
-        {id: 3, text: "thank you for trying me ^^"},
-        {id: 4, text: "'<h1>'Hello'</h1>'"}
+        {id: 1, text: ""},
+        {id: 2, text: ""},
+        {id: 3, text: ""},
+        {id: 4, text: ""}
     ];
-    //$scope.graphInformation = "Some random Text";
+    $scope.graphInformation = "Some random Text";
         
     $scope.pieOptions = {
         chart: {
@@ -262,26 +262,28 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.optionBarChart = {
         chart: {
             type: 'multiBarChart',
-            height: 450,
+            height: 150,
+            width: 400,
             margin : {
                 top: 20,
                 right: 20,
                 bottom: 45,
                 left: 45
             },
+     
             clipEdge: false,
-            duration: 4000,
+            duration: 40,
             stacked: true,
             color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
             xAxis: {
-                axisLabel: 'BarChart',
+                axisLabel: '',
                 showMaxMin: false,
                 tickFormat: function(d){
                     return d3.format('f')(d);
                 }
             },
             yAxis: {
-                axisLabel: 'Y Axis',
+                axisLabel: '',
                 axisLabelDistance: -20,
                 tickFormat: function(d){
                     return d3.format('.1f')(d);
