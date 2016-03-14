@@ -148,6 +148,12 @@ body {
 /*  **************************************************  */
 /*                      Dataviz1                        */
 /*  **************************************************  */
+text {
+    font-family: "source sans pro";
+    font-size: 12px;
+    fill: #fff;
+}
+
 foreignObject {
     font-family: "source sans pro";
     font-size: 12px;
@@ -165,11 +171,13 @@ rect.parent,
 }
 
 .grandparent rect {
-    
+    width : 40px;
+    fill: #9BC8D9;
+
 }
 
 .grandparent:hover rect {
-    fill: #ee9700;
+    
 }
 
 .children rect.parent,
@@ -189,13 +197,11 @@ rect.parent,
 
 #dataviz1 {
     width: 840px;
-    margin-left: 60px;
-    margin-right: -60px;
+
 }
 
 #titreDataviz1 {
     width: 600px;
-    
     font-size: 26px;
     font-style: italic;
     font-weight: bold;
@@ -216,6 +222,7 @@ rect.parent,
     color: #C56534;
     font-family: "source sans pro";
     text-align: center;
+    margin-top: 20px;
 }
 
 .nombreLicencies {

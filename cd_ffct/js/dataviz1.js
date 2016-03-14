@@ -17,11 +17,11 @@ affichageHover.append("p").attr("class", "texteLicencies").attr("id", "pourcentL
 affichageHover.append("p").attr("id", "nomRegion");
 affichageHover.append("p").attr("id", "infosCalcul").text("Surfaces calculées en proportion au nombre de licenciés en 2015 par rapport à la population totale de chacune des régions françaises");
 //ajout des margin du nom de la région survolée
-d3.select("#nomRegion").style("margin-top", "30px").style("margin-bottom", "50px");
+d3.select("#nomRegion").style("margin-top", "20px").style("margin-bottom", "20px");
 
 var margin = {top: 20, right: 0, bottom: 0, left: 0},
     width = 635,
-    height = 357,
+    height = 400,
     formatNumber = d3.format(",d"),
     transitioning;
 
@@ -46,6 +46,8 @@ var svg = d3.select("#dataviz1").append("svg")
     .attr("transform", "translate( 0," + margin.top + ")")
     .style("shape-rendering", "crispEdges");
 
+d3.select("svg").attr("margin-top", "20px");
+
 var grandparent = svg.append("g")
     .attr("class", "grandparent");
     
@@ -59,7 +61,8 @@ grandparent.append("rect")
 grandparent.append("text")
     .attr("x", 6)
     .attr("y", 6 - margin.top)
-    .attr("dy", ".75em");
+    .attr("dy", ".75em")
+    .text("<");
 
 d3.json("json/licences_regions_test.json", function(root) {
   initialize(root);
@@ -139,9 +142,7 @@ d3.json("json/licences_regions_test.json", function(root) {
         transition(d);
         majData(); // on met à jour les titres initiaux
         overZone(root); // détecter le mouseover au après clic sur retour
-    })
-      .select("foreignObject")
-        .text(name(d));
+    });
       
        
 
