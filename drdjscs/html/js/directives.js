@@ -1,7 +1,7 @@
-var app = angular.module('hyblabApp');
+var appHyblab = angular.module('hyblabApp');
 
 
-app.directive('svgMap', ['$compile', function ($compile) {
+appHyblab.directive('svgMap', ['$compile', function ($compile) {
     return {
         restrict: 'A',
         templateUrl: 'map/france.svg',
@@ -11,7 +11,7 @@ app.directive('svgMap', ['$compile', function ($compile) {
     }
 }]);
 
-app.directive('region', ['$compile', function ($compile) {
+appHyblab.directive('region', ['$compile', function ($compile) {
     return {
         restrict: 'A',
         scope: {

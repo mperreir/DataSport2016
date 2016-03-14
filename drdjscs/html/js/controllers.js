@@ -1,15 +1,15 @@
-var app = angular.module('hyblabApp');
+var appHyblab = angular.module('hyblabApp');
 
 /*Whole page Controller*/
 
-app.controller('MainCtrl', function ($scope) {
+appHyblab.controller('IntroCtrl', function ($scope) {
       
    
 });
 
 /*Intro controller*/
 
-app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
+appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
     $http.get('hyblabData/data.json').success (function(data) {
         $scope.data = data;
         $scope.fix = data;
@@ -22,87 +22,47 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
         $scope.pieData = data;
         $scope.pieDynamicData = data[0];
     });
+    $http.get('hyblabData/proportions_aides_disciplines.json').success (function(data) {
+        $scope.fixPieData = data;
+        $scope.pieList = [];
+        $scope.pieData = [];
+        
+        var reducePieList = [];
+        var reducePieData = [];
+        var temp = 0;
+        for (var i = 0; i < data.length; i++) {
+            $scope.pieList.push(data[i].name);
+            $scope.pieData.push(data[i].value);
+            reducePieList.push(data[i].name);
+            reducePieData.push(data[i].value);
+            if (data[i].value < $scope.pourcentage) {
+                reducePieList.pop();
+                reducePieData.pop();
+                temp += data[i].value;
+            }
+        }
+        reducePieData.push(temp);
+        reducePieList.push("Autres");
+        $scope.introPieListReduce = reducePieList;
+        $scope.introPieDataReduce = reducePieData;
+        $scope.introPieList = $scope.pieList;
+        $scope.introPieData = $scope.pieData;        
+    });
     
-    /*$scope.options = {
-            chart: {
-                type: 'multiChart',
-                height: 340,
-                margin : {
-                    top: 30,
-                    right: 60,
-                    bottom: 50,
-                    left: 70
-                },
-                color:  ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
-
-                useInteractiveGuideline: true,
-                duration: 4000,
-                useInteractiveGuideline: true,
-                dispatch: {
-                    stateChange: function(e){ console.log("stateChange"); },
-                    changeState: function(e){ console.log("changeState"); },
-                    tooltipShow: function(e){ console.log("tooltipShow"); },
-                    tooltipHide: function(e){ console.log("tooltipHide"); }
-                },
-                xAxis: {
-                    //axisLabel: 'Période de 1997 - 2015',
-                    tickFormat: function(d){
-                        return d3.format('f')(d);
-                    }
-                },
-                yAxis1: {
-                    //axisLabel: 'Création d\'emplois',
-                    tickFormat: function(d){
-                        return d3.format(',.1f')(d);
-                    }
-                },
-                yAxis2: {
-                    //axisLabel: 'Chômage en pourcentage',
-                    tickFormat: function(d){
-                        return d3.format(',.1f')(d);
-                    }
-                }
-            },
-            tooltip: {
-                contentGenerator: function (e) {
-                  var series = e.series[0];
-                  if (series.value === null) return;
-                  
-                  var rows = 
-                    "<tr>" +
-                      "<td class='key'>" + 'Time: ' + "</td>" +
-                      "<td class='x-value'>" + e.value + "</td>" + 
-                    "</tr>" +
-                    "<tr>" +
-                      "<td class='key'>" + 'Voltage: ' + "</td>" +
-                      "<td class='x-value'><strong>" + (series.value?series.value.toFixed(2):0) + "</strong></td>" +
-                    "</tr>";
-
-                  var header = 
-                    "<thead>" + 
-                      "<tr>" +
-                        "<td class='legend-color-guide'><div style='background-color: red;" + series.color + ";'></div></td>" +
-                        "<td class='key'><strong>" + series.key + "</strong></td>" +
-                      "</tr>" + 
-                    "</thead>";
-                    
-                  return "<table>" +
-                      header +
-                      "<tbody>" + 
-                        rows + 
-                      "</tbody>" +
-                    "</table>";
-                } 
-              }
-        };*/
+    $http.get('hyblabData/dataBar.json').success(function (data) {
+        
+        $scope.barData = data;
+        $scope.zoomBarFixData = data;
+    });
+    
+    $http.get('hyblabData/zoomDataBar.json').success(function (data) {
+       $scope.zoomBarData = data; 
+       
+    });
     
     $scope.options = {
             chart: {
               type: 'multiChart',
-
-           
-              
-
               height: 340,
               margin : {
                   top: 30,
@@ -110,87 +70,111 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
                   bottom: 50,
                   left: 70
               },
-              x: function(d){ console.log(d.y); return d.x; },
+              x: function(d){ return d.x; },
               y: function(d){ return d.y; },
               transitionDuration: 100,
               color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
-
               xAxis: {
-                  //axisLabel: 'Time (ms)'
-
-                  // showMaxMin: false,
-                  // staggerLabels: true
 
               },
-              yAxis: {
-                  //axisLabel: 'Voltage (v)',
+              yAxis1: {
                   showMaxMin: false,
                   tickFormat: function(d){
                       return d3.format('.02f')(d);
                   },
-                  axisLabelDistance: -300
+                  axisLabelDistance: 300
               },
-              useInteractiveGuideline: false,
-              interpolate:'basis',
-            
-              tooltip: {
-                contentGenerator: function (e) {
-                  //var series = e.series[0];
-                  //console.log(e);
-                  //if (series.value === null) return;
-
-                  return "<div class='toolTip'><h2>22</h2><p>EMPLOI CRÉES</p><h1>en 1996</h1></div>";
-
+              yAxis2: {
                   
-                } 
               },
-              callback: function(){
-                  d3.selectAll('.nvd3.nv-legend g').style('fill', "red");
-                }
-            }
+              useInteractiveGuideline: true,
+              tooltip: true,
+              interactiveLayer: {
+                  tooltip: {
+                    contentGenerator: function (e) {
+                      var series = e.series[0];
+                      if (series.value === null) return;
+                      var temp = "";
+                      if (series.originalKey == "chomage"){
+                          temp = " POURCENT DE CHÔMEUR ";
+                      }  else {
+                          temp = " EMPLOI CRÉES ";
+                      }
+                      return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
+                    } 
+                  }
+                },
+                callback: function(){
+                  d3.selectAll('.nvd3.nv-legend g').style('fill', "red")
+            }}
         };
-        
+    
+    var listCreation = [23, 11, 8, 5, 7, 3, 10, 7, 7, 3, 11, 9, 14, 10, 10, 9, 14, 19, 28];
+    $scope.emploisCreer = "Informations: "
+    function emplois(start, end) {
+        $scope.emploisCreer = 0;
+        for (var i = start; i < end; i++) {
+            $scope.emploisCreer += listCreation[i];
+        }
+    };
+    
     $scope.update19961998 = function () {    
         $scope.data = $scope.zoomData[0];
         $scope.pieDynamicData = $scope.pieData[1];
         $scope.graphInformation = $scope.textList[0].text;
-        $scope.titre = "1996 à 1998...";
+        $scope.barData = $scope.zoomBarData[0];
+        $scope.titre = "1997 à 1998...";
+        emplois(0,1);
     }
     $scope.update19972005 = function () {
         $scope.data = $scope.zoomData[1];
         $scope.pieDynamicData = $scope.pieData[0];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.barData = $scope.zoomBarData[1];
         $scope.titre = "1997 à 2005...";
+        emplois(0,8);
     }
     $scope.update20052010 = function () {    
         $scope.data = $scope.zoomData[2];
         $scope.graphInformation = $scope.textList[2].text;
+        $scope.barData = $scope.zoomBarData[2];
         $scope.titre = "2005 à 2010...";
+        emplois(8, 13);
     }
     $scope.update19972002 = function () {
         $scope.data = $scope.zoomData[3];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.barData = $scope.zoomBarData[3];
         $scope.titre = "1997 à 2002...";
+        emplois(0, 4);
     }
     $scope.update20102015 = function () {    
         $scope.data = $scope.zoomData[4];
         $scope.graphInformation = $scope.textList[0].text;
+        $scope.barData = $scope.zoomBarData[4];
         $scope.titre = "2010 à 2015...";
+        emplois(13, 18);
     }
     $scope.update20042015 = function () {
         $scope.data = $scope.zoomData[6];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.barData = $scope.zoomBarData[6];
         $scope.titre = "2004 à 2015...";
+        emplois(7, 18);
     }
     $scope.update20092013 = function () {
-        $scope.data = $scope.zoomData[8];
+        $scope.data = $scope.zoomData[7];
         $scope.graphInformation = $scope.textList[1].text;
+        $scope.barData = $scope.zoomBarData[7];
         $scope.titre = "2009 à 2013...";
+        emplois(12, 16);
     }
     $scope.reset = function () {
         $scope.data = $scope.fix;
         $scope.graphInformation = $scope.textList[2].text;
+        $scope.barData = $scope.zoomBarFixData;
         $scope.titre = "1996 à maintenant...";
+        $scope.emploisCreer = "Information: ";
     };
   
     /*DYNAMIC TEXT*/
@@ -226,32 +210,7 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     
     $scope.pourcentage = 0.05;
     
-    $http.get('hyblabData/proportions_aides_disciplines.json').success (function(data) {
-        $scope.fixPieData = data;
-        $scope.pieList = [];
-        $scope.pieData = [];
-        
-        var reducePieList = [];
-        var reducePieData = [];
-        var temp = 0;
-        for (var i = 0; i < data.length; i++) {
-            $scope.pieList.push(data[i].name);
-            $scope.pieData.push(data[i].value);
-            reducePieList.push(data[i].name);
-            reducePieData.push(data[i].value);
-            if (data[i].value < $scope.pourcentage) {
-                reducePieList.pop();
-                reducePieData.pop();
-                temp += data[i].value;
-            }
-        }
-        reducePieData.push(temp);
-        reducePieList.push("Autres");
-        $scope.introPieListReduce = reducePieList;
-        $scope.introPieDataReduce = reducePieData;
-        $scope.introPieList = $scope.pieList;
-        $scope.introPieData = $scope.pieData;        
-    });
+    
     
     $scope.incr = function() {
         $scope.pourcentage += 0.01;
@@ -292,18 +251,81 @@ app.controller('IntroCtrl', ['$scope', '$http', '$timeout', function ($scope, $h
     
     $scope.titre = "1997 à maintenant...";
     
+    $scope.optionBarChart = {
+        chart: {
+            type: 'multiBarChart',
+            height: 450,
+            margin : {
+                top: 20,
+                right: 20,
+                bottom: 45,
+                left: 45
+            },
+            clipEdge: false,
+            duration: 4000,
+            stacked: true,
+            color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
+            xAxis: {
+                axisLabel: 'BarChart',
+                showMaxMin: false,
+                tickFormat: function(d){
+                    return d3.format('f')(d);
+                }
+            },
+            yAxis: {
+                axisLabel: 'Y Axis',
+                axisLabelDistance: -20,
+                tickFormat: function(d){
+                    return d3.format('.1f')(d);
+                }
+
+            },
+            dispatch: {
+              /*tooltipShow: function(e){ console.log('! tooltip SHOW !')},
+              tooltipHide: function(e){console.log('! tooltip HIDE !')},
+              beforeUpdate: function(e){ console.log('! before UPDATE !')}*/
+            },
+            multibar: {
+              dispatch: {
+                //chartClick: function(e) {console.log("! chart Click !")},
+                elementClick: function(e) {
+                    console.log("! element Click !");
+                    $scope.optionBarChart.color = "red";
+                }
+                //elementDblClick: function(e) {console.log("! element Double Click !")},
+                //elementMouseout: function(e) {console.log("! element Mouseout !")},
+                //elementMouseover: function(e) {console.log("! element Mouseover !")}
+              }
+            },
+            tooltip: {
+                contentGenerator: function (e) {
+                  var series = e.series[0];
+                  //console.log(e);
+                  if (series.value === null) return;
+                  var temp = "";
+                  if (series.originalKey == "chomage"){
+                      temp = " POURCENT DE CHÔMEUR ";
+                  }  else {
+                      temp = " EMPLOI CRÉES ";
+                  }
+                  return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
+                } 
+          }
+        
+        }
+    }
     
     
 }]);
 
 /*Page one controller*/
 
-app.controller('PageOneCtrl', function ($scope) {
+appHyblab.controller('PageOneCtrl', function ($scope) {
     
 });
 /*Page two controller*/
 
-app.controller('PageTwoCtrl', function ($scope) {
+appHyblab.controller('PageTwoCtrl', function ($scope) {
   
     
 });
