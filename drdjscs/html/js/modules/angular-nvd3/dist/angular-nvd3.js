@@ -28,7 +28,7 @@
                         deepWatchOptions: true,
                         deepWatchData: true,
                         deepWatchDataDepth: 2, // 0 - by reference (cheap), 1 - by collection item (the middle), 2 - by value (expensive)
-                        debounce: 10 // default 10ms, time silence to prevent refresh while multiple options changes at a time
+                        debounce: 100 // default 10ms, time silence to prevent refresh while multiple options changes at a time
                     };
 
                     //flag indicates if directive and chart is ready

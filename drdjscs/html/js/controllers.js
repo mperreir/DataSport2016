@@ -1,13 +1,13 @@
 var appHyblab = angular.module('hyblabApp');
 
-/*Whole page Controller*/
+/*Intro page Controller*/
 
 appHyblab.controller('IntroCtrl', function ($scope) {
       
    
 });
 
-/*Intro controller*/
+/*Whole page controller*/
 
 appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scope, $http, $timeout) {
     $http.get('hyblabData/data.json').success (function(data) {
@@ -59,7 +59,14 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
        $scope.zoomBarData = data; 
        
     });
-    
+
+    function updtOpt () {
+        if ($scope.options.chart.type == 'multiChart'){
+            $scope.options.chart.type = 'multiBarHorizontalChart';
+        } else {
+            $scope.options.chart.type = 'multiChart';
+        }
+    }
     $scope.options = {
             chart: {
               type: 'multiChart',
@@ -204,7 +211,8 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                     bottom: 5,
                     left: 0
                 }
-            }
+            },
+        tooltipFillColor: "rgba(100,100,0,0.8)"
         }
     };
     
@@ -314,6 +322,84 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         
         }
     }
+    
+
+    $scope.slides = [
+            {'src': 'css/images/photo2.jpg'},
+            {'src': 'css/images/photo3.jpg'},
+            {'src': 'css/images/photo4.jpg'}/*,
+            {'src': 'images/photo5.jpg', caption: 'Lorem ipsum dolor sit amet,  Enim, maxime.'},
+            {'src': 'images/photo6.jpg', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.'}*/
+        ];
+
+    $scope.slideOptions = {
+            sourceProp: 'src',
+            visible: 5,
+            perspective: 35,
+            startSlide: 0,
+            border: 3,
+            dir: 'ltr',
+            width: 360,
+            height: 270,
+            space: 220
+        };
+
+
+        // ANY HTML
+        //===================================
+    $scope.slides2 = [
+            /*{'bg': '#2a6496', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.'},
+            {'bg': '#000000', caption: 'Lorem ipsum dolor sit amet '},
+            {'bg': '#ffcc41', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. '},
+            {'bg': '#445fac', caption: 'Lorem ipsum dolor sit amet,  Enim, maxime.'},
+            {'bg': '#442BF3', caption: 'Lorem ipsum dolor sit amet,  Maxime.'}*/
+        ];
+
+    $scope.slideOptions2 = {
+            visible: 3,
+            perspective: 35,
+            startSlide: 0,
+            border: 0,
+            dir: 'ltr',
+            width: 360,
+            height: 270,
+            space: 220,
+            controls: true
+        };
+
+    $scope.removeSlide = removeSlide;
+        $scope.addSlide = addSlide;
+        $scope.selectedClick = selectedClick;
+        $scope.slideChanged = slideChanged;
+        $scope.beforeChange = beforeChange;
+        $scope.lastSlide = lastSlide;
+
+
+        function lastSlide(index) {
+            console.log('Last Slide Selected callback triggered. \n == Slide index is: ' + index + ' ==');
+        }
+
+        function beforeChange(index) {
+            console.log('Before Slide Change callback triggered. \n == Slide index is: ' + index + ' ==');
+        }
+
+        function selectedClick(index) {
+            console.log('Selected Slide Clicked callback triggered. \n == Slide index is: ' + index + ' ==');
+        }
+
+        function slideChanged(index) {
+            console.log('Slide Changed callback triggered. \n == Slide index is: ' + index + ' ==');
+            $scope.text = "hello"+index;
+        }
+
+
+        function addSlide(slide, array) {
+            array.push(slide);
+        }
+
+        function removeSlide(index, array) {
+            array.splice(array.indexOf(array[index]), 1);
+        }
     
     
 }]);
