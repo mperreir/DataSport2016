@@ -3,10 +3,11 @@
 <style>
 
 path {
-  fill: none;
-  stroke: #000;
+  fill: #231F20;
+  stroke: #424242;
   stroke-linejoin: round;
   stroke-linecap: round;
+    
 }
     
 .overlay {
@@ -17,7 +18,8 @@ path {
 <body>
 <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.js"></script>
-    <div id="container" style="height: 100%;min-height: 400px;"></div>
+
+<div id="container" style="height: 100%;min-height: 400px;"></div>
 <script>
 
 var width = 960,
@@ -56,3 +58,4 @@ function zoom() {
   svg1.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")")};
 </script>
 
+</body>
