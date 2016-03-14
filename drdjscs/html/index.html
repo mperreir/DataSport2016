@@ -5,15 +5,15 @@
         <meta charset="utf-8">
         <title>Hyblab 2017</title>
         <!-- Déclaration de la feuille de style du document-->
-        <link rel="stylesheet" href="css/style.css">
+        
         <!-- Bootstrap css -->
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css">
+       <!--  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css"> -->
         <!-- Other css -->
-        <link rel="stylesheet" href="css/animate/animate.css">
+<!--         <link rel="stylesheet" href="css/animate/animate.css"> -->
         <link rel="stylesheet" href="js/modules/chartjs/angular-chart.css">
         <link rel="stylesheet" href="js/modules/nvd3/build/nv.d3.css">
-        
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div  ng-app="hyblabApp" ng-controller="MainCtrl">
@@ -22,34 +22,69 @@
             <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
 
             <!-- l'entête de la page: titre, barre de recherche -->
-            <header class="animated bounce">
-                <a href="#pageone">Hyblab 2016 and {{x}}</a>
-            </header>
+          <header>
+                <div class="logoLeft">
+                     <h1>Hyblab</h1>
+                     <h2>Analyser la création d'emploi du CNDS</h2>
+                </div>
+                <div class="menuRight">
+                    <ul>
+                    <li class="active"><img src="icons/curve_fill.svg"><p>Emploi CNDS</p></li>
+                    <li><img src="icons/dot_stroke.svg"><p>La carte</p></li>
+                    <li><img src="icons/map_stroke.svg"><p>Les associations</p></li>
+                    </ul>
+                </div>
+         <div class="infosRight">
+          
+        </div>
+        </header>   
+            <div class="sideBar">
+            <div class="infos">
+                
+                <div class="description">
+                    <h1>Qu'est-ce que c'est?</h1>
+                    <p>La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région. </p>
 
+                </div>
+                <div class="line lineSide"></div>
+                <div class="blocData">
+                    <div class="numbersData">
+                        <h1>25</h1>
+                        <h2>EMPLOI CRÉES</h2>
+
+                    </div>
+                    <div class="miniGraph">
+                    </div>
+                </div>
+                <div class="btn btnEnsavoir"><a href="main.html">En savoir plus...</a></div>
+            </div>
+        </div>
             <!-- Le contenu du site -->
+           
             <div ng-view>
+
             </div>
+            
             <!-- Notre pied de page -->
-            </div>
+        </div>
             <!--footer>
             <p>Team Tous Neuf</p>
-
             </footer-->
-        </div>
-        
-        <style>
+    <!-- PAUWEL -->   
+    <style>
         #map {
         width: 400px;
         height: 400px;
         background-color: #CCC;
-        }
-        </style>
-        <div id="map">
-            </footer>
-        <div>
 
-        <!-- PAUWEL -->
-        </div>
+      }
+    </style>
+     <div id="map">
+            
+    </div>
+       
+       
+
                
         <!-- Bootstrap script & Jquery-->
         <script src="js/modules/jquery/jquery-1.12.1.js"></script>
@@ -63,6 +98,7 @@
         
         <!-- Angular App script -->
         <script src="js/app.js"></script>
+           <script src="js/scriptFront.js"></script>
         <script src="js/config.js"></script>
         <script src="js/controllers.js"></script>
         <script src="js/directives.js"></script>

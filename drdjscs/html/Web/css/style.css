@@ -5,7 +5,7 @@
 }
 a{
 	text-decoration: none;
-	color:white;
+/*	color:white;*/
 }
 p,h1,h2,h3{
 	
@@ -26,8 +26,14 @@ header{
 	padding:40px;
 }
 header h1{
-	color:#6591AA;
-	font-weight:200;
+	color:black;
+	font-weight:bold;
+	font-size: 32pt;
+}
+.nvtooltip{
+	font-family: 'Source Sans Pro', sans-serif !important;
+	 background: rgba(255,255,255, 1);
+    border: 1px solid rgba(0,0,0,0.2);
 }
 .logoLeft{
 	float:left;
@@ -48,18 +54,36 @@ header h1{
 	background:#6591AA;
 	width:100px;
 	height:auto;
-	color:white;
+
 	text-align: center;
 	border-radius:100px;
-	padding:10px 35px 10px 35px;
+	padding:15px 35px 15px 35px;
 }
 .btnExplorer{
 margin:0 auto;
-margin-top:50px;
+margin-top:150px;
+	color:white;	
 }
 .btnEnsavoir{
 	margin:0 auto;
 	width:150px;
+	border: 3px #00AF9B solid;
+	background-color: white;
+	color: #00AF9B;
+
+}
+
+.btnEnsavoir:visited{
+
+	color:#00AF9B;
+	font-weight: bold;
+
+}
+
+.btnEnsavoir:link{
+
+	color:#00AF9B;
+
 }
 .btnExplorer:hover{
 	cursor:pointer;
@@ -68,8 +92,9 @@ margin-top:50px;
 .sideBar{
 	border-left:1px solid #DEE2E2;
 	padding:30px;
+	padding-top: 50px;
 	height:100vh;
-	width:300px;
+	width:400px;
 	background:white;
 	position:fixed;
 	top:0;
@@ -80,6 +105,10 @@ margin-top:50px;
 	margin-bottom:20px;
 }
 .description h1{
-	font-size:22px;
+	font-size:20pt;
 	margin-bottom:10px;
+}
+
+.description p {
+	line-height: 25px;
 }

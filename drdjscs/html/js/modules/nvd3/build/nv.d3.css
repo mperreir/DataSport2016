@@ -490,15 +490,15 @@ svg.nvd3-svg {
 }
 /* stacked area */
 .nvd3.nv-stackedarea path.nv-area {
-    fill-opacity: .7;
-    stroke-opacity: 0;
+    fill-opacity: .1;
+    stroke-opacity: 1;
     transition: fill-opacity 250ms linear, stroke-opacity 250ms linear;
     -moz-transition: fill-opacity 250ms linear, stroke-opacity 250ms linear;
     -webkit-transition: fill-opacity 250ms linear, stroke-opacity 250ms linear;
 }
 
 .nvd3.nv-stackedarea path.nv-area.hover {
-    fill-opacity: .9;
+    fill-opacity: .3;
 }
 
 
@@ -508,7 +508,7 @@ svg.nvd3-svg {
 }
 
 
-.nvtooltip {
+/*.nvtooltip {
     position: absolute;
     background-color: rgba(255,255,255,1.0);
     color: rgba(0,0,0,1.0);
@@ -530,13 +530,13 @@ svg.nvd3-svg {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
+}*/
 
-.nvtooltip {
+/*.nvtooltip {
     background: rgba(255,255,255, 0.8);
     border: 1px solid rgba(0,0,0,0.5);
     border-radius: 4px;
-}
+}*/
 
 /*Give tooltips that old fade in transition by
     putting a "with-transitions" class on the container div.
@@ -556,7 +556,7 @@ svg.nvd3-svg {
     padding: 8px;
 }
 
-.nvtooltip h3 {
+/*.nvtooltip h3 {
     margin: 0;
     padding: 4px 14px;
     line-height: 18px;
@@ -581,7 +581,7 @@ svg.nvd3-svg {
 .nvtooltip span {
     display: inline-block;
     margin: 2px 0;
-}
+}*/
 
 .nvtooltip table {
     margin: 6px;
