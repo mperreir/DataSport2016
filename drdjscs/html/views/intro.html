@@ -8,12 +8,34 @@
             <li class="active"><a href="#intro"><img src="icons/curve_fill.svg"><p>Emploi CNDS</p></a></li>
             <li><a href="#pageone"><img src="icons/dot_stroke.svg"><p>La carte</p></a></li>
             <li><a href="#pagetwo"><img src="icons/map_stroke.svg"><p>Les associations</p></a></li>
+            <li><a href="#pagethree"><img src="icons/map_stroke.svg"><p>Remerciements</p></a></li>
         </ul>
     </div>
     <div class="infosRight">
 
     </div>
-</header>   
+</header>
+
+<div id="content" class="sideBar animated bounceInRight">
+    <div class="infos">
+
+        <div class="description">
+            <h1>Qu'est-ce que c'est?</h1>
+            <p>La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région. </p>
+
+        </div>
+        <div class="line lineSide"></div>
+        <div class="blocData">
+            <div class="numbersData">
+                <h1>{{emploisCreer}}</h1>
+                <h2>EMPLOI CRÉES</h2>
+            </div>
+            <div class="miniGraph">
+            </div>
+        </div>
+        <div class="btn btnEnsavoir" href="#pageone"><a>En savoir plus...</a></div>
+    </div>
+</div>
 
 <div class="mainContent">
 <div>
@@ -24,7 +46,7 @@
     <div>   
         <nvd3 class="with-3d-shadow with-transitions" options='options' data='data'></nvd3>    
     </div>
-    </div>
+</div>
     <!--div ng-click="incr()">+</div>
     <div ng-click="decr()">-</div>
      <h4>[[pourcentage]]</h4--> 
@@ -36,10 +58,10 @@
         <div class="btnTimeline aide1" ng-click="update19961998()"><h3>1997-1998</h3></div>
         <div class="btnTimeline aide2" ng-click="update19972005()"><h3>1997-2005</h3></div>
         <div class="btnTimeline aide3" ng-click="update20052010()"><h3>2005-2010</h3></div>
-        <div  class="btnTimeline" ng-click="update19972002()"><h3>1997-2002</h3></div>
-        <div  class="btnTimeline" ng-click="update20102015()"><h3>2010-2015</h3></div>
-        <div  class="btnTimeline" ng-click="update20042015()"><h3>2004-2015</h3></div>
-        <div  class="btnTimeline" ng-click="update20092013()"><h3>2009-2013</h3></div>
+        <div class="btnTimeline" ng-click="update19972002()"><h3>1997-2002</h3></div>
+        <div class="btnTimeline" ng-click="update20102015()"><h3>2010-2015</h3></div>
+        <div class="btnTimeline" ng-click="update20042015()"><h3>2004-2015</h3></div>
+        <div class="btnTimeline" ng-click="update20092013()"><h3>2009-2013</h3></div>
      <div  class="btnTimeline" ng-click="reset()"><h3>reset</h3></div>
         <div>
             <h3 class="animated fadeIn">{{graphInformation}}</h3>
@@ -49,3 +71,4 @@
 <div>   
     <nvd3 class="with-3d-shadow with-transitions" options='optionBarChart' data='barData'></nvd3>    
 </div>
+

@@ -3,6 +3,9 @@ var appHyblab = angular.module('hyblabApp');
 
 appHyblab.config(function($routeProvider){
     $routeProvider
+        .when('/begin', {
+            templateUrl: 'views/begin.html'
+        })
         .when('/intro',{
             templateUrl: 'views/intro.html',
             controller: 'IntroCtrl'
@@ -15,8 +18,12 @@ appHyblab.config(function($routeProvider){
             templateUrl: 'views/pagetwo.html',
             controller: 'PageTwoCtrl'
         })
+        .when('/pagethree', {
+            templateUrl: 'views/pagethree.html',
+            controller: 'PageThreeCtrl'
+        })
         .otherwise({
-            redirectTo: '/intro'
+            redirectTo: '/begin'
         })
 });
 

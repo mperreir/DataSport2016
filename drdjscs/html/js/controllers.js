@@ -324,6 +324,25 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     }
     
 
+    
+
+
+
+}]);
+
+/*Page one controller*/
+
+appHyblab.controller('PageOneCtrl', function ($scope) {
+    
+});
+/*Page two controller*/
+
+appHyblab.controller('PageTwoCtrl', function ($scope) {
+  
+    
+});
+
+appHyblab.controller('PageThreeCtrl', function ($scope) {
     $scope.slides = [
             {'src': 'css/images/photo2.jpg'},
             {'src': 'css/images/photo3.jpg'},
@@ -335,9 +354,9 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.slideOptions = {
             sourceProp: 'src',
             visible: 5,
-            perspective: 35,
+            perspective: 60,
             startSlide: 0,
-            border: 3,
+            border: 5,
             dir: 'ltr',
             width: 360,
             height: 270,
@@ -367,8 +386,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             controls: true
         };
 
-    $scope.removeSlide = removeSlide;
-        $scope.addSlide = addSlide;
+
         $scope.selectedClick = selectedClick;
         $scope.slideChanged = slideChanged;
         $scope.beforeChange = beforeChange;
@@ -391,27 +409,6 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             console.log('Slide Changed callback triggered. \n == Slide index is: ' + index + ' ==');
             $scope.text = "hello"+index;
         }
-
-
-        function addSlide(slide, array) {
-            array.push(slide);
-        }
-
-        function removeSlide(index, array) {
-            array.splice(array.indexOf(array[index]), 1);
-        }
-    
-    
-}]);
-
-/*Page one controller*/
-
-appHyblab.controller('PageOneCtrl', function ($scope) {
     
 });
-/*Page two controller*/
 
-appHyblab.controller('PageTwoCtrl', function ($scope) {
-  
-    
-});
