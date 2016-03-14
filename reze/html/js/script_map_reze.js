@@ -1,6 +1,4 @@
 $("#container2").height($("#container1").height());
-        
-        
         var svg = d3.select("#svg").attr("preserveAspectRatio","none");
         svg1 = svg.selectAll("polygon").call(d3.behavior.zoom().scaleExtent([1, 2]).on("zoom", zoom)).on("click",clickHandler);
         var i = 1;
