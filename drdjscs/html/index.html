@@ -1,79 +1,129 @@
 <!DOCTYPE html>
 <html lang="fr"> <!-- Notre page est en français -->
-    <head>
+<head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-        <meta charset="utf-8">
-        <title>Hyblab 2017</title>
-        <!-- Déclaration de la feuille de style du document-->
-        <link rel="stylesheet" href="css/style.css">
-        <!-- Bootstrap css -->
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css">
-        <!-- Other css -->
-        <link rel="stylesheet" href="css/animate/animate.css">
-        <link rel="stylesheet" href="js/modules/chartjs/angular-chart.css">
-        <link rel="stylesheet" href="js/modules/nvd3/build/nv.d3.css">
-        
-    </head>
-    <body>
-        <div  ng-app="hyblabApp" ng-controller="MainCtrl">
-            <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-            <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-            <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+    <meta charset="utf-8">
+    <title>Hyblab 2017</title>
+    <!-- Déclaration de la feuille de style du document-->
 
-            <!-- l'entête de la page: titre, barre de recherche -->
-            <header>
-                <a href="#pageone">Hyblab 2016</a>
-            </header>
+    <!-- Bootstrap css -->
+       <!--  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+       <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css"> -->
+       <!-- Other css -->
+       <link rel="stylesheet" href="css/animate/animate.css">
+       <link rel="stylesheet" href="js/modules/chartjs/angular-chart.css">
+       <link rel="stylesheet" href="js/modules/nvd3/build/nv.d3.css">
+       <link rel="stylesheet" href="css/style.css">
+       <link rel="stylesheet" href="js/modules/angular-3d-carousel/src/carousel-3d.css">
 
-            <!-- Le contenu du site -->
-            <div ng-view>
+       <!-- PAUWEL-->
+       <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.15.0/mapbox-gl.js'></script>
+       <script src='./js/loire-atlantique.json'></script>
+       <script src='./js/associations.json'></script>
+       <!-- FIN PAUWEL -->
+
+   </head>
+   <body>
+
+      <div  ng-app="hyblabApp" ng-controller="MainCtrl">
+
+        <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+        <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+        <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+
+        <!-- l'entête de la page: titre, barre de recherche -->
+
+        <div class="sideBar">
+            <div class="infos">
+
+                <div class="description">
+                    <h1>Qu'est-ce que c'est?</h1>
+                    <p>La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région. </p>
+
+                </div>
+                <div class="line lineSide"></div>
+                <div class="blocData">
+                    <div class="numbersData">
+                        <h1>{{emploisCreer}}</h1>
+                        <h2>EMPLOI CRÉES</h2>
+
+                    </div>
+                    <div class="miniGraph">
+                    </div>
+                </div>
+                <div class="btn btnEnsavoir" href="#pageone">En savoir plus...</a></div>
             </div>
-            <!-- Notre pied de page -->
         </div>
+        <!-- Le contenu du site -->
+
+        <div ng-view>
+
+        </div>
+        <h1>FIN DE PAGE</h1>
+        <carousel3d
+        ng-model="slides"
+        options="slideOptions"
+        on-selected-click="selectedClick(index)"
+        on-slide-change="slideChanged(index)"
+        on-last-slide="lastSlide(index)"
+        on-before-change="beforeChange(index)">
+        <carousel3d-slide ng-repeat="slide in slides">
+        <figure>
+            <img ng-src="{{slide.src}}" alt=""/>
+            <figcaption ng-bind="slide.caption"></figcaption>
+        </figure>
+    </carousel3d-slide>
+</carousel3d>
+
+<!-- Notre pied de page -->
             <!--footer>
             <p>Team Tous Neuf</p>
+        </footer-->
 
-            </footer-->
-    <!-- PAUWEL -->   
-    <style>
+        <!-- PAUWEL -->   
+<!--     <style>
         #map {
         width: 400px;
         height: 400px;
         background-color: #CCC;
       }
-    </style>
-          <!--   -->
-       
-       
-               
-        <!-- Bootstrap script & Jquery-->
-        <script src="js/modules/jquery/jquery-1.12.1.js"></script>
-        <script src="js/modules/bootstrap/bootstrap.js"></script>
-           
-        <!-- Main Angular script -->
-        <script src="js/modules/angularjs/angular.js"></script>
-        <script src="js/modules/ngroute/angular-route.js"></script>
-        <script src="js/modules/angular-animate/angular-animate.js"></script>
-        
-        
-        <!-- Angular App script -->
-        <script src="js/app.js"></script>
-        <script src="js/config.js"></script>
-        <script src="js/controllers.js"></script>
-        <script src="js/directives.js"></script>
-        <script src="js/services.js"></script>
-        
-        <!-- Other app scripts -->
-        <script src="js/modules/d3js/d3.js"></script>
-        <script src="js/modules/angular-snapscroll-master/dist/angular-snapscroll.js"></script>
-        <script src="js/modules/angular-swipe-master/dist/angular-swipe.js"></script>
-        <script src="js/modules/Chart.js/Chart.js"></script>
-        <script src="js/modules/chartjs/angular-chart.js"></script>
-        <script src="js/modules/scroll-animate-directive-master/src/scroll-animate-directive.js"></script>
-        <script src="js/modules/nvd3/build/nv.d3.js"></script>
-       <script src="js/modules/angular-nvd3/dist/angular-nvd3.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-        <script src="js/script.js"></script>
-    </body>
+  </style> -->
+  <!--   -->
+
+
+
+
+
+  <!-- Bootstrap script & Jquery-->
+  <script src="js/modules/jquery/jquery-1.12.1.js"></script>
+  <script src="js/modules/bootstrap/bootstrap.js"></script>
+
+  <!-- Main Angular script -->
+  <script src="js/modules/angularjs/angular.js"></script>
+  <script src="js/modules/ngroute/angular-route.js"></script>
+  <script src="js/modules/angular-animate/angular-animate.js"></script>
+
+
+  <!-- Angular App script -->
+  <script src="js/app.js"></script>
+  <script src="js/scriptFront.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/modules/angular-sanitize/angular-sanitize.js"></script>
+
+  <!-- Other app scripts -->
+  <script src="js/modules/d3js/d3.js"></script>
+  <script src="js/modules/angular-snapscroll-master/dist/angular-snapscroll.js"></script>
+  <script src="js/modules/angular-swipe-master/dist/angular-swipe.js"></script>
+  <script src="js/modules/Chart.js/Chart.js"></script>
+  <script src="js/modules/chartjs/angular-chart.js"></script>
+  <script src="js/modules/nvd3/build/nv.d3.js"></script>
+  <script src="js/modules/angular-nvd3/dist/angular-nvd3.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/modules/angular-3d-carousel/src/carousel-3d.js"></script>
+
+  <!-- SCRIPT CARTE -->        
+</body>
 </html>

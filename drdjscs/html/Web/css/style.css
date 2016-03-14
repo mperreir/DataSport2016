@@ -26,9 +26,14 @@ header{
 	padding:40px;
 }
 header h1{
-	color:#333132;
+	color:black;
 	font-weight:bold;
 	font-size: 32pt;
+}
+.nvtooltip{
+	font-family: 'Source Sans Pro', sans-serif !important;
+	 background: rgba(255,255,255, 1);
+    border: 1px solid rgba(0,0,0,0.2);
 }
 .logoLeft{
 	float:left;
@@ -56,7 +61,7 @@ header h1{
 }
 .btnExplorer{
 margin:0 auto;
-margin-top:50px;
+margin-top:150px;
 	color:white;	
 }
 .btnEnsavoir{
@@ -107,3 +112,4 @@ margin-top:50px;
 .description p {
 	line-height: 25px;
 }
+

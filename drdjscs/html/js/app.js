@@ -3,12 +3,11 @@
         //List of dependency
         'ngRoute',
         'ngAnimate',
-        'snapscroll',
         'swipe',
         'chart.js',
-        'scroll-animate-directive',
-        'nvd3'
-
+        'nvd3',
+        'ngSanitize',
+        'angular-carousel-3d'
     ])
 })();
 

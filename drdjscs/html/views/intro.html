@@ -1,27 +1,51 @@
+<header>
+    <div class="logoLeft">
+         <h1>Hyblab</h1>
+         <h2>Analyser la création d'emploi du CNDS</h2>
+    </div>
+    <div class="menuRight">
+        <ul>
+            <li class="active"><a href="#intro"><img src="icons/curve_fill.svg"><p>Emploi CNDS</p></a></li>
+            <li><a href="#pageone"><img src="icons/dot_stroke.svg"><p>La carte</p></a></li>
+            <li><a href="#pagetwo"><img src="icons/map_stroke.svg"><p>Les associations</p></a></li>
+        </ul>
+    </div>
+    <div class="infosRight">
+
+    </div>
+</header>   
+
+<div class="mainContent">
+<div>
+    <p>{{titre}}</p>
+</div>
+<a href="#pageone" ng-click="updtOpt()">PageOne</a>
 <div class="deuxCourbes">
     <div>   
         <nvd3 class="with-3d-shadow with-transitions" options='options' data='data'></nvd3>    
     </div>
-<!--     <button ng-click="incr()">+</button>
-    <button ng-click="decr()">-</button> -->
-<!--     <h4>{{pourcentage}}</h4> -->
-<!--     <canvas id="pie" class="chart chart-pie"
-    chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce">
-    </canvas>   -->
-    <div>
-        <h1>PLEASE SCROLL ME!!</h1>
     </div>
-    <div> 
-        <button ng-click="update19961998()"><h3>1997-1998</h3></button>
-        <button ng-click="update19972005()"><h3>1997-2005</h3></button>
-        <button ng-click="update20052010()"><h3>20052010</h3></button>
-        <button ng-click="update19972002()"><h3>update19972002</h3></button>
-        <button ng-click="update20102015()"><h3>update20102015</h3></button>
-        <button ng-click="update20042015()"><h3>update20042015</h3></button>
-        <button ng-click="update20092013()"><h3>update20092013</h3></button>
-        <button ng-click="reset()"><h3>reset</h3></button>
+    <!--div ng-click="incr()">+</div>
+    <div ng-click="decr()">-</div>
+     <h4>[[pourcentage]]</h4--> 
+    <!--canvas id="pie" class="chart chart-pie"
+    chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce">
+    </canvas-->  
+    
+    <div class="aideTimeline"> 
+        <div class="btnTimeline aide1" ng-click="update19961998()"><h3>1997-1998</h3></div>
+        <div class="btnTimeline aide2" ng-click="update19972005()"><h3>1997-2005</h3></div>
+        <div class="btnTimeline aide3" ng-click="update20052010()"><h3>2005-2010</h3></div>
+        <div  class="btnTimeline" ng-click="update19972002()"><h3>1997-2002</h3></div>
+        <div  class="btnTimeline" ng-click="update20102015()"><h3>2010-2015</h3></div>
+        <div  class="btnTimeline" ng-click="update20042015()"><h3>2004-2015</h3></div>
+        <div  class="btnTimeline" ng-click="update20092013()"><h3>2009-2013</h3></div>
+     <div  class="btnTimeline" ng-click="reset()"><h3>reset</h3></div>
         <div>
             <h3 class="animated fadeIn">{{graphInformation}}</h3>
         </div>   
     </div>  
+</div>
+<div>   
+    <nvd3 class="with-3d-shadow with-transitions" options='optionBarChart' data='barData'></nvd3>    
 </div>

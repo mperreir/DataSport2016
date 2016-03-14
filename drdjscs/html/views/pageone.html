@@ -1,7 +1,95 @@
-<div class="animated tada" ng-controller="IntroCtrl">
-    <div>
-        <a href="#intro">Intro</a>
-        <a href="#pageone">PageOne</a>
-        <a href="#pagetwo">PageTwo</a>
+<header>
+    <div class="logoLeft">
+         <h1>Hyblab</h1>
+         <h2>Analyser la création d'emploi du CNDS</h2>
+    </div>
+    <div class="menuRight">
+        <ul>
+            <li><a href="#intro"><img src="icons/curve_stroke.svg"><p>Emploi CNDS</p></a></li>
+            <li  class="active"><a href="#pageone"><img src="icons/dot_fill.svg"><p>La carte</p></a></li>
+            <li><a href="#pagetwo"><img src="icons/map_stroke.svg"><p>Les associations</p></a></li>
+        </ul>
+    </div>
+    <div class="infosRight">
+
+    </div>
+</header>
+
+
+<div class="animated bounceInRight" ng-controller="IntroCtrl">   
+    <!-- PAUWEL -->   
+    <style>
+        #map {
+        width: 700px;
+        height: 700px;
+        background-color: #CCC;
+
+      }
+    </style>
+
+    <div id="map">
+            
     </div>
 </div>
+
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtZWJpcmJ5IiwiYSI6IkwwUXRVY28ifQ.ksZug_5n6Zyr-N0EqjfL9Q';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/gamebirby/cilnjnjif0035c4kncaeq95ex',
+        center: [-1.54,47.248],
+        zoom: 8
+    });
+
+    map.on('style.load', function () {
+
+        /////////////// CHARGEMENT DES POINTS /////////////////////
+
+        map.addSource("markers", association);
+
+        map.addLayer({
+            "id": "markers",
+            "type": "symbol",
+            "source": "markers",
+            "layout": {
+                "icon-image": "{marker-symbol}-15",
+                "text-field": "{title}",
+                "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                "text-offset": [0, 0.6],
+                "text-anchor": "top"
+            }
+        });
+
+        ///////////// FIN CHARGEMENT DES POINTS ///////////////////
+
+
+        ///////////// CHARGEMENT DES CONTOURS DE LA LOIRE ATLANTIQUE //////////////////////
+        var data_loire_atlantique = {
+            "type":"geojson"
+        };
+
+        data_loire_atlantique.data = loire_atlantique;
+
+        map.addSource("loire",data_loire_atlantique);
+
+        map.addLayer({
+            'id': 'contours',
+            'type': 'line',
+            'source': 'loire',
+            'source-layer': 'contour',
+            'layout': {
+                'line-join': 'round',
+                'line-cap': 'round'
+            },
+            'paint': {
+                'line-color': '#2e2818',
+                'line-width': 2
+            }
+        });
+        ///////////// FIN CHARGEMENT DES CONTOURS DE LA LOIRE ATLANTIQUE ///////////////////    
+
+
+
+    });
+    </script>
