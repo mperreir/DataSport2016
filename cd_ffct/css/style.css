@@ -148,7 +148,7 @@ body {
 /*  **************************************************  */
 /*                      Dataviz1                        */
 /*  **************************************************  */
-text {
+foreignObject {
     font-family: "source sans pro";
     font-size: 12px;
 }
@@ -191,7 +191,6 @@ rect.parent,
     width: 840px;
     margin-left: 60px;
     margin-right: -60px;
-    height: 100%;
 }
 
 #titreDataviz1 {
