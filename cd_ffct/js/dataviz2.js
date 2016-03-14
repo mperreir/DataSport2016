@@ -131,7 +131,7 @@ $(document).ready(function() {
             for (var j = 0; j < json.children[i].children.length; j++) {
                 var category = {};
                 category.label = json.children[i].children[j].label;
-                category.value = json.children[i].children[j].value;
+                category.value = json.children[i].children[j].men + json.children[i].children[j].women;
                 activity.sum += category.value;
                 activity.categories.push(category);
             }
@@ -185,7 +185,7 @@ $(document).ready(function() {
             .style("font-family", "source sans pro")
             .style("font-style", "italic")
             .style("fill", "#494949")
-            .attr("transform", "translate(" + 725 + "," + 435 + ")")
+            .attr("transform", "translate(" + 720 + "," + 430    + ")")
         
         var labelSource1 = source.append("text")
             .style("font-size", "15px")
@@ -318,7 +318,7 @@ $(document).ready(function() {
                     .duration(conf.legend.duration)
                     .delay(conf.legend.delay)
                     .tween("text", function(d) {
-                        var i = d3.interpolate(this.textContent, _dataSet.categories.reduce(function(a, b) { return a + b.value;}, 0));
+                        var i = d3.interpolate(this.textContent, _dataSet.categories.reduce(function(a, b) { return a + b.value; }, 0));
                         return function(t) {
                             this.textContent = Math.round(i(t));
                         }
@@ -377,7 +377,11 @@ $(document).ready(function() {
                 .style("text-anchor", "end")
                 .attr("dx", "-.8em")
                 .attr("dy", ".15em")
-                .attr("transform", "rotate(-65)" );
+                .attr("transform", "rotate(-65)" )
+                .style("font-family", "source sans pro")
+                .style("font-style", "italic")
+                .style("fill", "#494949")
+                .style("font-size", "13px");
 
             var y = d3.scale.linear().range([height, 0])
                 .domain([0, d3.max(datas.categories, function(d) { return d.value; })]);
@@ -397,7 +401,8 @@ $(document).ready(function() {
                 .text(function(d) { return d3.format(",")(d.value); })
                 .attr("x", function(d) { return x(d.label)+x.rangeBand()/2; })
                 .attr("y", function(d) { return y(d.value)-5; })
-                .attr("text-anchor", "middle");
+                .attr("text-anchor", "middle")
+                .style("fill", "#494949");
 
             function mouseover(d) {
                 d3.select(this).attr("fill", histColorHover);
