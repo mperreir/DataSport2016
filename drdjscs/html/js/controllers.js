@@ -22,7 +22,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.pieData = data;
         $scope.pieDynamicData = data[0];
     });
-    $http.get('hyblabData/proportions_aides_disciplines.json').success (function(data) {
+    $http.get('hyblabData/aides_accordees_par_discipline.json').success (function(data) {
         $scope.fixPieData = data;
         $scope.pieList = [];
         $scope.pieData = [];
@@ -310,7 +310,6 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             tooltip: {
                 contentGenerator: function (e) {
                   var series = e.series[0];
-                  //console.log(e);
                   if (series.value === null) return;
                   var temp = "";
                   if (series.originalKey == "chomage"){
@@ -325,10 +324,6 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         }
     }
     
-
-    
-
-
 
 }]);
 
@@ -348,7 +343,8 @@ appHyblab.controller('PageThreeCtrl', function ($scope) {
     $scope.slides = [
             {'src': 'css/images/photo2.jpg'},
             {'src': 'css/images/photo3.jpg'},
-            {'src': 'css/images/photo4.jpg'}/*,
+            {'src': 'css/images/photo4.jpg'},
+            {'src': 'css/images/iut.jpg'}/*,
             {'src': 'images/photo5.jpg', caption: 'Lorem ipsum dolor sit amet,  Enim, maxime.'},
             {'src': 'images/photo6.jpg', caption: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.'}*/
         ];
@@ -409,8 +405,39 @@ appHyblab.controller('PageThreeCtrl', function ($scope) {
 
         function slideChanged(index) {
             console.log('Slide Changed callback triggered. \n == Slide index is: ' + index + ' ==');
-            $scope.text = "hello"+index;
+            if (index == 0) {
+                $scope.photos = [
+                    {'src': 'css/images/photo5.jpg'},
+                    {'src': 'css/images/photo6.jpg'},
+                    {'src': 'css/images/photo7.jpg'}
+                ];
+            } else if (index == 1) {
+                $scope.photos = [
+                    {'src': 'css/images/photo2.jpg'},
+                    {'src': 'css/images/photo3.jpg'},
+                    {'src': 'css/images/photo4.jpg'}
+                ];
+            } else if (index == 3) {
+                $scope.photos = [
+                    {'src': 'css/images/photo5.jpg'},
+                    {'src': 'css/images/photo6.jpg'},
+                    {'src': 'css/images/photo7.jpg'}
+                ];
+            } else if (index == 4) {
+                $scope.photos = [
+                    {'src': 'css/images/photo2.jpg'},
+                    {'src': 'css/images/photo3.jpg'},
+                    {'src': 'css/images/photo4.jpg'}
+                ];
+            }
         }
+            
+    
+        $scope.photos = [
+            {'src': 'css/images/photo5.jpg'},
+            {'src': 'css/images/photo6.jpg'},
+            {'src': 'css/images/photo7.jpg'}
+        ];
     
 });
 
