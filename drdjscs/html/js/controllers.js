@@ -277,8 +277,6 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     
     $scope.titre = "1997 à maintenant...";
     
-    var barIndex = 0;
-    
     $scope.optionBarChart = {
         chart: {
             type: 'multiBarChart',
@@ -329,9 +327,8 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                     d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(0, 175, 155, 1)";
                 },
                 elementMouseover: function(e) { 
-                    console.log(e.index);
-                    barIndex = e.index;
-                    d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: red";
+                    //console.log(e.index);
+                    d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(32, 201, 41, 0.9)";
                 }
               }
             },
