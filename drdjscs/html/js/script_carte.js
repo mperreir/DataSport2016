@@ -7,6 +7,9 @@ var map = new mapboxgl.Map({
     center: [-1.54,47.248],
     zoom: 8
 });
+
+map.addControl(new mapboxgl.Navigation());
+
 map.on('style.load', function () {
     /////////////// CHARGEMENT DES POINTS /////////////////////
     map.addSource("markers", association);
@@ -87,6 +90,8 @@ map.on('click', function (e) {
         });
     });
 });
+
+
 
 function perreines(){
 
