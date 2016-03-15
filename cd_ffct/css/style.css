@@ -5,6 +5,10 @@ body {
     color: #494949;
 }
 
+p {
+    font-family: "source sans pro";
+}
+
 #container {
     width: 960px;
     margin: 0 auto;
@@ -131,7 +135,6 @@ body {
     font-style: italic;
     font-weight: bold;
     text-align: left;
-    font-family: "source sans pro";
     
     padding: 60px 80px 60px 80px;
 }
@@ -219,7 +222,6 @@ rect.parent,
     float: right;
     width: 190px;
     color: #C56534;
-    font-family: "source sans pro";
     text-align: center;
     margin-top: 20px;
 }
@@ -283,6 +285,58 @@ rect.parent,
 }
 
 
+
+/*  **************************************************  */
+/*                      Footer                         */
+/*  **************************************************  */
+
+.nomEleve {
+    font-style: italic;
+    font-size: 15px;
+    margin: 0px;
+    text-align: center;
+}
+
+#presentation_ecoles {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.ecole {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+        
+}
+
+.nom_ecole {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 29px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#staps {
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+#infos_complementaires {
+    text-align: center;
+}
+#infos_complementaires p {
+    font-style: italic;
+    font-size: 15px;
+    margin-top : 2px;
+    margin-bottom: 0px;
+}
+/*Liens de bas de page*/
+.link {
+    color : #F56D34;
+}
+
 /*  **************************************************  */
 /*                      Bandeau                         */
 /*  **************************************************  */
@@ -313,40 +367,4 @@ rect.parent,
 
 #bandeau .institutionnel {
     height: 48px;
-}
-
-.nomEleve {
-    font-style: italic;
-    font-weight: 21px;
-    margin: 0px;
-    text-align: center;
-}
-
-#presentation_ecoles {
-    display: inline-block;
-    width:900px;
-}
-
-.ecole {
-    margin: 0px;
-    width : auto;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.nom_ecole {
-    margin:0px;
-    margin-top: 23px;
-    font-weight: 29px;
-    font-weight: bold;
-    text-align: center;
-}
-
-#presentation_ecoles p {
-    font-family: "source sans pro";
-}
-
-.img_ecole {
-    
-   
 }
