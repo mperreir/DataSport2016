@@ -46,7 +46,8 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.introPieListReduce = reducePieList;
         $scope.introPieDataReduce = reducePieData;
         $scope.introPieList = $scope.pieList;
-        $scope.introPieData = $scope.pieData;        
+        $scope.introPieData = $scope.pieData;
+        console.log($scope.introPieData);
     });
     
     $http.get('hyblabData/dataBar.json').success(function (data) {
@@ -60,13 +61,6 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
        
     });
 
-    function updtOpt () {
-        if ($scope.options.chart.type == 'multiChart'){
-            $scope.options.chart.type = 'multiBarHorizontalChart';
-        } else {
-            $scope.options.chart.type = 'multiChart';
-        }
-    }
     $scope.options = {
             chart: {
               type: 'multiChart',
@@ -235,36 +229,55 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     };
     
     $scope.pourcentage = 0.05;
+    $scope.pieBoundary = false;
+    $scope.pieMessage = "";
     
+    function pieBounds(aBool) {
+        if (aBool == true) {
+            $scope.pieMessage = " Limite atteint...";
+        } else {
+            $scope.pieMessage = "";
+        }
+    }
     
     
     $scope.incr = function() {
-        $scope.pourcentage += 0.01;
-        updatePie();
+        if ($scope.pourcentage < 0.07) {
+            $scope.pourcentage += 0.01;
+            updatePie();
+        } else {
+            $scope.pieBoundary = true;
+        }
     }
     
     $scope.decr = function() {
-        $scope.pourcentage -= 0.01;
-        updatePie();
+        if ($scope.pourcentage > 0.03) {
+            $scope.pourcentage -= 0.01;
+            updatePie();
+        } else {
+            $scope.pieBoundary = true;
+        }
     }
     
     function updatePie() {
-        var reducePieList = [];
-        var reducePieData = [];
-        var autres = 0;
-        for (var i =0; i < $scope.pieList.length; i++) {
-                reducePieList.push($scope.pieList[i]);
-                reducePieData.push($scope.pieData[i]);
-                if ($scope.pieData[i] < $scope.pourcentage) {
-                    reducePieData.pop();
-                    reducePieList.pop();
-                    autres += $scope.pieData[i];
-                }
-        }
-        reducePieList.push("Autres");
-        reducePieData.push(autres);
-        $scope.introPieListReduce = reducePieList;
-        $scope.introPieDataReduce = reducePieData;
+       
+            var reducePieList = [];
+            var reducePieData = [];
+            var autres = 0;
+            for (var i =0; i < $scope.pieList.length; i++) {
+                    reducePieList.push($scope.pieList[i]);
+                    reducePieData.push($scope.pieData[i]);
+                    if ($scope.pieData[i] < $scope.pourcentage) {
+                        reducePieData.pop();
+                        reducePieList.pop();
+                        autres += $scope.pieData[i];
+                    }
+            }
+            reducePieList.push("Autres");
+            reducePieData.push(autres);
+            $scope.introPieListReduce = reducePieList;
+            $scope.introPieDataReduce = reducePieData;   
+    
     }
     
     $scope.introPieChartOptions = {        
