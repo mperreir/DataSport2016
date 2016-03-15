@@ -79,4 +79,17 @@
         });
         ///////////// FIN CHARGEMENT DES CONTOURS DE LA LOIRE ATLANTIQUE ///////////////////    
     });
+    
+    map.on('moveend', function () {
+	
+	var centre = map.getCenter();
+	if (centre.lng > 0.35 || centre.lng < -3 || centre.lat > 48 || centre.lat < 46.3 ){
+		map.flyTo({
+			center: [-1.54,47.248],
+			zoom: 8
+		});
+	}
+	console.log(map.getCenter());
+});
+    
     </script>
