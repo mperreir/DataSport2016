@@ -1,0 +1,63 @@
+
+
+
+/*Custom CSS
+*/
+body{
+    font-family: Gotham;
+    color: white;
+    position: relative;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+.section{
+    background-color: #414141;
+}
+
+.header_slide{
+    vertical-align: top;
+    width: 100%;
+    height: 20%;
+}
+
+table{
+    width: 100%;
+    margin: 0px;
+}
+
+/*Section 0 (titre)
+*/
+#section0{
+    background-image: url("../../Ressources/Images/img_background_2.jpg");
+    background-repeat:no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+}
+
+#section0 h1{
+    font-size: 3em;
+}
+
+#section0 h2{
+    font-size: 2em;
+}
+
+/*Section2
+*/
+#infos_CROS{
+    float: left;
+    width: 40%;
+    margin-left: 3%;
+}
+
+#infos_CROS h1{
+    font-size: 1em;
+}
+
+#barchart{
+    float: right;
+    width: 55%;
+}
