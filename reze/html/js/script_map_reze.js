@@ -1,9 +1,9 @@
 $("#container2").height($("#container1").height());
 var selected = false;
-        var svg = d3.select("#svg").attr("preserveAspectRatio","none").on("mouseover",svgInHandler).on("mouseout",svgOutHandler);
-        svg1 = svg.selectAll("polygon").call(d3.behavior.zoom().scaleExtent([1, 2]).on("zoom", zoom)).on("click",clickHandler);
+        var svg = d3.select("#svg").attr("preserveAspectRatio","none");
+        svg1 = svg.selectAll("polygon").on("click",clickHandler);
         var i = 1;
-        svg2 = svg.selectAll("circle").call(d3.behavior.zoom().scaleExtent([1, 2]).on("zoom", zoom)).on("mouseover",mouseOverHandler).on("mouseout",mouseOutHandler).on("click",clickHandler);
+        svg2 = svg.selectAll("circle").on("mouseover",mouseOverHandler).on("mouseout",mouseOutHandler).on("click",clickHandler);
         function zoom() {
             //console.log("translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
             svg1.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
@@ -91,15 +91,6 @@ var selected = false;
                selected = false;
            }
        };
-
-
-function svgInHandler(){
-    $.fn.fullpage.setAllowScrolling(false);
-};
-
-function svgOutHandler(){
-    $.fn.fullpage.setAllowScrolling(true);
-}
 
 
 var data = [
