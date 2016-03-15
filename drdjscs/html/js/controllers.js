@@ -124,6 +124,14 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             $scope.emploisCreer += listCreation[i];
         }
     };
+    function updateColor(debut, fin) {
+        for (var i = 0; i < 18; i++) {
+            d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
+        }
+        for (var i = debut; i < fin; i++) {
+            d3.selectAll("rect.nv-bar")[0][i].style= "fill: red";
+        }
+    }
     
     $scope.update19961998 = function () {    
         $scope.data = $scope.zoomData[0];
@@ -132,6 +140,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         //$scope.barData = $scope.zoomBarData[0];
         $scope.titre = "1997 à 1998...";
         emplois(0,1);
+        updateColor(0, 1);
     }
     $scope.update19972005 = function () {
         $scope.data = $scope.zoomData[1];
@@ -140,6 +149,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         //$scope.barData = $scope.zoomBarData[1];
         $scope.titre = "1997 à 2005...";
         emplois(0,8);
+        updateColor(0, 8);
     }
     $scope.update20052010 = function () {    
         $scope.data = $scope.zoomData[2];
@@ -147,6 +157,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         //$scope.barData = $scope.zoomBarData[2];
         $scope.titre = "2005 à 2010...";
         emplois(8, 13);
+        updateColor(8, 13);
     }
     $scope.update19972002 = function () {
         $scope.data = $scope.zoomData[3];
@@ -154,6 +165,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         //$scope.barData = $scope.zoomBarData[3];
         $scope.titre = "1997 à 2002...";
         emplois(0, 4);
+        updateColor(0, 4);
     }
     $scope.update20102015 = function () {    
         $scope.data = $scope.zoomData[4];
@@ -161,6 +173,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         //$scope.barData = $scope.zoomBarData[4];
         $scope.titre = "2010 à 2015...";
         emplois(13, 18);
+        updateColor(13, 18);
     }
     $scope.update20042015 = function () {
         $scope.data = $scope.zoomData[6];
@@ -168,6 +181,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         //$scope.barData = $scope.zoomBarData[6];
         $scope.titre = "2004 à 2015...";
         emplois(7, 18);
+        updateColor(7, 18);
     }
     $scope.update20092013 = function () {
         $scope.data = $scope.zoomData[7];
@@ -175,6 +189,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         //$scope.barData = $scope.zoomBarData[7];
         $scope.titre = "2009 à 2013...";
         emplois(12, 16);
+        updateColor(12, 16);
     }
     $scope.reset = function () {
         $scope.data = $scope.fix;
@@ -182,6 +197,9 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.barData = $scope.zoomBarFixData;
         $scope.titre = "1997 à maintenant...";
         emplois(0, 18);
+        for (var i = 0; i < 18; i++) {
+            d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
+        }
     };
   
     /*DYNAMIC TEXT*/
@@ -259,6 +277,8 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     
     $scope.titre = "1997 à maintenant...";
     
+    var barIndex = 0;
+    
     $scope.optionBarChart = {
         chart: {
             type: 'multiBarChart',
@@ -301,12 +321,18 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                 //chartClick: function(e) {console.log("! chart Click !")},
                 elementClick: function(e) {
                     console.log(e);
-                    $scope.optionBarChart.color = "red";
+                    
                     
                 },
                 //elementDblClick: function(e) {console.log("! element Double Click !")},
-                //elementMouseout: function(e) {console.log("! element Mouseout !")},
-                elementMouseover: function(e) { console.log("! element Mouseover !")}
+                elementMouseout: function(e) {
+                    d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(0, 175, 155, 1)";
+                },
+                elementMouseover: function(e) { 
+                    console.log(e.index);
+                    barIndex = e.index;
+                    d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: red";
+                }
               }
             },
             tooltip: {
@@ -327,6 +353,13 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             scaleShowGridLines: false,
             callback: function(chart) {
                 //console.log(d3.select("#nvd3-svg svg").selectAll("g"));
+                //console.log(chart);
+                /*d3.selectAll("rect.nv-bar")
+                  .style("fill", function(d, i){
+                        return d.y > 50 ? "red":"blue";
+                    });
+                console.log(d3.selectAll("rect.nv-bar"));*/
+                //d3.selectAll("rect.nv-bar")[0][18].style= "fill: red"
             }
         
         }
