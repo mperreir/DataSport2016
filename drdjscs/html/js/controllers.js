@@ -270,11 +270,10 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                 bottom: 45,
                 left: 45
             },
-            showLegend: false,
             clipEdge: false,
             duration: 40,
             stacked: false,
-            color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
+            color: ['rgba(0, 175, 155, 1)'],
             xAxis: {
                 axisLabel: '',
                 showMaxMin: false,
@@ -290,6 +289,8 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                 }
 
             },
+            showXAxis: false,
+            showYAxis: false,
             dispatch: {
               /*tooltipShow: function(e){ console.log('! tooltip SHOW !')},
               tooltipHide: function(e){console.log('! tooltip HIDE !')},
@@ -323,6 +324,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
           },
             showLegend: false,
             showControls: false,
+            scaleShowGridLines: false,
             callback: function(chart) {
                 //console.log(d3.select("#nvd3-svg svg").selectAll("g"));
             }
