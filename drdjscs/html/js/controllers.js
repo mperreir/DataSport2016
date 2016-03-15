@@ -270,10 +270,10 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                 bottom: 45,
                 left: 45
             },
-     
+            showLegend: false,
             clipEdge: false,
             duration: 40,
-            stacked: true,
+            stacked: false,
             color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
             xAxis: {
                 axisLabel: '',
@@ -319,7 +319,12 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                   }
                   return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
                 } 
-          }
+          },
+            callback: function() {
+                return function () {
+                    console.log("test");
+                }
+            }
         
         }
     }
