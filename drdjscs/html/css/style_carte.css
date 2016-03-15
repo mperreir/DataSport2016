@@ -1,0 +1,23 @@
+<style>
+        #map {
+        width: 100%;
+        height: 100%;
+        background-color: #CCC;
+        }
+        .nav{
+            width : 100px;
+            height : 200px;
+        }
+        .nav{
+            background:#f3f2f1;
+        }
+        .nav ul li{
+            float:left;
+            list-style:none;
+        }
+        .nav ul li a{
+            line-height:40px;
+            display:inline;
+            padding:0 10px;
+        }
+    </style>
