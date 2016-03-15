@@ -1,6 +1,9 @@
 "use strict";
 
 $(document).ready(function() {
+    
+    var firstTime4 = true;
+    
     // Fullpage
     $('#container').fullpage({
         anchors: ['1', '2', '3', '4', '5', '6', '7', '8'],
@@ -8,15 +11,19 @@ $(document).ready(function() {
         navigationPosition: 'right',
         css3: true,
         scrollBar: true,
-        verticalCentered: false
+        verticalCentered: false,
+        
+        afterLoad: function(anchorLink, index){
+            var loadedSection = $(this);
+
+            if (firstTime4) {
+                if (index == 4) {
+                    
+                }
+            }
+        }
     });
-    
-    // Bouton home
-    /*
-    $('.home').click(function() {
-        $('html,body').animate({scrollTop: 0}, 'slow');
-    });
-    
+
     $(window).scroll(function() {
         if ($(window).scrollTop() == 0) {
             $('.home').fadeOut();
@@ -24,5 +31,4 @@ $(document).ready(function() {
             $('.home').fadeIn();
         }
     });
-    */
 });

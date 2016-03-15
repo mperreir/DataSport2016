@@ -250,17 +250,21 @@ $(document).ready(function() {
 
                     outerRadius = Math.min(conf.pieChart.width, conf.pieChart.height) / 2;
                     innerRadius = outerRadius * conf.pieChart.ratioRadius;
-
-                    path.transition().duration(1000).attrTween("d", function(angle) {
-                        var outer = d3.interpolate(arc.outerRadius()(), outerRadius);
-                        var inner = d3.interpolate(arc.innerRadius()(), innerRadius);
-                        return function(t) {
-                            var arcTemp = arc.innerRadius(inner(t)).outerRadius(outer(t))(angle);
-                            // Mise à jour des positions des labels
-                            pieChartText.attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; }).attr("dy", ".35em");
-                            return arcTemp;
-                        }
-                    });
+                    
+                    path.transition()
+                        .duration(1000)
+                        .attrTween("d", function(angle) {
+                            var outer = d3.interpolate(arc.outerRadius()(), outerRadius);
+                            var inner = d3.interpolate(arc.innerRadius()(), innerRadius);
+                            var i = d3.interpolate(angle.startAngle + 0.1, angle.endAngle);
+                            return function(t) {
+                                angle.endAngle = i(t);
+                                var arcTemp = arc.innerRadius(inner(t)).outerRadius(outer(t))(angle);
+                                // Mise à jour des positions des labels
+                                pieChartText.attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; }).attr("dy", ".35em");
+                                return arcTemp;
+                            }
+                        });
                 }
 
                 var _dataSet = {},
@@ -327,20 +331,20 @@ $(document).ready(function() {
                 // Transition pour le pieChart
                 g.transition()
                     .duration(conf.pieChart.duration)
-                    .delay(conf.pieChart.delay)
+                    .delay(conf.pieChart.delay + 1000)
                     .attr("transform", "translate(" + _pieChart_TranslateX + "," + _pieChart_TranslateY + ")");
                 
                 // Transition pour le barChart
                 hist.g.transition()
                     .duration(conf.barChart.duration)
-                    .delay(conf.barChart.delay)
+                    .delay(conf.barChart.delay + 1000)
                     .attr("transform", "translate(" + _barChart_TranslateX + "," + _barChart_TranslateY + ")")
                     .style("visibility", "visible");
                 
                 // Transition pour la légende
                 legend.transition()
-                    .duration(conf.legend.duration)
-                    .delay(conf.legend.delay)
+                    .duration(conf.legend.duration + 1000)
+                    .delay(conf.legend.delay + 1000)
                     .attr("transform", "translate(" + _legend_TranslateX + "," + _legend_TranslateY + ")")
                     .style("visibility", "visible");
             }
