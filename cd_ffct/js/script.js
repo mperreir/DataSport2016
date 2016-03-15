@@ -31,4 +31,5 @@ $(document).ready(function() {
             $('.home').fadeIn();
         }
     });
+    
 });

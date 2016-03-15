@@ -2,7 +2,7 @@
 /*                      Général                         */
 /*  **************************************************  */
 body {
-    color: #494949;
+    background-color: #FFFFDF;
 }
 
 p {
@@ -19,7 +19,7 @@ h1{
 }
 
 .section {
-    background-color: #FFFFDF;
+    
     padding: 60px 60px 60px 60px;
 }
 
@@ -88,32 +88,37 @@ h1{
 /*  **************************************************  */
 #accueil h1 {
     text-transform: uppercase;
-    font-size: 29px;
+    font-size: 40px;
     font-style: italic;
     font-weight: bold;    
     position: absolute;
     padding: 0;
-    margin: 0;
+    margin-left: 450px;
 }
 
 #chaine {
     position: absolute;
-    margin: 38px 538px 359px 48px;
+    margin: 0px 538px 359px 48px;
+    margin-top: 0x;
+    margin-left: 0px;
 }
 
 #lampe {
     position: absolute;
-    margin: 312px 31px 38px 800px;
+    margin-top: 312px;
+    margin-left: 740px;;
 }
 
 #pedale {
     position: absolute;
-    margin: 243px 757px 55px 49px;
+    margin-top: 243px;
+    margin-left: 0px;
 }
 
 #roue {
     position: absolute;
-    margin: 180px 393px 43px 250px;
+    margin-top: 180px;
+    margin-left: 202px;
      -webkit-animation:spin 3s linear infinite;
     -moz-animation:spin 3s linear infinite;
     animation:spin 3s linear infinite;
@@ -126,25 +131,55 @@ h1{
 
 #selle {
     position: absolute;
-    margin: 154px 78px 230px 615px;
+    margin-top: 154px;
+    margin-left: 567px;
 }
 
 #sonette {
     position: absolute;
-    margin: 337px 203px 49px 590px;
+    margin-top: 337px;
+    margin-left: 542px;
 }
 
+.floating{
+    float: left;
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+
+}
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    30% {-webkit-transform:rotate(5deg);}
+    40% {-webkit-transform:translate(5px, 15px);}
+    50% {-webkit-transform:translate(10px, 15px);}
+    
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+    
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 15px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
 
 /*  **************************************************  */
 /*                      Edito                           */
 /*  **************************************************  */
 #edito {
-    text-transform: uppercase;
     font-size: 26px;
     font-style: italic;
     font-weight: bold;
     text-align: left;
-    
+    text-overflow: ellipsis;
     padding: 60px 80px 60px 80px;
 }
 
@@ -168,12 +203,15 @@ text {
 foreignObject {
     font-family: "source sans pro";
     font-size: 12px;
+    color: #FFFFDF;
+    width: 100px;
+    height: 10px;
 }
 
 rect.child,
 rect.parent {
     fill: #9BC8D9;
-    stroke: #fff;
+    stroke: #FFFFDF;
 }
 
 rect.parent,
@@ -183,12 +221,8 @@ rect.parent,
 
 .grandparent rect {
     width : 40px;
-    fill: #9BC8D9;
+    fill: rgb(244, 220, 120);
 
-}
-
-.grandparent:hover rect {
-    
 }
 
 .children rect.parent,
@@ -199,11 +233,6 @@ rect.parent,
 .children rect.parent {
     fill: #F56D34;
     opacity: .9;
-}
-
-.children:hover rect.child {
-    /*  fill: #bbb;*/
-
 }
 
 #dataviz1 {
