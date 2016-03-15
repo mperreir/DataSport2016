@@ -247,6 +247,8 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             updatePie();
         } else {
             $scope.pieBoundary = true;
+            pieBounds($scope.pieBoudary);
+            $scope.pieBoundary = false;
         }
     }
     
@@ -256,6 +258,8 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             updatePie();
         } else {
             $scope.pieBoundary = true;
+            pieBounds($scope.pieBoundary);
+            $scope.pieMessage = false;
         }
     }
     
