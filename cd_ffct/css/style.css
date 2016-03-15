@@ -314,3 +314,39 @@ rect.parent,
 #bandeau .institutionnel {
     height: 48px;
 }
+
+.nomEleve {
+    font-style: italic;
+    font-weight: 21px;
+    margin: 0px;
+    text-align: center;
+}
+
+#presentation_ecoles {
+    display: inline-block;
+    width:900px;
+}
+
+.ecole {
+    margin: 0px;
+    width : auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.nom_ecole {
+    margin:0px;
+    margin-top: 23px;
+    font-weight: 29px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#presentation_ecoles p {
+    font-family: "source sans pro";
+}
+
+.img_ecole {
+    
+   
+}
