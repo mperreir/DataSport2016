@@ -42,6 +42,7 @@ var treemap = d3.layout.treemap()
 var svg = d3.select("#dataviz1").append("svg")
     .attr("width", width)
     .attr("height", height + margin.top)
+    .style("margin-top", "20px")
   .append("g")
     .attr("transform", "translate( 0," + margin.top + ")")
     .style("shape-rendering", "crispEdges");
@@ -149,7 +150,7 @@ d3.json("json/licences_regions_test.json", function(root) {
     var g1 = svg.insert("g", ".grandparent")
         .datum(d)
         .attr("class", "depth");
-      
+        
       d3.select(".depth").attr("width", width).attr("height", height);
     var g = g1.selectAll("g")
         .data(d._children)
