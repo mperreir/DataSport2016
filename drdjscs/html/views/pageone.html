@@ -19,17 +19,35 @@
 
 <div class="animated bounceInRight" ng-controller="IntroCtrl">   
     <!-- PAUWEL -->
-    <h1>Text</h1>
-    <h1>Text</h1>
-    <h1>Text</h1>
     <style>
         #map {
         width: 100%;
         height: 1000px;
         background-color: #CCC;
-      }
+        }
+        .nav{
+            width : 100px;
+            height : 200px;
+        }
+        .nav{
+            background:#f3f2f1;
+        }
+        .nav ul li{
+            float:left;
+            list-style:none;
+        }
+        .nav ul li a{
+            line-height:40px;
+            display:inline;
+            padding:0 10px;
+        }
     </style>
-
+    <div class="nav">
+        <ul>
+            <li><a href="" onclick="perreines()">Associations perreines</a></li>
+            <li><a href="" onclick="nonperreines">Associations non perreines</a></li>
+        </ul>
+    </div>
     <div id="map">
             
     </div>
@@ -85,14 +103,51 @@
     
     map.on('moveend', function () {
 	
-	var centre = map.getCenter();
-	if (centre.lng > 0.35 || centre.lng < -3 || centre.lat > 48 || centre.lat < 46.3 ){
-		map.flyTo({
-			center: [-1.54,47.248],
-			zoom: 8
-		});
-	}
-	console.log(map.getCenter());
-});
+        var centre = map.getCenter();
+
+        if (centre.lng > 0.35 || centre.lng < -3 || centre.lat > 48 || centre.lat < 46.3 ){
+            map.flyTo({
+                center: [-1.54,47.248],
+                zoom: 8.5
+            });
+        }
+
+    });
+
+    var popup = new mapboxgl.Popup();
+/*
+    map.on('mousemove', function (e) {
+        map.featuresAt(e.point, {
+            radius: 7.5
+        },function (err, features){
+            console.log(features);
+            document.getElementById('menu').innerHTML = JSON.stringify(features, null, 2);
+            
+        });
+    });*/
+    
+    var zoom = 8;
+    
+    map.on('click', function (e) {
+        map.featuresAt(e.point, {
+            radius: 7.5
+        },function (err, features){
+            if (zoom < 50) {
+                zoom += 1;
+            }
+            console.log(e.lngLat.lng , e.lngLat.lat);
+            map.flyTo({
+                center: [e.lngLat.lng , e.lngLat.lat],
+                zoom: zoom
+            });
+        });
+    });
+    
+    function perreines(){
+        
+    }
     
     </script>
+
+
+
