@@ -22,6 +22,10 @@ appHyblab.config(function($routeProvider){
             templateUrl: 'views/pagethree.html',
             controller: 'PageThreeCtrl'
         })
+        .when('/sidebarpage', {
+            templateUrl: 'views/sidebarpage.html',
+            controller: 'IntroCtrl'
+        })
         .otherwise({
             redirectTo: '/begin'
         })
