@@ -1,6 +1,6 @@
 $("#container2").height($("#container1").height());
 var selected = false;
-        var svg = d3.select("#svg").attr("preserveAspectRatio","none");
+        var svg = d3.select("#svg").attr("preserveAspectRatio","none").on("mouseover",svgInHandler).on("mouseout",svgOutHandler);
         svg1 = svg.selectAll("polygon").call(d3.behavior.zoom().scaleExtent([1, 2]).on("zoom", zoom)).on("click",clickHandler);
         var i = 1;
         svg2 = svg.selectAll("circle").call(d3.behavior.zoom().scaleExtent([1, 2]).on("zoom", zoom)).on("mouseover",mouseOverHandler).on("mouseout",mouseOutHandler).on("click",clickHandler);
@@ -72,3 +72,13 @@ var selected = false;
                selected = false;
            }
        };
+
+
+function svgInHandler(){
+    $.fn.fullpage.setAllowScrolling(false);
+};
+
+function svgOutHandler(){
+    $.fn.fullpage.setAllowScrolling(true);
+}
+
