@@ -1,4 +1,5 @@
 "use strict";
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtZWJpcmJ5IiwiYSI6IkwwUXRVY28ifQ.ksZug_5n6Zyr-N0EqjfL9Q';
 var map = new mapboxgl.Map({
     container: 'map',
