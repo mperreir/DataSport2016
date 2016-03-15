@@ -299,12 +299,13 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
               dispatch: {
                 //chartClick: function(e) {console.log("! chart Click !")},
                 elementClick: function(e) {
-                    console.log("! element Click !");
+                    console.log(e);
                     $scope.optionBarChart.color = "red";
-                }
+                    
+                },
                 //elementDblClick: function(e) {console.log("! element Double Click !")},
                 //elementMouseout: function(e) {console.log("! element Mouseout !")},
-                //elementMouseover: function(e) {console.log("! element Mouseover !")}
+                elementMouseover: function(e) { console.log("! element Mouseover !")}
               }
             },
             tooltip: {
@@ -320,10 +321,10 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                   return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
                 } 
           },
-            callback: function() {
-                return function () {
-                    console.log("test");
-                }
+            showLegend: false,
+            showControls: false,
+            callback: function(chart) {
+                //console.log(d3.select("#nvd3-svg svg").selectAll("g"));
             }
         
         }
