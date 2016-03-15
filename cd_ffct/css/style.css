@@ -9,6 +9,10 @@ p {
     font-family: "source sans pro";
 }
 
+h1{
+    font-family: "source sans pro";
+}
+
 #container {
     width: 960px;
     margin: 0 auto;
@@ -24,7 +28,6 @@ p {
     font-style: italic;
     font-weight: bold;
     text-align: left;
-    font-family: "source sans pro";
     text-transform: uppercase;
     
     margin: 0;
@@ -87,9 +90,7 @@ p {
     text-transform: uppercase;
     font-size: 29px;
     font-style: italic;
-    font-weight: bold;
-    font-family: "source sans pro";
-    
+    font-weight: bold;    
     position: absolute;
     padding: 0;
     margin: 0;
@@ -113,7 +114,15 @@ p {
 #roue {
     position: absolute;
     margin: 180px 393px 43px 250px;
+     -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
 }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 
 #selle {
     position: absolute;
