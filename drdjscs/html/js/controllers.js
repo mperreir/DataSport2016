@@ -416,14 +416,14 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                 axisLabel: '',
                 showMaxMin: false,
                 tickFormat: function(d){
-                    return d3.format('f')(d);
+                    return d3.format('.0f')(d);
                 }
             },
             yAxis: {
                 axisLabel: '',
                 axisLabelDistance: -20,
                 tickFormat: function(d){
-                    return d3.format('.1f')(d);
+                    return d3.format('.0f')(d);
                 }
 
             },
@@ -438,21 +438,22 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
               dispatch: {
                 //chartClick: function(e) {console.log("! chart Click !")},
                 elementClick: function(e) {
-                    console.log(e);
+                    //console.log(e);
                     
                     
                 },
                 //elementDblClick: function(e) {console.log("! element Double Click !")},
                 elementMouseout: function(e) {
-                    d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(0, 175, 155, 1)";
+                    //d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(0, 175, 155, 1)";
                 },
                 elementMouseover: function(e) { 
                     //console.log(e.index);
-                    d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(32, 201, 41, 0.9)";
+                    //d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(32, 201, 41, 0.9)";
                 }
               }
             },
             tooltip: {
+                enable: false,
                 contentGenerator: function (e) {
                   var series = e.series[0];
                   if (series.value === null) return;
@@ -462,9 +463,10 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                   }  else {
                       temp = " EMPLOI CRÉES ";
                   }
-                  return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
+                  return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+Math.round(e.value)+"</h1></div>";
                 } 
           },
+            interactive: false,
             showLegend: false,
             showControls: false,
             scaleShowGridLines: false,
