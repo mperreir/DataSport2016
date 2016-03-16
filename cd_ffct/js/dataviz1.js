@@ -60,8 +60,8 @@ grandparent.append("rect")
     .attr("height", margin.top);
 
 grandparent.append("text")
-    .attr("x", 6)
-    .attr("y", 6 - margin.top)
+    .attr("x", 15)
+    .attr("y", -15)
     .attr("dy", ".75em")
     .text("<");
 
@@ -181,10 +181,8 @@ d3.json("json/licences_regions_test.json", function(root) {
 
       // renseigne le nom des régions dans le treemap
     g.append("foreignObject")
-        .attr("dy", ".75em")
         .text(function(d) { return d.name; })
-        .call(text)
-        .style("color","#FFFFDF");
+        .call(text);
     
     function transition(d) {
     if (transitioning || !d) return;
@@ -218,7 +216,6 @@ d3.json("json/licences_regions_test.json", function(root) {
     t1.remove().each("end", function() {
     svg.style("shape-rendering", "crispEdges");
     transitioning = false;
-    // majDataDept();
     });
     }
 
