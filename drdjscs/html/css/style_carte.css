@@ -41,3 +41,14 @@
 #menu a.active:hover {
     background: #65CEC2;
 }
+
+#searchbar{position:relative; width:1040px; height:auto;}
+
+.formulaire
+{display:inline-block;}
+
+#contenu_rechercher
+{width:600px; height:35px;}
+
+#rechercher
+{ background-image: url(images/searchbar_button.png);background-repeat: no-repeat;width: 35px;height: 35px;padding: 0; }
