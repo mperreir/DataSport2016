@@ -18,34 +18,14 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>-->
-<!--    <script src="js/jQuery.js"></script>  -->
+    <script src="js/jQuery.js"></script>  
     <script src="../Libraries/jquery-countTo-master/jquery.countTo.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-      $('#fullPage').fullpage({
-        sectionsColor: [ '#414141','#414141', '#414141', '#414141', '#414141','#414141','#414141','#414141'],
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage'],
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom',
-        navigation: true,
-        navigationPosition: 'right',
-        css3:true,
-        loopHorizontal: false,
-        afterLoad: countNumber
-      });
-    });
-        countNumber = function(al,index){
-    if(al == "4thPage"){
-        $('.timer').countTo({
-            from: 0,
-            to: 2500,
-            speed: 3000,
-            refreshInterval: 50
-        });
-    }
-        }
-    </script>
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/script_map_france.js"></script>
+        
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+        <link rel="stylesheet"  type="text/css" href="css/index.css">
+
 
  
   </head>
@@ -79,6 +59,41 @@ de la région Pays-de-la-Loire en 2015</h2>
                             <td><hr width="100%;" align="right"></td>
                         </tr>
                     </table>
+                </div>
+                <div style="width:45%; margin-left: 7%; float: left;">
+                    <p>
+                        Avec près de 11000 licenciés et plus de 80 clubs et associations sportives, la ville est habitée par le sport et attire des pratiquants bien au-delà des limites communales. Fait pas si fréquent pour une ville de cette dimension, elle compte cinq club en Nationale donc deux sont métropolitains.
+                    </p>
+                    <p>
+                        Cette situation résulte des liens étroits qui se sont tissés entre la municipalité, les associations et l’Office municipal des sports. Ils ont contribué à proposer un large choix de pratiques, des initiations proposées aux enfants très tôt par les écoles du sport et une qualité d’équipement et de banlieue de l’autre côté de la Loire, n’a eu que peu de ressources financières.
+                    </p>
+                    <p>
+                        Rendre les équipements et les pratiques accessibles à tous est un enjeu qui a été intégré dans deux des cinq priorités du mandat : “la jeunesse comme promesse pour l’avenir” et “les loisirs et la vie associative pour l’épanouissement de chacun”.
+                    </p>
+                    <p>
+                        En concourant pour le challenge de la ville la plus sportive du département, c’est un hommage qui a été rendu à tous les sportifs, enfants, femmes et hommes, de tous âges, pratiquant librement, en amateurs ou en professionnels, qui ont pour point commun de vivre et de faire vivre le sport avec passion sur le territoire.
+                    </p>
+                </div>
+                <div align="center" style="width:40%; margin-right: 3px; float: right;">
+                    <p style="font-size: 40px; margin-top: 0px;">10618 PRATIQUANTS</p>
+                    <svg style="margin-top: 15%;" viewBox="0 0 500 400" preserveAspectRatio="none">
+                        <rect x="0" y="0" fill="#241F21" width="262.4" height="25.9"/>
+                        <rect id="r1" x="0" y="0" fill="#FF3D00" height="25.9">
+                        </rect>
+                        <text class="t1" x="270" y="18" fill="white"></text><text x="310" y="18" fill="white">licencies</text>
+                                                
+	                    <rect x="0" y="79.9" fill="#241F21" width="262.4" height="25.9"/>
+	                    <rect id="r2" x="0" y="79.9" fill="#FF3D00" height="25.9"/>
+                        <text class="t2" x="270" y="98" fill="white">5113</text><text x="310" y="98" fill="white">jeunes</text>
+                        
+	                    <rect x="0" y="159.7" fill="#241F21" width="262.4" height="25.9"/>
+	                    <rect id="r3" x="0" y="159.7" fill="#FF3D00" height="25.9"/>
+                        <text class="t3" x="270" y="178" fill="white">4095</text><text x="310" y="178" fill="white">femmes</text>
+                        
+	                    <rect x="0" y="239.5" fill="#241F21" width="262.4" height="25.9"/>
+	                    <rect id="r4" x="0" y="239.5" fill="#FF3D00" height="25.9"/>
+                        <text class="t4" x="270" y="258" fill="white">878</text><text x="310" y="258" fill="white">adherents</text>
+                    </svg>
                 </div>
             </div>  
 <!--===============================================================================================================-->
@@ -253,6 +268,30 @@ de la région Pays-de-la-Loire en 2015</h2>
 	                                   <circle id="piscine2" fill="#FFFF00" cx="595.3" cy="282.8" r="7.8"/>
                                    </g>
                         </svg>
+                            <div style="position: absolute; left: 2%; bottom: 5%; width: 20%;">
+                                <svg id="legend" viewBox="0 0 300 220" style="background: #231F20;" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                    <g>
+                                        <circle cx="20" cy="30" r="10" fill="#44ff97" />
+                                        <text x="50" y="35" fill="white">Espaces sportifs de plein air</text>
+                                    </g>
+                                    <g>
+                                        <circle cx="20" cy="70" r="10" fill="#ff3652" />
+                                        <text x="50" y="75" fill="white">Gymanes</text>
+                                    </g>
+                                    <g>
+                                        <circle cx="20" cy="110" r="10" fill="#004cff" />
+                                        <text x="50" y="115" fill="white">Équipements spécialisés</text>
+                                    </g>
+                                    <g>
+                                        <circle cx="20" cy="150" r="10" fill="#ff3e00" />
+                                        <text x="50" y="155" fill="white">Stades</text>
+                                    </g>
+                                    <g>
+                                        <circle cx="20" cy="190" r="10" fill="#ffff00" />
+                                        <text x="50" y="195" fill="white">Piscine / Patinoire</text>
+                                    </g>                                  
+                                </svg>
+                            </div>
                         </div>
         
                         <div id="container2" style="width:45%; float:left;">
