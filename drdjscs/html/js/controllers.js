@@ -144,7 +144,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         }
     };
     function updateColor(debut, fin) {
-        for (var i = 0; i < 18; i++) {
+        for (var i = 0; i < 19; i++) {
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
         }
         for (var i = debut; i < fin; i++) {
@@ -155,71 +155,95 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.update19961998 = function () {    
         $scope.data = $scope.zoomData[0];
         $scope.pieDynamicData = $scope.pieData[1];
-        $scope.graphInformation = $scope.textList[0].text;
         //$scope.barData = $scope.zoomBarData[0];
         $scope.titre = "1997 à 1998...";
         $scope.barAnnee = "1997 - 1998";
-        emplois(0,1);
-        updateColor(0, 1);
+        emplois(0,2);
+        updateColor(0, 2);
     }
     $scope.update19972005 = function () {
         $scope.data = $scope.zoomData[1];
         $scope.pieDynamicData = $scope.pieData[0];
-        $scope.graphInformation = $scope.textList[1].text;
         //$scope.barData = $scope.zoomBarData[1];
         $scope.titre = "1997 à 2005...";
         $scope.barAnnee = "1997 - 2005";
-        emplois(0,8);
-        updateColor(0, 8);
+        emplois(0,9);
+        updateColor(0, 9);
     }
     $scope.update20052010 = function () {    
         $scope.data = $scope.zoomData[2];
-        $scope.graphInformation = $scope.textList[2].text;
         //$scope.barData = $scope.zoomBarData[2];
         $scope.titre = "2005 à 2010...";
         $scope.barAnnee = "2005 - 2010";
-        emplois(8, 13);
-        updateColor(8, 13);
+        emplois(8, 14);
+        updateColor(8, 14);
     }
     $scope.update19972002 = function () {
         $scope.data = $scope.zoomData[3];
-        $scope.graphInformation = $scope.textList[1].text;
         //$scope.barData = $scope.zoomBarData[3];
         $scope.titre = "1997 à 2002...";
         $scope.barAnnee = "1997 - 2002";
-        emplois(0, 4);
-        updateColor(0, 4);
+        emplois(0, 6);
+        updateColor(0, 6);
     }
     $scope.update20102015 = function () {    
         $scope.data = $scope.zoomData[4];
-        $scope.graphInformation = $scope.textList[0].text;
         //$scope.barData = $scope.zoomBarData[4];
         $scope.titre = "2010 à 2015...";
         $scope.barAnnee = "2010 - 2015";
-        emplois(13, 18);
-        updateColor(13, 18);
+        emplois(13, 19);
+        updateColor(13, 19);
     }
     $scope.update20042015 = function () {
         $scope.data = $scope.zoomData[6];
-        $scope.graphInformation = $scope.textList[1].text;
         //$scope.barData = $scope.zoomBarData[6];
         $scope.titre = "2004 à 2015...";
         $scope.barAnnee = "2004 - 2015";
-        emplois(7, 18);
-        updateColor(7, 18);
+        emplois(7, 19);
+        updateColor(7, 19);
     }
     $scope.update20092013 = function () {
-        $scope.data = $scope.zoomData[7];
-        $scope.graphInformation = $scope.textList[1].text;
+        $scope.data = $scope.zoomData[8];
         //$scope.barData = $scope.zoomBarData[7];
         $scope.titre = "2009 à 2013...";
         $scope.barAnnee = "2009 - 2013";
-        emplois(12, 16);
-        updateColor(12, 16);
+        emplois(12, 17);
+        updateColor(12, 17);
+    }
+    $scope.update19922005 = function () {
+        $scope.data = $scope.zoomData[12];
+        //$scope.barData = $scope.zoomBarData[7];
+        $scope.titre = "1992 à 2005...";
+        $scope.barAnnee = "1992 - 2005";
+        emplois(0, 9);
+        updateColor(0, 9);
+    }
+    $scope.update20122015 = function () {
+        $scope.data = $scope.zoomData[10];
+        //$scope.barData = $scope.zoomBarData[7];
+        $scope.titre = "2012 à 2015...";
+        $scope.barAnnee = "2012 - 2015";
+        emplois(15, 19);
+        updateColor(15, 19);
+    }
+    $scope.update20132015 = function () {
+        $scope.data = $scope.zoomData[11];
+        //$scope.barData = $scope.zoomBarData[7];
+        $scope.titre = "2013 à 2015...";
+        $scope.barAnnee = "2013 - 2015";
+        emplois(17, 19);
+        updateColor(17, 19);
+    }
+    $scope.update19962009 = function () {
+        $scope.data = $scope.zoomData[13];
+        //$scope.barData = $scope.zoomBarData[7];
+        $scope.titre = "1996 à 2009...";
+        $scope.barAnnee = "1996 - 2009";
+        emplois(0, 13);
+        updateColor(0, 13);
     }
     $scope.reset = function () {
         $scope.data = $scope.fix;
-        $scope.graphInformation = $scope.textList[2].text;
         $scope.barData = $scope.zoomBarFixData;
         $scope.titre = "1997 à maintenant...";
         $scope.barAnnee = "1997 - 2015";
@@ -228,16 +252,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
         }
     };
-  
-    /*DYNAMIC TEXT*/
-    $scope.textList = [
-        {id: 1, text: ""},
-        {id: 2, text: ""},
-        {id: 3, text: ""},
-        {id: 4, text: ""}
-    ];
-    $scope.graphInformation = "Some random Text";
-        
+          
     $scope.pieOptions = {
         chart: {
             type: 'pieChart',
@@ -265,11 +280,23 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.pieBoundary = false;
     $scope.pieMessage = "";
     
+    $scope.pourcentage2 = 0.05;
+    $scope.pieBoundary2 = false;
+    $scope.pieMessage2 = "";
+    
     function pieBounds(aBool) {
         if (aBool == true) {
             $scope.pieMessage = " Limite atteint...";
         } else {
             $scope.pieMessage = "";
+        }
+    }
+    
+    function pieBounds2(aBool) {
+        if (aBool == true) {
+            $scope.pieMessage2 = " Limite atteint...";
+        } else {
+            $scope.pieMessage2 = "";
         }
     }
     
@@ -314,6 +341,49 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             reducePieData.push(autres);
             $scope.introPieListReduce = reducePieList;
             $scope.introPieDataReduce = reducePieData;   
+    
+    }
+    
+    $scope.incr2 = function() {
+        if ($scope.pourcentage2 < 100) {
+            $scope.pourcentage2 += 1;
+            updatePie2();
+        } else {
+            $scope.pieBoundary2 = true;
+            pieBounds2($scope.pieBoudary2);
+            $scope.pieBoundary2 = false;
+        }
+    }
+    
+    $scope.decr2 = function() {
+        if ($scope.pourcentage2 > 0) {
+            $scope.pourcentage2 -= 1;
+            updatePie2();
+        } else {
+            $scope.pieBoundary2 = true;
+            pieBounds2($scope.pieBoundary2);
+            $scope.pieMessage2 = false;
+        }
+    }
+    
+    function updatePie2() {
+       
+            var reducePieList2 = [];
+            var reducePieData2 = [];
+            var autres = 0;
+            for (var i =0; i < $scope.pieList2.length; i++) {
+                    reducePieList2.push($scope.pieList2[i]);
+                    reducePieData2.push($scope.pieData2[i]);
+                    if ($scope.pieData2[i] < $scope.pourcentage2) {
+                        reducePieData2.pop();
+                        reducePieList2.pop();
+                        autres += $scope.pieData2[i];
+                    }
+            }
+            reducePieList2.push("Autres");
+            reducePieData2.push(autres);
+            $scope.introPieListReduce2 = reducePieList2;
+            $scope.introPieDataReduce2 = reducePieData2;   
     
     }
     
