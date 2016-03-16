@@ -19,8 +19,7 @@ $(document).ready(function() {
         // Création du svg
         var svg = dataviz.append("svg")
                 .attr("width", datavizWidth)
-                .attr("height", (datavizHeight - $("#dataviz2 h1").height()) - parseInt($("#dataviz2 h1").css("marginBottom")) + "px"),
-            svgWidth = dataviz.style("width");
+                .attr("height", (datavizHeight - $("#dataviz2 h1").height()) - parseInt($("#dataviz2 h1").css("marginBottom")) + "px");
 
         // Booléen qui permet de savoir si l'on a déjà cliqué sur le pieChart
         var firstTime = true;
@@ -32,8 +31,7 @@ $(document).ready(function() {
         /*  **************************************************  */
         /*                      Configuration                   */
         /*  **************************************************  */
-        var colors = ["#9BC8D9", "#F56D34", "#F4DC78"],
-            colorsHover = ["#6B98A9", "#C53D04", "#C4AC48"];
+        var colors = ["#9BC8D9", "#F56D34", "#F4DC78"];
         
         var conf = {
             pieChart: {
@@ -119,35 +117,32 @@ $(document).ready(function() {
         /*  **************************************************  */
         var dataSet = [];
         // Pour chacune des activités (Route, VTT, BMX)
-        for (var i = 0; i < json.children.length; i++) {
+        for (var i = 0; i < json.length; i++) {
             var activity = {};
             activity.color = colors[i];
-            activity.colorHover = colorsHover[i];
-            activity.label = json.children[i].label;
+            activity.label = json[i].label;
             activity.sum = 0;
-            activity.categories = [];
+            activity.mens = [];
+            activity.womens = [];
             
             // Pour chacune des catégories
-            for (var j = 0; j < json.children[i].children.length; j++) {
-                var category = {};
-                category.label = json.children[i].children[j].label;
-                category.value = json.children[i].children[j].men + json.children[i].children[j].women;
-                activity.sum += category.value;
-                activity.categories.push(category);
+            for (var j = 0; j < json[i].children.length; j++) {
+                activity.sum += json[i].children[j].men + json[i].children[j].women;
+                activity.mens.push({label: json[i].children[j].label, y: json[i].children[j].men});
+                activity.womens.push({label: json[i].children[j].label, y: json[i].children[j].women});
             }
 
             dataSet.push(activity);
         }
-
+        
+        
         var dataSet_barChartInit = {};
-        dataSet_barChartInit.categories = [];
-        for (var j = 0; j < json.children[0].children.length; j++) {
-            var category = {};
-            category.label = json.children[0].children[j].label;
-            category.value = 0;
-            dataSet_barChartInit.categories.push(category);
+        dataSet_barChartInit.mens = [];
+        dataSet_barChartInit.womens = [];
+        for (var j = 0; j < json[0].children.length; j++) {
+            dataSet_barChartInit.mens.push({label: json[0].children[j].label, y: 0});
+            dataSet_barChartInit.womens.push({label: json[0].children[j].label, y: 0});
         }
-
 
         /*  **************************************************  */
         /*                      Dataviz                         */
@@ -206,10 +201,14 @@ $(document).ready(function() {
         function pieChart(id) {
             var outerRadius = Math.min(conf.pieChart.init.width, conf.pieChart.init.height) / 2,
                 innerRadius = outerRadius * conf.pieChart.ratioRadius;
-
+            
             var arc = d3.svg.arc()
                 .outerRadius(outerRadius)
                 .innerRadius(innerRadius);
+            
+            var arcOpen = d3.svg.arc()
+                .outerRadius(Math.min(conf.pieChart.width, conf.pieChart.height) / 2 + 20)
+                .innerRadius((Math.min(conf.pieChart.width, conf.pieChart.height) / 2) * conf.pieChart.ratioRadius + 20);
 
             var pie = d3.layout.pie()
                 .sort(null)
@@ -237,10 +236,20 @@ $(document).ready(function() {
                 .attr("dy", ".35em")
                 .text(function(d) { return d.data.label; })
                 .on("click", clickSegment);
+            
+            var pieChartTextCenter = gArc.append("text")
+                .style("text-anchor", "middle")
+            .style("font-size", "15px")
+      .attr("dy", "0.35em");
 
-            function mouseover(d) { d3.select(this).style("fill", d.data.colorHover); }
+            function mouseover(d) {
+                path.attr("opacity", 0.5);
+                d3.select(this).attr("opacity", 1);
+            }
 
-            function mouseout(d) { d3.select(this).style("fill", d.data.color) }
+            function mouseout(d) {
+                path.attr("opacity", 1);
+            }
 
             function clickSegment(d) {
                 
@@ -250,6 +259,10 @@ $(document).ready(function() {
 
                     outerRadius = Math.min(conf.pieChart.width, conf.pieChart.height) / 2;
                     innerRadius = outerRadius * conf.pieChart.ratioRadius;
+                    
+                    /*arc = d3.svg.arc()
+                        .outerRadius(outerRadius)
+                        .innerRadius(innerRadius);*/
                     
                     path.transition()
                         .duration(1000)
@@ -265,8 +278,27 @@ $(document).ready(function() {
                                 return arcTemp;
                             }
                         });
-                }
+                    d3.select(this).transition()
+                        .delay(1000)
+                        .duration(1000)
+                        .attr("d", arcOpen);
+                } else {
+                    path.transition()
+                        .duration(1000)
+                        .attrTween("d", function(angle) {
+                            var i = d3.interpolate(angle.startAngle + 0.1, angle.endAngle);
+                            return function(t) {
+                                angle.endAngle = i(t);
+                                return arc(angle);
+                            }
+                        });
 
+                    d3.select(this).transition()
+                        .delay(1000)
+                        .duration(1000)
+                        .attr("d", arcOpen);
+                }
+                
                 var _dataSet = {},
                     _color = "",
                     _pieChart_TranslateX = 0,
@@ -317,12 +349,20 @@ $(document).ready(function() {
                 // Mise à jour des couleurs
                 legend.style("fill", _color);
                 
+                pieChartTextCenter.transition()
+                    .duration(conf.legend.duration)
+                    .delay(conf.legend.delay)
+                    .style("fill", _color)
+                    .text(_dataSet.label);
+                
                 // On met à jour les labels contenant les informations (somme des licenciés) sur l'activité sélectionnée
                 labelNombre.transition()
                     .duration(conf.legend.duration)
                     .delay(conf.legend.delay)
                     .tween("text", function(d) {
-                        var i = d3.interpolate(this.textContent, _dataSet.categories.reduce(function(a, b) { return a + b.value; }, 0));
+                        var i = d3.interpolate(this.textContent,
+                                               (_dataSet.mens.reduce(function(a, b) { return a + b.y; }, 0))
+                                               + (_dataSet.womens.reduce(function(a, b) { return a + b.y; }, 0)));
                         return function(t) {
                             this.textContent = Math.round(i(t));
                         }
@@ -357,16 +397,37 @@ $(document).ready(function() {
         function histogram(id, datas) {
 
             var hist = {};
-
-            var histColor = datas.color,
-                histColorHover = datas.colorHover;
+            
+            var histColor = datas.color;
+            
+            var stackedData = [];
+            stackedData.push(datas.mens);
+            stackedData.push(datas.womens);
+            
+            var stack = d3.layout.stack();
+            var layers = stack(stackedData);
+            var yStackMax = d3.max(layers, function(layer) {
+                return d3.max(layer, function(d) {
+                    return d.y0 + d.y;
+                });
+            });
 
             var margin = {top: 20, right: 20, bottom: 200, left: 80},
                 width = 500 - margin.left - margin.right,
                 height = 500 - margin.top - margin.bottom;
-
-            var x = d3.scale.ordinal().rangeRoundBands([0, width, 0.1])
-                .domain(datas.categories.map(function(d) { return d.label; }));
+            
+            var x = d3.scale.ordinal()
+                .rangeRoundBands([0, width, 0.1])
+                .domain(datas.mens.map(function(d) { return d.label; }));
+            
+            /*var y = d3.scale.linear()
+                .range([height, 0])
+                .domain([0, d3.max(datas.categories, function(d) { return d.value; })]);*/
+            var y = d3.scale.linear()
+                .range([height, 0])
+                .domain([0, yStackMax]);
+            
+            var xAxis = d3.svg.axis().scale(x).orient("bottom");            
 
             hist.g = svg.append("g")
                 .attr("id", "barChart")
@@ -376,7 +437,7 @@ $(document).ready(function() {
 
             hist.g.append("g").attr("class", "x axis")
                 .attr("transform", "translate(0," + height + ")")
-                .call(d3.svg.axis().scale(x).orient("bottom"))
+                .call(xAxis)
                 .selectAll("text")  
                 .style("text-anchor", "end")
                 .attr("dx", "-.8em")
@@ -386,44 +447,84 @@ $(document).ready(function() {
                 .style("font-style", "italic")
                 .style("fill", "#494949")
                 .style("font-size", "13px");
-
-            var y = d3.scale.linear().range([height, 0])
-                .domain([0, d3.max(datas.categories, function(d) { return d.value; })]);
-
+            
+            var layer = hist.g.selectAll(".layer")
+                .data(layers)
+                .enter().append("g")
+                .attr("class", "layer");
+            
+/*
             var bars = hist.g.selectAll(".bar").data(datas.categories).enter()
-                .append("g").attr("class", "bar");
-
-            bars.append("rect")
+                .append("g").attr("class", "bar");*/
+/*
+            var rect = bars.append("rect")
                 .attr("x", function(d) { return x(d.label); })
                 .attr("y", function(d) { return y(d.value); })
                 .attr("width", x.rangeBand())
                 .attr("height", function(d) { return height - y(d.value); })
                 .on("mouseover", mouseover)
                 .on("mouseout", mouseout);
-
+*/
+            
+            var rect = layer.selectAll("rect")
+                .data(function(d) { return d; })
+                .enter().append("rect")
+                .attr("x", function(d) { return x(d.label); })
+                //.attr("y", height)
+                .attr("width", x.rangeBand())
+                .attr("y", function(d) { return y(d.y0 + d.y); })
+                .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
+                .on("mouseover", mouseover)
+                .on("mouseout", mouseout);;
+            /*
             bars.append("text")
                 .text(function(d) { return d3.format(",")(d.value); })
                 .attr("x", function(d) { return x(d.label)+x.rangeBand()/2; })
                 .attr("y", function(d) { return y(d.value)-5; })
                 .attr("text-anchor", "middle")
-                .style("fill", "#494949");
+                .style("fill", "#494949");*/
 
             function mouseover(d) {
-                d3.select(this).attr("fill", histColorHover);
+                rect.attr("opacity", 0.5);
+                d3.select(this).attr("opacity", 1);
             }
 
             function mouseout(d) {
-                d3.select(this).attr("fill", histColor);
+                rect.attr("opacity", 1);
             }
 
             hist.update = function(datas) {
+                
                 // Mise à jour des couleurs
-                histColor = datas.color,
-                histColorHover = datas.colorHover;
 
+                var stackedData = [];
+                stackedData.push(datas.mens);
+                stackedData.push(datas.womens);
+
+                var stack = d3.layout.stack();
+                var layers = stack(stackedData);
+                var yStackMax = d3.max(layers, function(layer) {
+                    return d3.max(layer, function(d) {
+                        return d.y0 + d.y;
+                    });
+                });
+                
+                y.domain([0, yStackMax]);
+                layer = hist.g.selectAll(".layer").data(layers);
+                
+                layer.selectAll("rect").data(function(d) { return d; })
+                .transition()
+                    .duration(500)
+                    .attr("y", function(d) {
+                            return y(d.y0 + d.y);
+                    })
+                    .attr("height", function(d) {
+                        return y(d.y0) - y(d.y0 + d.y); })
+                    .attr("fill", datas.color);
+                
                 // Mise à jour du domaine des valeurs de l'histogramme
-                y.domain([0, d3.max(datas.categories, function(d) { return d.value; })]);
-
+                //y.domain([0, d3.max(datas.categories, function(d) { return d.value; })]);
+/*
                 // Mise à jour des valeurs de l'histogramme
                 var bars = svg.selectAll(".bar").data(datas.categories);
                 bars.select("rect")
@@ -445,6 +546,7 @@ $(document).ready(function() {
                             }
                         })
                     .attr("y", function(d) { return y(d.value)-5; });
+                    */
             }
 
             return hist;
