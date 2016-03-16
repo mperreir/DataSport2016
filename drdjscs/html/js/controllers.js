@@ -449,13 +449,13 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                 },
                 //elementDblClick: function(e) {console.log("! element Double Click !")},
 
-                elementMouseout: function(e) {
-                    d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: RGBA(230, 230, 230, 1)";
-                },
-                elementMouseover: function(e) { 
-                    //console.log(e.index);
-                    d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: RGBA(55, 196, 180, 1)";
-                }
+                // elementMouseout: function(e) {
+                //     d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: RGBA(230, 230, 230, 1)";
+                // },
+                // elementMouseover: function(e) { 
+                //     //console.log(e.index);
+                //     d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: RGBA(55, 196, 180, 1)";
+                // }
 
 
 
