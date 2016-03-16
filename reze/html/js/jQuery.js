@@ -13,13 +13,16 @@ $(document).ready(function() {
     });
         countNumber = function(al,index){
     if(al == "secondPage"){
+        $("#pa").countTo({
+            speed: 2500,
+            refreshInterval: 50
+        })
         $('.t1').countTo({
             from: 0,
             to: 9740,
             speed: 2000,
             refreshInterval: 50
         });
-        //d3.select('#r1').append("animate").attr("attributeName","width").attr("attributeType","XML").attr("from",0).attr("to", 240.7).attr("dur","2000ms");
         $('#r1').animate({
             width: 240.7
         },2000);
