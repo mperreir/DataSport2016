@@ -248,25 +248,42 @@ btnExplorer:hover{
 
 /*PAGE INTRO*/
 .container-intro {
-	height: 1800px;
+	height: 200vh;
 	text-align: center;
 }
+.container-intro > hr {
 
+	height: 6px;
+	background: url(../img/hr.png) repeat-x 0 0;
+    border: 0;
+    padding-bottom: 40px;
+    width: 300px;
+
+}
 .container-intro > p {
 	
 	font-size: 20px;
 	font-weight: 400;
 	padding-left: 20vw;
 	padding-right: 20vw;
+	line-height: 30px;
 	
 }
+
+.container-intro > p > strong {
+	
+	color: black;
+	padding-bottom: 50px;
+	
+}
+
 
 .container-intro > h2 {
 		color:black;
 	font-size: 44px;
 	font-weight:600;
-	padding-top: 90px;
-	padding-bottom: 40px;
+	padding-top: 40px;
+	padding-bottom: 10px;
 
 }
 
@@ -279,8 +296,12 @@ btnExplorer:hover{
 }
 .container-intro ul > li > h3 {
 	
-	color: #00af9B;
+	color: black;
 	padding: 10px;
+}
+.container-intro ul > li > img {
+	
+	width: 100px;
 }
 .container-intro ul > li{
 
