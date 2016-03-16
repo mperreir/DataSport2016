@@ -146,11 +146,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     function updateColor(debut, fin) {
 
         for (var i = 0; i < 19; i++) {
-            d3.selectAll("rect.nv-bar")[0][i].style= "fill: RGBA(230, 230, 230, 1)"
-
-        for (var i = 0; i < 19; i++) {
-            d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
-
+            d3.selectAll("rect.nv-bar")[0][i].style= "fill: RGBA(230, 230, 230, 1)";
         }
         for (var i = debut; i < fin; i++) {
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: RGBA(55, 196, 180, 1)";
