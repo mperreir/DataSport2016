@@ -4,11 +4,19 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtZWJpcmJ5IiwiYSI6IkwwUXRVY28ifQ.ksZug_5n6Z
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/gamebirby/cilnjnjif0035c4kncaeq95ex',
-    center: [-1.54,47.248],
+    center: [-1.54,47.4],
     zoom: 8
 });
 
 map.addControl(new mapboxgl.Navigation());
+
+var bouton_menu = document.getElementById('bouton_menu');
+bouton_menu.addEventListener("click",function (e) {
+    map.flyTo({
+            center: [-1.54,47.248],
+            zoom: 8
+        });
+});
 
 map.on('style.load', function () {
     /////////////// CHARGEMENT DES POINTS /////////////////////
@@ -91,8 +99,8 @@ map.on('click', function (e) {
     });
 });
 
-addLayer('Contours', 'contours');
-addLayer('Markers', 'markers');
+addLayer('Pays de la Loire', 'contours');
+addLayer('Clubs', 'markers');
 
 function addLayer(name, id) {
     var link = document.createElement('a');
@@ -118,3 +126,18 @@ function addLayer(name, id) {
     var layers = document.getElementById('menu');
     layers.appendChild(link);
 }
+
+var rechercher = document.getElementById('rechercher');
+rechercher.addEventListener('click',function () {
+    var contenu = document.getElementById('contenu_rechercher').value;
+    for (var i=0; i<association.data.features.length ; i++){
+        if (association.data.features[i].properties.title == contenu){
+            map.flyTo({
+                center: [association.data.features[i].geometry.coordinates[0], association.data.features[i].geometry.coordinates[1]],
+                zoom: 15
+            });
+        }
+    }
+    
+});
+
