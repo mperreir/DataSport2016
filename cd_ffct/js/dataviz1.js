@@ -54,16 +54,12 @@ var grandparent = svg.append("g")
     
 
 /*Bandeau de retour*/
-grandparent.append("rect")
-    .attr("y", -margin.top)
-    .attr("width", width)
-    .attr("height", margin.top);
 
 grandparent.append("text")
-    .attr("x", 15)
+    .attr("x", 0)
     .attr("y", -15)
     .attr("dy", ".75em")
-    .text("<");
+    .text("RETOUR");
 
 d3.json("json/licences_regions_test.json", function(root) {
   initialize(root);

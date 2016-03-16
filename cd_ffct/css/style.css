@@ -98,21 +98,23 @@ h1{
 
 #chaine {
     position: absolute;
-    margin: 0px 538px 359px 48px;
-    margin-top: 0x;
-    margin-left: 0px;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-bottom: 60px;
 }
 
 #lampe {
     position: absolute;
     margin-top: 312px;
-    margin-left: 740px;;
+    margin-left: 820px;
+    margin-bottom: 60px;
 }
 
 #pedale {
     position: absolute;
     margin-top: 243px;
-    margin-left: 0px;
+    margin-left: 40px;
+    margin-bottom: 60px;
 }
 
 #roue {
@@ -133,43 +135,16 @@ h1{
     position: absolute;
     margin-top: 154px;
     margin-left: 567px;
+    margin-bottom: 60px;
 }
 
 #sonette {
     position: absolute;
     margin-top: 337px;
-    margin-left: 542px;
+    margin-left: 600px;
+    margin-bottom: 60px;
 }
 
-.floating{
-    float: left;
-    -webkit-animation-name: Floatingx;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -moz-animation-name: Floating;
-    -moz-animation-duration: 3s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
-
-}
-
-@-webkit-keyframes Floatingx{
-    from {-webkit-transform:translate(0, 0px);}
-    30% {-webkit-transform:rotate(5deg);}
-    40% {-webkit-transform:translate(5px, 15px);}
-    50% {-webkit-transform:translate(10px, 15px);}
-    
-    to {-webkit-transform: translate(0, -0px);    }    
-}
-    
-@-moz-keyframes Floating{
-    from {-moz-transform:translate(0, 0px);}
-    65% {-moz-transform:translate(0, 15px);}
-    to {-moz-transform: translate(0, -0px);}    
-}
 
 /*  **************************************************  */
 /*                      Edito                           */
@@ -225,9 +200,13 @@ rect.parent,
 
 }
 
-.children rect.parent,
-.grandparent rect {
+.children rect.parent {
     cursor: pointer;
+}
+
+.grandparent text{
+    cursor: pointer;
+    fill : #C56534;
 }
 
 .children rect.parent {
