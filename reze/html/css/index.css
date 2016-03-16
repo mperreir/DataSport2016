@@ -33,8 +33,7 @@ table{
 /*Section 0 (titre)
 */
 #section0{
-    background-image: url("../../Ressources/Images/illus-fond.svg");
-    background-repeat:no-repeat;
+    background-image: url("../../Ressources/Images/illus-fond160316.svg");
 	background-position: center center;
 	background-size: 100% 100%;
 }
@@ -73,7 +72,6 @@ table{
 }
 
 #section6 path {
-  fill: #ccc;
   stroke: #fff;
   stroke-width: .5px;
 }
@@ -81,6 +79,11 @@ table{
 #section6 path:hover {
   fill: green;
 }
+
+#section6 path:selected {
+    fill: blue;
+}
+
 #section6 .chart text {
   fill: white;
   font: 10px sans-serif;
