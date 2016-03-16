@@ -7,7 +7,8 @@
         'chart.js',
         'nvd3',
         'ngSanitize',
-        'angular-carousel-3d'
+        'angular-carousel-3d',
+        'counter'
     ])
 })();
 

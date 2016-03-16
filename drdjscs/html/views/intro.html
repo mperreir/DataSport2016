@@ -29,6 +29,11 @@
             <div class="numbersData">
                 <h1>{{emploisCreer}}</h1>
                 <h2>EMPLOI CRÉES</h2>
+                <p  counter
+                    value="manualStartVar"
+                    to="manualStartTarget">
+                  {{ emploisCreer | number:0 }}
+                </p>
             </div>
             <div class="miniGraph">
                 <div>   
@@ -45,14 +50,13 @@
 <div>
     <p>{{titre}}</p>
 </div>
-<a href="#pageone" ng-click="updtOpt()">PageOne</a>
 <div class="deuxCourbes">
     <div>   
         <nvd3 class="with-3d-shadow with-transitions" options='options' data='data'></nvd3>    
     </div>
 </div>    
-    <div class="aideTimeline"> 
-        <div class="btnTimeline aide1" ng-click="update19961998()"><h3>1997-1998</h3></div>
+    <div class="aideTimeline" ng-init="manualStartTarget=0"> 
+        <div class="btnTimeline aide1" ng-click="update19961998(); manualStartTarget={{emploisCreer}};"><h3>1997-1998</h3></div>
         <div class="btnTimeline aide2" ng-click="update19972005()"><h3>1997-2005</h3></div>
         <div class="btnTimeline aide3" ng-click="update20052010()"><h3>2005-2010</h3></div>
         <div class="btnTimeline" ng-click="update19972002()"><h3>1997-2002</h3></div>

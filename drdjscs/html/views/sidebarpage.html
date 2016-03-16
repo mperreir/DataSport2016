@@ -1,3 +1,28 @@
+<li>
+<legend>Auto-start</legend>
+<p  counter
+    value="autoStartVar"
+    duration="5000"
+    effect="'easeOutQuint'"
+    to="100">
+  {{ autoStartVar | number:0 }}
+</p>
+</li>
+ <li ng-init="manualStartTarget=0">
+     <legend>
+      <a  href=""
+          class="pull-right small"
+          ng-click="manualStartTarget=100">
+        Start now!
+      </a>
+      Manual start
+    </legend>
+    <p  counter
+        value="manualStartVar"
+        to="manualStartTarget">
+      {{ manualStartVar | number:0 }}
+    </p>
+</li>
 <div class="">
 <h1>SIDE BAR PAGE</h1>
     <div ng-click="incr()">+</div>
@@ -8,3 +33,5 @@
             chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce">
     </canvas>  
 </div>
+
+
