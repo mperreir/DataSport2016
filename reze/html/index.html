@@ -18,7 +18,8 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>-->
-    <script src="js/jQuery.js"></script>  
+<!--    <script src="js/jQuery.js"></script>  -->
+    <script src="../Libraries/jquery-countTo-master/jquery.countTo.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
       $('#fullPage').fullpage({
@@ -29,13 +30,22 @@
         navigation: true,
         navigationPosition: 'right',
         css3:true,
-        loopHorizontal: false
-          
+        loopHorizontal: false,
+        afterLoad: countNumber
       });
     });
+        countNumber = function(al,index){
+    if(al == "4thPage"){
+        $('.timer').countTo({
+            from: 0,
+            to: 2500,
+            speed: 3000,
+            refreshInterval: 50
+        });
+    }
+        }
     </script>
         <link rel="stylesheet" type="text/css" href="css/index.css">
-
 
  
   </head>
@@ -123,10 +133,11 @@ de la région Pays-de-la-Loire en 2015</h2>
                 </div>
                 <div id="barchart">
                     <h1 style="text-align:left; float: left;-webkit-margin-start: 30%;">Budgets</h1>
-                    <h1 style="text-align:left; float: right;">Équipements
-sportifs</h1>
+                    <h1 style="text-align:left; float: right;">Équipements sportifs</h1>
+                    <span class="timer"></span>
                 </div>
-            </div>  
+            </div>
+            
  <!--===============================================================================================================-->
            <div class ="section" id="section4" >
                 <div class="header_slide">
