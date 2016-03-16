@@ -33,7 +33,7 @@ table{
 /*Section 0 (titre)
 */
 #section0{
-    background-image: url("../../Ressources/Images/illus-fond.jpg");
+    background-image: url("../../Ressources/Images/illus-fond.svg");
     background-repeat:no-repeat;
 	background-position: center center;
 	background-size: 100% 100%;
@@ -65,7 +65,32 @@ table{
     margin-left: 5%;
     margin-right: 5%;
 }
+
 p{
     font-size: 20px;
     width: 90%;
+
+
+/*Section6
+*/
+#section6 #map{
+    float: left;
+}
+
+#section6 path {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+#section6 path:hover {
+  fill: green;
+}
+#section6 .chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+#section6 .histogram-legend{
+    color:black;
 }
