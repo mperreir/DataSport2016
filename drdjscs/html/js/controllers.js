@@ -47,7 +47,32 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.introPieDataReduce = reducePieData;
         $scope.introPieList = $scope.pieList;
         $scope.introPieData = $scope.pieData;
-        console.log($scope.introPieData);
+    });
+    $http.get('hyblabData/aides_accordees_par_disciplaine2.json').success (function(data) {
+        $scope.fixPieData2 = data;
+        $scope.pieList2 = [];
+        $scope.pieData2 = [];
+        
+        var reducePieList2 = [];
+        var reducePieData2 = [];
+        var temp2 = 0;
+        for (var i = 0; i < data.length; i++) {
+            $scope.pieList2.push(data[i].name);
+            $scope.pieData2.push(data[i].value);
+            reducePieList2.push(data[i].name);
+            reducePieData2.push(data[i].value);
+            if (data[i].value < $scope.pourcentage2) {
+                reducePieList.pop();
+                reducePieData.pop();
+                temp += data[i].value;
+            }
+        }
+        reducePieData2.push(temp2);
+        reducePieList2.push("Autres");
+        $scope.introPieListReduce2 = reducePieList2;
+        $scope.introPieDataReduce2 = reducePieData2;
+        $scope.introPieList2 = $scope.pieList2;
+        $scope.introPieData2 = $scope.pieData2;
     });
     
     $http.get('hyblabData/dataBar.json').success(function (data) {
@@ -119,7 +144,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         }
     };
     function updateColor(debut, fin) {
-        for (var i = 0; i < 18; i++) {
+        for (var i = 0; i < 19; i++) {
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
         }
         for (var i = debut; i < fin; i++) {
@@ -130,71 +155,95 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.update19961998 = function () {    
         $scope.data = $scope.zoomData[0];
         $scope.pieDynamicData = $scope.pieData[1];
-        $scope.graphInformation = $scope.textList[0].text;
         //$scope.barData = $scope.zoomBarData[0];
         $scope.titre = "1997 à 1998...";
         $scope.barAnnee = "1997 - 1998";
-        emplois(0,1);
-        updateColor(0, 1);
+        emplois(0,2);
+        updateColor(0, 2);
     }
     $scope.update19972005 = function () {
         $scope.data = $scope.zoomData[1];
         $scope.pieDynamicData = $scope.pieData[0];
-        $scope.graphInformation = $scope.textList[1].text;
         //$scope.barData = $scope.zoomBarData[1];
         $scope.titre = "1997 à 2005...";
         $scope.barAnnee = "1997 - 2005";
-        emplois(0,8);
-        updateColor(0, 8);
+        emplois(0,9);
+        updateColor(0, 9);
     }
     $scope.update20052010 = function () {    
         $scope.data = $scope.zoomData[2];
-        $scope.graphInformation = $scope.textList[2].text;
         //$scope.barData = $scope.zoomBarData[2];
         $scope.titre = "2005 à 2010...";
         $scope.barAnnee = "2005 - 2010";
-        emplois(8, 13);
-        updateColor(8, 13);
+        emplois(8, 14);
+        updateColor(8, 14);
     }
     $scope.update19972002 = function () {
         $scope.data = $scope.zoomData[3];
-        $scope.graphInformation = $scope.textList[1].text;
         //$scope.barData = $scope.zoomBarData[3];
         $scope.titre = "1997 à 2002...";
         $scope.barAnnee = "1997 - 2002";
-        emplois(0, 4);
-        updateColor(0, 4);
+        emplois(0, 6);
+        updateColor(0, 6);
     }
     $scope.update20102015 = function () {    
         $scope.data = $scope.zoomData[4];
-        $scope.graphInformation = $scope.textList[0].text;
         //$scope.barData = $scope.zoomBarData[4];
         $scope.titre = "2010 à 2015...";
         $scope.barAnnee = "2010 - 2015";
-        emplois(13, 18);
-        updateColor(13, 18);
+        emplois(13, 19);
+        updateColor(13, 19);
     }
     $scope.update20042015 = function () {
         $scope.data = $scope.zoomData[6];
-        $scope.graphInformation = $scope.textList[1].text;
         //$scope.barData = $scope.zoomBarData[6];
         $scope.titre = "2004 à 2015...";
         $scope.barAnnee = "2004 - 2015";
-        emplois(7, 18);
-        updateColor(7, 18);
+        emplois(7, 19);
+        updateColor(7, 19);
     }
     $scope.update20092013 = function () {
-        $scope.data = $scope.zoomData[7];
-        $scope.graphInformation = $scope.textList[1].text;
+        $scope.data = $scope.zoomData[8];
         //$scope.barData = $scope.zoomBarData[7];
         $scope.titre = "2009 à 2013...";
         $scope.barAnnee = "2009 - 2013";
-        emplois(12, 16);
-        updateColor(12, 16);
+        emplois(12, 17);
+        updateColor(12, 17);
+    }
+    $scope.update19922005 = function () {
+        $scope.data = $scope.zoomData[12];
+        //$scope.barData = $scope.zoomBarData[7];
+        $scope.titre = "1992 à 2005...";
+        $scope.barAnnee = "1992 - 2005";
+        emplois(0, 9);
+        updateColor(0, 9);
+    }
+    $scope.update20122015 = function () {
+        $scope.data = $scope.zoomData[10];
+        //$scope.barData = $scope.zoomBarData[7];
+        $scope.titre = "2012 à 2015...";
+        $scope.barAnnee = "2012 - 2015";
+        emplois(15, 19);
+        updateColor(15, 19);
+    }
+    $scope.update20132015 = function () {
+        $scope.data = $scope.zoomData[11];
+        //$scope.barData = $scope.zoomBarData[7];
+        $scope.titre = "2013 à 2015...";
+        $scope.barAnnee = "2013 - 2015";
+        emplois(17, 19);
+        updateColor(17, 19);
+    }
+    $scope.update19962009 = function () {
+        $scope.data = $scope.zoomData[13];
+        //$scope.barData = $scope.zoomBarData[7];
+        $scope.titre = "1996 à 2009...";
+        $scope.barAnnee = "1996 - 2009";
+        emplois(0, 13);
+        updateColor(0, 13);
     }
     $scope.reset = function () {
         $scope.data = $scope.fix;
-        $scope.graphInformation = $scope.textList[2].text;
         $scope.barData = $scope.zoomBarFixData;
         $scope.titre = "1997 à maintenant...";
         $scope.barAnnee = "1997 - 2015";
@@ -203,16 +252,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
         }
     };
-  
-    /*DYNAMIC TEXT*/
-    $scope.textList = [
-        {id: 1, text: ""},
-        {id: 2, text: ""},
-        {id: 3, text: ""},
-        {id: 4, text: ""}
-    ];
-    $scope.graphInformation = "Some random Text";
-        
+          
     $scope.pieOptions = {
         chart: {
             type: 'pieChart',
@@ -240,11 +280,23 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.pieBoundary = false;
     $scope.pieMessage = "";
     
+    $scope.pourcentage2 = 0.05;
+    $scope.pieBoundary2 = false;
+    $scope.pieMessage2 = "";
+    
     function pieBounds(aBool) {
         if (aBool == true) {
             $scope.pieMessage = " Limite atteint...";
         } else {
             $scope.pieMessage = "";
+        }
+    }
+    
+    function pieBounds2(aBool) {
+        if (aBool == true) {
+            $scope.pieMessage2 = " Limite atteint...";
+        } else {
+            $scope.pieMessage2 = "";
         }
     }
     
@@ -292,6 +344,49 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     
     }
     
+    $scope.incr2 = function() {
+        if ($scope.pourcentage2 < 100) {
+            $scope.pourcentage2 += 1;
+            updatePie2();
+        } else {
+            $scope.pieBoundary2 = true;
+            pieBounds2($scope.pieBoudary2);
+            $scope.pieBoundary2 = false;
+        }
+    }
+    
+    $scope.decr2 = function() {
+        if ($scope.pourcentage2 > 0) {
+            $scope.pourcentage2 -= 1;
+            updatePie2();
+        } else {
+            $scope.pieBoundary2 = true;
+            pieBounds2($scope.pieBoundary2);
+            $scope.pieMessage2 = false;
+        }
+    }
+    
+    function updatePie2() {
+       
+            var reducePieList2 = [];
+            var reducePieData2 = [];
+            var autres = 0;
+            for (var i =0; i < $scope.pieList2.length; i++) {
+                    reducePieList2.push($scope.pieList2[i]);
+                    reducePieData2.push($scope.pieData2[i]);
+                    if ($scope.pieData2[i] < $scope.pourcentage2) {
+                        reducePieData2.pop();
+                        reducePieList2.pop();
+                        autres += $scope.pieData2[i];
+                    }
+            }
+            reducePieList2.push("Autres");
+            reducePieData2.push(autres);
+            $scope.introPieListReduce2 = reducePieList2;
+            $scope.introPieDataReduce2 = reducePieData2;   
+    
+    }
+    
     $scope.introPieChartOptions = {        
         animationSteps : 25,
         animateRotate : true,
@@ -321,14 +416,14 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                 axisLabel: '',
                 showMaxMin: false,
                 tickFormat: function(d){
-                    return d3.format('f')(d);
+                    return d3.format('.0f')(d);
                 }
             },
             yAxis: {
                 axisLabel: '',
                 axisLabelDistance: -20,
                 tickFormat: function(d){
-                    return d3.format('.1f')(d);
+                    return d3.format('.0f')(d);
                 }
 
             },
@@ -343,21 +438,22 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
               dispatch: {
                 //chartClick: function(e) {console.log("! chart Click !")},
                 elementClick: function(e) {
-                    console.log(e);
+                    //console.log(e);
                     
                     
                 },
                 //elementDblClick: function(e) {console.log("! element Double Click !")},
                 elementMouseout: function(e) {
-                    d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(0, 175, 155, 1)";
+                    //d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(0, 175, 155, 1)";
                 },
                 elementMouseover: function(e) { 
                     //console.log(e.index);
-                    d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(32, 201, 41, 0.9)";
+                    //d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: rgba(32, 201, 41, 0.9)";
                 }
               }
             },
             tooltip: {
+                enable: false,
                 contentGenerator: function (e) {
                   var series = e.series[0];
                   if (series.value === null) return;
@@ -367,9 +463,10 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                   }  else {
                       temp = " EMPLOI CRÉES ";
                   }
-                  return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
+                  return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+Math.round(e.value)+"</h1></div>";
                 } 
           },
+            interactive: false,
             showLegend: false,
             showControls: false,
             scaleShowGridLines: false,
@@ -470,36 +567,49 @@ appHyblab.controller('PageThreeCtrl', function ($scope) {
             console.log('Slide Changed callback triggered. \n == Slide index is: ' + index + ' ==');
             if (index == 0) {
                 $scope.photos = [
-                    {'src': 'css/images/photo5.jpg'},
-                    {'src': 'css/images/photo6.jpg'},
-                    {'src': 'css/images/photo7.jpg'}
-                ];
+                {'src': 'css/images/pauwel.jpg',
+                 'nom': 'Pauwel Almeida'},
+                {'src': 'css/images/jonathan.jpg',
+                 'nom': 'Jonathan Yue Chun'},
+                {'src': 'css/images/guest.jpg',
+                 'nom': 'Qian Yin'}
+            ];
             } else if (index == 1) {
                 $scope.photos = [
-                    {'src': 'css/images/photo2.jpg'},
-                    {'src': 'css/images/photo3.jpg'},
-                    {'src': 'css/images/photo4.jpg'}
+                    {'src': 'css/images/clement.jpg',
+                     'nom': 'Clément Aupiais'},
+                    {'src': 'css/images/maxime.jpg',
+                     'nom': 'Maxime Bénéteau'}
                 ];
             } else if (index == 3) {
                 $scope.photos = [
-                    {'src': 'css/images/photo5.jpg'},
-                    {'src': 'css/images/photo6.jpg'},
-                    {'src': 'css/images/photo7.jpg'}
+                    {'src': 'css/images/tiphainesaintfelix.jpg',
+                     'nom': 'Tiphaine Saint-Félix'}
                 ];
-            } else if (index == 4) {
+            } else if (index == 2) {
                 $scope.photos = [
-                    {'src': 'css/images/photo2.jpg'},
-                    {'src': 'css/images/photo3.jpg'},
-                    {'src': 'css/images/photo4.jpg'}
+                    {'src': 'css/images/salomeraffi.jpg',
+                     'nom': 'Salomé Raffi'},
+                    {'src': 'css/images/amandinevahe.jpg',
+                     'nom': 'Amandine Vahé'},
+                    {'src': 'css/images/ophelieprioux.jpg',
+                     'nom': 'Ophélie Prioux'},
+                    {'src': 'css/images/emmehuet.jpg',
+                     'nom': 'Emma Heulet'},
+                    {'src': 'css/images/marianneetienvre.jpg',
+                     'nom': 'Marianne Etienvre'}
                 ];
             }
         }
             
-    
+        //POLYTECH
         $scope.photos = [
-            {'src': 'css/images/photo5.jpg'},
-            {'src': 'css/images/photo6.jpg'},
-            {'src': 'css/images/photo7.jpg'}
+            {'src': 'css/images/pauwel.jpg',
+             'nom': 'Pauwel Almeida'},
+            {'src': 'css/images/jonathan.jpg',
+             'nom': 'Jonathan Yue Chun'},
+            {'src': 'css/images/guest.jpg',
+             'nom': 'Qian Yin'}
         ];
     
 });

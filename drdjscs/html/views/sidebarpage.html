@@ -5,8 +5,14 @@
     <h4>{{pourcentage}} = {{pieMessage}}</h4>
     <a href="#intro">BACK</a>
     <canvas id="pie" class="chart chart-pie"
-            chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce">
-    </canvas>  
+            chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce" chart-legend="true">
+    </canvas>
+     <canvas id="pie" class="chart chart-pie"
+            chart-data="introPieDataReduce2" chart-options="introPieChartOptions" chart-labels="introPieListReduce2" chart-legend="true">
+    </canvas> 
+    <div ng-click="incr2()">+</div>
+    <div ng-click="decr2()">-</div>
+    <h4>{{pourcentage2}} = {{pieMessage2}}</h4>
 </div>
 
 
