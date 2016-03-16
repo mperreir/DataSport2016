@@ -432,3 +432,7 @@ var data = [
     }
 ];
 
+
+//legende
+
+//var legend = d3.select("#");
