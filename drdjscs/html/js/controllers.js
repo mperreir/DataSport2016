@@ -147,15 +147,12 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
 
         for (var i = 0; i < 18; i++) {
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: RGBA(230, 230, 230, 1)"
-
-        for (var i = 0; i < 19; i++) {
-            d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
-
         }
         for (var i = debut; i < fin; i++) {
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: RGBA(55, 196, 180, 1)";
         }
     }
+        
     $scope.barAnnee = "1997- 2015";
     $scope.update19961998 = function () {    
         $scope.data = $scope.zoomData[0];
@@ -447,12 +444,12 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                     
                     
                 },
-                //elementDblClick: function(e) {console.log("! element Double Click !")},
+                elementDblClick: function(e) {console.log("! element Double Click !")},
 
-                // elementMouseout: function(e) {
+                elementMouseout: function(e) {
                 //     d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: RGBA(230, 230, 230, 1)";
-                // },
-                // elementMouseover: function(e) { 
+                }
+                //elementMouseover: function(e) { 
                 //     //console.log(e.index);
                 //     d3.selectAll("rect.nv-bar")[0][e.index].style= "fill: RGBA(55, 196, 180, 1)";
                 // }
