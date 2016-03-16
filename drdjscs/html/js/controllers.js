@@ -126,13 +126,14 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: red";
         }
     }
-    
+    $scope.barAnnee = "1997- 2015";
     $scope.update19961998 = function () {    
         $scope.data = $scope.zoomData[0];
         $scope.pieDynamicData = $scope.pieData[1];
         $scope.graphInformation = $scope.textList[0].text;
         //$scope.barData = $scope.zoomBarData[0];
         $scope.titre = "1997 à 1998...";
+        $scope.barAnnee = "1997 - 1998";
         emplois(0,1);
         updateColor(0, 1);
     }
@@ -142,6 +143,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.graphInformation = $scope.textList[1].text;
         //$scope.barData = $scope.zoomBarData[1];
         $scope.titre = "1997 à 2005...";
+        $scope.barAnnee = "1997 - 2005";
         emplois(0,8);
         updateColor(0, 8);
     }
@@ -150,6 +152,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.graphInformation = $scope.textList[2].text;
         //$scope.barData = $scope.zoomBarData[2];
         $scope.titre = "2005 à 2010...";
+        $scope.barAnnee = "2005 - 2010";
         emplois(8, 13);
         updateColor(8, 13);
     }
@@ -158,6 +161,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.graphInformation = $scope.textList[1].text;
         //$scope.barData = $scope.zoomBarData[3];
         $scope.titre = "1997 à 2002...";
+        $scope.barAnnee = "1997 - 2002";
         emplois(0, 4);
         updateColor(0, 4);
     }
@@ -166,6 +170,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.graphInformation = $scope.textList[0].text;
         //$scope.barData = $scope.zoomBarData[4];
         $scope.titre = "2010 à 2015...";
+        $scope.barAnnee = "2010 - 2015";
         emplois(13, 18);
         updateColor(13, 18);
     }
@@ -174,6 +179,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.graphInformation = $scope.textList[1].text;
         //$scope.barData = $scope.zoomBarData[6];
         $scope.titre = "2004 à 2015...";
+        $scope.barAnnee = "2004 - 2015";
         emplois(7, 18);
         updateColor(7, 18);
     }
@@ -182,6 +188,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.graphInformation = $scope.textList[1].text;
         //$scope.barData = $scope.zoomBarData[7];
         $scope.titre = "2009 à 2013...";
+        $scope.barAnnee = "2009 - 2013";
         emplois(12, 16);
         updateColor(12, 16);
     }
@@ -190,6 +197,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.graphInformation = $scope.textList[2].text;
         $scope.barData = $scope.zoomBarFixData;
         $scope.titre = "1997 à maintenant...";
+        $scope.barAnnee = "1997 - 2015";
         emplois(0, 18);
         for (var i = 0; i < 18; i++) {
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
