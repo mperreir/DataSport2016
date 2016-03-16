@@ -4,17 +4,17 @@
     background: #fff;
     position: absolute;
     z-index: 1;
-    top: 10px;
+    top: 160px;
     right: 10px;
     border-radius: 3px;
-    width: 120px;
+    width: 160px;
     border: 1px solid rgba(0,0,0,0.4);
     font-family: 'Open Sans', sans-serif;
 }
 
 #menu a {
-    font-size: 13px;
-    color: #404040;
+    font-size: 18px;
+    color: #000000;
     display: block;
     margin: 0;
     padding: 0;
@@ -34,10 +34,10 @@
 }
 
 #menu a.active {
-    background-color: #3887be;
+    background-color: #65CEC2;
     color: #ffffff;
 }
 
 #menu a.active:hover {
-    background: #3074a4;
+    background: #65CEC2;
 }
