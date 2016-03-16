@@ -37,9 +37,9 @@
 
 <h1><a href="#begin">Reset</a></h1>
 
-<div ng-repeat="photo in photos">
-    <div>
-        <img src="{{photo.src}}">
-        <p>Photos des étudiants et leurs nom selon l'établissement sélectionner</p>
+<div style="margin-left: 35%;">
+    <div ng-repeat="photo in photos" style="display: inline-block; width: 10%; height: 150px; margin-left: 50px;">
+        <img class="animated flipInX" style="width: 100%; height: 100%;" src="{{photo.src}}">
+        <h6 style="text-align: center; color: rgba(0, 175, 155, 1)">{{photo.nom}}</h6>
     </div>
 </div>

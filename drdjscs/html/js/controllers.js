@@ -470,36 +470,49 @@ appHyblab.controller('PageThreeCtrl', function ($scope) {
             console.log('Slide Changed callback triggered. \n == Slide index is: ' + index + ' ==');
             if (index == 0) {
                 $scope.photos = [
-                    {'src': 'css/images/photo5.jpg'},
-                    {'src': 'css/images/photo6.jpg'},
-                    {'src': 'css/images/photo7.jpg'}
-                ];
+                {'src': 'css/images/pauwel.jpg',
+                 'nom': 'Pauwel Almeida'},
+                {'src': 'css/images/jonathan.jpg',
+                 'nom': 'Jonathan Yue Chun'},
+                {'src': 'css/images/guest.jpg',
+                 'nom': 'Qian Yin'}
+            ];
             } else if (index == 1) {
                 $scope.photos = [
-                    {'src': 'css/images/photo2.jpg'},
-                    {'src': 'css/images/photo3.jpg'},
-                    {'src': 'css/images/photo4.jpg'}
+                    {'src': 'css/images/clement.jpg',
+                     'nom': 'Clément Aupiais'},
+                    {'src': 'css/images/maxime.jpg',
+                     'nom': 'Maxime Bénéteau'}
                 ];
             } else if (index == 3) {
                 $scope.photos = [
-                    {'src': 'css/images/photo5.jpg'},
-                    {'src': 'css/images/photo6.jpg'},
-                    {'src': 'css/images/photo7.jpg'}
+                    {'src': 'css/images/tiphainesaintfelix.jpg',
+                     'nom': 'Tiphaine Saint-Félix'}
                 ];
-            } else if (index == 4) {
+            } else if (index == 2) {
                 $scope.photos = [
-                    {'src': 'css/images/photo2.jpg'},
-                    {'src': 'css/images/photo3.jpg'},
-                    {'src': 'css/images/photo4.jpg'}
+                    {'src': 'css/images/salomeraffi.jpg',
+                     'nom': 'Salomé Raffi'},
+                    {'src': 'css/images/amandinevahe.jpg',
+                     'nom': 'Amandine Vahé'},
+                    {'src': 'css/images/ophelieprioux.jpg',
+                     'nom': 'Ophélie Prioux'},
+                    {'src': 'css/images/emmehuet.jpg',
+                     'nom': 'Emma Heulet'},
+                    {'src': 'css/images/marianneetienvre.jpg',
+                     'nom': 'Marianne Etienvre'}
                 ];
             }
         }
             
-    
+        //POLYTECH
         $scope.photos = [
-            {'src': 'css/images/photo5.jpg'},
-            {'src': 'css/images/photo6.jpg'},
-            {'src': 'css/images/photo7.jpg'}
+            {'src': 'css/images/pauwel.jpg',
+             'nom': 'Pauwel Almeida'},
+            {'src': 'css/images/jonathan.jpg',
+             'nom': 'Jonathan Yue Chun'},
+            {'src': 'css/images/guest.jpg',
+             'nom': 'Qian Yin'}
         ];
     
 });
