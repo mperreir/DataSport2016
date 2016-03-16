@@ -145,7 +145,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     };
     function updateColor(debut, fin) {
 
-        for (var i = 0; i < 18; i++) {
+        for (var i = 0; i < 19; i++) {
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: RGBA(230, 230, 230, 1)"
         }
         for (var i = debut; i < fin; i++) {
@@ -250,7 +250,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.titre = "1997 à Aujourd'hui";
         $scope.barAnnee = "1997 - 2015";
         emplois(0, 18);
-        for (var i = 0; i < 18; i++) {
+        for (var i = 0; i < 19; i++) {
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
         }
     };
