@@ -47,7 +47,32 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.introPieDataReduce = reducePieData;
         $scope.introPieList = $scope.pieList;
         $scope.introPieData = $scope.pieData;
-        console.log($scope.introPieData);
+    });
+    $http.get('hyblabData/aides_accordees_par_disciplaine2.json').success (function(data) {
+        $scope.fixPieData2 = data;
+        $scope.pieList2 = [];
+        $scope.pieData2 = [];
+        
+        var reducePieList2 = [];
+        var reducePieData2 = [];
+        var temp2 = 0;
+        for (var i = 0; i < data.length; i++) {
+            $scope.pieList2.push(data[i].name);
+            $scope.pieData2.push(data[i].value);
+            reducePieList2.push(data[i].name);
+            reducePieData2.push(data[i].value);
+            if (data[i].value < $scope.pourcentage2) {
+                reducePieList.pop();
+                reducePieData.pop();
+                temp += data[i].value;
+            }
+        }
+        reducePieData2.push(temp2);
+        reducePieList2.push("Autres");
+        $scope.introPieListReduce2 = reducePieList2;
+        $scope.introPieDataReduce2 = reducePieData2;
+        $scope.introPieList2 = $scope.pieList2;
+        $scope.introPieData2 = $scope.pieData2;
     });
     
     $http.get('hyblabData/dataBar.json').success(function (data) {
