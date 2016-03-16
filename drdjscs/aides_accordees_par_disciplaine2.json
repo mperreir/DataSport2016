@@ -1,0 +1,110 @@
+[
+  {
+    "name": "101-ATHLETISME",
+    "value": 1.02564
+  },
+  {
+    "name": "105-BASKET-BALL",
+    "value": 0.608
+  },
+  {
+    "name": "109-EQUITATION",
+    "value": 0.11173
+  },
+  {
+    "name": "113-GYMNASTIQUE",
+    "value": 0.90909
+  },
+  {
+    "name": "117-JUDO",
+    "value": 0.25974
+  },
+  {
+    "name": "123-TENNIS",
+    "value": 0.21428
+  },
+  {
+    "name": "128-VOILE",
+    "value": 1.219512
+  },
+  {
+    "name": "232-MONTAGNE ESCALADE",
+    "value": 0.666660
+  },
+  {
+    "name": "248-RUGBY A XIII",
+    "value": 40
+  },
+  {
+    "name": "413-UFOLEP",
+    "value": 0.11764
+  },
+  {
+    "name": "605-U.S.E.P.",
+    "value": 0.05050
+  },
+  {
+    "name": "102-AVIRON",
+    "value": 2
+  },
+  {
+    "name": "106-BOXE",
+    "value": 0.66666
+  },
+  {
+    "name": "115-HANDBALL",
+    "value": 0.9375
+  },
+  {
+    "name": "118-LUTTE",
+    "value": 1.11111
+  },
+  {
+    "name": "124-TENNIS DE TABLE",
+    "value": 0.22222
+  },
+  {
+    "name": "129-VOLLEY-BALL",
+    "value": 1.6
+  },
+  {
+    "name": "246-ROLLER SPORTS",
+    "value": 0.27027
+  },
+  {
+    "name": "402-E.P.G.V.",
+    "value": 0.45454
+  },
+  {
+    "name": "408-F.S.C.F.",
+    "value": 0.92307
+  },
+  {
+    "name": "247-RUGBY",
+    "value": 0.8333
+  },
+  {
+    "name": "225-GOLF",
+    "value": 0.21276
+  },
+  {
+    "name": "126-TIR A LARC",
+    "value": 0.5888235
+  },
+  {
+    "name": "119-NATATION",
+    "value": 1.42857
+  },
+  {
+    "name": "116-HOCKEY/GAZON",
+    "value": 1.42857
+  },
+  {
+    "name": "111-FOOTBALL",
+    "value": 0.53
+  },
+  {
+    "name": "108-CYCLISME",
+    "value": 0.2127
+  }
+]
