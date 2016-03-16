@@ -22,13 +22,13 @@ var selected = false;
                 $("#infos").css("opacity",0);
                 $("#infos").css("visibility","visible");
                 var fill = $(this).parent().attr("fill");
-                $("#infos").css("background", fill);
+                //$("#infos").css("background", fill);
                 $("#infos").animate({opacity: 1},1000);
                 
                 //afficher les donnees....
                 var result = $.grep(data, function(e){return e.id == pointId; });
                 if(result[0]){                   
-                    $("#name").text(result[0].name);
+                    $("#name").text(result[0].name).css("color",fill);
                     $("#address").text(result[0].address);
                     $("#information").text(result[0].infomation.join("\n"));
                 };
@@ -65,14 +65,14 @@ var selected = false;
                $("#infos").css("opacity",0);               
                $("#infos").css("visibility","hidden");
                $("#infos").css("visibility","visible");
-               $("#infos").css("background", fill);
+               //$("#infos").css("background", fill);
                $("#infos").animate({opacity: 1},1000);
                
                //afficher les donnees....
                var pointId = this.id;
                 var result = $.grep(data, function(e){return e.id == pointId; });
                 if(result[0]){                   
-                    $("#name").text(result[0].name);
+                    $("#name").text(result[0].name).css("color",fill);
                     $("#address").text(result[0].address);
                     $("#information").text(result[0].infomation.join("\n"));
                 };
