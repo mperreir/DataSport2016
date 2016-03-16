@@ -1,0 +1,45 @@
+<header>
+    <div class="logoLeft">
+         <h1>Hyblab</h1>
+         <h2>Analyser la création d'emploi du CNDS</h2>
+    </div>
+    <div class="menuRight">
+        <ul>
+            <li><a href="#intro"><img src="icons/curve_stroke.svg"><p>Emploi CNDS</p></a></li>
+            <li><a href="#pageone"><img src="icons/dot_stroke.svg"><p>La carte</p></a></li>
+            <li><a href="#pagetwo"><img src="icons/map_stroke.svg"><p>Les associations</p></a></li>
+            <li class="active"><a href="#pagethree"><img src="icons/map_fill.svg"><p>Remerciements</p></a></li>
+        </ul>
+    </div>
+    <div class="infosRight">
+
+    </div>
+</header>
+
+
+<div class="animated slideInUp">
+    <carousel3d
+        ng-model="slides"
+        options="slideOptions"
+        on-selected-click="selectedClick(index)"
+        on-slide-change="slideChanged(index)"
+        on-last-slide="lastSlide(index)"
+        on-before-change="beforeChange(index)">
+    <carousel3d-slide ng-repeat="slide in slides">
+        <figure>
+            <img ng-src="{{slide.src}}" alt=""/>
+            <figcaption ng-bind="slide.caption"></figcaption>
+        </figure>
+    </carousel3d-slide>
+    </carousel3d>
+</div>
+
+
+<h1><a href="#begin">Reset</a></h1>
+
+<div style="margin-left: 35%;">
+    <div ng-repeat="photo in photos" style="display: inline-block; width: 10%; height: 150px; margin-left: 50px;">
+        <img class="animated flipInX" style="width: 100%; height: 100%;" src="{{photo.src}}">
+        <h6 style="text-align: center; color: rgba(0, 175, 155, 1)">{{photo.nom}}</h6>
+    </div>
+</div>

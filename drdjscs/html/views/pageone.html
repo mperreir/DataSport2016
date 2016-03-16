@@ -1,7 +1,42 @@
-<div class="animated tada" ng-controller="IntroCtrl">
-    <div>
-        <a href="#intro">Intro</a>
-        <a href="#pageone">PageOne</a>
-        <a href="#pagetwo">PageTwo</a>
+<header>
+    <div class="logoLeft">
+         <h1>Hyblab</h1>
+         <h2>Analyser la création d'emploi du CNDS</h2>
     </div>
+    <div class="menuRight">
+        <ul>
+            <li><a href="#intro"><img src="icons/curve_stroke.svg"><p>Emploi CNDS</p></a></li>
+            <li  class="active"><a href="#pageone"><img src="icons/dot_fill.svg"><p>La carte</p></a></li>
+            <li><a href="#pagetwo"><img src="icons/map_stroke.svg"><p>Les associations</p></a></li>
+            <li><a href="#pagethree"><img src="icons/map_stroke.svg"><p>Remerciements</p></a></li>
+        </ul>
+    </div>
+    <div class="infosRight">
+
+    </div>
+</header>
+
+<div class="bounceInRight" ng-controller="IntroCtrl">
+    
+    <!-- PAUWEL -->
+    
+
+    
+    <nav id="menu">
+        <a id="bouton_menu" href='' class='button icon home'>Home</a>
+    </nav>
+    
+    <div id="map">
+
+    </div>
+    
+    
+    <script src='js/script_carte.js'></script>
+    
+    <div class='input-pill col12' style=' position : absolute; top : 160px; left : 30%; width : 700px;'>
+          <input id="contenu_rechercher" class="col8" type="text" placeholder="Entrer le nom d'un club">
+          <input id="rechercher" class="button col4" type="submit" value="Rechercher">
+    </div>
+    
 </div>
+

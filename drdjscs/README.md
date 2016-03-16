@@ -1,4 +1,4 @@
-# Descriptif du projet
+﻿# Descriptif du projet
 
 Média : nom de votre média
 
@@ -10,7 +10,7 @@ Patricipants :
 - EDNA : 
 Salomé Raffi, Ophélie Prioux, Emma Heulet, 
 Amandine Vahé, Marianne Etienvre
-- Polytech : Jonathan Yue Chun, Fanny Qian, Pauwell D'Almeida
+- Polytech : Jonathan Yue Chun, Fanny Qian, Pauwel d'Almeida Ayivi
 - STAPS : 
 Clément Aupiais, Maxime Béneteau
 -Com: Tiphaine Saint-Félix

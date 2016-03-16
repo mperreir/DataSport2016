@@ -1,1 +1,1 @@
-var app = angular.module('hyblabApp');
+var appHyblab = angular.module('hyblabApp');
