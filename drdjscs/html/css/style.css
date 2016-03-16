@@ -80,8 +80,8 @@ ul{
 	color:rgba(0,0,0,0.6);
 }
 .menuRight{
-	    float: right;
-	    margin-right:30px;
+	float: right;
+	margin-right:30px;
 }
 .menuRight ul li img{
 	width:32px;
@@ -161,14 +161,14 @@ ul{
 	padding:10px 35px 10px 35px;
 }
 .btnExplorer{
-margin:0 auto;
-margin-top:150px;
+	margin:0 auto;
+	margin-top:150px;
 }
 .btnEnsavoir{
 	margin:0 auto;
 	width:150px;
 	margin-top:80px;
-		-webkit-transition: all 0,2s ease;
+	-webkit-transition: all 0,2s ease;
 	-o-transition: all 0,2s ease;
 	transition: all 0,2s ease;
 }
@@ -246,7 +246,92 @@ btnExplorer:hover{
 }
 
 
+/*PAGE INTRO*/
+.container-intro {
+	height: 1800px;
+	text-align: center;
+}
 
+.container-intro > p {
+	
+	font-size: 20px;
+	font-weight: 400;
+	padding-left: 20vw;
+	padding-right: 20vw;
+	
+}
+
+.container-intro > h2 {
+		color:black;
+	font-size: 44px;
+	font-weight:600;
+	padding-top: 90px;
+	padding-bottom: 40px;
+
+}
+
+.container-intro > ul {
+	display: inline-block;
+	padding-bottom: 100px;
+	margin: 0;
+	padding: 0;
+	
+}
+.container-intro ul > li > h3 {
+	
+	color: #00af9B;
+	padding: 10px;
+}
+.container-intro ul > li{
+
+	display: inline-block;
+	vertical-align: top;
+	padding: 25px;
+	font-size: 20px;
+}
+
+.columns {
+
+	display: inline-block;
+}
+.wrapper-intro {
+
+	background-image: url("../img/bg.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100vh;
+
+
+}
+
+.wrapper-intro > h1 {
+
+	color:black;
+	font-size: 44px;
+	font-weight:600;
+	padding-top: 300px; 
+
+}
+
+.wrapper-intro > h2 {
+	font-size: 24px;
+	font-weight: 400;
+	padding-bottom: 60px;
+}
+
+.wrapper-intro > a {
+
+	padding: 20px 30px 20px 30px;
+
+	border-radius: 40px;
+	background-color:#00af9B; 
+	font-weight: 400;
+	position: relative;
+	width: 250px;
+	font-size: 15pt;
+	color:white;
+}
 
 /*END*/
 /*
