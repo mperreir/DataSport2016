@@ -42,13 +42,87 @@
     background: #65CEC2;
 }
 
-#searchbar{position:relative; width:1040px; height:auto;}
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
 
-.formulaire
-{display:inline-block;}
+.marker-title {
+    font-weight: 700;
+}
 
-#contenu_rechercher
-{width:600px; height:35px;}
+/////////// BARRE DE RECHERCHE ////////////////
+.button:hover, .button.active {
+    background-color: #52a1d8;
+}
+.input-pill input[type='text'] + .button {
+    border-left-width: 0;
+    border-radius: 0 3px 3px 0;
+}
+.button:hover, .button.active {
+    color: #fff;
+}
+.col4 {
+    float: left;
+    width: 33.3333%;
+    max-width: 400px;
+}
+.button {
+    background-color: #3887be;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    margin: 0px;
+    padding: 10px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: 'Open Sans Bold', sans-serif;
+    line-height: 20px;
+    font-size: 12px;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+}
+input, select, button {
+    vertical-align: top;
+}
 
-#rechercher
-{ background-image: url(images/searchbar_button.png);background-repeat: no-repeat;width: 35px;height: 35px;padding: 0; }
+.input-pill input[type='text'], .input-pill input[type=text]:focus {
+    border-right-width: 0;
+}
+
+textarea, input[type=password], input[type=text], input[type=date], input[type=email], input[type=number] {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    -webkit-transition: border-color .05s;
+    -moz-transition: border-color .05s;
+    -ms-transition: border-color .05s;
+    transition: border-color .05s;
+}
+
+textarea, input[type=password], input[type=text], input[type=date], input[type=email], input[type=number] {
+    display: inline-block;
+    height: 40px;
+    margin: 0;
+    color: rgba(0,0,0,.5);
+    padding: 10px;
+    -webkit-appearance: none;
+}
+
+input, select, button {
+    vertical-align: top;
+}
+
+input[type="button" i], input[type="submit" i], input[type="reset" i] {
+    -webkit-appearance: push-button;
+    -webkit-user-select: none;
+    white-space: pre;
+}
+
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    padding: 1px 6px;
+}
+

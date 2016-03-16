@@ -24,16 +24,19 @@ map.on('style.load', function () {
     map.addLayer({
         "id": "markers",
         "type": "symbol",
+        "interactive": true,
         "source": "markers",
         "layout": {
             "icon-image": "{marker-symbol}-15",
             "text-field": "{title}",
             "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
             "text-offset": [0, 0.6],
-            "text-anchor": "top"
+            "text-anchor": "top",
+            "icon-allow-overlap": true
         }
     });
     ///////////// FIN CHARGEMENT DES POINTS ///////////////////
+    
     ///////////// CHARGEMENT DES CONTOURS DE LA LOIRE ATLANTIQUE //////////////////////
     var data_loire_atlantique = {
         "type":"geojson"
@@ -84,6 +87,7 @@ map.on('mousemove', function (e) {
 
 var zoom = 8;
 
+/*
 map.on('click', function (e) {
     map.featuresAt(e.point, {
         radius: 7.5
@@ -94,11 +98,11 @@ map.on('click', function (e) {
         console.log(e.lngLat.lng , e.lngLat.lat);
         map.flyTo({
             center: [e.lngLat.lng , e.lngLat.lat],
-            zoom: zoom
+            zoom: getZoom()+1
         });
     });
 });
-
+*/
 addLayer('Pays de la Loire', 'contours');
 addLayer('Clubs', 'markers');
 
@@ -139,5 +143,36 @@ rechercher.addEventListener('click',function () {
         }
     }
     
+});
+
+map.on('click', function (e) {
+    map.featuresAt(e.point, {
+        radius: 7.5, // Half the marker size (15px).
+        includeGeometry: true,
+        layer: 'markers'
+    }, function (err, features) {
+
+        if (err || !features.length) {
+            popup.remove();
+            return;
+        }
+
+        var feature = features[0];
+
+        // Populate the popup and set its coordinates
+        // based on the feature found.
+        popup.setLngLat(feature.geometry.coordinates)
+            .setHTML(feature.properties.description)
+            .addTo(map);
+    });
+});
+
+map.on('mousemove', function (e) {
+    map.featuresAt(e.point, {
+        radius: 7.5, // Half the marker size (15px).
+        layer: 'markers'
+    }, function (err, features) {
+        map.getCanvas().style.cursor = (!err && features.length) ? 'pointer' : '';
+    });
 });
 

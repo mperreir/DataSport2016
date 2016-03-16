@@ -34,7 +34,7 @@ appHyblab.config(function($routeProvider){
 appHyblab.config (['ChartJsProvider', function (ChartJsProvider) {
     // Configure all charts
     ChartJsProvider.setOptions ({
-        colours: ['#FF5252', '#FF8A80', '#5D6369', '#5DA6E6'],
+        colors : [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
         responsive: true,
         tooltipFillColor: "rgba(100,100,0,0.8)"
     });
