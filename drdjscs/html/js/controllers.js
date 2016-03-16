@@ -62,9 +62,9 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             reducePieList2.push(data[i].name);
             reducePieData2.push(data[i].value);
             if (data[i].value < $scope.pourcentage2) {
-                reducePieList.pop();
-                reducePieData.pop();
-                temp += data[i].value;
+                reducePieList2.pop();
+                reducePieData2.pop();
+                temp2 += data[i].value;
             }
         }
         reducePieData2.push(temp2);
@@ -280,7 +280,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.pieBoundary = false;
     $scope.pieMessage = "";
     
-    $scope.pourcentage2 = 0.05;
+    $scope.pourcentage2 = 1.05;
     $scope.pieBoundary2 = false;
     $scope.pieMessage2 = "";
     
