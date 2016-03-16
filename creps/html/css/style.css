@@ -1,25 +1,193 @@
-/* just a sample css rule to show that everything works */
-#container{
-  width: 960px;
-  margin: 0 auto;
-  background-color: #DDDDDD;
+@font-face {
+  font-family: 'FuturaMedium';
+  src: url('Fonts/FuturaMedium.ttf') format('ttf');
 }
 
-header, footer{
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  font-family: 'FuturaMedium', Verdana;
+}
+
+/*
+**********************
+  Slide introduction
+**********************
+*/
+
+h1 {
+  font-family: 'FuturaMedium', Verdana;
+  color: #f8e82f;
+}
+
+h1.titre {
+  font-family: 'FuturaMedium', Verdana;
+  font-size: 3vw;
+  font-variant: small-caps;
+  font-weight: bold;
+  color: #f8e82f;
+  line-height: 1.5;
   text-align: center;
-  background-color: #0066CC;
+  padding-top: 100vh;
+  transform: translateY(-50%);
+}
+
+#slideIntro {
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  background-position: bottom center;
+}
+
+
+/*
+**********************
+      Slide Map
+**********************
+*/
+.slideMap{
+  background-color: #14d791;
+}
+
+#enteteSlideMap{
+  height: 20vh;
+  background-color: #14d791;
+}
+
+h2.slideMapEntete{
+  margin-bottom: 1em;
+  font-variant: small-caps;
+}
+
+p.slideMapEntete{
+  font-size: 0.8em;
+}
+
+.slideMapEntete {
   color: white;
-  padding: 10px;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
-header + p {
+#dataviz2M {
+  height: 80vh;
+  width: 50vw;
+  margin-left: 50vw;
+  background-color: white;
+}
+
+#dataviz2L {
+  height: 80vh;
+  width: 50vw;
+  float:left;
+  background-color: #E8E8E8;
+}
+
+
+#infoDep{
+  width: 20vw;
+  float:left;
+  padding-left: 5vw;
+  padding-top: 2vh;
+}
+
+/*
+**********************
+      Slide HS
+**********************
+*/
+.slideHSEntete {
+  padding-left: 5vw;
+  background-color: #00d68c;
+  width: 74vw;
+  height: 5vh;
+  font-variant: small-caps;
+  color: #3d3d3d;
+}
+
+hr {
+  color: #00d68c;
+  height: 1px;
+  margin-left: 8vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  width: 84vw;
+}
+
+.labelHs{
+  margin-top: 2vh;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #3d3d3d;
+}
+
+#lHS1 {
+  padding-left: 8.5vw;
+}
+
+#lHS2 {
+  padding-left: 22.5vw;
+}
+
+#lHS3 {
+  padding-left: 23.5vw;
+}
+
+#interview {
+  margin-top: 5vh;
+  background-color: #00d68c;
+  width: 100vw;
+  height: 48.5vh;
+}
+
+.interviewt {
+  padding-top: 1em;
+}
+
+p.interviewt ,li.interviewt {
+  color: white;
+  font-size: 0.8em;
+}
+
+p.cole {
+  width: 26vw;
+  text-align: justify;
+}
+
+p.colm {
+  width: 40vw;
+  text-align: justify;
+}
+
+h3.interviewt{
+  color: #3d3d3d;
+  font-size: 0.8em;
+}
+
+.col1, .col3 {
+  padding-left: 1vw;
+  width: 27vw;
+  height: 45vh;
+  float:left;
+}
+
+.col2 {
+  margin-top: 2vh;
+  padding-left: 1vw;
+  width: 41vw;
+  height: 45vh;
+  float:left;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: white;
+}
+
+.loading {
+  margin-top: 10em;
   text-align: center;
-  display:block;
-  height: 600px;
-  line-height: 600px;
-}
-
-footer p
-{
-  font-size: small;
+  color: gray;
 }
