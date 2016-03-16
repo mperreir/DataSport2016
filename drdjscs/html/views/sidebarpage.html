@@ -1,26 +1,26 @@
 <div class="">
 <h1>SIDE BAR PAGE</h1>
-    <div ng-click="incr()">+</div>
-    <div ng-click="decr()">-</div>
+
     <h4>{{pourcentage}} = {{pieMessage}}</h4>
     <a href="#intro">BACK</a>
     <h3>Quels sont les sports qui profitent de l'aide CNDS ?</h3>
-    <canvas id="pie" class="chart chart-pie"
-            chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce" chart-legend="true">
-    </canvas>
-    <div>
-        Le football a perçu le plus d'aide en 2015, environ 15% de l'aide CNDS est accordée pour au comité départemental de football de Loire-Altantique.
+    <div style="width : 1000px;">
+        <canvas id="pie" class="chart chart-pie"
+                chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce" chart-legend="true">
+        </canvas>
     </div>
-     <canvas id="pie" class="chart chart-pie"
-            chart-data="introPieDataReduce2" chart-options="introPieChartOptions" chart-labels="introPieListReduce2" chart-legend="true">
-    </canvas> 
+    <div>
+        Le football a perçu le plus d'aide en 2015, environ 15% de l'aide CNDS est accordée au comité départemental de football de Loire-Altantique.
+    </div>
+    <div style="width : 1000px;">
+         <canvas id="pie" class="chart chart-pie"
+                chart-data="introPieDataReduce2" chart-options="introPieChartOptions" chart-labels="introPieListReduce2" chart-legend="true">
+        </canvas> 
+    </div>
     <div>
         Cependant, en observant de plus près, on s'apperçoit que le Rugby à XIII est le sport le plus aidé si on regarde par rapport au nombres de clubs dans les comités départementaux.
     </div>
-    <div ng-click="incr2()">+</div>
-    <div ng-click="decr2()">-</div>
+
     <h4>{{pourcentage2}} = {{pieMessage2}}</h4>
 
 </div>
-
-
