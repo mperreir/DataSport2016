@@ -27,13 +27,22 @@
         <div class="line lineSide"></div>
         <div class="blocData">
             <div class="numbersData">
-                <h1>{{emploisCreer}}</h1>
+                <li ng-init="manualStartTarget=0">
+                     <legend>
+                      <a  href=""
+                          class="pull-right small">
+                        Start now!
+                      </a>
+                      Manual start
+                    </legend>
+                    <h1><p  counter
+                        value="manualStartVar"
+                        to="emploisCreer">
+                      {{ manualStartVar | number:0 }}
+                    </p></h1>
+                </li>
+                <!--h1>{{emploisCreer}}</h1-->
                 <h2>EMPLOI CRÉES</h2>
-                <p  counter
-                    value="manualStartVar"
-                    to="manualStartTarget">
-                  {{ emploisCreer | number:0 }}
-                </p>
             </div>
             <div class="miniGraph">
                 <div>   
@@ -55,8 +64,8 @@
         <nvd3 class="with-3d-shadow with-transitions" options='options' data='data'></nvd3>    
     </div>
 </div>    
-    <div class="aideTimeline" ng-init="manualStartTarget=0"> 
-        <div class="btnTimeline aide1" ng-click="update19961998(); manualStartTarget={{emploisCreer}};"><h3>1997-1998</h3></div>
+    <div class="aideTimeline"> 
+        <div class="btnTimeline aide1" ng-click="update19961998()"><h3>1997-1998</h3></div>
         <div class="btnTimeline aide2" ng-click="update19972005()"><h3>1997-2005</h3></div>
         <div class="btnTimeline aide3" ng-click="update20052010()"><h3>2005-2010</h3></div>
         <div class="btnTimeline" ng-click="update19972002()"><h3>1997-2002</h3></div>
@@ -71,5 +80,7 @@
         <div class="btnTimeline" ng-click=""><h3>1996-2009</h3></div>
     </div>  
 </div>
+
+
 
 
