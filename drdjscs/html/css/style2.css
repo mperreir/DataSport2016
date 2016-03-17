@@ -184,7 +184,11 @@ font-size:18px;
 	border-right:1px solid rgba(0,0,0,0.1);
 	border-left:1px solid rgba(0,0,0,0.1);
 }
-
+.aide:hover{
+	opacity:0.5;
+	cursor:pointer;
+	transition: opacity .15s ease-in-out;
+}
 .zoom{
 	float:right;
 }
@@ -625,8 +629,8 @@ cursor:pointer;
 
 }
 #pie{
-	width: 350px !important;
-    height: 180px !important;
+	width: 300px !important;
+    
 
 
 
