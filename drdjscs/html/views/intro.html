@@ -24,16 +24,16 @@
 
         <div class="description">
 
-            <h1>{{courbeDescriptionTitre}}</h1>
-    
+            <h1>{{courbeDescriptionTitre}}</h1>    
             <p><strong>Description: </strong>{{courbeDescription}}</p>
             <br>
-            <p><strong>Age: </strong>{{courbeDescriptionAge}}</p>
-            <br>
-            <p><strong>Nature: </strong>{{courbeDescriptionNature}}</p>
-            <br>
-            <p>{{courbeDescriptionAutre}}</p>
-
+            <div ng-if="activeMe" class="animated fadeIn">
+                <p><strong>Age: </strong>{{courbeDescriptionAge}}</p>
+                <br>
+                <p><strong>Nature: </strong>{{courbeDescriptionNature}}</p>
+                <br>
+                <p>{{courbeDescriptionAutre}}</p>
+            </div>
         </div>
         <div class="line lineSide"></div>
         <div class="blocData">
@@ -106,7 +106,7 @@
 
         </div>
         <div class="controlTimeline">
-            <div class="goBack" ng-click="reset()">Reset</div>
+            <div class="goBack" ng-click="reset(); activeMe = false;">Reset</div>
             <div class="zoom More"><img src="icons/zoom-01.svg"></div>
             <div class="zoom Less"><img src="icons/zoom-02.svg"></div> 
         </div>
@@ -117,24 +117,18 @@
         <nvd3 class="with-3d-shadow with-transitions" options='options' data='data'></nvd3>    
     </div>
 
-</div> 
-    
-    <div class="aideTimeline">     
-
-       
-    
-        <div class="btnTimeline aide2 aide" ng-click="update19972005()"><h3>Contrat Emploi Consolidé</h3></div>
-        <div class="btnTimeline aide3 aide" ng-click="update20052010()"><h3>Contrat d'Avenir</h3></div>
-        <div class="btnTimeline aide4 aide" ng-click="update19972002()"><h3>Emploi Jeune</h3></div>
-        <div class="btnTimeline aide5 aide" ng-click="update20102015()"><h3>Emploi à Forte Utilité Sociale</h3></div>
-        <div class="btnTimeline aide6 aide" ng-click="update20042015()"><h3>Contrat de Professionnalisation</h3></div>
-        <div class="btnTimeline aide7 aide" ng-click="update20092013()"><h3>Emplois PSE 4 ans</h3></div>
-        <div class="btnTimeline aide10 aide" ng-click="update20122015()"><h3>Emploi d'Avenir</h3></div>
-        <div class="btnTimeline aide11 aide" ng-click="update20132015g()"><h3>Contrat de génération</h3></div>
-        <div class="btnTimeline aide12 aide" ng-click="update20132015c()"><h3>Emploi CNDS</h3></div>
-        <div class="btnTimeline aide13 aide" ng-click="update19962009()"><h3>Emploi PSE  5 ans</h3></div>
-
-
+</div>    
+    <div class="aideTimeline" ng-model="!activeMe">     
+        <div class="btnTimeline aide2 aide" ng-click="update19972005(); activeMe = true;"><h3>Contrat Emploi Consolidé</h3></div>
+        <div class="btnTimeline aide3 aide" ng-click="update20052010(); activeMe = true;"><h3>Contrat d'Avenir</h3></div>
+        <div class="btnTimeline aide4 aide" ng-click="update19972002(); activeMe = true;"><h3>Emploi Jeune</h3></div>
+        <div class="btnTimeline aide5 aide" ng-click="update20102015(); activeMe = true;"><h3>Emploi à Forte Utilité Sociale</h3></div>
+        <div class="btnTimeline aide6 aide" ng-click="update20042015(); activeMe = true;"><h3>Contrat de Professionnalisation</h3></div>
+        <div class="btnTimeline aide7 aide" ng-click="update20092013(); activeMe = true;"><h3>Emplois PSE 4 ans</h3></div>
+        <div class="btnTimeline aide10 aide" ng-click="update20122015(); activeMe = true;"><h3>Emploi d'Avenir</h3></div>
+        <div class="btnTimeline aide11 aide" ng-click="update20132015g(); activeMe = true;"><h3>Contrat de génération</h3></div>
+        <div class="btnTimeline aide12 aide" ng-click="update20132015c(); activeMe = true;"><h3>Emploi CNDS</h3></div>
+        <div class="btnTimeline aide13 aide" ng-click="update19962009(); activeMe = true;"><h3>Emploi PSE  5 ans</h3></div>
     </div>    
  
 </div>
