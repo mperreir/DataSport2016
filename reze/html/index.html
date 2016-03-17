@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr"> <!-- Notre page est en français -->
  
-    
+
     
     
     <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Hyblab 2016</title>
       
     <!-- Déclaration de la feuille de style du document-->
@@ -15,16 +16,16 @@
     <link rel="stylesheet" href="css/fullPage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.js"></script>
+    <script src="../Libraries/jquery.transit.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>-->
     <script src="js/jQuery.js"></script>  
     <script src="../Libraries/jquery-countTo-master/jquery.countTo.js"></script>
-    <script src="js/script_map_france.js"></script>
+ <!--   <script src="js/script_map_france.js"></script>-->
         
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-
-        <link rel="stylesheet"  type="text/css" href="css/index.css">
+        <script src="js/animation.js"></script>
 
 
  
@@ -43,6 +44,11 @@
         <div id="fullPage" >
     <!-- Le contenu du site -->
             <div class ="section" id="section0" >
+                <span>
+                    <img class="section0_anim" id="avion" src="../Ressources/Images/illus-fond-avion_3.svg">
+                    <img class="section0_anim" id="cycliste" src="../Ressources/Images/illu_1e_page_cycliste2.svg">
+                    <img class="section0_anim" id="nageur" src="../Ressources/Images/illu_1e_page_nageur_solo.svg">
+                </span>
                 <h1>REZÉ</h1>
                 <h2>Élue ville la plus sportive 
 de la région Pays-de-la-Loire en 2015</h2>
@@ -337,7 +343,7 @@ de la région Pays-de-la-Loire en 2015</h2>
                 </div>
                 <div id="map" style="float:left;"></div>
                 <div style="float:right;width:600px;">
-                    <h1 id="region_name" style="margin-top:30%;margin-left:15%;text-align:left;visibility:hidden;"><span style="color:red;">Rezé</span> / <span id="region_name_green" style="color:green;"></span></h1>
+                    <h1 style="margin-top:30%;margin-left:15%;text-align:left;"><span style="color:red;">Rezé</span> / <span id="region_name_green" style="color:green;"></span></h1>
                     <svg class="chart"></svg>
                 </div>
                 <script>
@@ -380,9 +386,8 @@ de la région Pays-de-la-Loire en 2015</h2>
 
                     function histogram(region){
                         console.log(region);
-                        d3.select("#region_name").attr("visibility", "visible");
                         d3.select("#region_name_green").text(region);
-                        
+
                         $('svg.chart').html('');
                         d3.json("../Ressources/data/regions.json", function(error, regions) {
                           if (error) {
@@ -395,7 +400,7 @@ de la région Pays-de-la-Loire en 2015</h2>
                           data = [24.3, data[0].part_population, 42.6, data[0].part_femme];
                           var width = 150,
                             barHeight = 10;
-                            
+
                             var x = d3.scale.linear()
                                 .domain([0, 100])
                                 .range([0, width]);
@@ -403,7 +408,7 @@ de la région Pays-de-la-Loire en 2015</h2>
                             var chart = d3.select(".chart")
                                 .attr("width", width * 3)
                                 .attr("height", barHeight * 9);
-                            
+
                             var bar = chart.selectAll("g")
                                 .data(data)
                               .enter().append("g")
@@ -411,7 +416,7 @@ de la région Pays-de-la-Loire en 2015</h2>
                                     return i<2 ? "translate(200," + i * 2 * barHeight + ")":
                                     "translate(200," + (1 + i * 2) * barHeight + ")"; 
                                 });
-                            
+
                             bar.append("rect")
                                 .attr('fill','black')  
                                 .attr("height", barHeight - 1)
@@ -454,7 +459,7 @@ de la région Pays-de-la-Loire en 2015</h2>
                                 .attr("y2", "30")
                                 .attr("stroke", "white")
                                 .attr("stroke-width", "2");
-                            
+
                             chart.append("line")
                                 .attr("x1", "192")
                                 .attr("y1", "50")
@@ -465,8 +470,7 @@ de la région Pays-de-la-Loire en 2015</h2>
 
                             });
                     }
-
-                </script>
+                                    </script>
             </div> 
 <!--===============================================================================================================-->
             <div class ="section" id="section7" >Credits  </div> 
