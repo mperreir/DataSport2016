@@ -29,16 +29,13 @@
             <p><strong>Description: </strong>{{courbeDescription}}</p>
             <br>
             <div class="profile">
-            <p><img src="icons/profile.svg"><!-- <strong>Age: </strong> -->{{courbeDescriptionAge}}</p>
-
-                </div>
-            <div ng-if="activeMe" class="animated fadeIn">
-                <p><strong>Age: </strong>{{courbeDescriptionAge}}</p>
-
+                <div ng-if="activeMe" class="">
+                <p><img src="icons/profile.svg"><!-- <strong>Age: </strong> -->{{courbeDescriptionAge}}</p>
                 <br>
                 <p><strong>Nature: </strong>{{courbeDescriptionNature}}</p>
                 <br>
                 <p>{{courbeDescriptionAutre}}</p>
+                </div>        
             </div>
         </div>
         <div class="line lineSide"></div>
@@ -124,7 +121,7 @@
     </div>
 
 </div>    
-    <div class="aideTimeline" ng-model="!activeMe">     
+    <div class="aideTimeline">     
         <div class="btnTimeline aide2 aide" ng-click="update19972005(); activeMe = true;"><h3>Contrat Emploi Consolidé</h3></div>
         <div class="btnTimeline aide3 aide" ng-click="update20052010(); activeMe = true;"><h3>Contrat d'Avenir</h3></div>
         <div class="btnTimeline aide4 aide" ng-click="update19972002(); activeMe = true;"><h3>Emploi Jeune</h3></div>
