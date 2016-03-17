@@ -13,8 +13,16 @@ jQuery(document).ready(function($){
 		//create the navigation for each step of the tour
 		createNavigation(tourSteps, stepsNumber);
 		
-		tourTrigger.on('click', function(){
-			//start tour
+		// tourTrigger.on('click', function(){
+		// 	//start tour
+		// 	if(!tourWrapper.hasClass('active')) {
+		// 		//in that case, the tour has not been started yet
+		// 		tourWrapper.addClass('active');
+		// 		showStep(tourSteps.eq(0), coverLayer);
+		// 	}
+		// });
+
+		jQuery(document).load(function() {
 			if(!tourWrapper.hasClass('active')) {
 				//in that case, the tour has not been started yet
 				tourWrapper.addClass('active');
