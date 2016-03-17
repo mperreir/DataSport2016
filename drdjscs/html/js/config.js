@@ -8,7 +8,14 @@ appHyblab.config(function($routeProvider){
         })
         .when('/intro',{
             templateUrl: 'views/intro.html',
-            controller: 'IntroCtrl'
+            controller: 'IntroCtrl',
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    files: [
+                        'js/tour.js'
+                    ]
+                }]
+            }
         })
         .when('/pageone',{
             templateUrl: 'views/pageone.html',
