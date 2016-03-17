@@ -31,6 +31,9 @@
   padding: 2px 8px 2px 28px;
   font-size: smaller;
   cursor: default;
+  color:#9CA7AF;
+  width:350px !important;
+    text-align: left;
 }
 .chart-legend li span,
 .bar-legend li span,
