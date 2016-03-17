@@ -1,9 +1,10 @@
 $(document).ready( function(){
     
-    mapboxgl.accessToken = 'pk.eyJ1IjoiY3ljYXJvbiIsImEiOiJjaWx2Ymt4Y20wMDhkdnFtNmx2djF2dXd2In0.DAk4uJYDSUdWGsJP8MnMmg';
+    $("#map").append(function(){
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY3ljYXJvbiIsImEiOiJjaWx2Ymt4Y20wMDhkdnFtNmx2djF2dXd2In0.DAk4uJYDSUdWGsJP8MnMmg';
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v8',
+        style: 'mapbox://styles/cycaron/cilvfobh90003cglvaqdki97t',
         center: [-1.54, 47.248],
         zoom: 8
     });
@@ -22,7 +23,7 @@ $(document).ready( function(){
             "source": "clubs_data",
             "paint": {
                 "circle-radius": 8,
-                "circle-color": "rgba(55,148,179,1)"
+                "circle-color": "#F56D34"
             }
         });
         
@@ -47,7 +48,7 @@ $(document).ready( function(){
             // Populate the popup and set its coordinates
             // based on the feature found.
             popup.setLngLat(feature.geometry.coordinates)
-                .setHTML(feature.properties.club + "<br/>" + feature.properties.adresse + "<br/>" + feature.properties.commune)
+                .setHTML("<div id = \"popup\"><p>" +feature.properties.club + "</p><p>" + feature.properties.adresse + "</p><p>" + feature.properties.commune +"</p></div>")
                 .addTo(map);
             });
         });
@@ -62,5 +63,7 @@ $(document).ready( function(){
         });
 
     });
+    });
+    
 });
 
