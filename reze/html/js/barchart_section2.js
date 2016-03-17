@@ -163,17 +163,17 @@ var yAxis = d3.svg.axis()
     .orient("left")
     .ticks(10,"%");
 
-var svg1 = d3.select("#svg1")
+var svg1 = d3.select("#barchart2").select("#svg1")
     .attr("viewBox", "0 0 220 380").attr("preserveAspectRatio","none")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var svg2 = d3.select("#svg2")
+var svg2 = d3.select("#barchart2").select("#svg2")
     .attr("viewBox", "0 0 220 380").attr("preserveAspectRatio","none")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var svg3 = d3.select("#svg3")
+var svg3 = d3.select("#barchart2").select("#svg3")
     /*.attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)*/
     .attr("viewBox", "0 0 220 380").attr("preserveAspectRatio","none")
