@@ -113,10 +113,10 @@ $(function(){
   var $side = $(".sideBartotal");
     $('.btnEnsavoir').click(function() {
     	
-        $side .animate({ 'bottom': '-800px' }, 500);
+        $side .animate({ 'top': '100px' }, 700);
 
     }, function() {
-        $side .animate({ 'bottom': '0' }, 500);
+        $side .animate({ 'top': '-95vh' }, 700);
     });     
       
 });
