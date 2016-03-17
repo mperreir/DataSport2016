@@ -26,9 +26,9 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
         if ($(window).scrollTop() == 0) {
-            $('.home').fadeOut();
+            $('#home').fadeOut();
         } else {
-            $('.home').fadeIn();
+            $('#home').fadeIn();
         }
     });
     

@@ -317,6 +317,11 @@ rect.parent,
     color: #494949;
 }
 
+#dataviz2 path,
+.arc text {
+    cursor: pointer;
+}
+
 
 .tooltipPieChart {
     background: #eee;
