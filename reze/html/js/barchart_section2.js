@@ -227,8 +227,9 @@ var addSvg = function (data,svg){
     svg.selectAll(".text")
       .data(data)
     .enter().append("text").text(function(d) {
-        return (d.values *100).toFixed(1) + "%";
-   }).attr("x", function(d) { return x(d.label); }).attr("y", 0).attr("fill",'white');
+        return (d.values *100) + "%";
+   }).attr("x", function(d) { return x(d.label); }).attr("y", -5).attr("fill",'white');
+        
 }
 
 addSvg(series1,svg1);

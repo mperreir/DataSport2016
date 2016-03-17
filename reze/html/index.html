@@ -84,7 +84,7 @@
                 <div align="center" style="width:40%; margin-right: 3px; float: left;">
                     <img src="../Ressources/Images/picto_pratiquants-04.jpg" style="width: 90px; height: 115.2px; float: left;">
                     <a id="pa" style="font-size: 40px; margin-top: 50px; float: left;" data-from="0" data-to="10618"></a>
-                    <a style="font-size: 40px; margin-top: 50px; margin-left: 10px;float: left;">PRATIQUANTS</a>
+                    <a style="font-size:30px; margin-top: 60px; margin-left: 15px;float: left;">Pratiquants</a>
                     <svg id="sect2" style="margin-top: 2%;" viewBox="0 0 500 400" preserveAspectRatio="none">
                         <image id="i1" xlink:href="../Ressources/Images/picto_licensies.jpg" x="0" y="0" width="60" height="76.8"/>
                         <image id="i2" xlink:href="../Ressources/Images/picto_jeunes-06.jpg" x="0" y="80" width="60" height="76.8"/>
@@ -185,7 +185,7 @@
                         <h4 style="margin-top: 0px; margin-bottom: 2%; margin-left: 5%;">Budget consacré au sport par rapport au budget total</h4>
                     </div>
                     <div id="equipeDiv" style="width: 40%; float: right;">
-                        <h3 style="text-align:center; float: left;  -webkit-margin-start: 30%;">Équipements sportifs</h3>
+                        <h3 style="text-align:center; float: left;  -webkit-margin-start: 12%;">Équipements sportifs</h3>
                         <svg id="svg2" style="margin-bottom: 0px;"></svg>
                         <h4 style="margin-top: 0px;margin-bottom: 2%; margin-left: 5%;">Nombre d’équipements inscrits au RES par rapport à la population globale</h4>
                     </div>
@@ -341,7 +341,7 @@
                                 </h2>
                                 <h4 id="address">
                                 </h4>
-                                <pre id="information"></pre>
+                                <pre id="information" style="font-family: Montserrat;font-size: 20px;"></pre>
                             </div>
                         </div>
                     </div>
@@ -365,7 +365,7 @@
                 </div>
                 <div id="map" style="float:left;"></div>
                 <div id="titre" style="float:right;width:600px;visibility:hidden">
-                    <h1 style="margin-top:30%;margin-left:15%;text-align:left;"><span style="color:red;">Rezé</span> / <span id="region_name_green" style="color:green;"></span></h1>
+                    <h1 style="margin-top:30%;margin-left:15%;text-align:left;"><span style="color:#ff3652;">Rezé</span> / <span id="region_name_green" style="color:#42ff97;"></span></h1>
                     <svg class="chart"></svg>
                 </div>
                 <script>
@@ -392,13 +392,13 @@
                           .data(topojson.feature(topology, topology.objects.region).features)
                         .enter().append("path")
                           .attr("d", path)
-                          .attr("fill", function(d) { return d.properties.nom=="Pays de la Loire" ? 'blue': '#ccc' })
+                          .attr("fill", function(d) { return d.properties.nom=="Pays de la Loire" ? '#5D5C5C': '#241f21' })
                           .on('click', regionClickHandler);
                       var coordinates = projection([-1.5922779,47.1733296]);
                       svg.append('svg:circle')
                         .attr('cx', coordinates[0])
                         .attr('cy', coordinates[1])
-                        .attr('fill','red')
+                        .attr('fill','#ff3652')
                         .attr('r', 7);
                     });
 
@@ -449,7 +449,7 @@
 
                             bar.append("rect")
                                 .attr("width", 0)
-                                .attr('fill', function(d, i) { return i%2==0 ? 'red' : 'green' })  
+                                .attr('fill', function(d, i) { return i%2==0 ? '#ff3652' : '#42ff97' })  
                                 .attr("height", barHeight - 1)
                                 .transition()
                                 .duration(1000)
@@ -460,7 +460,7 @@
                                 .attr("x", function(d) { return width + 5 ; })
                                 .attr("y", barHeight / 2)
                                 .attr("dy", ".35em")
-                                .attr("fill", function(d, i) { return i%2==0 ? 'red' : 'green' })
+                                .attr("fill", function(d, i) { return i%2==0 ?  '#ff3652' : '#42ff97' })
                                 .text(function(d) { return d+'%'; });
 
                             bar.append("text")
@@ -512,7 +512,7 @@
                     </table>
                 </div>
                     <img id="photo" src="../Ressources/Images/photo.jpg">
-                    <img id="texte1" src="../Ressources/Images/text.JPG">
+                    <img id="texte1" src="../Ressources/Images/photo2.jpg">
 
              <div id="bandeau">
                 <img id="logo" src="../Ressources/Images/logo.JPG">
