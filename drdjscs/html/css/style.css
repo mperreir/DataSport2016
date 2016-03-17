@@ -307,7 +307,7 @@ color:white;
 	margin-bottom:10px;
 
 }
-.btnExplorer:hover{
+.btn	Explorer:hover{
 	cursor:pointer;
 
 }
@@ -448,7 +448,7 @@ cursor:pointer;
 .container-intro > h2 {
 		color:black;
 	font-size: 44px;
-	font-weight:600;
+	font-weight:900;
 	padding-top: 40px;
 	padding-bottom: 10px;
 
@@ -465,6 +465,7 @@ cursor:pointer;
 	
 	color: black;
 	padding: 10px;
+
 }
 .container-intro ul > li > img {
 	
@@ -497,8 +498,9 @@ cursor:pointer;
 
 	color:black;
 	font-size: 44px;
-	font-weight:600;
+	font-weight:900;
 	padding-top: 300px; 
+
 
 }
 
