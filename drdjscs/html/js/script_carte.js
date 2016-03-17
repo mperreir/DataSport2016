@@ -121,8 +121,8 @@ map.on('click', function (e) {
     });
 });
 */
-addLayer('Pays de la Loire', 'contours');
-addLayer('Clubs', 'markers');
+//addLayer('Pays de la Loire', 'contours');
+//addLayer('Clubs', 'markers');
 
 function addLayer(name, id) {
     var link = document.createElement('a');
