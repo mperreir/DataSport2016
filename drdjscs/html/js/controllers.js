@@ -144,52 +144,62 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             }}
         };
     $scope.optionsMini = {
-            chart: {
-              type: 'multiChart',
-              height: 340,
-              margin : {
-                  top: 30,
-                  right: 60,
-                  bottom: 50,
-                  left: 70
-              },
-              x: function(d){ return d.x; },
-              y: function(d){ return d.y; },
-              transitionDuration: 100,
-              color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
-              xAxis: {
-
-              },
-              yAxis1: {
-                  showMaxMin: false,
-                  tickFormat: function(d){
-                      return d3.format('.02f')(d);
-                  },
-                  axisLabelDistance: 300
-              },
-              yAxis2: {
-                  
-              },
-              useInteractiveGuideline: true,
-              tooltip: true,
-              interactiveLayer: {
-                  tooltip: {
-                    contentGenerator: function (e) {
-                      var series = e.series[0];
-                      if (series.value === null) return;
-                      var temp = "";
-                      if (series.originalKey == "chomage"){
-                          temp = " POURCENT DE CHÔMEUR ";
-                      }  else {
-                          temp = " EMPLOI CRÉES ";
-                      }
-                      return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
-                    } 
-                  }
+             chart: {
+                type: 'lineChart',
+                height: 150,
+                width: 300,
+                margin : {
+                    top: 20,
+                    right: 20,
+                    bottom: 40,
+                    left: 45
                 },
-                callback: function(){
-                  d3.selectAll('.nvd3.nv-legend g').style('fill', "RGBA(55, 196, 180, 1)")
-            }}
+                x: function(d){ return d.x; },
+                y: function(d){ return d.y; },
+                useInteractiveGuideline: false,
+                dispatch: {
+                    stateChange: function(e){ console.log("stateChange"); },
+                    changeState: function(e){ console.log("changeState"); },
+                    tooltipShow: function(e){ console.log("tooltipShow"); },
+                    tooltipHide: function(e){ console.log("tooltipHide"); }
+                },
+                xAxis: {
+                    axisLabel: ''
+                },
+                yAxis: {
+                    axisLabel: '',
+                    tickFormat: function(d){
+                        return d3.format('.02f')(d);
+                    },
+                    axisLabelDistance: -10
+                },
+                showXAxis: false,
+                showYAxis: false,
+                showLegend: false,
+                callback: function(chart){
+                    console.log("!!! lineChart callback !!!");
+                }
+            },
+            title: {
+                enable: false,
+                text: 'Title for Line Chart'
+            },
+            subtitle: {
+                enable: false,
+                text: 'Subtitle for simple line chart. Lorem ipsum dolor sit amet, at eam blandit sadipscing, vim adhuc sanctus disputando ex, cu usu affert alienum urbanitas.',
+                css: {
+                    'text-align': 'center',
+                    'margin': '10px 13px 0px 7px'
+                }
+            },
+            caption: {
+                enable: false,
+                html: '<b>Figure 1.</b> Lorem ipsum dolor sit amet, at eam blandit sadipscing, <span style="text-decoration: underline;">vim adhuc sanctus disputando ex</span>, cu usu affert alienum urbanitas. <i>Cum in purto erat, mea ne nominavi persecuti reformidans.</i> Docendi blandit abhorreant ea has, minim tantas alterum pro eu. <span style="color: darkred;">Exerci graeci ad vix, elit tacimates ea duo</span>. Id mel eruditi fuisset. Stet vidit patrioque in pro, eum ex veri verterem abhorreant, id unum oportere intellegam nec<sup>[1, <a href="https://github.com/krispo/angular-nvd3" target="_blank">2</a>, 3]</sup>.',
+                css: {
+                    'text-align': 'justify',
+                    'margin': '10px 13px 0px 7px'
+                }
+            }
         };
     
     var listCreation = [23, 11, 8, 5, 7, 3, 10, 7, 7, 3, 11, 9, 14, 10, 10, 9, 14, 19, 28];
