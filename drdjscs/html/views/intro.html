@@ -3,7 +3,9 @@
     <div class="infos">
 
         <div class="description">
+
             <h1>{{courbeDescriptionTitre}}</h1>
+    
             <p>{{courbeDescription}}</p>
 
         </div>
@@ -31,26 +33,14 @@
         <div class="btn btnEnsavoir"><a href="#sidebarpage">Domaines qui bénéficient de l'aides</a></div>
         <div class="btn btnEnsavoir"><a href="#pageone">En savoir plus...</a></div>
     </div>
-    <div class="filtersRight">
-        <h1>Filtres:</h1>
-        <div class="filtersType">
-        <ul>
-            <li class="etat">État</li>
-            <li class="cnds">CNDS</li>
-            <li class="autres">Autres</li>
-
-
-        </ul>
-        </div>
-    </div>
+    
 </div>
-
-<div class="mainContent">
 <header>
     <div class="logoLeft">
          <h1>Hyblab</h1>
          <h2>Analyser la création d'emploi du CNDS</h2>
          <div class="timeIndicator">
+         <img src="icons/clock-01.png">
     <p>{{titre}}</p>
 </div>
     </div>
@@ -66,6 +56,28 @@
 
     </div>
 </header>
+<div class="mainContent">
+<div class="filtersRight">
+    <div class="filtersRightBox">
+        <h1>Filtres:</h1>
+        <div class="filtersType">
+        <ul>
+            <li class="etat">État</li>
+            <li class="cnds">CNDS</li>
+            <li class="autres">Autres</li>
+
+
+        </ul>
+        </div>
+
+        </div>
+        <div class="controlTimeline">
+            <div class="goBack" ng-click="reset()">Reset</div>
+            <div class="zoom More"><img src="icons/zoom-01.svg"></div>
+            <div class="zoom Less"><img src="icons/zoom-02.svg"></div> 
+        </div>
+    </div>
+
 <div class="deuxCourbes">
     <div>   
         <nvd3 class="with-3d-shadow with-transitions" options='options' data='data'></nvd3>    
@@ -74,6 +86,7 @@
 </div> 
     
     <div class="aideTimeline">     
+
         <div class="controlTimeline">
             <div class="goBack" ng-click="reset()"></div>
             <div class="zoom More"><img src="icons/zoom-01.svg"></div>
@@ -91,6 +104,7 @@
         <div class="btnTimeline aide11 aide" ng-click="update20132015g()"><h3>Contrat de génération (2013-2015)</h3></div>
         <div class="btnTimeline aide12 aide" ng-click="update20132015c()"><h3>Emploi CNDS (2013-2015)</h3></div>
         <div class="btnTimeline aide13 aide" ng-click="update19962009()"><h3>Emploi PSE  5 ans (1996-2009)</h3></div>
+
 
     </div>    
  
