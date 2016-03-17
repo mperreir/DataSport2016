@@ -78,15 +78,29 @@ var selected = false;
                 };
                
                
-               d3.selectAll("circle").attr("fill","#c0c0c0");
-               d3.select("#" + this.id).attr("fill", fill).attr("r",10);
+               d3.select("#svg").selectAll("circle").attr("fill","#c0c0c0");
+               d3.select("#svg").select("#" + this.id).attr("fill", fill).attr("r",10);
+               d3.select("#legend").selectAll("circle").attr("fill","#c0c0c0");
+               d3.select("#legend").select("#" + this.id).attr("fill", fill).attr("r",10);
+               d3.select("#legend").selectAll("circle").each(function(){
+                   console.log($(this).attr("fill"));
+                   if($(this).parent().attr("fill") != fill){
+                      $(this).attr("fill","#c0c0c0");
+                    }
+                    else{
+                        $(this).attr("fill",fill);
+                        
+                    }
+               });
+               
                currentCircle = this;
                //$(this).attr("selected",true);
                selected = true;
            }
            else{
                $("#infos").css("visibility","hidden");
-               d3.selectAll("circle").attr("fill",$(this).parent().attr("fill")).attr("r",7.8);
+               d3.select("#svg").selectAll("circle").attr("fill",$(this).parent().attr("fill")).attr("r",7.8);
+               d3.select("#legend").selectAll("circle").attr("fill",$(this).parent().attr("fill"));
                //d3.selectAll("circle").attr("selected",false);
                selected = false;
            }
@@ -435,4 +449,18 @@ var data = [
 
 //legende
 
-//var legend = d3.select("#");
+var legend = d3.select("#legend");
+var group = legend.selectAll("g").on("click",legendClickHandler);
+function legendClickHandler(e){
+    var l = this;
+    svg2.each(function(){
+        if($(l).attr("fill") != $(this).parent().attr("fill")){
+            $(this).attr("fill","#c0c0c0");
+            console.log($(l).attr("fill") + "  " + $(this).parent().attr("fill"));
+        }
+        else{
+            $(this).attr("fill",$(this).parent().attr("fill"));
+        }
+    });
+    console.log(l);
+};
