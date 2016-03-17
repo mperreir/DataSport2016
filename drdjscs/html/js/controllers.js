@@ -94,6 +94,9 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.courbeDescription = "La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région."
 
     $scope.courbeDescriptionTitre = "Qu\'est-ce que c\'est?"
+    $scope.courbeDescriptionAge = "Age du bénéficiare de l'aide..";
+    $scope.courbeDescriptionNature = "Nature...";
+    $scope.courbeDescriptionAutre = "Autre...";
 
     $scope.options = {
             chart: {
@@ -327,8 +330,10 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(7, 19);
         updateColor(7, 19);
         $scope.courbeDescription = $scope.dataInfo[11].description;
-
         $scope.courbeDescriptionTitre = $scope.dataInfo[11].nom;
+        $scope.courbeDescriptionAge = $scope.dataInfo[11].age;
+        $scope.courbeDescriptionNature = $scope.dataInfo[11].nature;
+        $scope.courbeDescriptionAutre = $scope.dataInfo[11].autre;
 
     }
     $scope.update20092013 = function () {
@@ -339,8 +344,10 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(12, 17);
         updateColor(12, 17);
         $scope.courbeDescription = $scope.dataInfo[13].description;
-
         $scope.courbeDescriptionTitre = $scope.dataInfo[13].nom;
+        $scope.courbeDescriptionAge = $scope.dataInfo[13].age;
+        $scope.courbeDescriptionNature = $scope.dataInfo[13].nature;
+        $scope.courbeDescriptionAutre = $scope.dataInfo[13].autre;
 
     }
     $scope.update19922005 = function () {
@@ -359,8 +366,10 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(15, 19);
         updateColor(15, 19);
         $scope.courbeDescription = $scope.dataInfo[9].description;
-
         $scope.courbeDescriptionTitre = $scope.dataInfo[9].nom;
+        $scope.courbeDescriptionAge = $scope.dataInfo[9].age;
+        $scope.courbeDescriptionNature = $scope.dataInfo[9].nature;
+        $scope.courbeDescriptionAutre = $scope.dataInfo[9].autre;
 
     }
     $scope.update20132015g = function () {
@@ -371,8 +380,10 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(17, 19);
         updateColor(17, 19);
         $scope.courbeDescription = $scope.dataInfo[10].description;
-
         $scope.courbeDescriptionTitre = $scope.dataInfo[10].nom;
+        $scope.courbeDescriptionAge = $scope.dataInfo[10].age;
+        $scope.courbeDescriptionNature = $scope.dataInfo[10].nature;
+        $scope.courbeDescriptionAutre = $scope.dataInfo[10].autre;
 
     }
     $scope.update20132015c = function () {
@@ -383,8 +394,10 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(17, 19);
         updateColor(17, 19);
         $scope.courbeDescription = $scope.dataInfo[14].description;
-
         $scope.courbeDescriptionTitre = $scope.dataInfo[14].nom;
+        $scope.courbeDescriptionAge = $scope.dataInfo[14].age;
+        $scope.courbeDescriptionNature = $scope.dataInfo[14].nature;
+        $scope.courbeDescriptionAutre = $scope.dataInfo[14].autre;
 
     }
     $scope.update19962009 = function () {
