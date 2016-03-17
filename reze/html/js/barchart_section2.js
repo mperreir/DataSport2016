@@ -163,20 +163,20 @@ var yAxis = d3.svg.axis()
     .orient("left")
     .ticks(10,"%");
 
-var svg1 = d3.select("#barchart").append("svg")
-    .attr("width", "30%").attr("height", 400).attr("preserveAspectRatio","none")
+var svg1 = d3.select("#barchart2").select("#svg1")
+    .attr("viewBox", "0 0 220 380").attr("preserveAspectRatio","none")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var svg2 = d3.select("#barchart").append("svg")
-    .attr("width", "30%").attr("height", 400).attr("preserveAspectRatio","none")
+var svg2 = d3.select("#barchart2").select("#svg2")
+    .attr("viewBox", "0 0 220 380").attr("preserveAspectRatio","none")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var svg3 = d3.select("#barchart").append("svg")
+var svg3 = d3.select("#barchart2").select("#svg3")
     /*.attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)*/
-    .attr("width", "30%").attr("height", 400).attr("preserveAspectRatio","none")
+    .attr("viewBox", "0 0 220 380").attr("preserveAspectRatio","none")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -192,10 +192,7 @@ var addSvg = function (data,svg){
   svg.append("g")
       .attr("class", "y axis")
       .attr("fill","none")
-      .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6);
+      .call(yAxis);
     
   svg.selectAll(".bar")
       .data(data)
@@ -232,6 +229,7 @@ var addSvg = function (data,svg){
     .enter().append("text").text(function(d) {
         return (d.values *100) + "%";
    }).attr("x", function(d) { return x(d.label); }).attr("y", -5).attr("fill",'white');
+        
 }
 
 addSvg(series1,svg1);

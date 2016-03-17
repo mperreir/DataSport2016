@@ -45,12 +45,12 @@ var yAxis = d3.svg.axis()
     .scale(y).tickSize(0)
     .orient("left");
 
-var svg1 = d3.select("#svg1")
+var svg1 = d3.select("#barchart3").select("#svg1")
     .attr("viewBox", "0 0 220 380").attr("preserveAspectRatio","none")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var svg2 = d3.select("#svg2")
+var svg2 = d3.select("#barchart3").select("#svg2")
     .attr("viewBox", "0 0 220 380").attr("preserveAspectRatio","none")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
