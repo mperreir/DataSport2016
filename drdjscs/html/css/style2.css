@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,900italic,900,700italic,700,600italic,600,400italic,300italic,300);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,700italic,900,700,500italic,500,400italic,300italic,300,100italic,100);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic);
 *{
 	font-family: 'Roboto', sans-serif;
 }
@@ -14,7 +15,7 @@ p,h1,h2,h3{
 
 
 html{
-	background:RGBA(250, 250, 250, 1);
+	background:#272D38;
 	padding:0;
 	margin:0;
 }
@@ -24,17 +25,18 @@ body{
 }
 header{
 	padding:20px 20px 0px 60px;
-	border-bottom:1px solid rgba(0,0,0,0.1);
-	background:white;
+	border-bottom:1px solid rgba(0,0,0,0.5);
+	background:#13161C;
 	z-index:100000;
 	    width: 100%;
     position: absolute;
 	
 }
 header h1{
-	color:black;
-	font-weight:600;
-	font-size: 24Px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color:white;
+	font-weight:400;
+	font-size: 24px;
 }
 header h2{
 	opacity:0.5;
@@ -50,17 +52,23 @@ ul{
 	margin:0;
 }
 .timeIndicator{
-	padding-top: 20px;
+	    padding-top: 30px;
 	padding-left: 60px;
 	text-align:left;
+	float: right;
+    width: 200px;
+    padding-bottom: 10px;
+    padding-right:40px;
+
 }
 .timeIndicator p{
 	padding-top: 4px;
+	color:#80919B;
 }
 .timeIndicator img{
 width:25px;
 float: left;
-    margin-right: 15px;
+margin-right: 15px;
 }
 
 .nv-x .tick:nth-child(odd){
@@ -108,6 +116,7 @@ float: left;
 	display:none;
 }
 .menuRight ul li{
+	    opacity: 0.3;
 	display:inline-block;
 	text-align: center;
 	margin-right:20px;
@@ -119,6 +128,7 @@ float: left;
 	padding-bottom:15px;
 }
 .active{
+	opacity:1 !important;
 	color:#00af9B !important;
 	font-weight: 600;
 	border-bottom:4px solid #00af9B;
@@ -129,14 +139,31 @@ float: left;
 	    padding-top: 50px;
 	
 }
+.mainTitle{
+	float:left;
+	    color: #80919B;
+	    padding-top: 30px;
+    padding-left: 60px;
+
+}
+.mainTitle h1{
+	color: #80919B;
+font-weight:400;
+font-size:18px;
+}
 .btnTimeline{
 	border:1px solid rgba(0,0,0,0.2);
 	width:auto;
-	padding:10px 20px 10px 20px;
+	padding:5px 20px 5px 20px;
 	margin-top:5px;
 	font-size:10px;
+	font-weight:300;
 	border-radius:2px;
 	text-align:left;
+}
+.btnTimeline h3{
+	font-weight:400;
+	letter-spacing: 1px;
 }
 .aideTimeline{
 	margin-left:70px;
@@ -176,7 +203,7 @@ float: left;
 }
 
 .aide1,.aide2,.aide3,.aide4{
-background:RGBA(181, 174, 193, 1);
+background:#418DC3;
 color:white;
 }
 .aide12,.aide13,.aide7,.aide5{
@@ -184,7 +211,7 @@ background:RGBA(96, 206, 196, 1);
 color:white;
 }
 .aide6,.aide10,.aide11{
-	background:RGBA(51, 49, 50, 1);
+	background:#F68B79;
 color:white;
 }
 .aide1{
@@ -301,10 +328,12 @@ color:white;
 .description {
 	margin-bottom:20px;
 	    width: 390px;
+	    color:#6F7A84;
 }
 .description h1{
 	font-size:22px;
 	margin-bottom:10px;
+	color:#9CA7AF;
 
 }
 .btnExplorer:hover{
@@ -312,15 +341,16 @@ color:white;
 
 }
 .sideBar{
-	border-left:1px solid #DEE2E2;
+	border-left:1px solid rgba(255,255,255,0.1);
 	padding:30px;
 	padding-top: 80px;
 	height:100vh;
 	width:390px;
-	background:white;
+	background:#0B0D11;
 	position:fixed;
 	top:0;
 	right:0;
+	    z-index: 1000;
 
 }
 
@@ -336,7 +366,7 @@ color:white;
 	font-size:14px;
 	line-height: 25px;
 	font-weight:400;
-	color:rgba(0,0,0,0.7);
+	color:#6F7A84;
 }
 .numbersData{
 	margin-top:50px;
@@ -351,7 +381,7 @@ color:white;
 }
 
 .numbersData h2{
-	color:#AAAEAF;
+	color:#9CA7AF;
 	font-size:14px;
 	font-weight:400;
 	    width: 100px;
@@ -367,7 +397,7 @@ color:white;
 }
 .filtersRight{
 
-	background:white;
+	background:#272D38;
 	padding:5px;
 	width:974px;
 	height:auto;
@@ -384,6 +414,7 @@ color:white;
 	font-size:16px;
 	margin-right:20px;
 	float:left;
+	color:#80919B;
 }
 .filtersType ul {
 	
@@ -393,23 +424,30 @@ color:white;
 	margin-right:10px;
 	display:inline-block;
 	padding:10px 37px 10px 37px;
-	border-radius:5px;
+	border-radius:100px;
 	color:white;
+	font-size:12px;
+	    font-weight: 400;
+    letter-spacing: 1px;
 }
 .filtersType ul li:hover{
 cursor:pointer;
 }
 .etat{
-	background:RGBA(181, 174, 193, 1);
+	background:#418DC3;
+	border:2px solid #418DC3 ;
 }
 .cnds{
 	background:RGBA(101, 206, 196, 1);
+	border:2px solid RGBA(101, 206, 196, 1);
 }
 .autres{
-	background:RGBA(51, 49, 50, 1);
+	background:#F68B79;
+	border:2px solid #F68B79;
 }
 .selected{
-	background:RGBA(236, 236, 236, 1);
+	background:none;
+	border:2px solid RGBA(236, 236, 236, 1);
 	color:rgba(0,0,0,0.4);
 }
 /*PAGE INTRO*/
@@ -543,6 +581,11 @@ cursor:pointer;
 	text-align:center;
 	margin-top:50%;
 }
+
+.tick{
+	 opacity: 0.1 !important;
+}
+
 @media screen and (max-width: 600px){
 	.errorSize{
 		display:block;
