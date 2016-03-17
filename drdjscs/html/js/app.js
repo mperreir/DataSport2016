@@ -8,7 +8,8 @@
         'nvd3',
         'ngSanitize',
         'angular-carousel-3d',
-        'counter'
+        'counter',
+        'oc.lazyLoad'
     ])
 })();
 
