@@ -182,7 +182,7 @@ var svg3 = d3.select("#barchart").append("svg")
 
 var addSvg = function (data,svg){
     x.domain(data.map(function(d) { return d.label; }));
-  y.domain([0, d3.max(data, function(d) { return d.values; })]);
+  y.domain([0, 1]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -191,13 +191,11 @@ var addSvg = function (data,svg){
 
   svg.append("g")
       .attr("class", "y axis")
-      .attr("fill","white")
+      .attr("fill","none")
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end");
+      .attr("y", 6);
     
   svg.selectAll(".bar")
       .data(data)
