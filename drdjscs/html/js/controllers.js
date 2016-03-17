@@ -94,9 +94,9 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.courbeDescription = "La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région."
 
     $scope.courbeDescriptionTitre = "Qu\'est-ce que c\'est?"
-    $scope.courbeDescriptionAge = "Age du bénéficiare de l'aide..";
-    $scope.courbeDescriptionNature = "Nature...";
-    $scope.courbeDescriptionAutre = "Autre...";
+    $scope.courbeDescriptionAge = "Tous les âges";
+    $scope.courbeDescriptionNature = "Rémunération";
+    $scope.courbeDescriptionAutre = "";
 
     $scope.options = {
             chart: {
