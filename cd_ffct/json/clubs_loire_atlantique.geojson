@@ -1,0 +1,994 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "club": "U.C. NANTES ATLANTIQUE",
+        "code insee": 44109,
+        "commune": "NANTES",
+        "adresse": "25 rue Gaston Turpin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.541646,
+          47.224795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club": "CYCLOS RANDONNEURS LOIRE OCEAN",
+        "code insee": 44143,
+        "commune": "REZE",
+        "adresse": "29 rue J-B Vigier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.582138,
+          47.206924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club": "UNION SPORTIVE ST HERBLAIN",
+        "code insee": 44162,
+        "commune": "ST HERBLAIN",
+        "adresse": "Boulevard Salvador Allende, 44800 Saint-Herblain"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.72746,
+          47.204475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"GILLES DE RETZ CYCLO",
+        "code insee":44087,"commune":"MACHECOUL",
+        "adresse":"7 rue des Bouchers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.821041,
+          46.992605
+        ]
+      }
+    },
+      {
+      "type": "Feature",
+      "properties": {
+          "club":"CYCLO CLUB THOUAREEN",
+          "code insee":44204,
+          "commune":"THOUARE SUR LOIRE",
+          "adresse":"rue de Carquefou"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.445948,
+          47.27298
+        ]
+      }
+    },
+      {
+      "type": "Feature",
+      "properties": {
+          "club":"CL CYCLO BASSE LOIRE",
+          "code insee":44166,
+          "commune":"ST JEAN DE BOISEAU",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.727460,
+          47.204475
+        ]
+      }
+    },
+      {
+      "type": "Feature",
+      "properties": {
+        "club":"S CYCLO VELO CLUB BLINOIS",
+          "code insee":44015,
+          "commune":"BLAIN",
+          "adresse":"1 place Jean Guihard"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.764644,
+          47.475278
+        ]
+      }
+    },
+      {
+      "type": "Feature",
+      "properties": {
+        "club":"GILLES DE RETZ CYCLO",
+        "code insee":44087,"commune":"MACHECOUL",
+        "adresse":"7 rue des Bouchers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.821041,
+          46.992605
+        ]
+      }
+    },
+      {
+      "type": "Feature",
+      "properties": {
+        "club":"ASS SPORT GAZ ELEC NANTES",
+          "code insee":44109,
+          "commune":"NANTES",
+          "adresse":"8 rue moquechien"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.555401,
+          47.220392
+        ]
+      }
+    },
+      {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLO VTT LUCEEN",
+          "code insee":44172,
+          "commune":"STE LUCE SUR LOIRE",
+          "adresse":"32 rue de l'Erdre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.478818,
+          47.245122
+        ]
+      }
+    },
+      {
+      "type": "Feature",
+      "properties": {
+        "club":"GILLES DE RETZ CYCLO",
+        "code insee":44087,"commune":"MACHECOUL",
+        "adresse":"7 rue des Bouchers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.821041,
+          46.992605
+        ]
+      }
+    },
+      {
+      "type": "Feature",
+      "properties": {
+        "club":"ASS SPORT ET CULT TRIGNAC",
+          "code insee":44210,
+          "commune":"TRIGNAC",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.188691,
+          47.370262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLO CLUB VERTAVIEN",
+          "code insee":44215,
+          "commune":"VERTOU",
+          "adresse":"Mairie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.473349,
+          47.167861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "club":"RANDONNEE CYCLO TURBALLAISE",
+          "code insee":44211,
+          "commune":"LA TURBALLE",
+          "adresse":"23 rue de La Marjolaine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.513773,
+          47.352370
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "club":"NORT ATHLETIC CLUB",
+          "code insee":44110,
+          "commune":"NORT SUR ERDRE",
+          "adresse":"30 rue Aristide-Briand"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.501074,
+          47.439849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLOS RANDONNEURS IMMACULEE",
+          "code insee":44184,
+          "commune":"ST NAZAIRE",
+          "adresse":"Association Maison des sports, avenue Pierre-de-Coubertin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.232553,
+          47.272493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+       "club":"ACCT BASSE GOULAINE",
+          "code insee":44009,
+          "commune":"BASSE GOULAINE",
+          "adresse":"1 rue de la Poste"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.505594,
+          47.183927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLOS RAND BAULOIS",
+          "code insee":44055,
+          "commune":"LA BAULE ESCOULAC",
+          "adresse":"16 avenue des Glaïeuls"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.415958,
+          47.282339
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLO VTT SAVENAY",
+          "code insee":44195,
+          "commune":"SAVENAY",
+          "adresse":"Mairie de Savenay, 20 place de l'Hôtel de Ville"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.943561,
+          47.359387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"VELO CLUB SEBASTIENNAIS",
+          "code insee":44190,
+          "commune":"ST SEBASTIEN",
+          "adresse":"place des Lucines, rue de l'Ouche Catin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.501599,
+          47.192189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"VELOCE SPORT COUERONNAIS",
+          "code insee":44047,
+          "commune":"COUERON",
+          "adresse":"rue Marcel-de-la-Provôté"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.739200,
+          47.211511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLOS PORNIC COTE DE JADE",
+          "code insee":44131,
+          "commune":"PORNIC",
+          "adresse":"4 rue de Lorraine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.101480,
+          47.117525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"TREILLIERES VELO CLUB DU GESVRES",
+          "code insee":44209,
+          "commune":"TREILLIERES",
+          "adresse":"57 rue de la mairie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.620959,
+          47.329583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLOTOURISTES MALVILLOIS",
+          "code insee":44089,
+          "commune":"MALVILLE",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.864284,
+          47.397036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLO RANDONNEUR CELLARIEN",
+          "code insee":44028,
+          "commune":"LE CELLIER",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.349874,
+          47.328107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+       "club":"ATLANTIQUE VELO SPORT",
+          "code insee":44184,
+          "commune":"ST NAZAIRE",
+          "adresse":"188 rue de Pornichet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.227211,
+          47.264675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLO CLUB ORVAULT",
+          "code insee":44114,
+          "commune":"ORVAULT",
+          "adresse":"11 rue Marcel Deniau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.624425,
+          47.270544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLOS DE LA COTE PORNICHET",
+          "code insee":44132,
+          "commune":"PORNICHET",
+          "adresse":"Stade Louis Mahé Avenue Jeanne Lequérré"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.331296,
+         47.254017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLO CLUB SAINT MALO",
+          "code insee":44176,
+          "commune":"ST MALO DE GUERSAC",
+          "adresse":"74 rue Emile Zola"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.175871,
+          47.347308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"ASS. CYCLOTOURISME CROSSAC",
+          "code insee":44050,
+          "commune":"CROSSAC",
+          "adresse":"Mairie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -2.168988,
+          47.411244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLO CANTONAL VARADAIS",
+          "code insee":44213,
+          "commune":"VARADE",
+          "adresse":"rue de la Gare"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.023873,
+          47.376480
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"VELO CLUB NAZAIRIEN",
+          "code insee":44184,
+          "commune":"ST NAZAIRE",
+          "adresse":"54 Chemin de Porcé"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.249849,
+          47.257344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+       "club":"CYCLO-VTT EN VALLEE DE CLISSON",
+          "code insee":44043,
+          "commune":"CLISSON",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -1.277403,
+          47.098624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"UNION CYCLISTE DONGEOISE",
+          "code insee":44052,
+          "commune":"DONGES",
+          "adresse":"24 rue des Métairies"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.076531,
+          47.317364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"VELO TOTAL CLUB",
+          "code insee":44052,
+          "commune":"DONGES",
+          "adresse":"3 Avenue de la Paix"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -2.079203,
+         47.318787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+       "club":"ETOILE ARTHONNAISE CYCLO",
+          "code insee":44005,
+          "commune":"ARTHON EN RETZ",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.954590,
+          47.139246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"A E P STE ANNE",
+          "code insee":44168,
+          "commune":"ST JOACHIM",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -2.173372,
+          47.220771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"UNION CYCLOTOURISTE MONTOIRINE",
+          "code insee":44103,
+          "commune":"MONTOIR DE BRETAGNE",
+          "adresse":"7 impasse du Chevalier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.142253,
+          47.327302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"AS CORDEMAISIEN CYCLO",
+          "code insee":44045,
+          "commune":"CORDEMAIS",
+          "adresse":"6 rue de plaisance"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.877691,
+          47.292171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"OSB CYCLO BATZ SUR MER",
+          "code insee":44010,
+          "commune":"BATZ SUR MER",
+          "adresse":"Mairie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.477826,
+          47.277522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CYCLOS A.S. C.H.U DE NANTES",
+          "code insee":44109,
+          "commune":"NANTES",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.554051,
+          47.210475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"ALPAC SPORT NANTES",
+          "code insee":44109,
+          "commune":"NANTES",
+          "adresse":"478 route de Saint Joseph"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.519844,
+         47.269270
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"ETOILE SPORT. DE HTE GOULAINE",
+          "code insee":44071,
+          "commune":"HAUTE GOULAINE",
+          "adresse":"espace Eric Tabarly, rue de la Blandellerie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.416605,
+          47.201109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"VELO CLUB LAVAUSIEN",
+          "code insee":44080,
+          "commune":"LAVAU SUR LOIRE",
+          "adresse":"Mairie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.967527,
+          47.306324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+       "club":"CYCLO ET VTT FAY DE BRETAGNE",
+          "code insee":44056,
+          "commune":"FAY DE BRETAGNE",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.813089,
+          47.438132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"UNION SPORT. CHAPELLE LAUNAY",
+          "code insee":44033,
+          "commune":"LA CHAPELLE LAUNAY",
+          "adresse":"1 place de l'Église"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.971742,
+          47.372043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"RUST IN RETZ VTT ST PERE EN RETZ",
+          "code insee":44187,
+          "commune":"ST PÈRE EN RETZ",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -2.060350,
+          47.243467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+       "club":"ASSOCIATION SPORTIVE FAMAT",
+          "code insee":44184,
+          "commune":"ST NAZAIRE",
+          "adresse":"Z.I. de Brais"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.296546,
+            47.297970
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "club":"VELO CLUB ANCENIEN",
+          "code insee":44003,
+          "commune":"ANCENIS",
+          "adresse":"101 rue des hauts pavés"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.184684,
+          47.371182
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "club":"CYCLO MARCHE LA CHAPELLE DES MARAIS",
+          "code insee":44030,
+          "commune":"LA CHAPELLE DES MARAIS",
+          "adresse":"16 rue de la Brière"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.243002,
+          47.446670
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "club":"ALAC CYCLOTOURISME",
+          "code insee":44026,
+          "commune":"CARQUEFOU",
+          "adresse":"9 avenue des Argonautes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.483630,
+          47.297448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "club":"VELO SPORT VITALIEN",
+          "code insee":44192,
+          "commune":"ST VIAUD",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.033669,
+          47.275814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+         "club":"CHEMINOTS NAZAIRIENS",
+          "code insee":44184,
+          "commune":"ST NAZAIRE",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.225384,
+          47.282599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+         "club":"AMICALE LAIQUE SAINT JOACHIM",
+          "code insee":44168,
+          "commune":"ST JOACHIM",
+          "adresse":"rue Joliot Curie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -2.201157,
+          47.383304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+         "club":"GRAND LIEU VTT",
+          "code insee":44188,
+          "commune":"ST PHILBERT DE GRANDLIEU",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.649774,
+          47.059606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "club":"LA LOUPIOTTE VTT CLUB",
+          "code insee":44158,
+          "commune":"ST ETIENNE DE MONTLUC",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -1.789641,
+          47.286253
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+         "club":"CYCLO CLUB VALLETAIS",
+          "code insee":44212,
+          "commune":"VALLET",
+          "adresse":"Parc des Dorices"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.259992,
+          47.175047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+         "club":"S CYCLO COMITE SPORTIF QUILLY",
+          "code insee":44139,
+          "commune":"QUILLY",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -1.957495,
+          47.476350
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+         "club":"CYCLO CLUB CHAPELAIN",
+          "code insee":44035,
+          "commune":"LA CHAPELLE SUR ERDRE",
+          "adresse":""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.564863,
+          47.319968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+         "club":"VELO TOUT TERRAIN NANTAIS",
+          "code insee":44109,
+          "commune":"NANTES",
+          "adresse":"12 rue Anatole de Monzie"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.541478,
+          47.203467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"N O S SPORT NATURE",
+          "code insee":44113,
+          "commune":"NOZAY",
+          "adresse":"9 rue de l'Église"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -1.625208,
+          47.565903
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "club":"CAP SPORTS ET NATURE SECTION CAP VTT",
+          "code insee":44169,
+          "commune":"ST JULIEN DE CONCELLES",
+          "adresse":"1 route du Lac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.369720,
+          47.25248
+        ]
+      }
+    }
+  ]
+}
