@@ -667,3 +667,9 @@ cursor:pointer;
 
 /*END*/
 
+.nvd3 .nv-axis path {
+   fill: none;
+   stroke: #000;
+   stroke-opacity: .75;
+   shape-rendering: crispEdges;
+ }
