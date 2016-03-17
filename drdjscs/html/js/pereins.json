@@ -1,0 +1,454 @@
+var perein = {  
+   "type":"geojson",
+   "data":{  
+      "type":"FeatureCollection",
+      "features":[  
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.914807,
+            47.360732
+         ]
+      },
+      "properties":{  
+         "title":"Association sportive du golf de Savenay",
+         "marker-symbol":"circle",
+         "description":"Le Chambeau, Savenay",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.6105854,
+            47.2074317
+         ]
+      },
+      "properties":{  
+         "title":"CD Judo",
+         "marker-symbol":"circle",
+         "description":"44 rue Romain Rolland, Nantes",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.6105854,
+            47.2074317
+         ]
+      },
+      "properties":{  
+         "title":"CD Volley Ball",
+         "marker-symbol":"circle",
+         "description":"44 rue Romain Rolland, Nantes",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.6105854,
+            47.2074317
+         ]
+      },
+      "properties":{  
+         "title":"CD Canoë Kayak",
+         "marker-symbol":"circle",
+         "description":"44 rue Romain Rolland, Nantes",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.5806891,
+            47.214072
+         ]
+      },
+      "properties":{  
+         "title":"ASPTT NANTES section natation",
+         "marker-symbol":"circle",
+         "description":"42 Rue Appert, Nantes",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.5430069,
+            47.38076
+         ]
+      },
+      "properties":{  
+         "title":"Nautisme en Pays Blanc",
+         "marker-symbol":"circle",
+         "description":"Rue du Fort Baron, Piriac",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.5430069,
+            47.38076
+         ]
+      },
+      "properties":{  
+         "title":"Nautisme en Pays Blanc",
+         "marker-symbol":"circle",
+         "description":"Rue du Fort Baron, Piriac",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.544721,
+            47.380007
+         ]
+      },
+      "properties":{  
+         "title":"Nautisme en Pays Blanc",
+         "marker-symbol":"circle",
+         "description":"Maison de la mer, Piriac",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.5451956,
+            47.3807636
+         ]
+      },
+      "properties":{  
+         "title":"NAUTISME EN PAYS BLANC",
+         "marker-symbol":"circle",
+         "description":"Maison de la mer - BP 20, PIRIAC SUR MER",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.8181541,
+            46.9883972
+         ]
+      },
+      "properties":{  
+         "title":"ALLIANCE SUD RETZ",
+         "marker-symbol":"circle",
+         "description":"bd P. de Coubertin\", ST NAZAIRE",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.464684,
+            47.1883579
+         ]
+      },
+      "properties":{  
+         "title":"ST SEBASTIEN NATATION",
+         "marker-symbol":"circle",
+         "description":"La Tournière, CARQUEFOU",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.297638,
+            47.3271352
+         ]
+      },
+      "properties":{  
+         "title":"SAINT ANDRE BASKET BALL",
+         "marker-symbol":"circle",
+         "description":"74, bd des anglais, Nantes",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.2169774,
+            47.2776277
+         ]
+      },
+      "properties":{  
+         "title":"SAINT NAZAIRE HANDBALL",
+         "marker-symbol":"circle",
+         "description":"33, route de la rue Jean, ST ANDRE DES EAUX",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.5501918,
+            47.2096169
+         ]
+      },
+      "properties":{  
+         "title":"NANTES NATATION",
+         "marker-symbol":"circle",
+         "description":"63, rue de la paix, ST NAZAIRE",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.544721,
+            47.380007
+         ]
+      },
+      "properties":{  
+         "title":"NAUTISME EN PAYS BLANC",
+         "marker-symbol":"circle",
+         "description":"Maison de la mer, PIRIAC SUR MER",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.553621,
+            47.218371
+         ]
+      },
+      "properties":{  
+         "title":"NEC ESCRIME",
+         "marker-symbol":"circle",
+         "description":"Complexe sportif  Mangin Beaulieu, Nantes",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.6036106,
+            47.2104646
+         ]
+      },
+      "properties":{  
+         "title":"Fête le mur",
+         "marker-symbol":"circle",
+         "description":"65, route de Saint Herblain, Nantes",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.2328658,
+            47.27185
+         ]
+      },
+      "properties":{  
+         "title":"ST NAZAIRE VOLLEY-BALL ATLANTIQUE",
+         "marker-symbol":"circle",
+         "description":"18, av. Pierre de Coubertin, ST NAZAIRE",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -0.5890559,
+            44.8442693
+         ]
+      },
+      "properties":{  
+         "title":"La Cambronnaise",
+         "marker-symbol":"circle",
+         "description":"3, rue de la Croix Blanche BP 93421, St SEBASTIEN",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.374042,
+            47.0587064
+         ]
+      },
+      "properties":{  
+         "title":"Association Pont Caffino",
+         "marker-symbol":"circle",
+         "description":"\"Chez M. Christian GOUERNE",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.501864,
+            47.2098319
+         ]
+      },
+      "properties":{  
+         "title":"GSSB St Sébastien Football",
+         "marker-symbol":"circle",
+         "description":"1 bd, des Pas Enchantés, St SEBASTIEN",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.5198764,
+            47.2692701
+         ]
+      },
+      "properties":{  
+         "title":"Volley Ball Nantes Atlantique",
+         "marker-symbol":"circle",
+         "description":"67 rue du Breil, Nantes",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.5374624,
+            47.2224207
+         ]
+      },
+      "properties":{  
+         "title":"St Rogatien Basket Ball",
+         "marker-symbol":"circle",
+         "description":"Maison des associations, PORNIC",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.5877724,
+            47.2287932
+         ]
+      },
+      "properties":{  
+         "title":"St Nazaire Atlantique Natation",
+         "marker-symbol":"circle",
+         "description":"47, rue de Coulmiers, Nantes",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.552567,
+            47.372126
+         ]
+      },
+      "properties":{  
+         "title":"CD Hockey sur Gazon",
+         "marker-symbol":"circle",
+         "description":"102, avenue St Georges, LA BAULE ESCOUBLAC",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -1.385788,
+            47.253399
+         ]
+      },
+      "properties":{  
+         "title":"OLAC  CAP",
+         "marker-symbol":"circle",
+         "description":"Rue des Heurtauds hôtel de Ville, St Julien des Concelles",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.544721,
+            47.380007
+         ]
+      },
+      "properties":{  
+         "title":"Nautisme en Pays Blanc",
+         "marker-symbol":"circle",
+         "description":"Maison de la mer BP 20, Piriac sur mer",
+         "perenisation":"Oui"
+      }
+   },
+   {  
+      "type":"Feature",
+      "geometry":{  
+         "type":"Point",
+         "coordinates":[  
+            -2.544721,
+            47.380007
+         ]
+      },
+      "properties":{  
+         "title":"Nautisme en Pays Blanc",
+         "marker-symbol":"circle",
+         "description":"Maison de la mer BP 20, Piriac sur Mer",
+         "perenisation":"Oui"
+      }
+   }
+]}}

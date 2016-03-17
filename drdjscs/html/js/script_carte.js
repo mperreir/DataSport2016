@@ -57,7 +57,25 @@ map.on('style.load', function () {
             'line-width': 2
         }
     });
-    ///////////// FIN CHARGEMENT DES CONTOURS DE LA LOIRE ATLANTIQUE ///////////////////    
+    ///////////// FIN CHARGEMENT DES CONTOURS DE LA LOIRE ATLANTIQUE ///////////////////  
+    
+    /////////////////// CHARGEMENT DES CLUBS PERRREINS ////////////////////
+    map.addSource("markers_p", perein);
+    map.addLayer({
+        "id": "markers_p",
+        "type": "symbol",
+        "interactive": true,
+        "source": "markers_p",
+        "layout": {
+            "icon-image": "{marker-symbol}-15",
+            "text-field": "{title}",
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+            "text-offset": [0, 0.6],
+            "text-anchor": "top",
+            "icon-allow-overlap": true
+        }
+    });
+    /////////////////// CHARGEMENT DES CLUBS PERRREINS ////////////////////
 });
 
 map.on('moveend', function () {
@@ -175,4 +193,5 @@ map.on('mousemove', function (e) {
         map.getCanvas().style.cursor = (!err && features.length) ? 'pointer' : '';
     });
 });
+
 

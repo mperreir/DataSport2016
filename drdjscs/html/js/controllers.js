@@ -108,7 +108,63 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
               x: function(d){ return d.x; },
               y: function(d){ return d.y; },
               transitionDuration: 100,
-              color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
+              color: ['rgba(0, 175, 155, 0.8)','rgba(182, 174, 195, 0.8)'],
+              xAxis: {
+
+              },
+              yAxis1: {
+                  showMaxMin: false,
+                  tickFormat: function(d){
+                      return d3.format('.02f')(d);
+                  },
+                  axisLabelDistance: 300,
+                  css: {
+                opacity:"0.4",
+            }
+              },
+              yAxis2: {
+
+                  
+              },
+              useInteractiveGuideline: true,
+              tooltip: true,
+              interactiveLayer: {
+                  tooltip: {
+                    contentGenerator: function (e) {
+                      var series = e.series[0];
+                      if (series.value === null) return;
+                      var temp = "";
+                      if (series.originalKey == "chomage"){
+                          temp = " POURCENT DE CHÔMEUR ";
+                      }  else {
+                          temp = " EMPLOI CRÉES ";
+                      }
+                      return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
+                    } 
+                  }
+                },
+                callback: function(){
+                  d3.selectAll('.nvd3.nv-legend g').style('fill', "RGBA(55, 196, 180, 1)")
+            },
+            css: {
+                opacity:"0.4",
+            }
+        }
+        };
+    $scope.optionsMini = {
+            chart: {
+              type: 'multiChart',
+              height: 340,
+              margin : {
+                  top: 30,
+                  right: 60,
+                  bottom: 50,
+                  left: 70
+              },
+              x: function(d){ return d.x; },
+              y: function(d){ return d.y; },
+              transitionDuration: 100,
+              color: ['rgba(0, 175, 155, 0.2)','rgba(182, 174, 195, 0.2)'],
               xAxis: {
 
               },
@@ -138,21 +194,6 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                       return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
                     } 
                   }
-                },
-                callback: function(){
-                  d3.selectAll('.nvd3.nv-legend g').style('fill', "RGBA(55, 196, 180, 1)")
-            }}
-        };
-    $scope.optionsMini = {
-             chart: {
-                type: 'lineChart',
-                height: 150,
-                width: 300,
-                margin : {
-                    top: 20,
-                    right: 20,
-                    bottom: 40,
-                    left: 45
                 },
                 x: function(d){ return d.x; },
                 y: function(d){ return d.y; },
@@ -213,7 +254,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     function updateColor(debut, fin) {
 
         for (var i = 0; i < 19; i++) {
-            d3.selectAll("rect.nv-bar")[0][i].style= "fill: RGBA(230, 230, 230, 1)";
+            d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(99, 120, 135, 0.2)";
         }
         for (var i = debut; i < fin; i++) {
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: RGBA(55, 196, 180, 1)";
@@ -365,7 +406,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.barAnnee = "1997 - 2015";
         emplois(0, 18);
         for (var i = 0; i < 19; i++) {
-            d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
+            d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(99, 120, 135, 0.3)"
         }
         $scope.courbeDescription = "La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région."
         $scope.courbeDescriptionTitre = "Qu\'est-ce que c\'est?"
@@ -529,7 +570,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
             clipEdge: false,
             duration: 40,
             stacked: false,
-            color: ['RGBA(230, 230, 230, 1)'],
+            color: ['RGBA(55, 196, 180, 1)'],
             xAxis: {
                 axisLabel: '',
                 showMaxMin: false,
