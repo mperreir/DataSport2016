@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr"> <!-- Notre page est en français -->
- 
+
+
+         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'> 
 
     
-    
     <head>
+        
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +14,6 @@
     <title>Hyblab 2016</title>
       
     <!-- Déclaration de la feuille de style du document-->
-        
     <link rel="stylesheet" href="css/fullPage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.js"></script>
@@ -50,11 +51,10 @@
                     <img class="section0_anim" id="nageur" src="../Ressources/Images/illu_1e_page_nageur_solo.svg">
                 </span>
                 <h1>REZÉ</h1>
-                <h2>Élue ville la plus sportive 
-de la région Pays-de-la-Loire en 2015</h2>
+                <h3>Élue ville la plus sportive de la région Pays-de-la-Loire en 2015</h3>
             </div> 
-<!--===============================================================================================================-->
-            <div class ="section" id="section1" >
+<!--=========================================================================================================================-->
+<!--=========================================================================================================================-->            <div class ="section" id="section1" >
                 <div class="header_slide">
                     <table>
                         <tr>
@@ -103,8 +103,8 @@ de la région Pays-de-la-Loire en 2015</h2>
                     </svg>
                 </div>
             </div>  
-<!--===============================================================================================================-->
-            <div class ="section" id="section2" >
+<!--=========================================================================================================================-->
+<!--=========================================================================================================================-->            <div class ="section" id="section2" >
                 <div class="header_slide">
                     <table>
                         <tr>
@@ -132,7 +132,8 @@ de la région Pays-de-la-Loire en 2015</h2>
                 <script src="js/barchart_section2.js"></script>
             </div> 
             
-<!--===============================================================================================================-->
+<!--=========================================================================================================================-->
+<!--=========================================================================================================================-->
             <div class ="section" id="section3" >
                 <div class="header_slide">
                     <table>
@@ -161,7 +162,8 @@ de la région Pays-de-la-Loire en 2015</h2>
                 </div>
             </div>
             
- <!--===============================================================================================================-->
+<!--=========================================================================================================================-->
+<!--=========================================================================================================================-->
            <div class ="section" id="section4" >
                 <div class="header_slide">
                     <table>
@@ -314,21 +316,9 @@ de la région Pays-de-la-Loire en 2015</h2>
                     </div>
                     <script src="js/script_map_reze.js"></script>
             </div>  
-<!--===============================================================================================================-->
-            <div class ="section" id="section5" >
-                <div class="header_slide">
-                    <table>
-                        <tr>
-                            <td><hr width="100%;" align="left"></td>
-                            <td width="40%" align="center" style="padding: 2px;">
-                                <h1>Slide5</h1>
-                            </td>
-                            <td><hr width="100%;" align="right"></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>  
-<!--========================================================================================================================-->
+<!--=========================================================================================================================-->
+<!--=========================================================================================================================-->
+
             <div class ="section" id="section6" > 
                 <div class="header_slide">
                     <table>
@@ -343,7 +333,7 @@ de la région Pays-de-la-Loire en 2015</h2>
                     </table>
                 </div>
                 <div id="map" style="float:left;"></div>
-                <div style="float:right;width:600px;">
+                <div id="titre" style="float:right;width:600px;visibility:hidden">
                     <h1 style="margin-top:30%;margin-left:15%;text-align:left;"><span style="color:red;">Rezé</span> / <span id="region_name_green" style="color:green;"></span></h1>
                     <svg class="chart"></svg>
                 </div>
@@ -383,6 +373,9 @@ de la région Pays-de-la-Loire en 2015</h2>
 
                     function regionClickHandler(d){
                         histogram(d.properties.nom);
+                        d3.select('#titre')
+                        .attr("style","float:right;width:600px;visibility:visible");
+                        console.log(d3.select('#titre'));
                     }
 
                     function histogram(region){
@@ -474,8 +467,31 @@ de la région Pays-de-la-Loire en 2015</h2>
                                     </script>
             </div> 
 <!--===============================================================================================================-->
-            <div class ="section" id="section7" >Credits  </div> 
+<!--===============================================================================================================-->
+         <div class ="section" id="section7" >
+                <div class="header_slide">
+                    <table>
+                        <tr>
+                            <td><hr width="100%;" align="left"></td>
+                            <td width="40%" align="center" style="padding: 2px;">
+                                <h1>Credits</h1>
+                            </td>
+                            <td><hr width="100%;" align="right"></td>
+                        </tr>
+                    </table>
+                </div>
+                    <img id="photo" src="../Ressources/Images/photo.jpg">
+                    <img id="texte1" src="../Ressources/Images/text.JPG">
 
-        </div>
+             <div id="bandeau">
+                <img id="logo" src="../Ressources/Images/logo.JPG">
+
+            </div>
+
+                 
+             </div>
+         </div>
+<!--=========================================================================================================================-->
+<!--=========================================================================================================================-->
   </body>
 </html>

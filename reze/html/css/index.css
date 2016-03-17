@@ -4,11 +4,11 @@
 /*Custom CSS
 */
 body{
-    font-family: Gotham;
+    font-family: font-family: 'Montserrat';
     color: white;
 }
 
-h1, h2{
+h1, h2, h3{
     -webkit-margin-before: 0.4em;
     -webkit-margin-after: 0.4em;
     text-align: center;
@@ -39,7 +39,7 @@ table{
 }
 
 #section0 h1{
-    font-size: 3em;
+    font-size: 3vh;
 }
 
 #section0 h2{
@@ -125,4 +125,33 @@ p{
 }
 #section6 .histogram-legend{
     color:black;
+}
+
+/*section07*/
+
+#photo{
+    float: left;
+    margin-top: 8px;
+    width: 340px;
+    height: 307px;
+    padding-left: 200px;
+
+}
+
+#texte1{
+    /*margin-top: 10px;*/
+    width: 340px;
+    height: 307px;
+    padding-top: 
+    padding-left: 1000px;
+    /*padding-bottom: 300px;*/
+
+}
+
+
+#logo{
+       margin-top:80px;   
+       margin-bottom: 0px;
+       padding-left: 200px;
+       padding-right: 100px;
 }

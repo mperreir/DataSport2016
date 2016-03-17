@@ -8,7 +8,8 @@ $(document).ready(function() {
         navigationPosition: 'right',
         css3:true,
         loopHorizontal: false,
-        afterLoad: countNumber
+        afterLoad: countNumber,
+        resize:true
       });
     });
         countNumber = function(al,index){
