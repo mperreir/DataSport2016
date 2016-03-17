@@ -453,6 +453,13 @@ cursor:pointer;
 	
 }
 
+.container-intro > a {
+
+	color: 	white;
+	padding-bottom: 20px;
+	font-size: 	25px;
+}
+
 
 .container-intro > h2 {
 		color:black;

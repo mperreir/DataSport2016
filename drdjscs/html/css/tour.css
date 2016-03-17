@@ -558,6 +558,7 @@ Main Components
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
   visibility: visible;
   opacity: 0;
   -webkit-transition: opacity 0.4s 0s, visibility 0s 0.4s;
