@@ -4,7 +4,7 @@
 
         <div class="description">
             <h1>Qu'est-ce que c'est?</h1>
-            <p>La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région. </p>
+            <p>{{courbeDescription}}</p>
 
         </div>
         <div class="line lineSide"></div>
@@ -73,27 +73,24 @@
 
 </div> 
     
-    <div class="aideTimeline">
-
-        
+    <div class="aideTimeline">     
         <div class="controlTimeline">
-        <div class="goBack" ng-click="reset()"><h3><</h3></div>
-        <div class="zoom More"><img src="icons/zoom-01.svg"></div>
-        <div class="zoom Less"><img src="icons/zoom-02.svg"></div> 
+            <div class="goBack" ng-click="reset()"></div>
+            <div class="zoom More"><img src="icons/zoom-01.svg"></div>
+            <div class="zoom Less"><img src="icons/zoom-02.svg"></div> 
         </div>
     
-       <!--  <div class="btnTimeline aide1 aide" ng-click="update19961998()"><h3>Contrat Emploi Ville (1997-1998)</h3></div> -->
+       
         <div class="btnTimeline aide2 aide" ng-click="update19972005()"><h3>Contrat Emploi Consolidé (1997-2005)</h3></div>
         <div class="btnTimeline aide3 aide" ng-click="update20052010()"><h3>Contrat d'Avenir (2005-2010)</h3></div>
         <div class="btnTimeline aide4 aide" ng-click="update19972002()"><h3>Emploi Jeune (1997-2002)</h3></div>
         <div class="btnTimeline aide5 aide" ng-click="update20102015()"><h3>Emploi à Forte Utilité Sociale (2010-2015)</h3></div>
         <div class="btnTimeline aide6 aide" ng-click="update20042015()"><h3>Contrat de Professionnalisation (2004-2015)</h3></div>
         <div class="btnTimeline aide7 aide" ng-click="update20092013()"><h3>Emplois PSE 4 ans (2009-2013)</h3></div>
-        <!-- <div class="btnTimeline aide9" ng-click=""><h3>1992-2005(on a deja de 1997 a 2015)</h3></div> -->
-        <div class="btnTimeline aide10 aide" ng-click=""><h3>Emploi d'Avenir (2012-2015)</h3></div>
-        <div class="btnTimeline aide11 aide" ng-click=""><h3>Contrat de génération (2013-2015)</h3></div>
-        <div class="btnTimeline aide12 aide" ng-click=""><h3>Emploi CNDS (2013-2015)</h3></div>
-        <div class="btnTimeline aide13 aide" ng-click=""><h3>Emploi PSE  5 ans (1996-2009)</h3></div>
+        <div class="btnTimeline aide10 aide" ng-click="update20122015()"><h3>Emploi d'Avenir (2012-2015)</h3></div>
+        <div class="btnTimeline aide11 aide" ng-click="update20132015g()"><h3>Contrat de génération (2013-2015)</h3></div>
+        <div class="btnTimeline aide12 aide" ng-click="update20132015c()"><h3>Emploi CNDS (2013-2015)</h3></div>
+        <div class="btnTimeline aide13 aide" ng-click="update19962009()"><h3>Emploi PSE  5 ans (1996-2009)</h3></div>
 
     </div>    
  

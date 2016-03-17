@@ -85,6 +85,11 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
        $scope.zoomBarData = data; 
        
     });
+    
+    $http.get('hyblabData/dataInfo.json').success(function (data) {
+       $scope.dataInfo = data;
+    });
+    $scope.courbeDescription = "La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région."
 
     $scope.options = {
             chart: {
@@ -170,6 +175,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.barAnnee = "1997 - 2005";
         emplois(0,9);
         updateColor(0, 9);
+        $scope.courbeDescription = $scope.dataInfo[1].description;
     }
     $scope.update20052010 = function () {    
         $scope.data = $scope.zoomData[2];
@@ -178,6 +184,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.barAnnee = "2005 - 2010";
         emplois(8, 14);
         updateColor(8, 14);
+        $scope.courbeDescription = $scope.dataInfo[4].description;
     }
     $scope.update19972002 = function () {
         $scope.data = $scope.zoomData[3];
@@ -186,6 +193,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.barAnnee = "1997 - 2002";
         emplois(0, 6);
         updateColor(0, 6);
+        $scope.courbeDescription = $scope.dataInfo[3].description;
     }
     $scope.update20102015 = function () {    
         $scope.data = $scope.zoomData[4];
@@ -194,6 +202,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.barAnnee = "2010 - 2015";
         emplois(13, 19);
         updateColor(13, 19);
+        $scope.courbeDescription = $scope.dataInfo[8].description;
     }
     $scope.update20042015 = function () {
         $scope.data = $scope.zoomData[6];
@@ -202,6 +211,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.barAnnee = "2004 - 2015";
         emplois(7, 19);
         updateColor(7, 19);
+        $scope.courbeDescription = $scope.dataInfo[11].description;
     }
     $scope.update20092013 = function () {
         $scope.data = $scope.zoomData[8];
@@ -210,6 +220,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.barAnnee = "2009 - 2013";
         emplois(12, 17);
         updateColor(12, 17);
+        $scope.courbeDescription = $scope.dataInfo[13].description;
     }
     $scope.update19922005 = function () {
         $scope.data = $scope.zoomData[12];
@@ -226,14 +237,25 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.barAnnee = "2012 - 2015";
         emplois(15, 19);
         updateColor(15, 19);
+        $scope.courbeDescription = $scope.dataInfo[9].description;
     }
-    $scope.update20132015 = function () {
+    $scope.update20132015g = function () {
         $scope.data = $scope.zoomData[11];
         //$scope.barData = $scope.zoomBarData[7];
         $scope.titre = "2013 à 2015...";
         $scope.barAnnee = "2013 - 2015";
         emplois(17, 19);
         updateColor(17, 19);
+        $scope.courbeDescription = $scope.dataInfo[10].description;
+    }
+    $scope.update20132015c = function () {
+        $scope.data = $scope.zoomData[11];
+        //$scope.barData = $scope.zoomBarData[7];
+        $scope.titre = "2013 à 2015...";
+        $scope.barAnnee = "2013 - 2015";
+        emplois(17, 19);
+        updateColor(17, 19);
+        $scope.courbeDescription = $scope.dataInfo[14].description;
     }
     $scope.update19962009 = function () {
         $scope.data = $scope.zoomData[13];
@@ -242,6 +264,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.barAnnee = "1996 - 2009";
         emplois(0, 13);
         updateColor(0, 13);
+        $scope.courbeDescription = $scope.dataInfo[12].description;
     }
     $scope.reset = function () {
         $scope.data = $scope.fix;
