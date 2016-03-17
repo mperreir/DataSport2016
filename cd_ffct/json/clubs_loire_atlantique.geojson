@@ -7,7 +7,8 @@
         "club": "U.C. NANTES ATLANTIQUE",
         "code insee": 44109,
         "commune": "NANTES",
-        "adresse": "25 rue Gaston Turpin"
+        "adresse": "25 rue Gaston Turpin",
+        "marker-symbol":"circle"
       },
       "geometry": {
         "type": "Point",
@@ -23,7 +24,8 @@
         "club": "CYCLOS RANDONNEURS LOIRE OCEAN",
         "code insee": 44143,
         "commune": "REZE",
-        "adresse": "29 rue J-B Vigier"
+        "adresse": "29 rue J-B Vigier",
+        "marker-symbol":"circle"
       },
       "geometry": {
         "type": "Point",
@@ -39,7 +41,8 @@
         "club": "UNION SPORTIVE ST HERBLAIN",
         "code insee": 44162,
         "commune": "ST HERBLAIN",
-        "adresse": "Boulevard Salvador Allende, 44800 Saint-Herblain"
+        "adresse": "Boulevard Salvador Allende, 44800 Saint-Herblain",
+        "marker-symbol":"circle"
       },
       "geometry": {
         "type": "Point",
@@ -54,7 +57,8 @@
       "properties": {
         "club":"GILLES DE RETZ CYCLO",
         "code insee":44087,"commune":"MACHECOUL",
-        "adresse":"7 rue des Bouchers"
+        "adresse":"7 rue des Bouchers",
+        "marker-symbol":"circle"
       },
       "geometry": {
         "type": "Point",
@@ -70,7 +74,8 @@
           "club":"CYCLO CLUB THOUAREEN",
           "code insee":44204,
           "commune":"THOUARE SUR LOIRE",
-          "adresse":"rue de Carquefou"
+          "adresse":"rue de Carquefou",
+          "marker-symbol": "star"
       },
       "geometry": {
         "type": "Point",
