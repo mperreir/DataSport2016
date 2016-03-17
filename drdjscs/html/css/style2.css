@@ -51,6 +51,12 @@ ul{
 	padding:0;
 	margin:0;
 }
+.profile img{
+	opacity:0.7;
+	width: 15px;
+	margin-right:10px;
+	vertical-align: middle;
+}
 .timeIndicator{
 	        padding: 5px 10px 5px 10px;
     border-radius: 100px;
@@ -365,6 +371,7 @@ color:white;
 }
 .sideBartotal{
 	position: fixed;
+	top:100px;
     
 }
 .sideBar1{
