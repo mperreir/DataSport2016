@@ -493,12 +493,8 @@ cursor:pointer;
 	display: inline-block;
 }
 .wrapper-intro {
-
-	background-image: url("../img/bg.png");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 100vh;
+	
+	height: 25vh;
 
 
 }
