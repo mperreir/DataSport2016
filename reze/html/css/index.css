@@ -118,12 +118,12 @@ p{
 }
 
 #section6 path {
-  stroke: #fff;
-  stroke-width: .5px;
+  stroke: #414141;
+  stroke-width: 1px;
 }
 
 #section6 path:hover {
-  fill: green;
+  fill: #42ff97;
 }
 
 #section6 .chart text {
