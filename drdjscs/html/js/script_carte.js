@@ -10,7 +10,7 @@ var map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.Navigation());
 
-var bouton_menu = document.getElementById('bouton_menu');
+var bouton_menu = document.getElementById('recentrer');
 bouton_menu.addEventListener("click",function (e) {
     map.flyTo({
             center: [-1.54,47.248],

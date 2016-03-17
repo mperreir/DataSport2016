@@ -24,7 +24,7 @@ body{
 	margin:0;
 }
 header{
-	padding:20px 20px 0px 60px;
+	padding:20px 0px 0px 0px;
 	border-bottom:1px solid rgba(0,0,0,0.5);
 	background:#13161C;
 	z-index:100000;
@@ -37,6 +37,7 @@ header h1{
 	color:white;
 	font-weight:400;
 	font-size: 24px;
+	padding-left: 60px;
 }
 header h2{
 	opacity:0.5;
@@ -472,7 +473,7 @@ cursor:pointer;
 }
 /*PAGE INTRO*/
 .container-intro {
-	height: 200vh;
+	height: 100vh;
 	text-align: center;
 }
 .container-intro > hr {
@@ -507,7 +508,7 @@ cursor:pointer;
 		color:black;
 	font-size: 44px;
 	font-weight:600;
-	padding-top: 40px;
+	padding-top: 85px;
 	padding-bottom: 10px;
 
 }
@@ -542,11 +543,8 @@ cursor:pointer;
 }
 .wrapper-intro {
 
-	background-image: url("../img/bg.png");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 100vh;
+
+	height: 100vh !important;
 
 
 }

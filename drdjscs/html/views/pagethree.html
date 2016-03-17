@@ -1,45 +1,60 @@
 <header>
     <div class="logoLeft">
-         <h1>Hyblab</h1>
-         <h2>Analyser la création d'emploi du CNDS</h2>
-    </div>
-    <div class="menuRight">
-        <ul>
-            <li><a href="#intro"><img src="icons/curve_stroke.svg"><p>Emploi CNDS</p></a></li>
-            <li><a href="#pageone"><img src="icons/dot_stroke.svg"><p>La carte</p></a></li>
-            <li><a href="#pagetwo"><img src="icons/map_stroke.svg"><p>Les associations</p></a></li>
-            <li class="active"><a href="#pagethree"><img src="icons/map_fill.svg"><p>Remerciements</p></a></li>
-        </ul>
-    </div>
-    <div class="infosRight">
+       <h1>HYBLAB</h1>
+      
+   </div>
+   <div class="menuRight">
+    <ul>
+    <li><a href="#intro"><p>Emploi CNDS</p></a></li>
+        <li><a href="#pageone"><p>La carte</p></a></li>
 
-    </div>
+        <li class="active"><a href="#pagethree"><p>À propos</p></a></li>
+    </ul>
+</div>
+<div class="infosRight">
+
+</div>
 </header>
 
 
-<div class="animated slideInUp">
-    <carousel3d
-        ng-model="slides"
-        options="slideOptions"
-        on-selected-click="selectedClick(index)"
-        on-slide-change="slideChanged(index)"
-        on-last-slide="lastSlide(index)"
-        on-before-change="beforeChange(index)">
-    <carousel3d-slide ng-repeat="slide in slides">
-        <figure>
-            <img ng-src="{{slide.src}}" alt=""/>
-            <figcaption ng-bind="slide.caption"></figcaption>
-        </figure>
-    </carousel3d-slide>
-    </carousel3d>
-</div>
+<div class="container-intro">
+    <h2>Le Projet</h2>
+    <hr>
+    <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid mollitia, aspernatur, tempora ut facilis, voluptates voluptate saepe iure architecto expedita vitae magnam unde possimus. Quae adipisci vitae veritatis est sunt?</strong> <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum iste, officiis. Necessitatibus corporis, architecto ex magnam, similique recusandae quaerat excepturi quod obcaecati, in ut. Provident alias quia, commodi accusantium ut. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit corrupti itaque asperiores magni ad cumque odit accusantium omnis voluptates similique. Incidunt debitis ipsam blanditiis minima cumque quo eligendi, accusamus reprehenderit.</p>
 
+    <h2>L'Équipe</h2>
+    <hr>
+    <ul>
+        <li>
+            <img src="img/poly.png" alt="">
+            <h3>Polytech</h3>
+            <p>Pauwel Almeida</p>
+            <p>Jonathan Yue Chun</p>
+            <p>Qian Yin</p>
+        </li>
 
-<h1><a href="#begin">Reset</a></h1>
+        <li>
+            <img src="img/univ.png" alt="">
+            <h3>Staps</h3>
+            <p>Salomé Raffi</p>
+            <p>Amandine Vahé</p>
+            <p>Ophélie Prioux</p>
+            <p>Emma Heulet</p>
+            <p>Marianne Etienvre</p>
+        </li>
+        
+        <li>
+            <img src="img/edna.png" alt="">
+            <h3>L'École de design</h3>
+            <p>Clément Aupiais</p>
+            <p>Maxime Bénéteau</p>
+        </li>
 
-<div style="margin-left: 35%;">
-    <div ng-repeat="photo in photos" style="display: inline-block; width: 10%; height: 150px; margin-left: 50px;">
-        <img class="animated flipInX" style="width: 100%; height: 100%;" src="{{photo.src}}">
-        <h6 style="text-align: center; color: rgba(0, 175, 155, 1)">{{photo.nom}}</h6>
-    </div>
+        <li>
+            <img src="img/iut.png" alt="">
+            <h3>IUT La Roche sur Yon</h3>
+            <p>Tipahine Saint-Félix</p>
+        </li>
+    </ul>
+
 </div>
