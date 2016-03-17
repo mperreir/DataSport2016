@@ -52,23 +52,29 @@ ul{
 	margin:0;
 }
 .timeIndicator{
-	    padding-top: 30px;
-	padding-left: 60px;
+	        padding: 5px 10px 5px 10px;
+    border-radius: 100px;
+    margin-right: 60px;
+    border:1px solid rgba(255,255,255,0.3);
+    width: 180px;
+    margin-top:30px;
 	text-align:left;
 	float: right;
-    width: 200px;
-    padding-bottom: 10px;
-    padding-right:40px;
+    
+   
 
+}
+.timeIndicator2{
+	text-align: center;
 }
 .timeIndicator p{
 	padding-top: 4px;
-	color:#80919B;
+	color:rgba(255,255,255,0.6);
 }
 .timeIndicator img{
 width:25px;
 float: left;
-margin-right: 15px;
+margin-right: 0px;
 }
 
 .nv-x .tick:nth-child(odd){
@@ -142,8 +148,8 @@ margin-right: 15px;
 .mainTitle{
 	float:left;
 	    color: #80919B;
-	    padding-top: 30px;
-    padding-left: 60px;mi
+	       padding-top: 40px;
+    padding-left: 60px;
 
 }
 .mainTitle h1{
@@ -176,7 +182,7 @@ font-size:18px;
 	float:right;
 }
 .controlTimeline{
-	    padding-right:50px;
+	    padding-right:480px;
 }
 .goBack:hover, .zoom:hover{
 	cursor:pointer;
@@ -355,7 +361,7 @@ color:white;
 	right:0;
 	z-index: 1000;
 	overflow: hidden;
-
+	
 }
 .sideBartotal{
 	position: fixed;
@@ -411,7 +417,7 @@ color:white;
 .filtersRightBox{
 	padding-left:60px;
 	    float: left;
-    width: 500px;
+    width: 485px;
 
 
 }
@@ -419,7 +425,7 @@ color:white;
 
 	background:#272D38;
 	padding:5px;
-	width:974px;
+	width:100%;
 	height:auto;
 	border-top:1px solid rgba(0,0,0,0.2);
 	    position: fixed;
@@ -435,6 +441,7 @@ color:white;
 	margin-right:20px;
 	float:left;
 	color:#80919B;
+	font-weight:400;
 }
 .filtersType ul {
 	

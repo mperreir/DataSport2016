@@ -116,7 +116,7 @@ $(function(){
         $side .animate({ 'bottom': '-800px' }, 500);
 
     }, function() {
-        $side .animate({ 'bottom': '0' }, 500);
+        $side .animate({ 'bottom': '20px' }, 500);
     });     
       
 });
