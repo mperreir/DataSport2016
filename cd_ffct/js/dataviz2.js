@@ -8,7 +8,7 @@ $(document).ready(function() {
         var colors = [
             ["#9BC8D9", "#C3D8E7"],
             ["#F56D34", "#FFA574"],
-            ["#F4DC78", "#EFDF90"]
+            ["#F4DC78", "#F7E790"]
         ];
         
         
