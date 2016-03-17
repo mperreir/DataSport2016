@@ -108,18 +108,18 @@ $(function(){
 
 
 
-// $(function(){
+$(function(){
 
-//   var $side = $(".sideBar");
-//     $('.sideBar').click(function() {
+  var $side = $(".sideBartotal");
+    $('.btnEnsavoir').click(function() {
     	
-//         $side .animate({ 'width': '390px' }, 500);
+        $side .animate({ 'bottom': '-800px' }, 500);
 
-//     }, function() {
-//         $side .animate({ 'width': '90%' }, 500);
-//     });     
+    }, function() {
+        $side .animate({ 'bottom': '0' }, 500);
+    });     
       
-// });
+});
 
 
 

@@ -20,6 +20,7 @@
 }
 
 .nvd3 .nv-axis line {
+    opacity: 0.1 !important;
     fill: none;
     stroke: #e5e5e5;
     shape-rendering: crispEdges;
@@ -28,6 +29,7 @@
 .nvd3 .nv-axis .zero line,
     /*this selector may not be necessary*/ .nvd3 .nv-axis line.zero {
     stroke-opacity: .75;
+
 }
 
 .nvd3 .nv-axis .nv-axisMaxMin text {
@@ -61,7 +63,7 @@
 }
 
 .nvd3 .nv-bars text {
-    fill: rgba(0,0,0,0);
+    fill: rgba(255,255,255,1);
 }
 
 .nvd3 .nv-bars .hover text {

@@ -18,6 +18,8 @@
     </div>
 </header>
 <div id="content" class="sideBar animated bounceInRight">
+<div class="sideBartotal">
+<div class="sideBar1">
     <div class="infos">
 
         <div class="description">
@@ -48,10 +50,31 @@
                 </div>
             </div>
         </div>
-        <div class="btn btnEnsavoir"><a href="#sidebarpage">Domaines qui bénéficient de l'aides</a></div>
-        <div class="btn btnEnsavoir"><a href="#pageone">En savoir plus...</a></div>
+        <div class="btn btnEnsavoir">Qui béneficie de cette aide ?</div>
+
+     <!--    <div class="btn btnEnsavoir"><a href="#pageone">En savoir plus...</a></div> -->
     </div>
-    
+    </div>
+    <div class="sideBar2">
+        <h3>Quels sont les sports qui profitent de l'aide CNDS ?</h3>
+    <div style="width : 350pxpx;">
+        <canvas id="pie" class="chart chart-pie"
+                chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce" chart-legend="true" chart-colours="[ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360']">
+        </canvas>
+    </div>
+    <div style="width : 350px; text">
+        <p class="titleSide" style="color:#9CA7AF;">Le football a perçu le plus d'aide en 2015, environ 15% de l'aide CNDS est accordée au comité départemental de football de Loire-Altantique.</p>
+    </div>
+    <div style="width : 350px;">
+         <canvas id="pie" class="chart chart-pie"
+                chart-data="introPieDataReduce2" chart-options="introPieChartOptions" chart-labels="introPieListReduce2" chart-legend="true" chart-colours="[ '#4D5360','#00ADF9', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360']">
+        </canvas> 
+    </div>
+    <div style="width : 350px; text">
+        Cependant, en observant de plus près, on s'apperçoit que le Rugby à XIII est le sport le plus aidé si on regarde par rapport au nombres de clubs dans les comités départementaux.
+    </div>
+    </div>
+    </div>
 </div>
 
 <div class="mainContent">

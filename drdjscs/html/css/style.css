@@ -12,7 +12,13 @@ p,h1,h2,h3{
 	margin:0;
 }
 
-
+.titleSide{
+	font-size: 22px;
+    color: #9CA7AF;
+}
+.pie-legend li{
+	color:#9CA7AF;
+}
 html{
 	background:RGBA(250, 250, 250, 1);
 	padding:0;
@@ -322,6 +328,9 @@ color:white;
 	top:0;
 	right:0;
 
+}
+.sideBartotal{
+	position: fixed;
 }
 
 .description {

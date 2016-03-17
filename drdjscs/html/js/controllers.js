@@ -120,6 +120,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
                   axisLabelDistance: 300,
                   css: {
                 opacity:"0.4",
+                color:"white",
             }
               },
               yAxis2: {
