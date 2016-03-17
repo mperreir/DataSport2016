@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr"> <!-- Notre page est en français -->
  
-    
+
     
     
     <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Hyblab 2016</title>
       
     <!-- Déclaration de la feuille de style du document-->
@@ -15,16 +16,16 @@
     <link rel="stylesheet" href="css/fullPage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.js"></script>
+    <script src="../Libraries/jquery.transit.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>-->
     <script src="js/jQuery.js"></script>  
     <script src="../Libraries/jquery-countTo-master/jquery.countTo.js"></script>
-    <script src="js/script_map_france.js"></script>
+ <!--   <script src="js/script_map_france.js"></script>-->
         
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-
-        <link rel="stylesheet"  type="text/css" href="css/index.css">
+        <script src="js/animation.js"></script>
 
 
  
@@ -43,6 +44,11 @@
         <div id="fullPage" >
     <!-- Le contenu du site -->
             <div class ="section" id="section0" >
+                <span>
+                    <img class="section0_anim" id="avion" src="../Ressources/Images/illus-fond-avion_3.svg">
+                    <img class="section0_anim" id="cycliste" src="../Ressources/Images/illu_1e_page_cycliste2.svg">
+                    <img class="section0_anim" id="nageur" src="../Ressources/Images/illu_1e_page_nageur_solo.svg">
+                </span>
                 <h1>REZÉ</h1>
                 <h2>Élue ville la plus sportive 
 de la région Pays-de-la-Loire en 2015</h2>
@@ -336,7 +342,7 @@ de la région Pays-de-la-Loire en 2015</h2>
                         </tr>
                     </table>
                 </div>
-                <div id="map"></div>
+                <div id="map" style="float:left;"></div>
                 <div style="float:right;width:600px;">
                     <h1 style="margin-top:30%;margin-left:15%;text-align:left;"><span style="color:red;">Rezé</span> / <span id="region_name_green" style="color:green;"></span></h1>
                     <svg class="chart"></svg>
@@ -382,7 +388,7 @@ de la région Pays-de-la-Loire en 2015</h2>
                     function histogram(region){
                         console.log(region);
                         d3.select("#region_name_green").text(region);
-                        
+
                         $('svg.chart').html('');
                         d3.json("../Ressources/data/regions.json", function(error, regions) {
                           if (error) {
@@ -392,10 +398,10 @@ de la région Pays-de-la-Loire en 2015</h2>
                             return r.region == region;
                           })
 
-                          data = [data[0].part_femme,data[0].part_population];
+                          data = [24.3, data[0].part_population, 42.6, data[0].part_femme];
                           var width = 150,
-                            barHeight = 15;
-                            
+                            barHeight = 10;
+
                             var x = d3.scale.linear()
                                 .domain([0, 100])
                                 .range([0, width]);
@@ -407,8 +413,11 @@ de la région Pays-de-la-Loire en 2015</h2>
                             var bar = chart.selectAll("g")
                                 .data(data)
                               .enter().append("g")
-                                .attr("transform", function(d, i) { return "translate(200," + (2 + 5 * i) * barHeight + ")"; });
-                            
+                                .attr("transform", function(d, i) { 
+                                    return i<2 ? "translate(200," + i * 2 * barHeight + ")":
+                                    "translate(200," + (1 + i * 2) * barHeight + ")"; 
+                                });
+
                             bar.append("rect")
                                 .attr('fill','black')  
                                 .attr("height", barHeight - 1)
@@ -416,32 +425,53 @@ de la région Pays-de-la-Loire en 2015</h2>
 
                             bar.append("rect")
                                 .attr("width", 0)
-                                .attr('fill','green')  
+                                .attr('fill', function(d, i) { return i%2==0 ? 'red' : 'green' })  
                                 .attr("height", barHeight - 1)
                                 .transition()
                                 .duration(1000)
                                 .ease("quad")
                                 .attr("width", x);
 
-
                             bar.append("text")
-                                .attr("x", function(d) { return x(d); })
+                                .attr("x", function(d) { return width + 5 ; })
                                 .attr("y", barHeight / 2)
                                 .attr("dy", ".35em")
+                                .attr("fill", function(d, i) { return i%2==0 ? 'red' : 'green' })
                                 .text(function(d) { return d+'%'; });
-                            
+
                             bar.append("text")
+                                .attr("y", barHeight / 2)
+                                .attr("dx", "-1.3em")
                                 .attr("dy", ".35em")
                                 .attr('class','histogram-legend')
+                                .attr("text-anchor", "end")
+                                .attr("fill", "white")
                                 .text(function(d,i) { 
-                                    if(i == 0) return 'Pourcentage de femme licenciées';
-                                    else return 'Pourcentage de licenciés population';
+                                    if(i == 0) return 'Pourcentage de licenciés';
+                                    else if(i == 1) return 'parmi la population globale';
+                                    else if(i == 2) return 'Pourcentage de femmes';
+                                    else if(i == 3) return 'licenciées';
                                  });
 
-                        });
-                    }
+                            chart.append("line")
+                                .attr("x1", "190")
+                                .attr("y1", "0")
+                                .attr("x2", "190")
+                                .attr("y2", "30")
+                                .attr("stroke", "white")
+                                .attr("stroke-width", "2");
 
-                </script>
+                            chart.append("line")
+                                .attr("x1", "192")
+                                .attr("y1", "50")
+                                .attr("x2", "192")
+                                .attr("y2", "80")
+                                .attr("stroke", "white")
+                                .attr("stroke-width", "2");
+
+                            });
+                    }
+                                    </script>
             </div> 
 <!--===============================================================================================================-->
             <div class ="section" id="section7" >Credits  </div> 

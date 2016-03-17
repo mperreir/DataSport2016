@@ -6,7 +6,6 @@
 body{
     font-family: Gotham;
     color: white;
-    position: relative;
 }
 
 h1, h2{
@@ -36,6 +35,7 @@ table{
     background-image: url("../../Ressources/Images/illus-fond160316.svg");
 	background-position: center center;
 	background-size: 100% 100%;
+    position: relative;
 }
 
 #section0 h1{
@@ -44,6 +44,40 @@ table{
 
 #section0 h2{
     font-size: 2em;
+}
+
+#section0 span{
+	overflow: hidden;
+    margin: auto;
+    position: absolute;
+    top:0;bottom:0;
+    left:0;right:0;
+    width:60%;
+    height:100%;
+}
+
+.section0_anim {
+    z-index: 1;
+    position: absolute;
+    height: auto;
+}
+
+#avion {
+    top: 6%;
+    left: -10%;
+    width: 60px;
+}
+
+#cycliste {
+    top: 80%;
+    left: 0%;
+    width: 50px;
+}
+
+#nageur {
+    top: 57%;
+    left: 20%;
+    width: 40px;
 }
 
 /*Section2
@@ -85,14 +119,9 @@ p{
   fill: green;
 }
 
-#section6 path:selected {
-    fill: blue;
-}
-
 #section6 .chart text {
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: end;
+  font: 12px sans-serif;
+    font-weight: bold;
 }
 #section6 .histogram-legend{
     color:black;
