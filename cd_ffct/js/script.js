@@ -23,14 +23,6 @@ $(document).ready(function() {
             }
         }
     });
-
-    $(window).scroll(function() {
-        if ($(window).scrollTop() == 0) {
-            $('#home').fadeOut();
-        } else {
-            $('#home').fadeIn();
-        }
-    });
     
     /*Calcule la nouvelle position de la div*/
     function makeNewPosition(element){
