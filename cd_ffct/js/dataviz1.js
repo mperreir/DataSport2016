@@ -15,7 +15,6 @@ affichageHover.append("hr").attr("id", "sep");
 affichageHover.append("p").attr("class", "nombreLicencies").attr("id", "pourcentLabelLicencies");
 affichageHover.append("p").attr("class", "texteLicencies").attr("id", "pourcentLabel");
 affichageHover.append("p").attr("id", "nomRegion");
-affichageHover.append("p").attr("id", "infosCalcul").text("Surfaces calculées en proportion au nombre de licenciés en 2015 par rapport à la population totale de chacune des régions françaises");
 //ajout des margin du nom de la région survolée
 d3.select("#nomRegion").style("margin-top", "20px").style("margin-bottom", "20px");
 
@@ -80,7 +79,6 @@ d3.json("json/licences_regions_test.json", function(root) {
         d3.select("#pourcentLabelLicencies").text(pourcent+"%");
         d3.select("#nbLicenciesRegion").text(pdl.value);
         d3.select("#nomRegion").text(pdl.name);
-        d3.select("#infosCalcul").text("Surfaces calculées en proportion au nombre de licenciés en 2015 par rapport à la population totale de chacune des régions françaises");
         d3.select("#pourcentLabel").text("DES LICENCIÉS EN FRANCE");
         
     }
@@ -95,7 +93,6 @@ d3.json("json/licences_regions_test.json", function(root) {
         // changement du titre et des éléments fixes
         d3.select("#titreDataviz1").html("ET AU SEIN DES PAYS DE LA LOIRE, LA LOIRE-ATLANTIQUE SE TROUVE 1<sup>re</sup> AVEC " + loire_atlan.value + " LICENCIÉS");
         d3.select("#pourcentLabel").text("DES LICENCIÉS DE LA RÉGION");
-        d3.select("#infosCalcul").text("Surfaces calculées en proportion au nombre de licenciés en 2015 par rapport à la population totale de chacun des départements");
     }
     
     
