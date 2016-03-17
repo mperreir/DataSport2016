@@ -571,28 +571,30 @@ cursor:pointer;
 .wrapper-intro > h1 {
 
 	color:white;
-	font-size: 44px;
+	font-size: 26px;
 	font-weight:600;
 	padding-top: 300px; 
 
 }
 
 .wrapper-intro > h2 {
-	font-size: 24px;
+	opacity:0.6;
+	color:white;
+	font-size: 20px;
 	font-weight: 400;
 	padding-bottom: 60px;
 }
 
 .wrapper-intro > a {
 
-	padding: 20px 30px 20px 30px;
+	padding: 15px 30px 15px 30px;
 
 	border-radius: 40px;
 	background-color:#00af9B; 
 	font-weight: 400;
 	position: relative;
 	width: 250px;
-	font-size: 15pt;
+	font-size: 12pt;
 	color:white;
 }
 .timelineSelected{
