@@ -449,11 +449,11 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         }
     };
     
-    $scope.pourcentage = 0.05;
+    $scope.pourcentage = 0.08;
     $scope.pieBoundary = false;
     $scope.pieMessage = "";
     
-    $scope.pourcentage2 = 1.05;
+    $scope.pourcentage2 = 2.05;
     $scope.pieBoundary2 = false;
     $scope.pieMessage2 = "";
     
