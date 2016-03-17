@@ -52,24 +52,36 @@ ul{
 	padding:0;
 	margin:0;
 }
+.profile img{
+	opacity:0.7;
+	width: 15px;
+	margin-right:10px;
+	vertical-align: middle;
+}
 .timeIndicator{
-	    padding-top: 30px;
-	padding-left: 60px;
+	        padding: 5px 10px 5px 10px;
+    border-radius: 100px;
+    margin-right: 60px;
+    border:1px solid rgba(255,255,255,0.3);
+    width: 180px;
+    margin-top:30px;
 	text-align:left;
 	float: right;
-    width: 200px;
-    padding-bottom: 10px;
-    padding-right:40px;
+    
+   
 
+}
+.timeIndicator2{
+	text-align: center;
 }
 .timeIndicator p{
 	padding-top: 4px;
-	color:#80919B;
+	color:rgba(255,255,255,0.6);
 }
 .timeIndicator img{
 width:25px;
 float: left;
-margin-right: 15px;
+margin-right: 0px;
 }
 
 .nv-x .tick:nth-child(odd){
@@ -143,12 +155,12 @@ margin-right: 15px;
 .mainTitle{
 	float:left;
 	    color: #80919B;
-	    padding-top: 30px;
-    padding-left: 60px;mi
+	       padding-top: 40px;
+    padding-left: 60px;
 
 }
 .mainTitle h1{
-	color: #80919B;
+	color: #BECCD3;
 font-weight:400;
 font-size:18px;
 }
@@ -172,12 +184,16 @@ font-size:18px;
 	border-right:1px solid rgba(0,0,0,0.1);
 	border-left:1px solid rgba(0,0,0,0.1);
 }
-
+.aide:hover{
+	opacity:0.5;
+	cursor:pointer;
+	transition: opacity .15s ease-in-out;
+}
 .zoom{
 	float:right;
 }
 .controlTimeline{
-	    padding-right:50px;
+	    padding-right:480px;
 }
 .goBack:hover, .zoom:hover{
 	cursor:pointer;
@@ -303,7 +319,7 @@ color:white;
 }
 .btnEnsavoir{
 	margin:0 auto;
-	width:150px;
+	width:200px;
 
 	margin-top:20px;
 -webkit-transition: all 0,2s ease;
@@ -356,10 +372,11 @@ color:white;
 	right:0;
 	z-index: 1000;
 	overflow: hidden;
-
+	
 }
 .sideBartotal{
 	position: fixed;
+	top:100px;
     
 }
 .sideBar1{
@@ -412,7 +429,7 @@ color:white;
 .filtersRightBox{
 	padding-left:60px;
 	    float: left;
-    width: 500px;
+    width: 485px;
 
 
 }
@@ -420,7 +437,7 @@ color:white;
 
 	background:#272D38;
 	padding:5px;
-	width:974px;
+	width:100%;
 	height:auto;
 	border-top:1px solid rgba(0,0,0,0.2);
 	    position: fixed;
@@ -436,6 +453,7 @@ color:white;
 	margin-right:20px;
 	float:left;
 	color:#80919B;
+	font-weight:400;
 }
 .filtersType ul {
 	
@@ -492,20 +510,20 @@ cursor:pointer;
 	padding-left: 20vw;
 	padding-right: 20vw;
 	line-height: 30px;
-	
+	color: 	white;
 
 }
 
 .container-intro > p > strong {
 	
-	color: black;
+	color: white;
 	padding-bottom: 50px;
 	
 }
 
 
 .container-intro > h2 {
-		color:black;
+		color:white;
 	font-size: 44px;
 	font-weight:600;
 	padding-top: 85px;
@@ -522,7 +540,7 @@ cursor:pointer;
 }
 .container-intro ul > li > h3 {
 	
-	color: black;
+	color: white;
 	padding: 10px;
 }
 .container-intro ul > li > img {
@@ -535,6 +553,7 @@ cursor:pointer;
 	vertical-align: top;
 	padding: 25px;
 	font-size: 20px;
+	color: 	white;
 }
 
 .columns {
@@ -551,7 +570,7 @@ cursor:pointer;
 
 .wrapper-intro > h1 {
 
-	color:black;
+	color:white;
 	font-size: 44px;
 	font-weight:600;
 	padding-top: 300px; 
@@ -611,13 +630,26 @@ cursor:pointer;
 
 }
 #pie{
-	width: 350px !important;
-    height: 180px !important;
+	width: 300px !important;
+    
 
 
 
 
 }
+
+.container-intro > a {
+
+	color: 	white;
+	padding-bottom: 20px;
+	font-size: 	25px;
+}
+
+.nv-axis{
+	fill:white !important;
+	opacity:0.7 !important;
+}
+
 /*END*/
 /*
 //POUR POSITIONER LES LEGENDS
@@ -633,3 +665,9 @@ cursor:pointer;
 
 /*END*/
 
+.nvd3 .nv-axis path {
+   fill: none;
+   stroke: #000;
+   stroke-opacity: .75;
+   shape-rendering: crispEdges;
+ }

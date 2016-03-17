@@ -12,6 +12,7 @@ $(document).ready(function() {
 
 
 
+
 // $(".aide2").click(function() {
 
 // 	$(".aide").hide();
@@ -36,6 +37,7 @@ $(document).ready(function(){
   }
 });
 $(".goBack").click(function() {
+	$('.btnEnsavoir').show();
 	$(".aide").show();
 	$(".aide").removeClass("timelineSelected");
  });
@@ -113,16 +115,29 @@ $(function(){
   var $side = $(".sideBartotal");
     $('.btnEnsavoir').click(function() {
     	
-        $side .animate({ 'bottom': '-800px' }, 500);
+        $side .animate({ 'top': '100px' }, 700);
 
     }, function() {
-        $side .animate({ 'bottom': '0' }, 500);
+        $side .animate({ 'top': '-95vh' }, 700);
     });     
       
 });
 
+$(function(){
 
+  var $side = $(".sideBartotal");
+    $('.aide').click(function() {
+    	
+        $side .animate({ 'top': '-95vh' }, 700);
 
+    }, function() {
+        $side .animate({ 'top': '100px' }, 700);
+    });     
+      
+});
+    $('.aide').click(function() {
+$('.btnEnsavoir').hide();
+});
 
 
 

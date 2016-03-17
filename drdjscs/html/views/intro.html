@@ -28,12 +28,14 @@
             <h1>{{courbeDescriptionTitre}}</h1>    
             <p><strong>Description: </strong>{{courbeDescription}}</p>
             <br>
-            <div ng-if="activeMe" class="animated fadeIn">
-                <p><strong>Age: </strong>{{courbeDescriptionAge}}</p>
-                <br>
+
+            <div class="profile">
+                <div ng-if="activeMe" class="">
+                <p><img src="icons/profile.svg">{{courbeDescriptionAge}}</p>
                 <p><strong>Nature: </strong>{{courbeDescriptionNature}}</p>
                 <br>
                 <p>{{courbeDescriptionAutre}}</p>
+                </div>        
             </div>
         </div>
         <div class="line lineSide"></div>
@@ -64,20 +66,22 @@
     </div>
     <div class="sideBar2">
         <h3>Quels sont les sports qui profitent de l'aide CNDS ?</h3>
-    <div style="width : 350pxpx;">
-        <canvas id="pie" class="chart chart-pie"
-                chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce" chart-legend="true" chart-colours="[ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360']">
+    <div style="width : 300px;">
+
+        <canvas id="pie" class="chart chart-pie style="margin-top:40px"
+
+                chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce" chart-legend="false" chart-colours="[ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360']">
         </canvas>
     </div>
-    <div style="width : 350px; text">
-        <p class="titleSide" style="color:#9CA7AF;">Le football a perçu le plus d'aide en 2015, environ 15% de l'aide CNDS est accordée au comité départemental de football de Loire-Altantique.</p>
+    <div style="width : 350px; color:#80919B;padding-top:20px;padding-bottom:20px">
+        Cependant, en observant de plus près, on s'apperçoit que le Rugby à XIII est le sport le plus aidé si on regarde par rapport au nombres de clubs dans les comités départementaux.
     </div>
-    <div style="width : 350px;">
+    <div style="width : 300px;">
          <canvas id="pie" class="chart chart-pie"
-                chart-data="introPieDataReduce2" chart-options="introPieChartOptions" chart-labels="introPieListReduce2" chart-legend="true" chart-colours="[ '#4D5360','#00ADF9', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360']">
+                chart-data="introPieDataReduce2" chart-options="introPieChartOptions" chart-labels="introPieListReduce2" chart-legend="false" chart-colours="[ '#4D5360','#00ADF9', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360']">
         </canvas> 
     </div>
-    <div style="width : 350px; text">
+    <div style="width : 350px; color:#80919B;padding-top:20px;padding-bottom:20px;">
         Cependant, en observant de plus près, on s'apperçoit que le Rugby à XIII est le sport le plus aidé si on regarde par rapport au nombres de clubs dans les comités départementaux.
     </div>
     </div>
@@ -89,12 +93,14 @@
 <h1>Création d'emplois par le CNDS</h1>
 </div>
 <div class="timeIndicator">
-         <img src="icons/clock-02-01.png">
+<div class="timeIndicator2">
+    <img src="icons/clock-02-01.png">
     <p>{{titre}}</p>
+    </div>
 </div>
 <div class="filtersRight">
     <div class="filtersRightBox">
-        <h1>Filtres:</h1>
+        <h1>Financement:</h1>
         <div class="filtersType">
         <ul>
             <li class="etat">État</li>
@@ -119,7 +125,7 @@
     </div>
 
 </div>    
-    <div class="aideTimeline" ng-model="!activeMe">     
+    <div class="aideTimeline">     
         <div class="btnTimeline aide2 aide" ng-click="update19972005(); activeMe = true;"><h3>Contrat Emploi Consolidé</h3></div>
         <div class="btnTimeline aide3 aide" ng-click="update20052010(); activeMe = true;"><h3>Contrat d'Avenir</h3></div>
         <div class="btnTimeline aide4 aide" ng-click="update19972002(); activeMe = true;"><h3>Emploi Jeune</h3></div>
