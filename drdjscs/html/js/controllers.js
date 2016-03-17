@@ -14,7 +14,9 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         $scope.data = data;
         $scope.fix = data;
     });
-    
+    $http.get('hyblabData/dataCreation.json').success (function (data) {
+        $scope.dataMini = data; 
+    });
     $http.get('hyblabData/zoomData.json').success (function(data) {
         $scope.zoomData = data;
     });
@@ -92,6 +94,54 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.courbeDescription = "La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région."
     $scope.courbeDescriptionTitre = "Qu\'est-ce que c\'est?"
     $scope.options = {
+            chart: {
+              type: 'multiChart',
+              height: 340,
+              margin : {
+                  top: 30,
+                  right: 60,
+                  bottom: 50,
+                  left: 70
+              },
+              x: function(d){ return d.x; },
+              y: function(d){ return d.y; },
+              transitionDuration: 100,
+              color: ['rgba(0, 175, 155, 1)','rgba(182, 174, 195, 1)'],
+              xAxis: {
+
+              },
+              yAxis1: {
+                  showMaxMin: false,
+                  tickFormat: function(d){
+                      return d3.format('.02f')(d);
+                  },
+                  axisLabelDistance: 300
+              },
+              yAxis2: {
+                  
+              },
+              useInteractiveGuideline: true,
+              tooltip: true,
+              interactiveLayer: {
+                  tooltip: {
+                    contentGenerator: function (e) {
+                      var series = e.series[0];
+                      if (series.value === null) return;
+                      var temp = "";
+                      if (series.originalKey == "chomage"){
+                          temp = " POURCENT DE CHÔMEUR ";
+                      }  else {
+                          temp = " EMPLOI CRÉES ";
+                      }
+                      return "<div class='toolTip'><h2>"+(series.value?series.value.toFixed(2):0)+"</h2><p> "+temp+"</p><h1>en "+e.value+"</h1></div>";
+                    } 
+                  }
+                },
+                callback: function(){
+                  d3.selectAll('.nvd3.nv-legend g').style('fill', "RGBA(55, 196, 180, 1)")
+            }}
+        };
+    $scope.optionsMini = {
             chart: {
               type: 'multiChart',
               height: 340,
