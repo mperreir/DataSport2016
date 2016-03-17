@@ -31,7 +31,11 @@ $(document).ready(function() {
         /*  **************************************************  */
         /*                      Configuration                   */
         /*  **************************************************  */
-        var colors = ["#9BC8D9", "#F56D34", "#F4DC78"];
+        var colors = [
+            ["#9BC8D9", "#D3E8F7"],
+            ["#F56D34", "#FFA574"],
+            ["#F4DC78", "#FFEFA0"]
+        ];
         
         var conf = {
             pieChart: {
@@ -85,7 +89,7 @@ $(document).ready(function() {
                 duration: 1000,
                 delay: 0
             },
-            legend: {
+            info: {
                 init: {
                     translateX: datavizWidth / 2,
                     translateY: datavizHeight / 2
@@ -119,17 +123,19 @@ $(document).ready(function() {
         // Pour chacune des activités (Route, VTT, BMX)
         for (var i = 0; i < json.length; i++) {
             var activity = {};
-            activity.color = colors[i];
+            activity.colors = colors[i];
             activity.label = json[i].label;
             activity.sum = 0;
-            activity.mens = [];
-            activity.womens = [];
+            activity.men = [];
+            activity.women = [];
+            activity.all = [];
             
             // Pour chacune des catégories
             for (var j = 0; j < json[i].children.length; j++) {
                 activity.sum += json[i].children[j].men + json[i].children[j].women;
-                activity.mens.push({label: json[i].children[j].label, y: json[i].children[j].men});
-                activity.womens.push({label: json[i].children[j].label, y: json[i].children[j].women});
+                activity.men.push({label: json[i].children[j].label, y: json[i].children[j].men, sexe: "Homme"});
+                activity.women.push({label: json[i].children[j].label, y: json[i].children[j].women, sexe: "Femme"});
+                activity.all.push({label: json[i].children[j].label, y: json[i].children[j].men + json[i].children[j].women});
             }
 
             dataSet.push(activity);
@@ -137,42 +143,69 @@ $(document).ready(function() {
         
         
         var dataSet_barChartInit = {};
-        dataSet_barChartInit.mens = [];
-        dataSet_barChartInit.womens = [];
+        dataSet_barChartInit.men = [];
+        dataSet_barChartInit.women = [];
+        dataSet_barChartInit.all = [];
         for (var j = 0; j < json[0].children.length; j++) {
-            dataSet_barChartInit.mens.push({label: json[0].children[j].label, y: 0});
-            dataSet_barChartInit.womens.push({label: json[0].children[j].label, y: 0});
+            dataSet_barChartInit.men.push({label: json[0].children[j].label, y: 0, sexe: "Homme"});
+            dataSet_barChartInit.women.push({label: json[0].children[j].label, y: 0, sexe: "Femme"});
+            dataSet_barChartInit.all.push({label: json[0].children[j].label, y: 0});
         }
 
         /*  **************************************************  */
         /*                      Dataviz                         */
         /*  **************************************************  */
         pieChart("#dataviz2");
-
+        
         hist = histogram("#dataviz2", dataSet_barChartInit);
+        
 
         // Div contenant des informations lorsque l'utilisateur clique sur un quartier du pieChart
-        var legend = svg.append("g")
-            .attr("id", "legend")
+        var info = svg.append("g")
+            .attr("id", "info")
             .style("font-family", "source sans pro")
             .style("text-transform", "uppercase")
-            .attr("transform", "translate(" + conf.legend.init.translateX + "," + conf.legend.init.translateY + ")");
+            .attr("transform", "translate(" + conf.info.init.translateX + "," + conf.info.init.translateY + ")");
 
-        var labelNombre = legend.append("text")
+        var labelNombre = info.append("text")
             .style("font-size", "48px")
             .text("0")
             .attr("x", 0)
             .attr("y", 0);
 
-        var labelTexte = legend.append("text")
+        var labelTexte = info.append("text")
             .style("font-size", "29px")
             .text("licenciés")
             .attr("x", 0)
             .attr("y", 25);
 
+        var colorsInit = ["#000000", "#000000"];
+        var legend = info.selectAll(".legend")
+            .data(colorsInit)
+            .enter().append("g")
+            .attr("class", "legend")
+            .attr("transform", function(d, m) { return "translate(0," + (m * (25 + 7) + 50) + ")"; });
+
+        legend.append("rect")
+            .attr("width", 25)
+            .attr("height", 25);
+
+        legend.append("text")
+            .style("font-size", "15px")
+            .attr("x", 30)
+            .attr("y", 12)
+            .attr("dy", ".35em")
+            .style("text-anchor", "start")
+            .text(function(d, i) {
+                switch (i) {
+                    case 0: return "Femmes";
+                    case 1: return "Hommes";
+                }
+            });
+        
         // On cache le barchart et la légende à l'initialisation
         d3.select("#barChart").style("visibility", "hidden");
-        legend.style("visibility", "hidden");
+        info.style("visibility", "hidden");
 
         
         var source = svg.append("g")
@@ -180,7 +213,7 @@ $(document).ready(function() {
             .style("font-family", "source sans pro")
             .style("font-style", "italic")
             .style("fill", "#494949")
-            .attr("transform", "translate(" + 720 + "," + 430    + ")")
+            .attr("transform", "translate(" + 720 + "," + 430 + ")")
         
         var labelSource1 = source.append("text")
             .style("font-size", "15px")
@@ -199,6 +232,16 @@ $(document).ready(function() {
         /*                      PieChart                        */
         /*  **************************************************  */    
         function pieChart(id) {
+            var tooltip = d3.select('#dataviz2')
+                .append('div')
+                .attr('class', 'tooltipPieChart');
+
+            tooltip.append('div')
+                .attr('class', 'tooltipPieChart_label');
+
+            tooltip.append('div')
+                .attr('class', 'tooltipPieChart_value');
+            
             var outerRadius = Math.min(conf.pieChart.init.width, conf.pieChart.init.height) / 2,
                 innerRadius = outerRadius * conf.pieChart.ratioRadius;
             
@@ -226,9 +269,10 @@ $(document).ready(function() {
 
             var path = gArc.append("path")
                 .attr("d", arc)
-                .style("fill", function(d) { return d.data.color; })
+                .style("fill", function(d) { return d.data.colors[0]; })
                 .on("mouseover", mouseover)
                 .on("mouseout", mouseout)
+                .on("mousemove", mousemove)
                 .on("click", clickSegment);
 
             var pieChartText = gArc.append("text")
@@ -239,16 +283,28 @@ $(document).ready(function() {
             
             var pieChartTextCenter = gArc.append("text")
                 .style("text-anchor", "middle")
-            .style("font-size", "15px")
-      .attr("dy", "0.35em");
+                .style("font-size", "15px")
+                .attr("dy", "0.35em");
 
             function mouseover(d) {
+                /*
+                    FAIRE AVEC (d, i)  + if-else
+                */
                 path.attr("opacity", 0.5);
                 d3.select(this).attr("opacity", 1);
+                tooltip.select(".tooltipPieChart_label").html(d.data.label);
+                tooltip.select(".tooltipPieChart_value").html(d.data.sum + " licencié(s)");
+                tooltip.style("display", "block");
             }
 
             function mouseout(d) {
                 path.attr("opacity", 1);
+                tooltip.style("display", "none");
+            }
+            
+            function mousemove(d) {
+                tooltip.style("left", d3.event.layerX + 20 + "px")
+                    .style("top", d3.event.layerY - 30 + "px");
             }
 
             function clickSegment(d) {
@@ -259,10 +315,6 @@ $(document).ready(function() {
 
                     outerRadius = Math.min(conf.pieChart.width, conf.pieChart.height) / 2;
                     innerRadius = outerRadius * conf.pieChart.ratioRadius;
-                    
-                    /*arc = d3.svg.arc()
-                        .outerRadius(outerRadius)
-                        .innerRadius(innerRadius);*/
                     
                     path.transition()
                         .duration(1000)
@@ -300,44 +352,44 @@ $(document).ready(function() {
                 }
                 
                 var _dataSet = {},
-                    _color = "",
+                    _colors = "",
                     _pieChart_TranslateX = 0,
                     _pieChart_TranslateY = 0,
                     _barChart_TranslateX = 0,
                     _barChart_TranslateY = 0,
-                    _legend_TranslateX = 0,
-                    _legend_TranslateY = 0
+                    _info_TranslateX = 0,
+                    _info_TranslateY = 0
                 
                 switch (d.data.label) {
                     case "ROUTE":
                         _dataSet = dataSet[0];
-                        _color = colors[0];
+                        _colors = colors[0];
                         _pieChart_TranslateX = conf.pieChart.route.translateX;
                         _pieChart_TranslateY = conf.pieChart.route.translateY;
                         _barChart_TranslateX = conf.barChart.route.translateX;
                         _barChart_TranslateY = conf.barChart.route.translateY;
-                        _legend_TranslateX = conf.legend.route.translateX;
-                        _legend_TranslateY = conf.legend.route.translateY;
+                        _info_TranslateX = conf.info.route.translateX;
+                        _info_TranslateY = conf.info.route.translateY;
                         break;
                     case "VTT":
                         _dataSet = dataSet[1];
-                        _color = colors[1];
+                        _colors = colors[1];
                         _pieChart_TranslateX = conf.pieChart.vtt.translateX;
                         _pieChart_TranslateY = conf.pieChart.vtt.translateY;
                         _barChart_TranslateX = conf.barChart.vtt.translateX;
                         _barChart_TranslateY = conf.barChart.vtt.translateY;
-                        _legend_TranslateX = conf.legend.vtt.translateX;
-                        _legend_TranslateY = conf.legend.vtt.translateY;
+                        _info_TranslateX = conf.info.vtt.translateX;
+                        _info_TranslateY = conf.info.vtt.translateY;
                         break;
                     case "BMX":
                         _dataSet = dataSet[2];
-                        _color = colors[2];
+                        _colors = colors[2];
                         _pieChart_TranslateX = conf.pieChart.bmx.translateX;
                         _pieChart_TranslateY = conf.pieChart.bmx.translateY;
                         _barChart_TranslateX = conf.barChart.bmx.translateX;
                         _barChart_TranslateY = conf.barChart.bmx.translateY;
-                        _legend_TranslateX = conf.legend.bmx.translateX;
-                        _legend_TranslateY = conf.legend.bmx.translateY;
+                        _info_TranslateX = conf.info.bmx.translateX;
+                        _info_TranslateY = conf.info.bmx.translateY;
                         break;
                     default:
                         alert("Label inconnu");
@@ -347,26 +399,31 @@ $(document).ready(function() {
                 hist.update(_dataSet);
                 
                 // Mise à jour des couleurs
-                legend.style("fill", _color);
+                info.style("fill", _colors[0]);
                 
                 pieChartTextCenter.transition()
-                    .duration(conf.legend.duration)
-                    .delay(conf.legend.delay)
-                    .style("fill", _color)
+                    .duration(conf.info.duration)
+                    .delay(conf.info.delay)
+                    .style("fill", _colors[0])
                     .text(_dataSet.label);
                 
                 // On met à jour les labels contenant les informations (somme des licenciés) sur l'activité sélectionnée
                 labelNombre.transition()
-                    .duration(conf.legend.duration)
-                    .delay(conf.legend.delay)
+                    .duration(conf.info.duration)
+                    .delay(conf.info.delay)
                     .tween("text", function(d) {
                         var i = d3.interpolate(this.textContent,
-                                               (_dataSet.mens.reduce(function(a, b) { return a + b.y; }, 0))
-                                               + (_dataSet.womens.reduce(function(a, b) { return a + b.y; }, 0)));
+                                               (_dataSet.men.reduce(function(a, b) { return a + b.y; }, 0))
+                                               + (_dataSet.women.reduce(function(a, b) { return a + b.y; }, 0)));
                         return function(t) {
                             this.textContent = Math.round(i(t));
                         }
                     });
+
+                legend.transition()
+                    .duration(conf.info.duration)
+                    .delay(conf.info.delay)
+                    .style("fill", function(d, i) { return _colors.reverse()[0]; });
                 
                 // Transition pour le pieChart
                 g.transition()
@@ -382,10 +439,10 @@ $(document).ready(function() {
                     .style("visibility", "visible");
                 
                 // Transition pour la légende
-                legend.transition()
-                    .duration(conf.legend.duration + 1000)
-                    .delay(conf.legend.delay + 1000)
-                    .attr("transform", "translate(" + _legend_TranslateX + "," + _legend_TranslateY + ")")
+                info.transition()
+                    .duration(conf.info.duration + 1000)
+                    .delay(conf.info.delay + 1000)
+                    .attr("transform", "translate(" + _info_TranslateX + "," + _info_TranslateY + ")")
                     .style("visibility", "visible");
             }
         }
@@ -395,19 +452,30 @@ $(document).ready(function() {
         /*                      BarChart                        */
         /*  **************************************************  */
         function histogram(id, datas) {
+            
+            var tooltip = d3.select('#dataviz2')
+                .append('div')
+                .attr('class', 'tooltipBarChart');
 
+            tooltip.append('div')
+                .attr('class', 'tooltipBarChart_sexe');
+            
+            tooltip.append('div')
+                .attr('class', 'tooltipBarChart_label');
+
+            tooltip.append('div')
+                .attr('class', 'tooltipBarChart_value');
+            
             var hist = {};
             
-            var histColor = datas.color;
-            
             var stackedData = [];
-            stackedData.push(datas.mens);
-            stackedData.push(datas.womens);
+            stackedData.push(datas.men);
+            stackedData.push(datas.women);
             
             var stack = d3.layout.stack();
             var layers = stack(stackedData);
-            var yStackMax = d3.max(layers, function(layer) {
-                return d3.max(layer, function(d) {
+            var yStackMax = d3.max(layers, function(layer, i) {
+                return d3.max(layer, function(d, j) {
                     return d.y0 + d.y;
                 });
             });
@@ -417,12 +485,9 @@ $(document).ready(function() {
                 height = 500 - margin.top - margin.bottom;
             
             var x = d3.scale.ordinal()
-                .rangeRoundBands([0, width, 0.1])
-                .domain(datas.mens.map(function(d) { return d.label; }));
+                .rangeRoundBands([0, width], 0.1)
+                .domain(datas.men.map(function(d) { return d.label; }));
             
-            /*var y = d3.scale.linear()
-                .range([height, 0])
-                .domain([0, d3.max(datas.categories, function(d) { return d.value; })]);*/
             var y = d3.scale.linear()
                 .range([height, 0])
                 .domain([0, yStackMax]);
@@ -438,7 +503,7 @@ $(document).ready(function() {
             hist.g.append("g").attr("class", "x axis")
                 .attr("transform", "translate(0," + height + ")")
                 .call(xAxis)
-                .selectAll("text")  
+                .selectAll("text")
                 .style("text-anchor", "end")
                 .attr("dx", "-.8em")
                 .attr("dy", ".15em")
@@ -453,53 +518,53 @@ $(document).ready(function() {
                 .enter().append("g")
                 .attr("class", "layer");
             
-/*
-            var bars = hist.g.selectAll(".bar").data(datas.categories).enter()
-                .append("g").attr("class", "bar");*/
-/*
-            var rect = bars.append("rect")
-                .attr("x", function(d) { return x(d.label); })
-                .attr("y", function(d) { return y(d.value); })
-                .attr("width", x.rangeBand())
-                .attr("height", function(d) { return height - y(d.value); })
-                .on("mouseover", mouseover)
-                .on("mouseout", mouseout);
-*/
-            
             var rect = layer.selectAll("rect")
                 .data(function(d) { return d; })
                 .enter().append("rect")
                 .attr("x", function(d) { return x(d.label); })
-                //.attr("y", height)
                 .attr("width", x.rangeBand())
                 .attr("y", function(d) { return y(d.y0 + d.y); })
                 .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
                 .on("mouseover", mouseover)
-                .on("mouseout", mouseout);;
-            /*
-            bars.append("text")
-                .text(function(d) { return d3.format(",")(d.value); })
+                .on("mouseout", mouseout)
+                .on("mousemove", mousemove);
+            
+            var text = hist.g.append("g");
+            
+            text.selectAll("text")
+                .data(datas.all)
+                .enter()
+                .append("text")
+                .text(function(d) { return d3.format(",")(d.y); })
                 .attr("x", function(d) { return x(d.label)+x.rangeBand()/2; })
-                .attr("y", function(d) { return y(d.value)-5; })
+                .attr("y", function(d) { return y(d.y)-5; })
                 .attr("text-anchor", "middle")
-                .style("fill", "#494949");*/
-
-            function mouseover(d) {
+                .style("fill", "#494949");
+            
+            function mouseover(d, i) {
                 rect.attr("opacity", 0.5);
                 d3.select(this).attr("opacity", 1);
+                tooltip.select(".tooltipBarChart_sexe").html("Sexe : " + d.sexe);
+                tooltip.select(".tooltipBarChart_label").html("Catégorie : " + d.label);
+                tooltip.select(".tooltipBarChart_value").html(d.y + " licencié(s)");
+                tooltip.style("display", "block");
             }
 
             function mouseout(d) {
                 rect.attr("opacity", 1);
+                tooltip.style("display", "none");
+            }
+            
+            function mousemove(d) {
+                tooltip.style("left", d3.event.layerX + 20 + "px")
+                    .style("top", d3.event.layerY - 30  + "px");
             }
 
             hist.update = function(datas) {
-                
-                // Mise à jour des couleurs
 
                 var stackedData = [];
-                stackedData.push(datas.mens);
-                stackedData.push(datas.womens);
+                stackedData.push(datas.men);
+                stackedData.push(datas.women);
 
                 var stack = d3.layout.stack();
                 var layers = stack(stackedData);
@@ -510,7 +575,8 @@ $(document).ready(function() {
                 });
                 
                 y.domain([0, yStackMax]);
-                layer = hist.g.selectAll(".layer").data(layers);
+                layer = hist.g.selectAll(".layer").data(layers)
+                    .style("fill", function(d, i) { return datas.colors[i]; });
                 
                 layer.selectAll("rect").data(function(d) { return d; })
                 .transition()
@@ -519,34 +585,19 @@ $(document).ready(function() {
                             return y(d.y0 + d.y);
                     })
                     .attr("height", function(d) {
-                        return y(d.y0) - y(d.y0 + d.y); })
-                    .attr("fill", datas.color);
+                        return y(d.y0) - y(d.y0 + d.y); });
                 
-                // Mise à jour du domaine des valeurs de l'histogramme
-                //y.domain([0, d3.max(datas.categories, function(d) { return d.value; })]);
-/*
-                // Mise à jour des valeurs de l'histogramme
-                var bars = svg.selectAll(".bar").data(datas.categories);
-                bars.select("rect")
-                    .transition()
-                        .duration(500)
-                        .attr("y", function(d) {return y(d.value); })
-                        .attr("height", function(d) { return height - y(d.value); })
-                        .attr("fill", histColor);
-
-                // Mise à jour du texte des bars de l'histogramme
-                bars.select("text")
+                text.selectAll("text").data(datas.all)
                     .transition()
                     .duration(500)
                         .delay(0)
                         .tween("text", function(d) {
-                            var i = d3.interpolate(this.textContent, d.value);
+                            var i = d3.interpolate(this.textContent, d.y);
                             return function(t) {
                                 this.textContent = Math.round(i(t));
                             }
-                        })
-                    .attr("y", function(d) { return y(d.value)-5; });
-                    */
+                    })
+                    .attr("y", function(d) { return y(d.y)-5; });
             }
 
             return hist;
