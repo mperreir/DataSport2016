@@ -6,9 +6,9 @@ $(document).ready(function() {
         if (error) { throw error; }
         
         var colors = [
-            ["#9BC8D9", "#D3E8F7"],
+            ["#9BC8D9", "#C3D8E7"],
             ["#F56D34", "#FFA574"],
-            ["#F4DC78", "#FFEFA0"]
+            ["#F4DC78", "#EFDF90"]
         ];
         
         
@@ -99,7 +99,7 @@ $(document).ready(function() {
                         duration: 1000,
                         delay: 0
                     },
-                    mouvement: {
+                    move: {
                         duration: 1000,
                         delay: 0
                     }
@@ -122,14 +122,24 @@ $(document).ready(function() {
                 
                 // Transitions
                 transition: {
-                    duration: 1000,
-                    delay: 0
+                    animation: {
+                        duration: 1000,
+                        delay: 0
+                    },
+                    hide: {
+                        duration: 1000,
+                        delay: 0
+                    },
+                    move: {
+                        duration: 0,
+                        delay: 0
+                    }
                 }
             },
             info: {
                 init: {
                     translateX: $("#dataviz2").width() / 2,
-                    translateY: $("#dataviz2").height() / 2
+                    translateY: 120
                 },
                 
                 // Activités
@@ -147,8 +157,18 @@ $(document).ready(function() {
                 },
                 
                 transition: {
-                    duration: 1000,
-                    delay: 0
+                    animation: {
+                        duration: 1000,
+                        delay: 0
+                    },
+                    move: {
+                        duration: 1000,
+                        delay: 0
+                    },
+                    hide: {
+                        duration: 1000,
+                        delay: 0
+                    }
                 }
             },
             infoClick: {
@@ -361,9 +381,10 @@ $(document).ready(function() {
                     outerRadius = Math.min(conf.piechart.width, conf.piechart.height) / 2;
                     innerRadius = outerRadius * conf.piechart.ratioRadius;
                     
+                    // Réduction du piechart
                     path.transition()
-                        .duration(conf.barchart.transition.duration)
-                        .delay(conf.barchart.transition.delay)
+                        .duration(conf.piechart.transition.reduction.duration)
+                        .delay(conf.piechart.transition.reduction.delay)
                         .attrTween("d", function(angle) {
                             var outer = d3.interpolate(arc.outerRadius()(), outerRadius);
                             var inner = d3.interpolate(arc.innerRadius()(), innerRadius);
@@ -381,8 +402,8 @@ $(document).ready(function() {
                     infoClick.style("display", "none");
                 } else {
                     path.transition()
-                        .duration(conf.barchart.transition.duration)
-                        .delay(conf.barchart.transition.delay)
+                        .duration(conf.piechart.transition.reduction.duration)
+                        .delay(conf.piechart.transition.reduction.delay)
                         .attrTween("d", function(angle) {
                             var outer = d3.interpolate(arc.outerRadius()(), arc.outerRadius()());
                             var inner = d3.interpolate(arc.innerRadius()(), arc.innerRadius()());
@@ -393,17 +414,28 @@ $(document).ready(function() {
                             }
                         });
                 }
+                /*
+                d3.select("#barChart").transition()
+                    .duration(conf.barchart.transition.hide.duration)
+                    .delay(conf.barchart.transition.hide.delay)
+                    .style("visibility", "hidden");
                 
+                info.transition()
+                    .duration(conf.info.transition.hide.duration)
+                    .delay(conf.info.transition.hide.delay)
+                    .style("visibility", "hidden");
+                */
                 
+                // Ouverture de l'arc
                 if (this.previousSibling == null) {
                     d3.select(this).transition()
-                        .duration(conf.barchart.transition.duration)
-                        .delay(conf.barchart.transition.delay)
+                        .duration(conf.piechart.transition.animation.duration)
+                        .delay(conf.piechart.transition.animation.delay)
                         .attr("d", arcOpen);
                 } else {
                     d3.select(this.previousSibling).transition()
-                        .duration(conf.barchart.transition.duration)
-                        .delay(conf.barchart.transition.delay)
+                        .duration(conf.piechart.transition.animation.duration)
+                        .delay(conf.piechart.transition.animation.delay)
                         .attr("d", arcOpen);                        
                 }
                 
@@ -455,17 +487,22 @@ $(document).ready(function() {
                 hist.update(_dataSet);
                 
                 // Mise à jour des couleurs
+                
+                /*info.transition()
+                    .duration(conf.info.transition.animation.duration)
+                    .delay(conf.info.transition.animation.delay)
+                    .style("fill", function(d, i) { return _colors.reverse()[0]; });*/
                 info.style("fill", _colors[0]);
                 
                 labelTitre.transition()
-                    .duration(conf.info.transition.duration)
-                    .delay(conf.info.transition.delay)
+                    .duration(conf.info.transition.animation.duration)
+                    .delay(conf.info.transition.animation.delay)
                     .text(_dataSet.label)
                 
                 // On met à jour les labels contenant les informations (somme des licenciés) sur l'activité sélectionnée
                 labelNombre.transition()
-                    .duration(conf.info.transition.duration)
-                    .delay(conf.info.transition.delay)
+                    .duration(conf.info.transition.animation.duration)
+                    .delay(conf.info.transition.animation.delay)
                     .tween("text", function(d) {
                         var i = d3.interpolate(this.textContent,
                                                (_dataSet.men.reduce(function(a, b) { return a + b.y; }, 0))
@@ -475,28 +512,29 @@ $(document).ready(function() {
                         }
                     });
 
-                legend.transition()
-                    .duration(conf.info.transition.duration)
-                    .delay(conf.info.transition.delay)
-                    .style("fill", function(d, i) { return _colors.reverse()[0]; });
+                /*legend.transition()
+                    .duration(conf.info.transition.animation.duration)
+                    .delay(conf.info.transition.animation.delay)
+                    .style("fill", function(d, i) { return _colors.reverse()[0]; });*/
+                legend.style("fill", function(d, i) { return _colors.reverse()[0]; });
                 
-                // Transition pour le pieChart
+                // Transition pour le déplacement du pieChart
                 g.transition()
-                    .duration(conf.piechart.transition.mouvement.duration)
-                    .delay(conf.piechart.transition.mouvement.delay)
+                    .duration(conf.piechart.transition.move.duration)
+                    .delay(conf.piechart.transition.move.delay)
                     .attr("transform", "translate(" + _pieChart_TranslateX + "," + _pieChart_TranslateY + ")");
                 
-                // Transition pour le barChart
+                // Transition pour le déplacement du barChart
                 hist.g.transition()
-                    .duration(conf.barchart.transition.duration)
-                    .delay(conf.barchart.transition.delay)
+                    .duration(conf.barchart.transition.move.duration)
+                    .delay(conf.barchart.transition.move.delay)
                     .attr("transform", "translate(" + _barChart_TranslateX + "," + _barChart_TranslateY + ")")
                     .style("visibility", "visible");
                 
-                // Transition pour la légende
+                // Transition pour le déplacement de la légende
                 info.transition()
-                    .duration(conf.info.transition.duration)
-                    .delay(conf.info.transition.delay)
+                    .duration(conf.info.transition.move.duration)
+                    .delay(conf.info.transition.move.delay)
                     .attr("transform", "translate(" + _info_TranslateX + "," + _info_TranslateY + ")")
                     .style("visibility", "visible");
             }
@@ -632,8 +670,8 @@ $(document).ready(function() {
                 
                 layer.selectAll("rect").data(function(d) { return d; })
                 .transition()
-                    .duration(conf.barchart.transition.duration)
-                    .delay(conf.barchart.transition.delay)
+                    .duration(conf.barchart.transition.animation.duration)
+                    .delay(conf.barchart.transition.animation.delay)
                     .attr("y", function(d) {
                             return y(d.y0 + d.y);
                     })
@@ -642,8 +680,8 @@ $(document).ready(function() {
                 
                 text.selectAll("text").data(datas.all)
                     .transition()
-                    .duration(conf.barchart.transition.duration)
-                    .delay(conf.barchart.transition.delay)
+                    .duration(conf.barchart.transition.animation.duration)
+                    .delay(conf.barchart.transition.animation.delay)
                         .tween("text", function(d) {
                             var i = d3.interpolate(this.textContent, d.y);
                             return function(t) {

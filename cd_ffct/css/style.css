@@ -294,7 +294,8 @@ rect.parent,
 }
 
 .arc text {
-  text-anchor: middle;
+    text-anchor: middle;
+    color: #FFFFDF;
 }
 
 /* Contours des quartiers du pieChart */
@@ -305,12 +306,6 @@ rect.parent,
 /* Barre des abscisses */
 .x.axis path {
     display: none;
-}
-
-/* Traits sur la barre des abscisses */
-.axis line {
-    fill: none;
-    stroke: #000;
 }
 
 #dataviz2 text {
@@ -324,33 +319,35 @@ rect.parent,
 
 
 .tooltipPieChart {
-    background: #eee;
-    box-shadow: 0 0 5px #999999;
-    color: #333;
+    /*background: #eee;*/
+    /*box-shadow: 0 0 5px #494949;*/
+    color: #494949;
     display: none;
     font-size: 12px;
     left: 130px;
     padding: 10px;
     position: absolute;
-    text-align: center;
+    text-align: left;
     top: 95px;
     width: 150px;
     z-index: 10;
+    font-family: "source sans pro";
 }
 
 .tooltipBarChart {
-    background: #eee;
-    box-shadow: 0 0 5px #999999;
-    color: #333;
+    /*background: #eee;*/
+    /*box-shadow: 0 0 5px #494949;*/
+    color: #494949;
     display: none;
     font-size: 12px;
     left: 130px;
     padding: 10px;
     position: absolute;
-    text-align: center;
+    text-align: left;
     top: 95px;
     width: 150px;
     z-index: 10;
+    font-family: "source sans pro";
 }
 /*  **************************************************  */
 /*                      Dataviz3                        */
