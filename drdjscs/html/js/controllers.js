@@ -89,7 +89,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
     $scope.options = {
             chart: {
               type: 'multiChart',
-              height: 340,
+              height: 300,
               margin : {
                   top: 30,
                   right: 60,
