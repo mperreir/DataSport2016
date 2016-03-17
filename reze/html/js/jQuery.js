@@ -73,7 +73,7 @@ $(document).ready(function() {
         },500);
     }
             if(al == "3rdPage"){
-                d3.select("#barchart").selectAll("svg").each(function(){
+                d3.select("#barchart2").selectAll("svg").each(function(){
                     d3.select(this).selectAll(".bar").each(function(){
                         console.log(this);
                         $(this).animate({
