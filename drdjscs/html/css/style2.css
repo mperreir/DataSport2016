@@ -160,7 +160,7 @@ margin-right: 0px;
 
 }
 .mainTitle h1{
-	color: #80919B;
+	color: #BECCD3;
 font-weight:400;
 font-size:18px;
 }
@@ -319,7 +319,7 @@ color:white;
 }
 .btnEnsavoir{
 	margin:0 auto;
-	width:150px;
+	width:200px;
 
 	margin-top:20px;
 -webkit-transition: all 0,2s ease;
@@ -643,6 +643,10 @@ cursor:pointer;
 	color: 	white;
 	padding-bottom: 20px;
 	font-size: 	25px;
+}
+.nv-axis{
+	fill:white !important;
+	opacity:0.7 !important;
 }
 /*END*/
 /*
