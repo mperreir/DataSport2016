@@ -492,20 +492,20 @@ cursor:pointer;
 	padding-left: 20vw;
 	padding-right: 20vw;
 	line-height: 30px;
-	
+	color: 	white;
 
 }
 
 .container-intro > p > strong {
 	
-	color: black;
+	color: white;
 	padding-bottom: 50px;
 	
 }
 
 
 .container-intro > h2 {
-		color:black;
+		color:white;
 	font-size: 44px;
 	font-weight:600;
 	padding-top: 85px;
@@ -522,7 +522,7 @@ cursor:pointer;
 }
 .container-intro ul > li > h3 {
 	
-	color: black;
+	color: white;
 	padding: 10px;
 }
 .container-intro ul > li > img {
@@ -535,6 +535,7 @@ cursor:pointer;
 	vertical-align: top;
 	padding: 25px;
 	font-size: 20px;
+	color: 	white;
 }
 
 .columns {
@@ -551,7 +552,7 @@ cursor:pointer;
 
 .wrapper-intro > h1 {
 
-	color:black;
+	color:white;
 	font-size: 44px;
 	font-weight:600;
 	padding-top: 300px; 
@@ -617,6 +618,13 @@ cursor:pointer;
 
 
 
+}
+
+.container-intro > a {
+
+	color: 	white;
+	padding-bottom: 20px;
+	font-size: 	25px;
 }
 /*END*/
 /*
