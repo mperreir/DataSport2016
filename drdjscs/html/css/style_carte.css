@@ -2,9 +2,9 @@
 
 #menu {
     background: #fff;
-    position: absolute;
-    z-index: 1;
-    top: 160px;
+
+    z-index: -1;
+    top: 0px;
     right: 10px;
     border-radius: 3px;
     width: 160px;
@@ -13,8 +13,9 @@
 }
 
 #menu a {
+    top : 10px;
     font-size: 18px;
-    color: #000000;
+    color: #00af9B;
     display: block;
     margin: 0;
     padding: 0;
@@ -35,7 +36,7 @@
 
 #menu a.active {
     background-color: #65CEC2;
-    color: #ffffff;
+    color: #00af9B;
 }
 
 #menu a.active:hover {
@@ -51,80 +52,39 @@
 }
 
 /////////// BARRE DE RECHERCHE ////////////////
-.button:hover, .button.active {
-    background-color: #52a1d8;
-}
-.input-pill input[type='text'] + .button {
-    border-left-width: 0;
-    border-radius: 0 3px 3px 0;
-}
-.button:hover, .button.active {
-    color: #fff;
-}
-.col4 {
-    float: left;
-    width: 33.3333%;
-    max-width: 400px;
-}
-.button {
-    background-color: #3887be;
-    text-align: center;
-    color: #fff;
-    display: inline-block;
-    margin: 0px;
-    padding: 10px;
-    position: relative;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-family: 'Open Sans Bold', sans-serif;
-    line-height: 20px;
-    font-size: 12px;
-    -webkit-appearance: none;
-    -webkit-font-smoothing: antialiased;
-}
-input, select, button {
-    vertical-align: top;
+
+#contenu_rechercher{
+   font-size: 18px;
+    position : absolute;
+    bottom : 100px;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    top : 500px;
+     vertical-align: bottom;
 }
 
-.input-pill input[type='text'], .input-pill input[type=text]:focus {
-    border-right-width: 0;
-}
-
-textarea, input[type=password], input[type=text], input[type=date], input[type=email], input[type=number] {
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,0.1);
-    -webkit-transition: border-color .05s;
-    -moz-transition: border-color .05s;
-    -ms-transition: border-color .05s;
-    transition: border-color .05s;
-}
-
-textarea, input[type=password], input[type=text], input[type=date], input[type=email], input[type=number] {
-    display: inline-block;
-    height: 40px;
+#rechercher{
+    font-size: 18px;
+    color: #00af9B;
     margin: 0;
-    color: rgba(0,0,0,.5);
+    padding: 0;
     padding: 10px;
-    -webkit-appearance: none;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 0px;
+    border-radius: 3px;
+    width: 160px;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Open Sans', sans-serif;
 }
 
-input, select, button {
-    vertical-align: top;
-}
-
-input[type="button" i], input[type="submit" i], input[type="reset" i] {
-    -webkit-appearance: push-button;
-    -webkit-user-select: none;
-    white-space: pre;
-}
-
-input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
-    padding: 1px 6px;
-}
-
+///////////// FIN BARRE DE RECHERCHE ///////////////
 .mapboxgl-popup-close-button{
     font-size: 100%;
     position : absolute;
@@ -150,6 +110,31 @@ input[type="button" i], input[type="submit" i], input[type="reset" i], input[typ
     
 }
 
+#menu{
+    position : relative;
+    top : 10px;
+}
 
+#recentrer{
+        font-size: 18px;
+    color: #00af9B;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+
+    right: -550px;
+
+    border-radius: 3px;
+    width: 160px;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Open Sans', sans-serif;
+}
 
 
