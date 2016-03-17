@@ -102,7 +102,7 @@ chart.append("g")
       .attr("class", "y axis")
       .call(yAxis);*/
 
-var series= [
+var series1= [
     {
       label: 'REZE',
       values: 0.243
@@ -114,6 +114,32 @@ var series= [
     {
       label: 'PORNIC',
       values: 0.365
+    }];
+var series2= [
+    {
+      label: 'REZE',
+      values: 0.426
+    },
+    {
+      label: 'SAINT-NAZAIRE',
+      values: 0.459
+    },
+    {
+      label: 'PORNIC',
+      values: 0.374
+    }];
+var series3= [
+    {
+      label: 'REZE',
+      values: 0.469
+    },
+    {
+      label: 'SAINT-NAZAIRE',
+      values: 0.474
+    },
+    {
+      label: 'PORNIC',
+      values: 0.428
     }];
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -138,15 +164,27 @@ var yAxis = d3.svg.axis()
     .ticks(10,"%");
 
 
-var svg = d3.select("#barchart").append("svg")
+var svg1 = d3.select("#barchart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+var svg2 = d3.select("#barchart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  x.domain(series.map(function(d) { return d.label; }));
-  y.domain([0, d3.max(series, function(d) { return d.values; })]);
+var svg3 = d3.select("#barchart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var addSvg = function (data,svg){
+    x.domain(data.map(function(d) { return d.label; }));
+  y.domain([0, d3.max(data, function(d) { return d.values; })]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -161,11 +199,10 @@ var svg = d3.select("#barchart").append("svg")
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
       .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Percentage");
+      .style("text-anchor", "end");
 
   svg.selectAll(".bar")
-      .data(series)
+      .data(data)
     .enter().append("rect")
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.label); })
@@ -183,3 +220,8 @@ var svg = d3.select("#barchart").append("svg")
             return "#004CFF";
         }
       });
+}
+
+addSvg(series1,svg1);
+addSvg(series2,svg2);
+addSvg(series3,svg3);

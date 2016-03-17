@@ -4,11 +4,11 @@ var selected = false;
         svg1 = svg.selectAll("polygon").on("click",clickHandler);
         var i = 1;
         svg2 = svg.selectAll("circle").on("mouseover",mouseOverHandler).on("mouseout",mouseOutHandler).on("click",clickHandler);
-        function zoom() {
+        /*function zoom() {
             //console.log("translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
             svg1.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
             svg2.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-        }; 
+        };*/ 
         
         function mouseOverHandler(){
             //var loc = cursorPoint(e);
