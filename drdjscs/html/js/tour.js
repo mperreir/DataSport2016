@@ -22,11 +22,16 @@ jQuery(document).ready(function($){
 		// 	}
 		// });
 
-		jQuery(document).load(function() {
+		jQuery(document).ready(function() {
+			
 			if(!tourWrapper.hasClass('active')) {
 				//in that case, the tour has not been started yet
+				 setTimeout(function() {
+  
+  
 				tourWrapper.addClass('active');
 				showStep(tourSteps.eq(0), coverLayer);
+				  }, 2000);
 			}
 		});
 
@@ -43,6 +48,7 @@ jQuery(document).ready(function($){
 		//close tour
 		tourStepInfo.on('click', '.cd-close', function(event){
 			closeTour(tourSteps, tourWrapper, coverLayer);
+			coverLayer.css('visibility', 'hidden');
 		});
 
 	}

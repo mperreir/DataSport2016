@@ -29,7 +29,7 @@ xnugget info
 }
 .cd-nugget-info h1 {
   color: #fefffb;
-  font-size: 2.4rem;
+  font-size: 22px;
   margin: .6em 0;
 }
 .cd-nugget-info .cd-btn {
@@ -76,7 +76,7 @@ Main Components
 -------------------------------- */
 .cd-tour-wrapper {
   position: fixed;
-  z-index: 2;
+  z-index: 2000;
   height: 90%;
   width: 90%;
   left: 50%;
@@ -173,7 +173,7 @@ Main Components
   width: 10px;
   height: 10px;
   border-radius: inherit;
-  background: #ff962c;
+  background: #00AF9B;
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -ms-transform: scale(0);
@@ -314,7 +314,7 @@ Main Components
 
 @-webkit-keyframes cd-pulse {
   0% {
-    box-shadow: 0 0 0 0 #ff962c;
+    box-shadow: 0 0 0 0 #00AF9B;
   }
   100% {
     box-shadow: 0 0 0 20px rgba(255, 150, 44, 0);
@@ -322,7 +322,7 @@ Main Components
 }
 @-moz-keyframes cd-pulse {
   0% {
-    box-shadow: 0 0 0 0 #ff962c;
+    box-shadow: 0 0 0 0 #00AF9B;
   }
   100% {
     box-shadow: 0 0 0 20px rgba(255, 150, 44, 0);
@@ -330,7 +330,7 @@ Main Components
 }
 @keyframes cd-pulse {
   0% {
-    box-shadow: 0 0 0 0 #ff962c;
+    box-shadow: 0 0 0 0 #00AF9B;
   }
   100% {
     box-shadow: 0 0 0 20px rgba(255, 150, 44, 0);
@@ -356,15 +356,16 @@ Main Components
   display: none;
 }
 .cd-single-step .cd-more-info h2 {
-  font-size: 2rem;
+  font-size: 22px;
   line-height: 1.2;
   margin-bottom: .4em;
+  font-family: 'Roboto' !important;
 }
 .cd-single-step .cd-more-info p {
-  font-size: 1.3rem;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 1.4em;
-  font-family: Georgia, serif;
+  font-family: 'Roboto', sans-serif;
   color: #7f7f7d;
 }
 .cd-single-step .cd-more-info img {
@@ -557,7 +558,7 @@ Main Components
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  visibility: hidden;
+  visibility: visible;
   opacity: 0;
   -webkit-transition: opacity 0.4s 0s, visibility 0s 0.4s;
   -moz-transition: opacity 0.4s 0s, visibility 0s 0.4s;
@@ -608,40 +609,3 @@ Main Components
 xapp prototype - no need to import this in production 
 
 -------------------------------- */
-.cd-app-screen {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  width: 90%;
-  height: 80%;
-  background: #222d33;
-  border-radius: 4px;
-  box-shadow: 0 10px 60px #08151d;
-}
-.cd-app-screen::before, .cd-app-screen::after {
-  content: '';
-  position: absolute;
-}
-.cd-app-screen::before {
-  top: 0;
-  left: 0;
-  height: 40px;
-  width: 100%;
-  background: #fefffb;
-  border-radius: 4px 4px 0 0;
-}
-.cd-app-screen::after {
-  top: 14px;
-  left: 20px;
-  height: 12px;
-  width: 60px;
-  background: #e4e5e1;
-  border-radius: 3px;
-}
