@@ -141,24 +141,25 @@ p{
     margin-top: 8px;
     width: 340px;
     height: 307px;
+    padding-top: auto;
     padding-left: 200px;
 
 }
 
 #texte1{
-    /*margin-top: 10px;*/
+    margin-top: 8px;
+    float: left;
     width: 340px;
     height: 307px;
-    padding-top: 
-    padding-left: 1000px;
+    padding-top: auto;
+/*    margin-left: 600px;*/
     /*padding-bottom: 300px;*/
 
 }
 
 
 #logo{
-       margin-top:80px;   
-       margin-bottom: 0px;
+       margin-bottom: 1.5px;
        padding-left: 200px;
        padding-right: 100px;
 }
