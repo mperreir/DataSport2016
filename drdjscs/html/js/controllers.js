@@ -90,7 +90,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
        $scope.dataInfo = data;
     });
     $scope.courbeDescription = "La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région."
-
+    $scope.courbeDescriptionTitre = "Qu\'est-ce que c\'est?"
     $scope.options = {
             chart: {
               type: 'multiChart',
@@ -176,6 +176,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(0,9);
         updateColor(0, 9);
         $scope.courbeDescription = $scope.dataInfo[1].description;
+        $scope.courbeDescriptionTitre = $scope.dataInfo[1].nom;
     }
     $scope.update20052010 = function () {    
         $scope.data = $scope.zoomData[2];
@@ -185,6 +186,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(8, 14);
         updateColor(8, 14);
         $scope.courbeDescription = $scope.dataInfo[4].description;
+        $scope.courbeDescriptionTitre = $scope.dataInfo[4].nom;
     }
     $scope.update19972002 = function () {
         $scope.data = $scope.zoomData[3];
@@ -194,6 +196,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(0, 6);
         updateColor(0, 6);
         $scope.courbeDescription = $scope.dataInfo[3].description;
+        $scope.courbeDescriptionTitre = $scope.dataInfo[3].nom;
     }
     $scope.update20102015 = function () {    
         $scope.data = $scope.zoomData[4];
@@ -203,6 +206,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(13, 19);
         updateColor(13, 19);
         $scope.courbeDescription = $scope.dataInfo[8].description;
+        $scope.courbeDescriptionTitre = $scope.dataInfo[8].nom;
     }
     $scope.update20042015 = function () {
         $scope.data = $scope.zoomData[6];
@@ -212,6 +216,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(7, 19);
         updateColor(7, 19);
         $scope.courbeDescription = $scope.dataInfo[11].description;
+        $scope.courbeDescriptionTitre = $scope.dataInfo[11].nom;
     }
     $scope.update20092013 = function () {
         $scope.data = $scope.zoomData[8];
@@ -221,6 +226,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(12, 17);
         updateColor(12, 17);
         $scope.courbeDescription = $scope.dataInfo[13].description;
+        $scope.courbeDescriptionTitre = $scope.dataInfo[13].nom;
     }
     $scope.update19922005 = function () {
         $scope.data = $scope.zoomData[12];
@@ -238,6 +244,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(15, 19);
         updateColor(15, 19);
         $scope.courbeDescription = $scope.dataInfo[9].description;
+        $scope.courbeDescriptionTitre = $scope.dataInfo[9].nom;
     }
     $scope.update20132015g = function () {
         $scope.data = $scope.zoomData[11];
@@ -247,6 +254,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(17, 19);
         updateColor(17, 19);
         $scope.courbeDescription = $scope.dataInfo[10].description;
+        $scope.courbeDescriptionTitre = $scope.dataInfo[10].nom;
     }
     $scope.update20132015c = function () {
         $scope.data = $scope.zoomData[11];
@@ -256,6 +264,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(17, 19);
         updateColor(17, 19);
         $scope.courbeDescription = $scope.dataInfo[14].description;
+        $scope.courbeDescriptionTitre = $scope.dataInfo[14].nom;
     }
     $scope.update19962009 = function () {
         $scope.data = $scope.zoomData[13];
@@ -265,6 +274,7 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         emplois(0, 13);
         updateColor(0, 13);
         $scope.courbeDescription = $scope.dataInfo[12].description;
+        $scope.courbeDescriptionTitre = $scope.dataInfo[12].nom;
     }
     $scope.reset = function () {
         $scope.data = $scope.fix;
@@ -275,6 +285,8 @@ appHyblab.controller('MainCtrl', ['$scope', '$http', '$timeout', function ($scop
         for (var i = 0; i < 19; i++) {
             d3.selectAll("rect.nv-bar")[0][i].style= "fill: rgba(0, 175, 155, 1)"
         }
+        $scope.courbeDescription = "La stratégie régionale en matière d’emploi fera l’objet d’un examen spécifique au sein de la commission territoriale. Un renforcement de ce moyen d’intervention devra être mis en œuvre sur la période 2013-2016 dans chaque région."
+        $scope.courbeDescriptionTitre = "Qu\'est-ce que c\'est?"
     };
           
     $scope.pieOptions = {
