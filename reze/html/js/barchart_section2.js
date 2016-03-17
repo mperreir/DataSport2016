@@ -143,7 +143,7 @@ var series3= [
     }];
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 200 - margin.left - margin.right,
+    width = 220 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
@@ -163,22 +163,20 @@ var yAxis = d3.svg.axis()
     .orient("left")
     .ticks(10,"%");
 
-
 var svg1 = d3.select("#barchart").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", "30%").attr("height", 400).attr("preserveAspectRatio","none")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var svg2 = d3.select("#barchart").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", "30%").attr("height", 400).attr("preserveAspectRatio","none")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var svg3 = d3.select("#barchart").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    /*.attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)*/
+    .attr("width", "30%").attr("height", 400).attr("preserveAspectRatio","none")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -200,13 +198,23 @@ var addSvg = function (data,svg){
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end");
+    
+  svg.selectAll(".bar")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "bbar")
+      .attr("x", function(d) { return x(d.label); })
+      .attr("width", 40)
+      .attr("y", 0)
+      .attr("height", height)
+      .attr("fill", "#231F20");
 
   svg.selectAll(".bar")
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
       .attr("x", function(d) { return x(d.label); })
-      .attr("width", 30)
+      .attr("width", 40)
       .attr("y", function(d) { return y(d.values); })
       .attr("height", function(d) { return height - y(d.values); })
       .attr("fill", function(d){
@@ -220,6 +228,12 @@ var addSvg = function (data,svg){
             return "#004CFF";
         }
       });
+    
+    svg.selectAll(".text")
+      .data(data)
+    .enter().append("text").text(function(d) {
+        return (d.values *100) + "%";
+   }).attr("x", function(d) { return x(d.label); }).attr("y", 0).attr("fill",'white');
 }
 
 addSvg(series1,svg1);
