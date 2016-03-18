@@ -2,7 +2,7 @@
 ==========
 
 Source code of all the projects of [Hyblab DataSport 2016][2]. Hyblab DataSport is a data story project organized by [Ouest Medilab][3] in the city of Nantes (France) from March 07 to March 17, 2015.
-
+LINK TO VIEW SITE: http://maddoxximba.github.io/
 Three schools participated in this project:
 
  - [STAPS department of University of Nantes][4] (sport)
