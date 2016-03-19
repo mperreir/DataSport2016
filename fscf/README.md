@@ -1,15 +1,15 @@
 # Descriptif du projet
 
-Média : nom de votre média
+Média : Fédération Sportive et Culturelle de France
 
-Sujet : description du sujet
+Sujet : Evolution du nombre de licencié à la FSCF durant l'olympiade 2011-2015
 
-Equipe : nom de votre équipe
+Equipe : Les Douzeux
 
 Patricipants :
-- EDNA :
-- Polytech :
-- STAPS :
+- EDNA : Emeline Pelé, Angélique Lemaitre
+- Polytech : Arnaud Mathurin, Indy Berthomé
+- STAPS : ... Melo, Pierre, Theo, Richard, Ségo (C'est quoi leur nom ?)...
 
 # Installation
 

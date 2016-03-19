@@ -1,0 +1,52 @@
+[
+  {
+    "name" : "année",
+    "data" : ["2012", "2015"]
+  },
+  {
+            "name": "ACTIVITES CULTURELLES ET ARTISTIQUES",
+            "data":[494,462]
+        },{
+            "name": "ACTIVITES DE PLEINE NATURE",
+            "data":[432,513]
+        },{
+            "name": "ACTIVITES DE REMISE EN FORME",
+            "data":[3131,3704]
+        },{
+            "name" : "ARTS MARTIAUX",
+            "data" :[253,140]
+        },{
+            "name" : "AUTRES ACTIVITES GYMNIQUES ET D'EXPRESSION",
+            "data":[355,80]
+        },{
+            "name" : "DANSES",
+            "data" :[514,461]
+        },{
+            "name" : "EVEIL",
+            "data" :[1341,1299]
+        },{
+            "name" : "GYMNASTIQUE FEMININE",
+            "data" :[8709,8965]
+        },{
+            "name" : "GYMNASTIQUE MASCULINE",
+            "data" :[1672,1350]
+        },{
+            "name" : "GYMNASTIQUE RYTHMIQUE",
+            "data" :[873,903]
+        },{
+            "name" : "MUSIQUES ET CHANTS",
+            "data":[680,396]
+        },{
+            "name" : "SPORTS COLLECTIFS",
+            "data":[1709,1025]
+        },{
+            "name" : "SPORTS DE BOULES ET PRECISION",
+            "data" :[292,124]
+        },{
+            "name" : "SPORTS DE RAQUETTES",
+            "data" :[572,186]
+        },{
+            "name": "TWIRLING",
+            "data":[2155,2276]
+        }
+]

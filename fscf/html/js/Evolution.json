@@ -1,0 +1,24 @@
+[
+  {
+    "name" : "Pratique",
+    "data" : ["ACTIVITES CULTURELLES ET ARTISTIQUES",
+                "ACTIVITES DE PLEINE NATURE",
+                "ACTIVITES DE REMISE EN FORME",
+                "ARTS MARTIAUX",
+                "AUTRES ACTIVITES GYMNIQUES ET D'EXPRESSION",
+                "DANSES",
+                "EVEIL",
+                "GYMNASTIQUE FEMININE",
+                "GYMNASTIQUE MASCULINE",
+                "GYMNASTIQUE RYTHMIQUE",
+                "MUSIQUES ET CHANTS",
+                "SPORTS COLLECTIFS",
+                "SPORTS DE BOULES ET PRECISION",
+                "SPORTS DE RAQUETTES",
+                "TWIRLING"]
+  },
+  {
+    "name" : "Evolution",
+    "data" : [-19.03, 4.17, 7.44, -44.66, 29.86, -10.31, -3.13,2.94, -19.26, 3.44,-41.76, -31.25, -57.53, -67.48, 5.61]
+  }
+]
