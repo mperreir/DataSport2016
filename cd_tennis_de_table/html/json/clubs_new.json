@@ -1,0 +1,624 @@
+{
+    "clubs": [
+  {
+    "CLUB": "AIGREFEUILLAIS C.P.",
+    "Longitude": -1.4,
+    "Latitude": 47.0667
+  },
+  {
+    "CLUB": "ALCATEL ATLANTIQUE",
+    "Longitude": -1.61667,
+    "Latitude": 47.2667
+  },
+  {
+    "CLUB": "Ancenis Tennis de Table",
+    "Longitude": -1.16667,
+    "Latitude": 47.3667
+  },
+  {
+    "CLUB": "APAVE 44 TENNIS DE TABLE",
+    "Longitude": -1.65,
+    "Latitude": 47.2167
+  },
+  {
+    "CLUB": "ASBR",
+    "Longitude": -1.56667,
+    "Latitude": 47.2
+  },
+  {
+    "CLUB": "ASCEE",
+    "Longitude": -1.61667,
+    "Latitude": 47.1833
+  },
+  {
+    "CLUB": "ASLOCRAM",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "ATMEL",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "ATSCAF LOIRE ATLANTIQUE",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "BESNE DONGES T.T.",
+    "Longitude": -2.08333,
+    "Latitude": 47.4
+  },
+  {
+    "CLUB": "BLAIN TENNIS DE TABLE",
+    "Longitude": -1.75,
+    "Latitude": 47.4833
+  },
+  {
+    "CLUB": "BOUAYE A.L.",
+    "Longitude": -1.7,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "BOUEE T.T.",
+    "Longitude": -1.91667,
+    "Latitude": 47.3167
+  },
+  {
+    "CLUB": "BOURGNEUF ST CYR TENNIS TABLE",
+    "Longitude": -1.95,
+    "Latitude": 47.05
+  },
+  {
+    "CLUB": "BOUSSAY T.T.C.",
+    "Longitude": -1.18333,
+    "Latitude": 47.05
+  },
+  {
+    "CLUB": "BRIERE T.T.",
+    "Longitude": -2.25,
+    "Latitude": 47.45
+  },
+  {
+    "CLUB": "BRISSONNEAU",
+    "Longitude": -1.5,
+    "Latitude": 47.3
+  },
+  {
+    "CLUB": "BRIVET T.T.",
+    "Longitude": -2.08333,
+    "Latitude": 47.4333
+  },
+  {
+    "CLUB": "CAISSE EPARGNE",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "CARQUEFOU A.L.C.E.P.",
+    "Longitude": -1.5,
+    "Latitude": 47.3
+  },
+  {
+    "CLUB": "CENTRALE CORDEMAIS",
+    "Longitude": -1.88333,
+    "Latitude": 47.2833
+  },
+  {
+    "CLUB": "CHAPELAINE (LA)",
+    "Longitude": -1.55,
+    "Latitude": 47.3
+  },
+  {
+    "CLUB": "CHATEAU THEBAUD",
+    "Longitude": 0.580279,
+    "Latitude": 47.125
+  },
+  {
+    "CLUB": "CHATEAUBRIANT TENNIS TABLE",
+    "Longitude": -1.38333,
+    "Latitude": 47.7167
+  },
+  {
+    "CLUB": "CHEVROLIERE (LA) A.L.",
+    "Longitude": -1.61667,
+    "Latitude": 47.1
+  },
+  {
+    "CLUB": "CLISSONNAIS TT",
+    "Longitude": -1.28333,
+    "Latitude": 47.0833
+  },
+  {
+    "CLUB": "CORCOUEENNE",
+    "Longitude": 0.423057,
+    "Latitude": 46.9656
+  },
+  {
+    "CLUB": "CORDEMAIS A S",
+    "Longitude": -1.88333,
+    "Latitude": 47.2833
+  },
+  {
+    "CLUB": "COTE D AMOUR T.T.",
+    "Longitude": -2.35,
+    "Latitude": 47.25
+  },
+  {
+    "CLUB": "COTELOISE A.T.T.",
+    "Longitude": -1.16667,
+    "Latitude": 47.45
+  },
+  {
+    "CLUB": "COUERON T.T.",
+    "Longitude": -1.73333,
+    "Latitude": 47.2167
+  },
+  {
+    "CLUB": "COUETS (LES)",
+    "Longitude": -1.61667,
+    "Latitude": 47.1833
+  },
+  {
+    "CLUB": "EDUCATION NATIONALE",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "ENTEN SPORT ARTHON CHEMERE",
+    "Longitude": -1.91667,
+    "Latitude": 47.1167
+  },
+  {
+    "CLUB": "ENTENTE PONGISTE SUD LOIRE",
+    "Longitude": 0.487223,
+    "Latitude": 47.0556
+  },
+  {
+    "CLUB": "EURO INFORMATION",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "FRESNAY EN RETZ   TDR   SM",
+    "Longitude": -1.88333,
+    "Latitude": 47.0167
+  },
+  {
+    "CLUB": "GAVRE (LE) T.T.",
+    "Longitude": -1.75,
+    "Latitude": 47.5167
+  },
+  {
+    "CLUB": "GOULAINE TENNIS DE TABLE",
+    "Longitude": -1.43333,
+    "Latitude": 47.2167
+  },
+  {
+    "CLUB": "GRANDCHAMP T.T.",
+    "Longitude": 0.394723,
+    "Latitude": 47.365
+  },
+  {
+    "CLUB": "GUEMENE PONGISTES CO DON",
+    "Longitude": -1.83333,
+    "Latitude": 47.6333
+  },
+  {
+    "CLUB": "HAIE FOUASSIERE (LA) T.T.C",
+    "Longitude": -1.4,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "HERIC T.T.",
+    "Longitude": -1.65,
+    "Latitude": 47.4167
+  },
+  {
+    "CLUB": "INDRE A.T.T.",
+    "Longitude": 0.32889,
+    "Latitude": 47.1987
+  },
+  {
+    "CLUB": "JOVEENNE LANGUEUROISE E.S.",
+    "Longitude": -1.41667,
+    "Latitude": 47.5
+  },
+  {
+    "CLUB": "JUSTICE 44",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "LANDREAU (LE)",
+    "Longitude": -1.3,
+    "Latitude": 47.2
+  },
+  {
+    "CLUB": "LEGE A.S.T.T.",
+    "Longitude": -1.6,
+    "Latitude": 46.8833
+  },
+  {
+    "CLUB": "LIGNE A.S.T.T.",
+    "Longitude": -1.38333,
+    "Latitude": 47.4167
+  },
+  {
+    "CLUB": "LOGI TECH INFORMATIQUE TT",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "LOISIRS ET CULTURE",
+    "Longitude": -1.5,
+    "Latitude": 47.2167
+  },
+  {
+    "CLUB": "LOROUX BOTTEREAU(LE)CEPOLO",
+    "Longitude": -1.35,
+    "Latitude": 47.25
+  },
+  {
+    "CLUB": "MACHECOUL",
+    "Longitude": -1.81667,
+    "Latitude": 47
+  },
+  {
+    "CLUB": "MAISDONNAIS T.T.",
+    "Longitude": -1.38333,
+    "Latitude": 47.1
+  },
+  {
+    "CLUB": "MAUMUSSON C.T.T.",
+    "Longitude": -1.1,
+    "Latitude": 47.4833
+  },
+  {
+    "CLUB": "MAUVES TT",
+    "Longitude": -1.4,
+    "Latitude": 47.3
+  },
+  {
+    "CLUB": "MESANGER T.T.",
+    "Longitude": -1.23333,
+    "Latitude": 47.4333
+  },
+  {
+    "CLUB": "MINDIN",
+    "Longitude": -2.16667,
+    "Latitude": 47.25
+  },
+  {
+    "CLUB": "MISSILLAC TTC",
+    "Longitude": -2.16667,
+    "Latitude": 47.4833
+  },
+  {
+    "CLUB": "MONTAGNE (LA) A.S.C.",
+    "Longitude": -1.68333,
+    "Latitude": 47.1833
+  },
+  {
+    "CLUB": "MONTBERT G. DAUMEZON HOPITAL",
+    "Longitude": -1.4,
+    "Latitude": 47.0667
+  },
+  {
+    "CLUB": "MONTOIR ST MALO TT",
+    "Longitude": -2.15,
+    "Latitude": 47.3333
+  },
+  {
+    "CLUB": "MOUZILLON E.T.T.",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES AS CHU",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES ASCBG",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES ASGEN",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES ASPTT LAMORICIERE",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES BAUT (LE)",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES MELLINET (LA)",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES RACC",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES ST JOSEPH TENNIS DE TABLE",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES ST MEDARD DOULON",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES TOUTES AIDES",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NANTES TTCNA",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "NORT SUR ERDRE N.A.C.T.T.",
+    "Longitude": -1.5,
+    "Latitude": 47.4333
+  },
+  {
+    "CLUB": "ORVAULT SPORT",
+    "Longitude": -1.61667,
+    "Latitude": 47.2667
+  },
+  {
+    "CLUB": "PAIMBOEUF C.P.",
+    "Longitude": -2.03333,
+    "Latitude": 47.2833
+  },
+  {
+    "CLUB": "PALLET (LE) TT",
+    "Longitude": -1.33333,
+    "Latitude": 47.1333
+  },
+  {
+    "CLUB": "PAZENAISE T.T.",
+    "Longitude": -1.81667,
+    "Latitude": 47.1
+  },
+  {
+    "CLUB": "PELLERIN (LE)",
+    "Longitude": -1.75,
+    "Latitude": 47.2
+  },
+  {
+    "CLUB": "PENHOET U.M.",
+    "Longitude": -2.2,
+    "Latitude": 47.2833
+  },
+  {
+    "CLUB": "PETIT MARS T.T.",
+    "Longitude": -1.45,
+    "Latitude": 47.4
+  },
+  {
+    "CLUB": "PONT ST MARTIN U.S.",
+    "Longitude": -1.58333,
+    "Latitude": 47.1167
+  },
+  {
+    "CLUB": "PORT ST PERE T.T.A.C.",
+    "Longitude": -1.75,
+    "Latitude": 47.1333
+  },
+  {
+    "CLUB": "POULIGUEN (LE)",
+    "Longitude": -2.43333,
+    "Latitude": 47.2667
+  },
+  {
+    "CLUB": "PRESQU ILE T.T.",
+    "Longitude": -2.43333,
+    "Latitude": 47.3333
+  },
+  {
+    "CLUB": "REZE AEPR",
+    "Longitude": -1.56667,
+    "Latitude": 47.2
+  },
+  {
+    "CLUB": "REZE TENNIS DE TABLE",
+    "Longitude": -1.56667,
+    "Latitude": 47.2
+  },
+  {
+    "CLUB": "SAFFRE T.T.",
+    "Longitude": -1.56667,
+    "Latitude": 47.5
+  },
+  {
+    "CLUB": "SAUTRON T.T.",
+    "Longitude": -1.66667,
+    "Latitude": 47.2667
+  },
+  {
+    "CLUB": "SAVENAY ASP TT",
+    "Longitude": -1.95,
+    "Latitude": 47.3667
+  },
+  {
+    "CLUB": "SERCEL",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "SORINIERES (LES)",
+    "Longitude": -1.53333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "SOUDAN T.T.",
+    "Longitude": -1.3,
+    "Latitude": 47.7333
+  },
+  {
+    "CLUB": "ST BREVIN T.T.",
+    "Longitude": -2.16667,
+    "Latitude": 47.25
+  },
+  {
+    "CLUB": "ST COLOMBAN T.T.",
+    "Longitude": 0.41639,
+    "Latitude": 47.0089
+  },
+  {
+    "CLUB": "ST HERBLAIN A.S.H.",
+    "Longitude": -1.65,
+    "Latitude": 47.2167
+  },
+  {
+    "CLUB": "ST HERBLAIN T.T.",
+    "Longitude": -1.65,
+    "Latitude": 47.2167
+  },
+  {
+    "CLUB": "ST HERBLON ATT",
+    "Longitude": -1.1,
+    "Latitude": 47.4167
+  },
+  {
+    "CLUB": "ST JULIEN TENNIS DE TABLE",
+    "Longitude": -1.38333,
+    "Latitude": 47.25
+  },
+  {
+    "CLUB": "ST MARS LE CELLIER",
+    "Longitude": -1.35,
+    "Latitude": 47.3167
+  },
+  {
+    "CLUB": "ST MICHEL CHEF CHEF  TTMT",
+    "Longitude": -2.15,
+    "Latitude": 47.1833
+  },
+  {
+    "CLUB": "ST NAZAIRE AIRBUS",
+    "Longitude": -2.2,
+    "Latitude": 47.2833
+  },
+  {
+    "CLUB": "ST NAZAIRE COSTA",
+    "Longitude": -2.18333,
+    "Latitude": 47.3167
+  },
+  {
+    "CLUB": "ST NAZAIRE LEON BLUM TT",
+    "Longitude": -2.2,
+    "Latitude": 47.2833
+  },
+  {
+    "CLUB": "ST NAZAIRE TENNIS DE TABLE",
+    "Longitude": -2.2,
+    "Latitude": 47.2833
+  },
+  {
+    "CLUB": "ST PERE EN RETZ",
+    "Longitude": -2.03333,
+    "Latitude": 47.2
+  },
+  {
+    "CLUB": "ST PHILBERT T.T.",
+    "Longitude": -1.63333,
+    "Latitude": 47.0333
+  },
+  {
+    "CLUB": "ST SEBASTIEN P.P.C.",
+    "Longitude": -1.5,
+    "Latitude": 47.2167
+  },
+  {
+    "CLUB": "STE GENERALE",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "STE LUCE T.T.",
+    "Longitude": -1.5,
+    "Latitude": 47.25
+  },
+  {
+    "CLUB": "ST-NAZAIRE CHEMINOTS",
+    "Longitude": -2.2,
+    "Latitude": 47.2833
+  },
+  {
+    "CLUB": "SUCE SUR ERDRE",
+    "Longitude": 0.470557,
+    "Latitude": 47.3448
+  },
+  {
+    "CLUB": "TAN T.T.",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  },
+  {
+    "CLUB": "TEILLE C.P.",
+    "Longitude": 0.720279,
+    "Latitude": 47.4617
+  },
+  {
+    "CLUB": "THOUARE TT",
+    "Longitude": -1.45,
+    "Latitude": 47.2667
+  },
+  {
+    "CLUB": "TOUCHES (LES)",
+    "Longitude": -1.425,
+    "Latitude": 47.4417
+  },
+  {
+    "CLUB": "TREFFIEUX MARSAC T.T.",
+    "Longitude": -1.53333,
+    "Latitude": 47.6167
+  },
+  {
+    "CLUB": "TREILLIERES A.L.",
+    "Longitude": -1.63333,
+    "Latitude": 47.3333
+  },
+  {
+    "CLUB": "TRIGNAC TENNIS DE TABLE",
+    "Longitude": -2.18333,
+    "Latitude": 47.3167
+  },
+  {
+    "CLUB": "VARADES A.S.C.P.",
+    "Longitude": -1.03333,
+    "Latitude": 47.3833
+  },
+  {
+    "CLUB": "VERTOU ASP",
+    "Longitude": -1.48333,
+    "Latitude": 47.1667
+  },
+  {
+    "CLUB": "VIEILLEVIGNE A.P.",
+    "Longitude": -1.43333,
+    "Latitude": 46.9667
+  },
+  {
+    "CLUB": "WIRQUIN TT",
+    "Longitude": -1.28333,
+    "Latitude": 47.15
+  }
+]
+}

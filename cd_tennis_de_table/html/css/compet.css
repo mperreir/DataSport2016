@@ -1,0 +1,58 @@
+#menu-principal li:nth-child(1)
+{
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+}
+
+#menu-principal li:nth-child(1) a
+{
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+}
+
+#menu-secondaire li:nth-child(3)
+{
+  background-color: rgb(29,29,29);
+}
+
+#pratique img{
+    float: left;
+    width: 490px;
+    height: auto;
+    margin-top : 20px;
+}
+
+#pratique p{
+    margin-left: 490px;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+}
+
+#pratique
+{
+    margin-top: -70px;
+}
+
+h1{
+    margin-top: 100px;
+    font-size: 1.2em;
+}
+
+section
+{
+  height: auto;
+  background-color: white;
+}
+
+#centre-page1
+{
+  margin-left: 134px;
+  background-color: white;
+}
+
+#menu-secondaire
+{
+  margin-left: -134px;
+}

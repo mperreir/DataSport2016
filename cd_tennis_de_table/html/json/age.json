@@ -1,0 +1,39 @@
+{
+  "age":[
+  {
+    "Pourcentage": "0 - 10",
+    "Homme": "1,0044",
+    "Femme": "0,1674"
+  },
+  {
+    "Pourcentage": "10 - 20",
+    "Homme": "28,8554",
+    "Femme": "3,2643"
+  },
+  {
+    "Pourcentage": "20 - 30",
+    "Homme": "8,2653",
+    "Femme": "0,9835"
+  },
+  {
+    "Pourcentage": "30 - 40",
+    "Homme": "10,4834",
+    "Femme": "0,9835"
+  },
+  {
+    "Pourcentage": "40 - 50",
+    "Homme": "15,7774",
+    "Femme": "1,7158"
+  },
+  {
+    "Pourcentage": "50 - 60",
+    "Homme": "12,8270",
+    "Femme": "1,5484"
+  },
+  {
+    "Pourcentage": "> 60",
+    "Homme": "12,6596",
+    "Femme": "1,4647"
+  }
+]
+}

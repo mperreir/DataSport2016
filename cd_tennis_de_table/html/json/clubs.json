@@ -1,0 +1,391 @@
+{
+    "clubs":[
+      {
+        "CLUB": "AIGREFEUILLAIS C.P."
+      },
+      {
+        "CLUB": "ALCATEL ATLANTIQUE"
+      },
+      {
+        "CLUB": "Ancenis Tennis de Table"
+      },
+      {
+        "CLUB": "APAVE 44 TENNIS DE TABLE"
+      },
+      {
+        "CLUB": "ASBR"
+      },
+      {
+        "CLUB": "ASCEE"
+      },
+      {
+        "CLUB": "ASLOCRAM"
+      },
+      {
+        "CLUB": "ATMEL"
+      },
+      {
+        "CLUB": "ATSCAF LOIRE ATLANTIQUE"
+      },
+      {
+        "CLUB": "BESNE DONGES T.T."
+      },
+      {
+        "CLUB": "BLAIN TENNIS DE TABLE"
+      },
+      {
+        "CLUB": "BOUAYE A.L."
+      },
+      {
+        "CLUB": "BOUEE T.T."
+      },
+      {
+        "CLUB": "BOURGNEUF ST CYR TENNIS TABLE"
+      },
+      {
+        "CLUB": "BOUSSAY T.T.C."
+      },
+      {
+        "CLUB": "BRIERE T.T."
+      },
+      {
+        "CLUB": "BRISSONNEAU"
+      },
+      {
+        "CLUB": "BRIVET T.T."
+      },
+      {
+        "CLUB": "CAISSE EPARGNE"
+      },
+      {
+        "CLUB": "CARQUEFOU A.L.C.E.P."
+      },
+      {
+        "CLUB": "CENTRALE CORDEMAIS"
+      },
+      {
+        "CLUB": "CHAPELAINE (LA)"
+      },
+      {
+        "CLUB": "CHATEAU THEBAUD"
+      },
+      {
+        "CLUB": "CHATEAUBRIANT TENNIS TABLE"
+      },
+      {
+        "CLUB": "CHEVROLIERE (LA) A.L."
+      },
+      {
+        "CLUB": "CHEVROLIERE DU LAC TT"
+      },
+      {
+        "CLUB": "CLISSONNAIS TT"
+      },
+      {
+        "CLUB": "CORCOUEENNE"
+      },
+      {
+        "CLUB": "CORDEMAIS A S"
+      },
+      {
+        "CLUB": "COTE D AMOUR T.T."
+      },
+      {
+        "CLUB": "COTELOISE A.T.T."
+      },
+      {
+        "CLUB": "COUERON T.T."
+      },
+      {
+        "CLUB": "COUETS (LES)"
+      },
+      {
+        "CLUB": "CREDIT MUTUEL ASCM TT"
+      },
+      {
+        "CLUB": "EDUCATION NATIONALE"
+      },
+      {
+        "CLUB": "ENTEN SPORT ARTHON CHEMERE"
+      },
+      {
+        "CLUB": "ENTENTE PONGISTE SUD LOIRE"
+      },
+      {
+        "CLUB": "EURO INFORMATION"
+      },
+      {
+        "CLUB": "FRESNAY EN RETZ   TDR   SM"
+      },
+      {
+        "CLUB": "GAVRE (LE) T.T."
+      },
+      {
+        "CLUB": "GOULAINE TENNIS DE TABLE"
+      },
+      {
+        "CLUB": "GRANDCHAMP T.T."
+      },
+      {
+        "CLUB": "GUEMENE PONGISTES CO DON"
+      },
+      {
+        "CLUB": "HAIE FOUASSIERE (LA) T.T.C"
+      },
+      {
+        "CLUB": "HERIC T.T."
+      },
+      {
+        "CLUB": "INDRE A.T.T."
+      },
+      {
+        "CLUB": "JOVEENNE LANGUEUROISE E.S."
+      },
+      {
+        "CLUB": "JUSTICE 44"
+      },
+      {
+        "CLUB": "LANDREAU (LE)"
+      },
+      {
+        "CLUB": "LEGE A.S.T.T."
+      },
+      {
+        "CLUB": "LIGNE A.S.T.T."
+      },
+      {
+        "CLUB": "LOGI TECH INFORMATIQUE TT"
+      },
+      {
+        "CLUB": "LOISIRS ET CULTURE"
+      },
+      {
+        "CLUB": "LOROUX BOTTEREAU(LE)CEPOLO"
+      },
+      {
+        "CLUB": "MACHECOUL"
+      },
+      {
+        "CLUB": "MAISDONNAIS T.T."
+      },
+      {
+        "CLUB": "MAUMUSSON C.T.T."
+      },
+      {
+        "CLUB": "MAUVES TT"
+      },
+      {
+        "CLUB": "MESANGER T.T."
+      },
+      {
+        "CLUB": "MINDIN"
+      },
+      {
+        "CLUB": "MISSILLAC TTC"
+      },
+      {
+        "CLUB": "MONTAGNE (LA) A.S.C."
+      },
+      {
+        "CLUB": "MONTBERT G. DAUMEZON HOPITAL"
+      },
+      {
+        "CLUB": "MONTOIR ST MALO TT"
+      },
+      {
+        "CLUB": "MOUZILLON E.T.T."
+      },
+      {
+        "CLUB": "NANTES AS CHU"
+      },
+      {
+        "CLUB": "NANTES ASCBG"
+      },
+      {
+        "CLUB": "NANTES ASGEN"
+      },
+      {
+        "CLUB": "NANTES ASPTT LAMORICIERE"
+      },
+      {
+        "CLUB": "NANTES BAUT (LE)"
+      },
+      {
+        "CLUB": "NANTES MELLINET (LA)"
+      },
+      {
+        "CLUB": "NANTES MUNICIPAUX"
+      },
+      {
+        "CLUB": "NANTES RACC"
+      },
+      {
+        "CLUB": "NANTES ST JOSEPH TENNIS DE TABLE"
+      },
+      {
+        "CLUB": "NANTES ST MEDARD DOULON"
+      },
+      {
+        "CLUB": "NANTES TOUTES AIDES"
+      },
+      {
+        "CLUB": "NANTES TTCNA"
+      },
+      {
+        "CLUB": "NORT SUR ERDRE N.A.C.T.T."
+      },
+      {
+        "CLUB": "ORVAULT SPORT"
+      },
+      {
+        "CLUB": "PAIMBOEUF C.P."
+      },
+      {
+        "CLUB": "PALLET (LE) TT"
+      },
+      {
+        "CLUB": "PAZENAISE T.T."
+      },
+      {
+        "CLUB": "PELLERIN (LE)"
+      },
+      {
+        "CLUB": "PENHOET U.M."
+      },
+      {
+        "CLUB": "PETIT MARS T.T."
+      },
+      {
+        "CLUB": "PONT ST MARTIN U.S."
+      },
+      {
+        "CLUB": "PORT ST PERE T.T.A.C."
+      },
+      {
+        "CLUB": "POULIGUEN (LE)"
+      },
+      {
+        "CLUB": "PRESQU ILE T.T."
+      },
+      {
+        "CLUB": "REZE AEPR"
+      },
+      {
+        "CLUB": "REZE TENNIS DE TABLE"
+      },
+      {
+        "CLUB": "SAFFRE T.T."
+      },
+      {
+        "CLUB": "SAUTRON T.T."
+      },
+      {
+        "CLUB": "SAVENAY ASP TT"
+      },
+      {
+        "CLUB": "SERCEL"
+      },
+      {
+        "CLUB": "SORINIERES (LES)"
+      },
+      {
+        "CLUB": "SOUDAN T.T."
+      },
+      {
+        "CLUB": "ST BREVIN T.T."
+      },
+      {
+        "CLUB": "ST COLOMBAN T.T."
+      },
+      {
+        "CLUB": "ST ETIENNE TENNIS DE TABLE"
+      },
+      {
+        "CLUB": "ST HERBLAIN A.S.H."
+      },
+      {
+        "CLUB": "ST HERBLAIN T.T."
+      },
+      {
+        "CLUB": "ST HERBLON ATT"
+      },
+      {
+        "CLUB": "ST JULIEN TENNIS DE TABLE"
+      },
+      {
+        "CLUB": "ST MARS LE CELLIER"
+      },
+      {
+        "CLUB": "ST MICHEL CHEF CHEF  TTMT"
+      },
+      {
+        "CLUB": "ST NAZAIRE AIRBUS"
+      },
+      {
+        "CLUB": "ST NAZAIRE COSTA"
+      },
+      {
+        "CLUB": "ST NAZAIRE LEON BLUM TT"
+      },
+      {
+        "CLUB": "ST NAZAIRE TENNIS DE TABLE"
+      },
+      {
+        "CLUB": "ST PERE EN RETZ"
+      },
+      {
+        "CLUB": "ST PHILBERT T.T."
+      },
+      {
+        "CLUB": "ST SEBASTIEN P.P.C."
+      },
+      {
+        "CLUB": "STE GENERALE"
+      },
+      {
+        "CLUB": "STE LUCE T.T."
+      },
+      {
+        "CLUB": "ST-NAZAIRE CHEMINOTS"
+      },
+      {
+        "CLUB": "SUCE SUR ERDRE"
+      },
+      {
+        "CLUB": "SUD VILAINE GOELANDS"
+      },
+      {
+        "CLUB": "TAN T.T."
+      },
+      {
+        "CLUB": "TEILLE C.P."
+      },
+      {
+        "CLUB": "THOUARE TT"
+      },
+      {
+        "CLUB": "TOUCHES (LES)"
+      },
+      {
+        "CLUB": "TREFFIEUX MARSAC T.T."
+      },
+      {
+        "CLUB": "TREILLIERES A.L."
+      },
+      {
+        "CLUB": "TRIGNAC TENNIS DE TABLE"
+      },
+      {
+        "CLUB": "VARADES A.S.C.P."
+      },
+      {
+        "CLUB": "VERTOU ASP"
+      },
+      {
+        "CLUB": "VIEILLEVIGNE A.P."
+      },
+      {
+        "CLUB": "WIRQUIN TT"
+      }
+    ]
+}

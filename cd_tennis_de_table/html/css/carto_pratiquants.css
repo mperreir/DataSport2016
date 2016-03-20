@@ -1,0 +1,82 @@
+#menu-principal li:nth-child(3)
+{
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+}
+
+#menu-principal li:nth-child(3) a
+{
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+}
+
+#menu-secondaire li:nth-child(2)
+{
+  background-color: rgb(29,29,29);
+}
+
+section
+{
+  margin-left: 134px;
+  height: auto;
+  background-color: white;
+}
+
+#adherent
+{
+  margin-left: 110px;
+  width: 75%;
+  height: auto;
+}
+
+#choix_club
+{
+  position: absolute;
+  z-index: 2;
+  margin-left: 45px;
+  margin-top: 14px;
+  padding-bottom: 15px;
+  
+}
+
+#liste_choix
+{
+  border: 2px solid rgb(65,65,65);
+}
+
+#maMap
+{
+  height: 80%;
+  z-index: 1;
+}
+
+#centre-page1
+{
+  height: 670px;
+  margin-left: 134px;
+  background-color: white;
+}
+
+#com
+{
+  margin-top: -140px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#menu-secondaire
+{
+  margin-left: -134px;
+}
+
+h1{
+    font-size: 1.2em;
+    margin-left: 300px;
+    
+}
+
+#centre-page1
+{
+  height: 650px;
+}
