@@ -1,12 +1,10 @@
-// load express module for creating server
 var express = require('express');
-// create your server app
+var path = require('path');
 var app = express();
-// specifing static files
-app.use(express.static('html'));
-// creating your server
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log('Example app listening at http://%s:%s', host, port);
-});
+
+// serve static content from the html directory
+app.use(express.static(path.join(__dirname, 'html')));
+app.use('/Libraries',express.static(path.join(__dirname, 'Libraries')));
+app.use('/Ressources',express.static(path.join(__dirname, 'Ressources')));
+
+module.exports = app;

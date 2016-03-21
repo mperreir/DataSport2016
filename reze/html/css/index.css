@@ -35,7 +35,7 @@ table{
 /*Section 0 (titre)
 */
 #section0{
-    background-image: url("../../Ressources/Images/illus-fond170316.svg");
+    background-image: url("../Ressources/Images/illus-fond170316.svg");
 	background-position: center center;
 	background-size: 100% 100%;
     position: relative;
@@ -86,7 +86,7 @@ table{
 /*Section1
 */
 
-p{  
+p{
     margin-top: 25px;
     font-size: 1.2vw;
     width: 90%;

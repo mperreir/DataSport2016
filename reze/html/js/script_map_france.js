@@ -14,7 +14,7 @@ var svg = d3.select("#map").append("svg")
     .attr("id", "carte_france_s6")
     .attr("width", width)
     .attr("height", height);
-d3.json("../Ressources/data/regions.topojson", function(error, topology) {
+d3.json("Ressources/data/regions.topojson", function(error, topology) {
   if (error) {
     console.log(error);
     throw error;
@@ -65,19 +65,19 @@ function histogram(region){
         var bar = chart.selectAll("g")
             .data(data)
           .enter().append("g")
-            .attr("transform", function(d, i) { 
+            .attr("transform", function(d, i) {
                 return i<2 ? "translate(200," + i * 2 * barHeight + ")":
-                "translate(200," + (1 + i * 2) * barHeight + ")"; 
+                "translate(200," + (1 + i * 2) * barHeight + ")";
             });
 
         bar.append("rect")
-            .attr('fill','black')  
+            .attr('fill','black')
             .attr("height", barHeight - 1)
             .attr("width", width);
 
         bar.append("rect")
             .attr("width", 0)
-            .attr('fill', function(d, i) { return i%2==0 ? 'red' : 'green' })  
+            .attr('fill', function(d, i) { return i%2==0 ? 'red' : 'green' })
             .attr("height", barHeight - 1)
             .transition()
             .duration(1000)
@@ -98,7 +98,7 @@ function histogram(region){
             .attr('class','histogram-legend')
             .attr("text-anchor", "end")
             .attr("fill", "white")
-            .text(function(d,i) { 
+            .text(function(d,i) {
                 if(i == 0) return 'Pourcentage de licenciés';
                 else if(i == 1) return 'parmi la population globale';
                 else if(i == 2) return 'Pourcentage de femmes';
