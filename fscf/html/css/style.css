@@ -1,25 +1,214 @@
-/* just a sample css rule to show that everything works */
 #container{
   width: 960px;
   margin: 0 auto;
-  background-color: #DDDDDD;
+  background-color: #EEE7D8;
+  /*background-image: url("../images/back.svg");
+  background-repeat: repeat-x;*/
 }
 
-header, footer{
-  text-align: center;
-  background-color: #0066CC;
-  color: white;
-  padding: 10px;
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14pt;
+  background-color: #EEE7D8;
+  /*background-image: url("../images/back.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;*/
+  color: #5d5d5d;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
 }
 
 header + p {
   text-align: center;
   display:block;
-  height: 600px;
-  line-height: 600px;
+  height: 150px;
+  line-height: 150px;
 }
 
-footer p
-{
-  font-size: small;
+#header {
+  width: 140%;
+  margin-left: -20%;
+}
+
+#edito {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-top: -25%;
+  margin-bottom: 10%;
+  margin-left: 25%;
+  font-size: 14pt;
+}
+
+#edito2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-top: -25%;
+  margin-bottom: 0%;
+  margin-left: 35%;
+  font-size: 14pt;
+}
+
+#edito3 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-top: -50%;
+  margin-bottom: 0%;
+  margin-left: 60%;
+  font-size: 14pt;
+}
+
+#prix {
+  width: 35%;
+  margin-top: -5%;
+  margin-left: 10%;
+  position: relative;
+}
+
+#comparaison {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  margin-top: 10%;
+  margin-left: 0%;
+  font-size: 14pt;
+}
+
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+
+#topflop {
+    width: 30%;
+    margin-top: -20%;
+    margin-left: 40%;
+    position: absolute;
+}
+
+#map {
+    width: 40%;
+    margin-left: 0%;
+    margin-top: -30%;
+}
+
+#text_map {
+    color: #5D5D5D;
+    width: 40%;
+    margin-left: 65%;
+}
+
+footer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer {
+  width: 140%;
+  margin-left: -20%;
+}
+
+#comparaisonHF {
+  min-width: 900px; 
+  height: 400px; 
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 36pt; 
+  font-weight: bold;
+}
+
+#interactif15Pratiques {
+  min-width: 900px; 
+  height: 350px; 
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+
+#evolutionLicencies {
+  width: 900px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#button1 {
+  width: 15%;
+  margin-left: 40%;
+  margin-top: -10%;
+  position: relative;
+}
+
+#titre1 {
+  font-size: 400%;
+  margin-left: -40%;
+}
+
+#image1 {
+   width: 35%;
+   margin-top: 8%;
+   position: absolute;
+}
+
+#text16ans {
+  font-size: 14pt;
+  margin-left: 55%;
+  width: 45%;
+}
+
+#btn_up {
+  margin-left: 90%;
+  width: 30%;
+  
+}
+
+#timer {
+  margin-left: 2.5%;
+}
+
+#oeuf {
+  width: 30%;
+  margin-top: 0%;
+  position: relative;
+}  
+
+#text15PEvoReg2 {
+   text-align: center;
+}
+
+#text15PEvoReg{
+  text-align: center;
+}
+
+#textCompHF{
+  text-align: center;
+}
+
+#returnOnTop {
+    background: url('../images/boutons-02.png') no-repeat;
+    bottom: 1%;
+    cursor: pointer;
+    display: none;
+    filter: alpha(opacity = 50); /* IE < 8 */
+    height: 48px;
+    opacity: 0.5;
+    position: fixed;
+    right: 1%;
+    width: 48px;
+}
+
+#returnOnTop:hover {
+    filter: alpha(opacity = 100); /* IE < 8 */
+    opacity: 1;
 }

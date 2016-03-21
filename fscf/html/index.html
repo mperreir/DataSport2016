@@ -1,30 +1,146 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
+<html lang="fr">
   <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
+    <title>Hyblab 2016 DataSport FSCF</title>
+  
+    
+     <!-- CDN JQuery-->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.js"></script>
+    
+    
+     <!-- CDN HighCharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/4.2.3/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/fr/fr-r-all.js"></script>
+
+    
+     <!-- Déclaration de la feuille de style du document-->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    
+   
+     <!-- Script javascript perso pour les Viz-->
+    <script type="text/javascript" src="js/evoLic.js" defer></script>
+    <script type="text/javascript" src="js/interactif15P.js" defer></script>
+    <script type="text/javascript" src="js/comphf.js" defer></script>
+    <script type="text/javascript" src="js/compare.js" defer></script>
+    <script type="text/javascript" src="js/map.js" defer></script>
+    
   </head>
+  <div id="container">
   <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
     <header>
-      <h1>Hyblab 2016</h1>
+      <img id="header" src="images/header3.gif"/>
     </header>
-
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
+    
+    <img id="oeuf" src="images/oeuf.svg"/>
+    <div id="edito">
+      <span style="color: #f15125; font-size: 200%; font-weight: bold;">La FSCF est née en 1898</span> des patronages catholiques et proposait des pratiques gymniques dans un but hygiénique <br/> et de préparation militaire. La pratique s’adressait alors essentiellement <br/> à la jeunesse et plus particulièrement aux jeunes hommes afin <br/> de leur inculquer les valeurs traditionnelles. 
     </div>
+    
+    <img id="prix" src="images/prix.svg"/>
+    <div id="edito2">
+      <span style="color: #f15125; font-size: 200%; font-weight: bold;">En 1932,</span> l’association est alors reconnue d’utilité publique
+sous <br/> le nom de Fédération Gymnique et Sportive des patronages de
+France. <br/> Depuis, la pratique s’est fortement développée et
+diversifiée même <br/> si la gymnastique reste l’activité phare de
+l’association. 
+    </div>
+    
+    <div id="comparaison">
+      <h2>Répartition des gymnastes <br/> en Pays de la Loire</h2>
+    </div>
+    
+    <div>
+      <h1 id="titre1">
+        <center>
+          <span id="timer"></span>% <img src="images/pictos01.svg" alt=""/>
+          <br/>
+          <span id="timer2"></span>% <img src="images/pictos02.svg" alt=""/>
+          <br/>
+          <span id="timer3"></span>% <img src="images/pictos03.svg" alt=""/>
+          <br/><br/>
+        </center>
+      </h1>
+    </div>
+    
+    <div id="edito3">
+    En effet, aujourd’hui, la FSCF
+    représente <span style="color: #f15125;"><br/>43% des gymnastes
+    licenciés en Pays de la Loire</span> avec une
+    pratique qui s’est féminisée, <br/>au cours du 20ème siècle, de façon
+    très importante : 9868 licenciées en
+    GAF et GRS <br/>contre 1350 licenciés en
+    Gymnastique Artistique Masculine. La
+    fédération propose également <br/>de
+    nombreuses autres activités
+    permettant <br/>de répondre aux attentes
+    d’un public très large avec des valeurs
+    éducatives toujours <br/>très présentes.</div><br/><br/><br/><br/>
+    
+    <div id="textCompHF">
+      <h2>Inversion de la tendance</h2>
+      On ne s’imagine pas qu’il fut un temps où la gymnastique</br>
+
+s’adressait aux hommes ... 
+    </div>
+
+    <center>
+    <div id="comparaisonHF"></div>
+    </center>
+    
+    <img src="images/graph_loisir_compet.svg" alt="" id="image1"/>
+    <div id="text16ans">
+      <h2>Papa, Maman,</br>
+j’arrête la compét'</h2>
+      Actuellement, de nombreuses pratiques hybrides <br/>se développent offrant plus de libertés aux pratiquants. Ces pratiques attirent plus particulièrement un public jeune. D’un autre côté on constate qu’au sein de la FSCF des Pays de La Loire et de manière générale, <br/>les jeunes sont très nombreux à posséder une licence compétition entre onze et seize ans (4635 licences compétions à la FSCF) puis qu’une baisse très importante apparaît à partir de seize ans (1034 licences compétition à la FSCF). Cet arrêt peut être dû à plusieurs faits. <br/>Tout d’abord vers l’âge de seize ans de nombreux jeunes partent au lycée, celui-ci leur impose un emploi du temps et une charge de travail plus importante. <br/>L’établissement peut également être éloigné de leur lieu de pratique. Il devient alors difficile de maintenir <br/>un rythme régulier d’entraînement pour pouvoir poursuivre la compétition. C’est également la période <br/>de l’adolescence avec le rejet des règles et de l’autorité, le cadre fédéral peut alors être perçu comme trop contraignant, ce qui les pousse à se tourner <br/>vers les nouvelles pratiques qui le sont moins. <br/>Nous pensons donc que la FSCF devrait porter <br/>son intérêt vers le développement des pratiques hybrides émergentes afin de garder les jeunes dans le giron <br/>de la fédération. 
+    </div>
+    <br/><br/>
+
+    <div id="text15PEvoReg">
+      <h2>Qui monte ? Qui descend ?</h2>
+
+L’évolution du nombre de licenciés (en %) sur une olympiade<br/>
+
+pour toutes les catégories de sports proposées par la FSCF<br/>
+
+au niveau régional.
+    </div>
+    
+    <center>
+    <div id="evolutionLicencies"></div>
+    </center>
+    
+    <div id="text15PEvoReg2">Comparez l’évolution du nombre de licenciés en pourcentage <br/>
+
+avec le diagramme ci-dessous pour un aperçu plus détaillé.</div>
+    
+    <center>
+    <div id="interactif15Pratiques"></div>
+    <img id="button1" src="images/boutons-01.png"/>
+    </center>
+    <br/><br/><br/><br/><br/><br/>
+    
+    <div id="text_map">
+      <h2>Top / Flop par département</h2>
+      Cliquez sur un département pour afficher les activités proposées pour la FSCF, en hausse ou en baisse, en nombre de licenciés entre 2011-2015.
+    </div>
+    <div id="map"></div>
+    <div id="topflop"></div>
+    <br/><br/>
+    
+    <img id="btn_up" src="images/boutons-02.png"/>
+    
   </body>
+  <footer>
+    <img id="footer" src="images/footer1.jpg" alt="FOOTER FSCF"/>
+  </footer>
+  </div>
 </html>

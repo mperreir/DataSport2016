@@ -1,0 +1,397 @@
+{
+    "CD44": [
+        {
+            "arts_martiaux": [
+                {
+                    "a2011" : 253,
+                    "a2015" : 140
+                }],
+            "activites_de_pleine_nature": [
+                {
+                    "a2011" : 382,
+                    "a2015" : 348
+                }],
+            "activites_culturelles_et_artistiques": [
+                {
+                    "a2011" : 471,
+                    "a2015" : 358
+                }],
+            "sports_collectifs": [
+                {
+                    "a2011" : 342,
+                    "a2015" : 106
+                }],
+            "sports_de_raquettes": [
+                {
+                    "a2011" : 554,
+                    "a2015" : 113
+                }],
+            "sports_de_boules_et_precision": [
+                {
+                    "a2011" : 181,
+                    "a2015" : 81
+                }],
+            "musiques_et_chants": [
+                {
+                    "a2011" : 342,
+                    "a2015" : 115
+                }],
+            "eveil": [
+                {
+                    "a2011" : 674,
+                    "a2015" : 706
+                }],
+            "danses": [
+                {
+                    "a2011" : 399,
+                    "a2015" : 354
+                }],
+            "gymnastique_feminine": [
+                {
+                    "a2011" : 3600,
+                    "a2015" : 3707
+                }],
+            "gymnastique_masculine": [
+                {
+                    "a2011" : 1026,
+                    "a2015" : 807
+                }],
+            "gymnastique_rythmique": [
+                {
+                    "a2011" : 186,
+                    "a2015" : 165
+                }],
+            "twirling": [
+                {
+                    "a2011" : 629,
+                    "a2015" : 718
+                }],
+            "autres_activites_gymniques": [
+                {
+                    "a2011" : 337,
+                    "a2015" : 434
+                }],
+            "activites_de_remise_en_forme": [
+                {
+                    "a2011" : 1998,
+                    "a2015" : 1899
+                }]
+        }
+    ],
+    "CD49": [
+        {
+            "arts_martiaux": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "activites_de_pleine_nature": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 44
+                }],
+            "activites_culturelles_et_artistiques": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "sports_collectifs": [
+                {
+                    "a2011" : 1232,
+                    "a2015" : 935
+                }],
+            "sports_de_raquettes": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "sports_de_boules_et_precision": [
+                {
+                    "a2011" : 14,
+                    "a2015" : 15
+                }],
+            "musiques_et_chants": [
+                {
+                    "a2011" : 204,
+                    "a2015" : 195
+                }],
+            "eveil": [
+                {
+                    "a2011" : 448,
+                    "a2015" : 415
+                }],
+            "danses": [
+                {
+                    "a2011" : 30,
+                    "a2015" : 23
+                }],
+            "gymnastique_feminine": [
+                {
+                    "a2011" : 3560,
+                    "a2015" : 3737
+                }],
+            "gymnastique_masculine": [
+                {
+                    "a2011" : 355,
+                    "a2015" : 321
+                }],
+            "gymnastique_rythmique": [
+                {
+                    "a2011" : 66,
+                    "a2015" : 81
+                }],
+            "twirling": [
+                {
+                    "a2011" : 167,
+                    "a2015" : 196
+                }],
+            "autres_activites_gymniques": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 16
+                }],
+            "activites_de_remise_en_forme": [
+                {
+                    "a2011" : 504,
+                    "a2015" : 586
+                }]
+        }
+    ],
+    "CD53": [
+        {
+            "arts_martiaux": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "activites_de_pleine_nature": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "activites_culturelles_et_artistiques": [
+                {
+                    "a2011" : 23,
+                    "a2015" : 0
+                }],
+            "sports_collectifs": [
+                {
+                    "a2011" : 79,
+                    "a2015" : 70
+                }],
+            "sports_de_raquettes": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "sports_de_boules_et_precision": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "musiques_et_chants": [
+                {
+                    "a2011" : 66,
+                    "a2015" : 49
+                }],
+            "eveil": [
+                {
+                    "a2011" : 60,
+                    "a2015" : 10
+                }],
+            "danses": [
+                {
+                    "a2011" : 45,
+                    "a2015" : 31
+                }],
+            "gymnastique_feminine": [
+                {
+                    "a2011" : 496,
+                    "a2015" : 544
+                }],
+            "gymnastique_masculine": [
+                {
+                    "a2011" : 68,
+                    "a2015" : 52
+                }],
+            "gymnastique_rythmique": [
+                {
+                    "a2011" : 498,
+                    "a2015" : 546
+                }],
+            "twirling": [
+                {
+                    "a2011" : 123,
+                    "a2015" : 116
+                }],
+            "autres_activites_gymniques": [
+                {
+                    "a2011" : 18,
+                    "a2015" : 11
+                }],
+            "activites_de_remise_en_forme": [
+                {
+                    "a2011" : 50,
+                    "a2015" : 6
+                }]
+        }
+    ],
+    "CD72": [
+        {
+            "arts_martiaux": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "activites_de_pleine_nature": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "activites_culturelles_et_artistiques": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 42
+                }],
+            "sports_collectifs": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "sports_de_raquettes": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "sports_de_boules_et_precision": [
+                {
+                    "a2011" : 97,
+                    "a2015" : 28
+                }],
+            "musiques_et_chants": [
+                {
+                    "a2011" : 61,
+                    "a2015" : 37
+                }],
+            "eveil": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "danses": [
+                {
+                    "a2011" : 24,
+                    "a2015" : 53
+                }],
+            "gymnastique_feminine": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "gymnastique_masculine": [
+                {
+                    "a2011" : 10,
+                    "a2015" : 0
+                }],
+            "gymnastique_rythmique": [
+                {
+                    "a2011" : 102,
+                    "a2015" : 111
+                }],
+            "twirling": [
+                {
+                    "a2011" : 320,
+                    "a2015" : 368
+                }],
+            "autres_activites_gymniques": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "activites_de_remise_en_forme": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }]
+        }
+    ],
+    "CD85": [
+        {
+            "arts_martiaux": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "activites_de_pleine_nature": [
+                {
+                    "a2011" : 50,
+                    "a2015" : 58
+                }],
+            "activites_culturelles_et_artistiques": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "sports_collectifs": [
+                {
+                    "a2011" : 56,
+                    "a2015" : 64
+                }],
+            "sports_de_raquettes": [
+                {
+                    "a2011" : 18,
+                    "a2015" : 73
+                }],
+            "sports_de_boules_et_precision": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "musiques_et_chants": [
+                {
+                    "a2011" : 7,
+                    "a2015" : 0
+                }],
+            "eveil": [
+                {
+                    "a2011" : 159,
+                    "a2015" : 168
+                }],
+            "danses": [
+                {
+                    "a2011" : 16,
+                    "a2015" : 0
+                }],
+            "gymnastique_feminine": [
+                {
+                    "a2011" : 1053,
+                    "a2015" : 977
+                }],
+            "gymnastique_masculine": [
+                {
+                    "a2011" : 213,
+                    "a2015" : 170
+                }],
+            "gymnastique_rythmique": [
+                {
+                    "a2011" : 21,
+                    "a2015" : 0
+                }],
+            "twirling": [
+                {
+                    "a2011" : 916,
+                    "a2015" : 878
+                }],
+            "autres_activites_gymniques": [
+                {
+                    "a2011" : 0,
+                    "a2015" : 0
+                }],
+            "activites_de_remise_en_forme": [
+                {
+                    "a2011" : 579,
+                    "a2015" : 873
+                }]
+        }    
+    ]
+}
