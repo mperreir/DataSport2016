@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+/*Custom CSS
+*/
+body{
+    font-family: 'Montserrat' !important;
+    color: white;
+}
+
+h1, h2, h3{
+    -webkit-margin-before: 0.4em;
+    -webkit-margin-after: 0.4em;
+    text-align: center;
+}
+.page1 > h1, h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800;
+}
+.section{
+    background-color: #414141;
+}
+
+.header_slide{
+    vertical-align: top;
+    width: 100%;
+    height: 20%;
+}
+
+table{
+    width: 100%;
+    margin: 0px;
+}
+
+/*Section 0 (titre)
+*/
+#section0{
+    background-image: url("../../Ressources/Images/illus-fond170316.svg");
+	background-position: center center;
+	background-size: 100% 100%;
+    position: relative;
+}
+
+#section0 h1{
+    font-size: 3vh;
+}
+
+#section0 h2{
+    font-size: 2em;
+}
+
+#section0 span{
+	overflow: hidden;
+    margin: auto;
+    position: absolute;
+    top:0;bottom:0;
+    left:0;right:0;
+    width:60%;
+    height:100%;
+}
+
+.section0_anim {
+    z-index: 1;
+    position: absolute;
+    height: auto;
+}
+
+#avion {
+    top: 9%;
+    left: -10%;
+    width: 60px;
+}
+
+#cycliste {
+    top: 76%;
+    left: 0%;
+    width: 80px;
+}
+
+#nageur {
+    top: 55%;
+    left: 20%;
+    width: 60px;
+}
+
+/*Section1
+*/
+
+p{  
+    margin-top: 25px;
+    font-size: 1.2vw;
+    width: 90%;
+}
+
+
+/*Section2
+*/#infos_CROS{
+    float: left;
+    width: 30%;
+    margin-left: 3%;
+}
+
+#infos_CROS h1{
+    font-size: 1em;
+}
+
+#barchart{
+    float: right;
+    width: 57%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*Section6
+*/
+#section6 #map{
+    float: left;
+}
+
+#section6 path {
+  stroke: #414141;
+  stroke-width: 1px;
+}
+
+#section6 path:hover {
+  fill: #42ff97;
+}
+
+#section6 .chart text {
+  font: 12px sans-serif;
+    font-weight: bold;
+}
+#section6 .histogram-legend{
+    color:black;
+}
+
+/*section07*/
+
+#photo{
+    float: left;
+    margin-top: 8px;
+    width: 340px;
+    height: 307px;
+    padding-top: auto;
+    padding-left: 200px;
+
+}
+
+#texte1{
+    margin-top: 8px;
+    float: left;
+    width: 340px;
+    height: 307px;
+    padding-top: auto;
+/*    margin-left: 600px;*/
+    /*padding-bottom: 300px;*/
+
+}
+
+
+#logo{
+       margin-bottom: 1.5px;
+       padding-left: 200px;
+       padding-right: 100px;
+}
