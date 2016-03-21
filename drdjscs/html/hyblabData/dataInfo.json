@@ -1,0 +1,164 @@
+[
+    {
+        "nom": "Contrat Emploi Ville",
+        "date": "1996 - 1998",
+        "description": "Insertion des jeunes rencontrant des difficultés particulières à l'emploi.",
+        "age": "18-26 ans résidents dans les quartiers sensibles.",
+        "nature":"Rémunération",
+        "autre":"",
+        "id": 1
+    },
+    {
+        "nom": "Contrat Emploi Solidarité",
+        "date": "1990-2005",
+        "description": "Favoriser l'insertion professionnelle ds personnes sans emploi.",
+        "age": "Personnes sans emploi. Tous âges.",
+        "nature":"",
+        "autre":"",
+        "id": 2
+    },
+    {
+        "nom": "Contrat Emploi Consolidé",
+        "date": "1992-2005",
+        "description": "Destiné aux personnes en difficultés sur le marché du travail, ou ne pouvant pas bénéficier d'une formation à l'issu d'un Contrat Emploi Solidarité.",
+        "age": "Tous âges.",
+        "nature":"",
+        "autre":"",
+        "id": 3
+    },
+    {
+        "nom": "Emploi Jeune",
+        "date": "1997-2002",
+        "description": "Vise à développer des activités d'utilité sociale répondant à des besoins émergents ou non satisfaits.",
+        "age": "-26 ans jusqu'a 30 ans.",
+        "nature":"Rémunération",
+        "autre":"",
+        "id": 4
+    },
+    {
+        "nom": "Contrat d'Avenir",
+        "date": "2005-2010",
+        "description": "Pas de description...",
+        "age": "Les allocataires des minima sociaux.",
+        "nature":"Exonération",
+        "autre":"",
+        "id": 5
+    },
+    {
+        "nom": "Contrat d'Accompagnement dans l'Emploi",
+        "date": "2005-2010",
+        "description": "Faciliter l'insertion professionnelle des personnes rencontrant des difficultés à entrer sur la marché de l'emploi. Les emplois proposés visent à combler les besoins collectifs non satisfaits.",
+        "age": "Les personnes rencontrant d'importantes difficultés pour trouver un emploi.",
+        "nature":"Exonération",
+        "autre":"",
+        "id": 6
+    },
+    {
+        "nom": "Emploi Tremplin pour le Territoire",
+        "date": "2003-2012",
+        "description": "Soutenir la réalisation d'un projet de territoire. Créer des emplois pérennes.",
+        "age": "Les personnes rencontrant d'importantes difficultés pour trouver un emploi.",
+        "nature":"Rémunération",
+        "autre":"",
+        "id": 7
+    },
+    {
+        "nom": "Emploi Adulte Relais",
+        "date": "2000 à aujourd'hui",
+        "description": "Susciter par le financement de l'Etat, le développement d'activités visant à améliorer dans les quartiers relevant de la politique de la ville, les rapports sociaux dans les espaces publics ou entre les habitants et les services publics. Faciliter l'accès à un véritable emploi des personnes habitant ces mêmes quartiers et confrontées au problème de chômage.",
+        "age": "-30 ans et résider dans un quartier prioritaire, sans emploi ou être bénéficiaire d'un CUI-CAE.",
+        "nature":"Rémunération (80%)",
+        "autre":"",
+        "id": 8
+    },
+    {
+        "nom": "CUI-CAE",
+        "date": "2010 à aujourd'hui",
+        "description": "Insertion des personnes rencontrant des difficultés d'accès à l'emploi.",
+        "age": "Les personnes sans emploi rencontrant des difficultés sociales et professionnelles d'accès à l'emploi.",
+        "nature":"Exonération",
+        "autre":"",
+        "id": 9
+    },
+    {
+        "nom": "Emploi d'Avenir",
+        "date": "2012 à aujourd'hui",
+        "description": "Insertion des jeunes dans l'emploi, peu ou pas qualifiés rencontrant des difficultés d'accès à l'emploi.",
+        "age": "16-25 ans qui ont effectuées 6 mois de recherche d'emploi sur les 12 derniers mois. Jusqu'à 30 ans pour les personnes en situation de handicap. Niveau CAP/BEP maximum.",
+        "nature":"Rémunération (75%)",
+        "autre":"",
+        "id": 10
+    },
+    {
+        "nom": "Contrat de génération",
+        "date": "2013 à aujourd'hui",
+        "description": "Vise à favoriser le maintien dans l'emploi des séniors,l'insertion durable des jeunes dans l'emploi et la transmission de compétences dans l'entreprise.",
+        "age": "-26 ans, -30 ans pour les personnes en situation de handicap, +57 ans.",
+        "nature":"Rémunération",
+        "autre":"",
+        "id": 11
+    },
+    {
+        "nom": "Contrat de Professionnalisation",
+        "date": "2004 à aujourd'hui",
+        "description": "Insertion professionnelle des jeunes et réinsertion professionnelle des demandeurs d'emploi par l'acquisition d'une qualification.",
+        "age": "16-25 ans peu qualifiés. +26 ans ayant besoin d'un parcours de professionnalisation pour favoriser le retour vers l'emploi. +26 ans demandeurs d'emploi. Les bénéficiaires d'un CUI.Ceux ayant bénéficié du RSA, ASS, AAH.",
+        "nature":"Exonération et Rémunération",
+        "autre":"",
+        "id": 12
+    },
+    {
+        "nom": "Emploi PSE 5 ans",
+        "date": "1996-2009",
+        "description": "Favoriser la création d’emplois dans le champ associatif sportif.Inciter la professionnalisation de l’encadrement dans les associations sportives.",
+        "age": "Tous âges.",
+        "nature":"Rémunération",
+        "autre":"",
+        "id": 13
+    },
+    {
+        "nom": "Emploi PSE 4 ans",
+        "date": "2009-2013",
+        "description": "Pas de description...",
+        "age": "Tous âges.",
+        "nature":"Rémunération",
+        "autre":"",
+        "id": 14
+    },
+    {
+        "nom": "Emploi CNDS",
+        "date": "2013 à aujourd'hui",
+        "description": "Développement de la pratique et de l’emploi sportif.",
+        "age": "Tous âges.",
+        "nature":"Rémunération",
+        "autre":"",
+        "id": 15
+    },
+    {
+        "nom": "Emploi à Forte Utilité Sociale",
+        "date": "2010 à aujourd'hui",
+        "description": "Développer des emplois qui revêtent une forte utilité sociale au sein des petites associations sportives pour faciliter la pratique sportive des publics résidents en milieu rural ou dans des zones urbaines sensibles, ou connaissant des difficultés particulières d’accès.",
+        "age": "Les associations n’ayant pour l’instant ni les moyens nécessaires, ni les ressources financières disponibles pour bénéficier d’un quelconque contrat aidé.",
+        "nature":"Rémunération",
+        "autre":"",
+        "id": 16
+    },
+    {
+        "nom": "Emploi Citoyen",
+        "date": "2015 à aujourd'hui",
+        "description": "",
+        "age": "",
+        "nature":"",
+        "autre":"",
+        "id": 17
+    },
+    {
+        "nom": "Emploi Sportif Qualifié",
+        "date": "2015 à aujourd'hui",
+        "description": "Faciliter la pratique sportive des publics résidents en milieu rural ou dans des zones urbaines sensibles, ou connaissant des difficultés particulières d’accès (habitants des quartiers en difficulté, personnes handicapées, jeunes filles et pratiques féminines ..).",
+        "age": "",
+        "nature":"Rémunération",
+        "autre":"",
+        "id": 18
+    }
+]

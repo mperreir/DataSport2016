@@ -1,0 +1,2678 @@
+var association = {  
+   "type":"geojson",
+   "data":{  
+      "type":"FeatureCollection",
+      "features":[  
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.5144335,
+                  47.2890178
+               ]
+            },
+            "properties":{  
+               "title":"Tennis Club",
+               "marker-symbol":"circle",
+               "description":"74 rue de Kervenel, Le Croizic"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.914807,
+                  47.360732
+               ]
+            },
+            "properties":{  
+               "title":"Association sportive du golf de Savenay",
+               "marker-symbol":"circle",
+               "description":"Le Chambeau, Savenay"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.598125,
+                  47.2427737
+               ]
+            },
+            "properties":{  
+               "title":"Sté Nantaise de Tir",
+               "marker-symbol":"circle",
+               "description":"21 avenue de Fontainebleau, Saint-Herblain"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5220919,
+                  47.3324729
+               ]
+            },
+            "properties":{  
+               "title":"Jeune Garde de l’Erdre (maintenant association TT sucéen)",
+               "marker-symbol":"circle",
+               "description":"561 route de la Papinière, Suce/Erdre"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"CD Judo",
+               "marker-symbol":"circle",
+               "description":"44 rue Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6535962,
+                  47.2108277
+               ]
+            },
+            "properties":{  
+               "title":"St Herblain Basket Ball",
+               "marker-symbol":"circle",
+               "description":"Avenue des sports, St Herblain"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.1014211,
+                  47.1175051
+               ]
+            },
+            "properties":{  
+               "title":"L’Optimist",
+               "marker-symbol":"circle",
+               "description":"Maison des Associations 4 rue de Lorraine, Pornic"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.473746,
+                  47.1660458
+               ]
+            },
+            "properties":{  
+               "title":"Vertou Basket ball",
+               "marker-symbol":"circle",
+               "description":"4 Ter rue Alexandre Arnaud, Vertou"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"CD Volley Ball",
+               "marker-symbol":"circle",
+               "description":"44 rue Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.52178,
+                  47.2355104
+               ]
+            },
+            "properties":{  
+               "title":"Nantes Atlantique Rink Hockey",
+               "marker-symbol":"circle",
+               "description":"29 rue du Croissant, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5967354,
+                  47.2540691
+               ]
+            },
+            "properties":{  
+               "title":"Amicale Laïque du Petit Chantilly",
+               "marker-symbol":"circle",
+               "description":"1 rue des Pins, Orvault"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5418404,
+                  47.2047411
+               ]
+            },
+            "properties":{  
+               "title":"TTCNA",
+               "marker-symbol":"circle",
+               "description":"2 Rue Louis Joxé, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.2064242,
+                  47.2820937
+               ]
+            },
+            "properties":{  
+               "title":"Entente Sportive des Clubs de lOcéan 44",
+               "marker-symbol":"circle",
+               "description":"10 rue Georges Clemenceau, St Nazaire"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.553621,
+                  47.218371
+               ]
+            },
+            "properties":{  
+               "title":"Nantes Atlantique Hockey Glace",
+               "marker-symbol":"circle",
+               "description":"Boulevard du Petit Port (Patinoire du Petit Port), Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"CD Canoë Kayak",
+               "marker-symbol":"circle",
+               "description":"44 rue Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.548918,
+                  47.1794968
+               ]
+            },
+            "properties":{  
+               "title":"Rezé Basket 44",
+               "marker-symbol":"circle",
+               "description":"16 avenue des Gâts, Rezé"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5609451,
+                  47.2166141
+               ]
+            },
+            "properties":{  
+               "title":"La Nantaise",
+               "marker-symbol":"circle",
+               "description":"10 Rue la Fayette, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.414152,
+                  47.2836874
+               ]
+            },
+            "properties":{  
+               "title":"Centre Equestre",
+               "marker-symbol":"circle",
+               "description":"5 avenue des Rosières, La Baule"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5669343,
+                  47.1816282
+               ]
+            },
+            "properties":{  
+               "title":"Rezé Tennis Club",
+               "marker-symbol":"circle",
+               "description":"Rue des champs Garnier, Rezé"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.3850628,
+                  47.7018983
+               ]
+            },
+            "properties":{  
+               "title":"Voltigeurs Castelbriantais Football",
+               "marker-symbol":"circle",
+               "description":"Rue A.Lincoln, Chateaubriant"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.651444,
+                  47.210335
+               ]
+            },
+            "properties":{  
+               "title":"SAELaïque",
+               "marker-symbol":"circle",
+               "description":"Chemin des Frères Legoux, Rue de la Crête, St Herblain"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6042924,
+                  47.1994698
+               ]
+            },
+            "properties":{  
+               "title":"Léo Lagrange Natation",
+               "marker-symbol":"circle",
+               "description":"2 Boulevard Jean-Moulin, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5271578,
+                  47.2359313
+               ]
+            },
+            "properties":{  
+               "title":"Tennis Club de l Atlantique",
+               "marker-symbol":"circle",
+               "description":"82 rue de la Marrière, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.425372,
+                  47.269852
+               ]
+            },
+            "properties":{  
+               "title":"CNBPP Voile Le Pouliguen",
+               "marker-symbol":"circle",
+               "description":"77 rue François Bougouin, Le Pouliguen"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.1014211,
+                  47.1175051
+               ]
+            },
+            "properties":{  
+               "title":"Pornic Basket",
+               "marker-symbol":"circle",
+               "description":"4 rue de lorraine, Pornic"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6042924,
+                  47.1994698
+               ]
+            },
+            "properties":{  
+               "title":"Leo Lagrange Natation",
+               "marker-symbol":"circle",
+               "description":"2 Boulevard Jean Moulin, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.1109108,
+                  47.1117248
+               ]
+            },
+            "properties":{  
+               "title":"Club nautique de Pornic",
+               "marker-symbol":"circle",
+               "description":"Avenue de la Noëveillard, Pornic"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.0400922,
+                  47.0824065
+               ]
+            },
+            "properties":{  
+               "title":"Avenir Tennis",
+               "marker-symbol":"circle",
+               "description":"55 Bis Rue Georges Clemenceau, La Bernerie en Retz"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.0526555,
+                  47.1188761
+               ]
+            },
+            "properties":{  
+               "title":"Tennis Club",
+               "marker-symbol":"circle",
+               "description":"Avenue des Sports, Le clion, Pornic"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.1855239,
+                  47.3749066
+               ]
+            },
+            "properties":{  
+               "title":"Ancenis Basket",
+               "marker-symbol":"circle",
+               "description":"320, r du Pressoir Rouge, Ancenis"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.486812,
+                  47.296241
+               ]
+            },
+            "properties":{  
+               "title":"Carquefou Handball",
+               "marker-symbol":"circle",
+               "description":"Complexe sportif du Moulin Boisseau, Carquefou"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5806891,
+                  47.214072
+               ]
+            },
+            "properties":{  
+               "title":"ASPTT NANTES section natation",
+               "marker-symbol":"circle",
+               "description":"42 Rue Appert, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  4.0180389,
+                  48.2875754
+               ]
+            },
+            "properties":{  
+               "title":"Handball Club Sainte Luce",
+               "marker-symbol":"circle",
+               "description":"5 rue Toulouse Lautrec, Sainte Luce"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.2328658,
+                  47.27185
+               ]
+            },
+            "properties":{  
+               "title":"SNVBA",
+               "marker-symbol":"circle",
+               "description":"18 avenue Pierre Coubertin, Saint Nazaire"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.1109108,
+                  47.1117248
+               ]
+            },
+            "properties":{  
+               "title":"Club Nautique Pornic",
+               "marker-symbol":"circle",
+               "description":"Avenue de la Noëveillard, Pornic"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5414193,
+                  47.3454286
+               ]
+            },
+            "properties":{  
+               "title":"Club Canoë Kayak SucéErdre",
+               "marker-symbol":"circle",
+               "description":"23 Rue Mahere, Suce/Erdre"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.5430069,
+                  47.38076
+               ]
+            },
+            "properties":{  
+               "title":"Nautisme en Pays Blanc",
+               "marker-symbol":"circle",
+               "description":"Rue du Fort Baron, Piriac"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5400512,
+                  47.1952888
+               ]
+            },
+            "properties":{  
+               "title":"ASC Bonne Garde",
+               "marker-symbol":"circle",
+               "description":"15 Rue Gabriel Goudy, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.1109108,
+                  47.1117248
+               ]
+            },
+            "properties":{  
+               "title":"Club Nautique Pornic",
+               "marker-symbol":"circle",
+               "description":"Avenue de la Noëveillard, Pornic"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.2590917,
+                  47.0776163
+               ]
+            },
+            "properties":{  
+               "title":"Gétigné Canoë Kayak",
+               "marker-symbol":"circle",
+               "description":"Rue de Terbin, Gétigné"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.340571,
+                  47.263426
+               ]
+            },
+            "properties":{  
+               "title":"Canoë Kayak Presquîle côte damour",
+               "marker-symbol":"circle",
+               "description":"PORT D'ECHOUAGE, Pornichet"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.1651846,
+                  47.1715269
+               ]
+            },
+            "properties":{  
+               "title":"Centre Nautique Cormorane",
+               "marker-symbol":"circle",
+               "description":"Boulevard de l'Océan, Saint Michel Chef chef"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5806891,
+                  47.214072
+               ]
+            },
+            "properties":{  
+               "title":"ASPTT Nantes section natation",
+               "marker-symbol":"circle",
+               "description":"42 Rue Appert, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.5430069,
+                  47.38076
+               ]
+            },
+            "properties":{  
+               "title":"Nautisme en Pays Blanc",
+               "marker-symbol":"circle",
+               "description":"Rue du Fort Baron, Piriac"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.4297589,
+                  47.328003
+               ]
+            },
+            "properties":{  
+               "title":"US presquîle de Guérande",
+               "marker-symbol":"circle",
+               "description":"Salle des sports de Kerbiniou, Guérande"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.3713789,
+                  47.2532519
+               ]
+            },
+            "properties":{  
+               "title":"OLAC Voile  CAP",
+               "marker-symbol":"circle",
+               "description":"1 route du lac, Saint Julien de Concelles"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.0383886,
+                  47.0799111
+               ]
+            },
+            "properties":{  
+               "title":"Société des Régates de la Bernerie en Retz",
+               "marker-symbol":"circle",
+               "description":"Rue de la mer, La Bernerie en Retz"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.544721,
+                  47.380007
+               ]
+            },
+            "properties":{  
+               "title":"Nautisme en Pays Blanc",
+               "marker-symbol":"circle",
+               "description":"Maison de la mer, Piriac"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.425372,
+                  47.269852
+               ]
+            },
+            "properties":{  
+               "title":"CNBPP",
+               "marker-symbol":"circle",
+               "description":"77 rue François Bougouin, Le Pouliguen"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.553621,
+                  47.218371
+               ]
+            },
+            "properties":{  
+               "title":"CARNABAL",
+               "marker-symbol":"circle",
+               "description":"CSC Malakoff, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5360471,
+                  47.1631301
+               ]
+            },
+            "properties":{  
+               "title":"Rezé GRS",
+               "marker-symbol":"circle",
+               "description":"22 rue de la Robinière, Rezé"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.104444,
+                  47.115491
+               ]
+            },
+            "properties":{  
+               "title":"Club Nautique de Pornic",
+               "marker-symbol":"circle",
+               "description":"Base de la  Noëveillard, Pornic"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"CD Hockey sur Gazon",
+               "marker-symbol":"circle",
+               "description":"Maison des sports 44 rue Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5412209,
+                  47.2035756
+               ]
+            },
+            "properties":{  
+               "title":"Association Handisport Nantes",
+               "marker-symbol":"circle",
+               "description":"10 Rue Anatole de Monzie, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.2627414,
+                  47.2644683
+               ]
+            },
+            "properties":{  
+               "title":"Sporting Grammairien Rugby",
+               "marker-symbol":"circle",
+               "description":"Rue Albert Einstein, Saint-Nazaire"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.2328658,
+                  47.27185
+               ]
+            },
+            "properties":{  
+               "title":"SNVBA",
+               "marker-symbol":"circle",
+               "description":"18 Boulevard Pierre de Coubertin, Saint-Nazaire"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"CD Handball",
+               "marker-symbol":"circle",
+               "description":"44 rue Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.391721,
+                  47.290809
+               ]
+            },
+            "properties":{  
+               "title":"La Baule Tennis Club",
+               "marker-symbol":"circle",
+               "description":"45 avenue de l’étoile, LA BAULE"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6209287,
+                  47.3295829
+               ]
+            },
+            "properties":{  
+               "title":"Sympho Foot Trélières",
+               "marker-symbol":"circle",
+               "description":"57 rue de la mairie, Treillières"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.0993626,
+                  47.4398874
+               ]
+            },
+            "properties":{  
+               "title":"Avenir Omnisport Pontchatelain section Handball (dissous en 2014)",
+               "marker-symbol":"circle",
+               "description":"2 allée des bourreliers, Pontchateau"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.0383886,
+                  47.0799111
+               ]
+            },
+            "properties":{  
+               "title":"Société des Régates de la Bernerie en Retz",
+               "marker-symbol":"circle",
+               "description":"Rue de la mer, La Bernerie en Retz"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"Groupement demployeurs Sport 44",
+               "marker-symbol":"circle",
+               "description":"Maison des sports 44 rue Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.4687839,
+                  47.2552805
+               ]
+            },
+            "properties":{  
+               "title":"USJA Gym Féminine",
+               "marker-symbol":"circle",
+               "description":"14 rue de la minais, Sainte Luce sur Loire"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.162965,
+                  47.414029
+               ]
+            },
+            "properties":{  
+               "title":"Centre de plein air de Pied Bercy",
+               "marker-symbol":"circle",
+               "description":"La Senserie, La Roche Blanche"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.4876811,
+                  47.20969
+               ]
+            },
+            "properties":{  
+               "title":"Saint-Sébastien Sud Loire Handball",
+               "marker-symbol":"circle",
+               "description":"97 avenue du Général de Gaulle, Saint -Sébastien sur Loire"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.4323586,
+                  47.2820067
+               ]
+            },
+            "properties":{  
+               "title":"Budokan 44 La Baule",
+               "marker-symbol":"circle",
+               "description":"15 boulevard de la libération, Le Pouliguen"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.265137,
+                  47.16092
+               ]
+            },
+            "properties":{  
+               "title":"PAMPRES VALLETAIS BASKET",
+               "marker-symbol":"circle",
+               "description":"les dorices, VALLET"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.610585,
+                  47.20743
+               ]
+            },
+            "properties":{  
+               "title":"CD GYMNASTIQUE",
+               "marker-symbol":"circle",
+               "description":"Maison des sports, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6126658,
+                  47.2071525
+               ]
+            },
+            "properties":{  
+               "title":"Groupement demployeurs Sport 44",
+               "marker-symbol":"circle",
+               "description":"Maison des sports, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5460257,
+                  47.2457796
+               ]
+            },
+            "properties":{  
+               "title":"CLUB LEO LAGRANGE OMNISPORTS (aviron)",
+               "marker-symbol":"circle",
+               "description":"44, rue d'Allonville, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.5451956,
+                  47.3807636
+               ]
+            },
+            "properties":{  
+               "title":"NAUTISME EN PAYS BLANC",
+               "marker-symbol":"circle",
+               "description":"Maison de la mer - BP 20, PIRIAC SUR MER"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.235661,
+                  47.271659
+               ]
+            },
+            "properties":{  
+               "title":"Atlantique Basket club st nazaire",
+               "marker-symbol":"circle",
+               "description":"\"Maison des sports "
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.8181541,
+                  46.9883972
+               ]
+            },
+            "properties":{  
+               "title":"ALLIANCE SUD RETZ",
+               "marker-symbol":"circle",
+               "description":"bd P. de Coubertin\", ST NAZAIRE"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.0087239,
+                  47.0627211
+               ]
+            },
+            "properties":{  
+               "title":"CLUB NAUTIQUE DES MOUTIERS",
+               "marker-symbol":"circle",
+               "description":"Stade la Rabine, MACHECOUL"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.553621,
+                  47.218371
+               ]
+            },
+            "properties":{  
+               "title":"LA NANTAISE",
+               "marker-symbol":"circle",
+               "description":"Rue du sauvetage, LES MOUTIERS EN RETZ"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.463295,
+                  47.319622
+               ]
+            },
+            "properties":{  
+               "title":"LES ARCHERS DE LERDRE",
+               "marker-symbol":"circle",
+               "description":"10, rue Lafayette, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.464684,
+                  47.1883579
+               ]
+            },
+            "properties":{  
+               "title":"ST SEBASTIEN NATATION",
+               "marker-symbol":"circle",
+               "description":"La Tournière, CARQUEFOU"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  4.0488919,
+                  48.2826233
+               ]
+            },
+            "properties":{  
+               "title":"CD Basket 44",
+               "marker-symbol":"circle",
+               "description":"80, allée de la Plée, BASSE-GOULAINE"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.425372,
+                  47.269852
+               ]
+            },
+            "properties":{  
+               "title":"Cercle nautique La Baule\nPornichet (CNBPP)",
+               "marker-symbol":"circle",
+               "description":"5, rue Ch Colomb, STE LUCE"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5808103,
+                  47.2288162
+               ]
+            },
+            "properties":{  
+               "title":"STADE NANTAIS ATHLETIC CLUB",
+               "marker-symbol":"circle",
+               "description":"77, rue François Bougouin, LE POULIGUEN"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.297638,
+                  47.3271352
+               ]
+            },
+            "properties":{  
+               "title":"SAINT ANDRE BASKET BALL",
+               "marker-symbol":"circle",
+               "description":"74, bd des anglais, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.2169774,
+                  47.2776277
+               ]
+            },
+            "properties":{  
+               "title":"SAINT NAZAIRE HANDBALL",
+               "marker-symbol":"circle",
+               "description":"33, route de la rue Jean, ST ANDRE DES EAUX"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5501918,
+                  47.2096169
+               ]
+            },
+            "properties":{  
+               "title":"NANTES NATATION",
+               "marker-symbol":"circle",
+               "description":"63, rue de la paix, ST NAZAIRE"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"CD Montagne et escalade",
+               "marker-symbol":"circle",
+               "description":"13, chaussée de la Madeleine, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.4981164,
+                  47.2090108
+               ]
+            },
+            "properties":{  
+               "title":"PING PONG CLUB ST SEBASTIENLOIRE",
+               "marker-symbol":"circle",
+               "description":"44, rue R. Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5592073,
+                  47.2292786
+               ]
+            },
+            "properties":{  
+               "title":"UGSEL 44",
+               "marker-symbol":"circle",
+               "description":"rue de Chantepie, St SEBASTIEN"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5806891,
+                  47.214072
+               ]
+            },
+            "properties":{  
+               "title":"ASPTT NANTES section escalade",
+               "marker-symbol":"circle",
+               "description":"15, rue Leglas Maurice, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.527222,
+                  47.2149327
+               ]
+            },
+            "properties":{  
+               "title":"JUDO CLUB MALAKOFF",
+               "marker-symbol":"circle",
+               "description":"42, rue Apperrt, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  0.1080011,
+                  49.4933602
+               ]
+            },
+            "properties":{  
+               "title":"FédérationAssociation",
+               "marker-symbol":"circle",
+               "description":"10, rue d'Angleterre, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.544721,
+                  47.380007
+               ]
+            },
+            "properties":{  
+               "title":"NAUTISME EN PAYS BLANC",
+               "marker-symbol":"circle",
+               "description":"Maison de la mer, PIRIAC SUR MER"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.3391497,
+                  47.2721439
+               ]
+            },
+            "properties":{  
+               "title":"UNION SPORTIVE LOIRE ET DIVATTE",
+               "marker-symbol":"circle",
+               "description":"1, rue des forges, LA CHAPELLE BASSE MER"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.553621,
+                  47.218371
+               ]
+            },
+            "properties":{  
+               "title":"NEC ESCRIME",
+               "marker-symbol":"circle",
+               "description":"Complexe sportif  Mangin Beaulieu, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6036106,
+                  47.2104646
+               ]
+            },
+            "properties":{  
+               "title":"Fête le mur",
+               "marker-symbol":"circle",
+               "description":"65, route de Saint Herblain, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.3347364,
+                  47.2596232
+               ]
+            },
+            "properties":{  
+               "title":"Ninon Tennis Club",
+               "marker-symbol":"circle",
+               "description":"1, av. St Sébastien, PORNICHET"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.2328658,
+                  47.27185
+               ]
+            },
+            "properties":{  
+               "title":"ST NAZAIRE VOLLEY-BALL ATLANTIQUE",
+               "marker-symbol":"circle",
+               "description":"18, av. Pierre de Coubertin, ST NAZAIRE"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -0.5890559,
+                  44.8442693
+               ]
+            },
+            "properties":{  
+               "title":"La Cambronnaise",
+               "marker-symbol":"circle",
+               "description":"3, rue de la Croix Blanche BP 93421, St SEBASTIEN"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5629783,
+                  47.2335548
+               ]
+            },
+            "properties":{  
+               "title":"Sté Hippique",
+               "marker-symbol":"circle",
+               "description":"31, rue Vidié, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.4876811,
+                  47.20969
+               ]
+            },
+            "properties":{  
+               "title":"St Sébastien Sud Loire handball",
+               "marker-symbol":"circle",
+               "description":"97, rue du Général de Gaulle, St SEBASTIEN"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.374042,
+                  47.0587064
+               ]
+            },
+            "properties":{  
+               "title":"Association Pont Caffino",
+               "marker-symbol":"circle",
+               "description":"\"Chez M. Christian GOUERNE"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  0.1080011,
+                  49.4933602
+               ]
+            },
+            "properties":{  
+               "title":"FédérationAssociation",
+               "marker-symbol":"circle",
+               "description":"18, rue du champ St Père\", REMOUILLE"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.184628,
+                  47.3137188
+               ]
+            },
+            "properties":{  
+               "title":"Rugby Club Trignacais",
+               "marker-symbol":"circle",
+               "description":"Maison du rugby, rue de la Gare, TRIGNAC"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.1855239,
+                  47.3749066
+               ]
+            },
+            "properties":{  
+               "title":"Ancenis Hand Ball",
+               "marker-symbol":"circle",
+               "description":"320, rue du Pressoir Rouge, ANCENIS"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.2450699,
+                  47.1086791
+               ]
+            },
+            "properties":{  
+               "title":"GR Clissonnaise",
+               "marker-symbol":"circle",
+               "description":"4, rue du Four-La Dourie, CLISSON"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5770607,
+                  47.2551767
+               ]
+            },
+            "properties":{  
+               "title":"Temple des Arts Martiaux",
+               "marker-symbol":"circle",
+               "description":"108, Route de Rennes, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6036106,
+                  47.2104646
+               ]
+            },
+            "properties":{  
+               "title":"Jeunesse Sportive et Culturelle Bellevue (section judo)",
+               "marker-symbol":"circle",
+               "description":"65, rte de St Herblain, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.505178,
+                  47.2399104
+               ]
+            },
+            "properties":{  
+               "title":"St Médard Doulon",
+               "marker-symbol":"circle",
+               "description":"72, rue du Pontereau, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.501864,
+                  47.2098319
+               ]
+            },
+            "properties":{  
+               "title":"GSSB St Sébastien Football",
+               "marker-symbol":"circle",
+               "description":"1 bd, des Pas Enchantés, St SEBASTIEN"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.610585,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"Comité départemental USEP 44",
+               "marker-symbol":"circle",
+               "description":"\"Maison des sports, "
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.549863,
+                  47.2123571
+               ]
+            },
+            "properties":{  
+               "title":"CD Karaté",
+               "marker-symbol":"circle",
+               "description":"44 rue Romain Rolland\", Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5881014,
+                  47.2306003
+               ]
+            },
+            "properties":{  
+               "title":"CD EPGV 44",
+               "marker-symbol":"circle",
+               "description":"9, rue des Olivettes, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5198764,
+                  47.2692701
+               ]
+            },
+            "properties":{  
+               "title":"Volley Ball Nantes Atlantique",
+               "marker-symbol":"circle",
+               "description":"67 rue du Breil, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5618836,
+                  47.2539358
+               ]
+            },
+            "properties":{  
+               "title":"Amicale Laïque de la Chauvinière",
+               "marker-symbol":"circle",
+               "description":"478, route de St Joseph, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.104444,
+                  47.115491
+               ]
+            },
+            "properties":{  
+               "title":"Côte de Jade Athlétic Club",
+               "marker-symbol":"circle",
+               "description":"4, bis rue des Renards, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5374624,
+                  47.2224207
+               ]
+            },
+            "properties":{  
+               "title":"St Rogatien Basket Ball",
+               "marker-symbol":"circle",
+               "description":"Maison des associations, PORNIC"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5877724,
+                  47.2287932
+               ]
+            },
+            "properties":{  
+               "title":"St Nazaire Atlantique Natation",
+               "marker-symbol":"circle",
+               "description":"47, rue de Coulmiers, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.345547,
+                  47.2714894
+               ]
+            },
+            "properties":{  
+               "title":"ASCE Escoublac (section gymnastique)",
+               "marker-symbol":"circle",
+               "description":"Avenue Pierre Coubertin, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.552567,
+                  47.372126
+               ]
+            },
+            "properties":{  
+               "title":"CD Hockey sur Gazon",
+               "marker-symbol":"circle",
+               "description":"102, avenue St Georges, LA BAULE ESCOUBLAC"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  0.1080011,
+                  49.4933602
+               ]
+            },
+            "properties":{  
+               "title":"AS Preux",
+               "marker-symbol":"circle",
+               "description":"148, rue du Véridet, PIRIAC SUR MER"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.618332,
+                  47.2209674
+               ]
+            },
+            "properties":{  
+               "title":"Entente Sportive Pornichet",
+               "marker-symbol":"circle",
+               "description":"23,bis Jean-Jaurès, St-Herblain"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.3325464,
+                  47.2571889
+               ]
+            },
+            "properties":{  
+               "title":"Bellevue AF Boxe anglaise",
+               "marker-symbol":"circle",
+               "description":"Complexe sportif Aubry / Prieux avenue de Prieux, Pornichet"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6030397,
+                  47.2104069
+               ]
+            },
+            "properties":{  
+               "title":"ASGEN",
+               "marker-symbol":"circle",
+               "description":"61, route de Saint-herblain, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5554291,
+                  47.2203727
+               ]
+            },
+            "properties":{  
+               "title":"US Guérande Presquîle",
+               "marker-symbol":"circle",
+               "description":"8, rue Moquechien, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  3.728711,
+                  46.159759
+               ]
+            },
+            "properties":{  
+               "title":"ASPTT NANTES",
+               "marker-symbol":"circle",
+               "description":"MAIRIE DE GUERANDE, Guérande"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5806891,
+                  47.214072
+               ]
+            },
+            "properties":{  
+               "title":"Tennis Club de lAtlantique",
+               "marker-symbol":"circle",
+               "description":"42, rue Appert, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5259139,
+                  47.2602621
+               ]
+            },
+            "properties":{  
+               "title":"Racing Club Nantais",
+               "marker-symbol":"circle",
+               "description":"2, rue Arthur Raimbaud, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5338749,
+                  47.210619
+               ]
+            },
+            "properties":{  
+               "title":"CD Rollers",
+               "marker-symbol":"circle",
+               "description":"Stade Michel LECOINTRE Bd Maurice BERTIN, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"Espoir Sud Loire",
+               "marker-symbol":"circle",
+               "description":"Maison des Sports 44, bd Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5154922,
+                  47.0554928
+               ]
+            },
+            "properties":{  
+               "title":"Elan des Sorinières",
+               "marker-symbol":"circle",
+               "description":"37, rue Jean-Baptiste LEGEAY, Géneston"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5293824,
+                  47.1545015
+               ]
+            },
+            "properties":{  
+               "title":"GE44",
+               "marker-symbol":"circle",
+               "description":"5, rue des quarterons, Les Sorinières"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"FC Rezé",
+               "marker-symbol":"circle",
+               "description":"Maison des Sports 44, bd Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5538883,
+                  47.1894214
+               ]
+            },
+            "properties":{  
+               "title":"GE 44 Tennis de Table",
+               "marker-symbol":"circle",
+               "description":"10, rue Victor HUGO, REZE"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  0.1080011,
+                  49.4933602
+               ]
+            },
+            "properties":{  
+               "title":"FédérationAssociation",
+               "marker-symbol":"circle",
+               "description":"Maison des Sports 44, bd Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.4561782,
+                  47.2659665
+               ]
+            },
+            "properties":{  
+               "title":"CD Basket 44",
+               "marker-symbol":"circle",
+               "description":"5, rue Christophe Colomb, Ste-Luce"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.553305,
+                  47.2816002
+               ]
+            },
+            "properties":{  
+               "title":"District Foot",
+               "marker-symbol":"circle",
+               "description":"14, rue du Leinster, La Chapelle sur Erdre"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"CD Lutte",
+               "marker-symbol":"circle",
+               "description":"Maison des Sports 44, bd Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6105854,
+                  47.2074317
+               ]
+            },
+            "properties":{  
+               "title":"CD Sports adaptés",
+               "marker-symbol":"circle",
+               "description":"Maison des Sports 44, bd Romain Rolland, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5618836,
+                  47.2539358
+               ]
+            },
+            "properties":{  
+               "title":"AL Chauvinière Basket",
+               "marker-symbol":"circle",
+               "description":"4, rue des Renards, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6845797,
+                  47.5928313
+               ]
+            },
+            "properties":{  
+               "title":"Avenir Sportif Marsacais",
+               "marker-symbol":"circle",
+               "description":"Route de Vay, MARSAC SUR DON"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.340571,
+                  47.263426
+               ]
+            },
+            "properties":{  
+               "title":"ES Pornichet",
+               "marker-symbol":"circle",
+               "description":"60, avenue de Prieux Noîte n°4, Pornichet"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5389076,
+                  47.1951053
+               ]
+            },
+            "properties":{  
+               "title":"AS Bonne Garde",
+               "marker-symbol":"circle",
+               "description":"20, rue du Frère Louis, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6036106,
+                  47.2104646
+               ]
+            },
+            "properties":{  
+               "title":"Fête le Mur",
+               "marker-symbol":"circle",
+               "description":"65, route de St Herblain, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.2515868,
+                  47.2670249
+               ]
+            },
+            "properties":{  
+               "title":"Groupe Nazairien USEP",
+               "marker-symbol":"circle",
+               "description":"Ecole A. Chédid 3, rue des Hibiscus, St-Nazaire"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.385788,
+                  47.253399
+               ]
+            },
+            "properties":{  
+               "title":"OLAC  CAP",
+               "marker-symbol":"circle",
+               "description":"Rue des Heurtauds hôtel de Ville, St Julien des Concelles"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.544721,
+                  47.380007
+               ]
+            },
+            "properties":{  
+               "title":"Nautisme en Pays Blanc",
+               "marker-symbol":"circle",
+               "description":"Maison de la mer BP 20, Piriac sur mer"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.569382,
+                  47.190616
+               ]
+            },
+            "properties":{  
+               "title":"Rezé Basket 44",
+               "marker-symbol":"circle",
+               "description":"Avenue des Gâts BP 23, Rezé"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5615143,
+                  47.2327925
+               ]
+            },
+            "properties":{  
+               "title":"CCS St Félix",
+               "marker-symbol":"circle",
+               "description":"7 Rue St Jean Baptiste de la Salle, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.486812,
+                  47.296241
+               ]
+            },
+            "properties":{  
+               "title":"Carquefou Hand",
+               "marker-symbol":"circle",
+               "description":"Complexe sportif du Moulin Boisseau, CARQUEFOU"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.491053,
+                  47.1853127
+               ]
+            },
+            "properties":{  
+               "title":"USSA Vertou",
+               "marker-symbol":"circle",
+               "description":"26, rue de la Maladrie, Vertou"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5314611,
+                  47.1859497
+               ]
+            },
+            "properties":{  
+               "title":"Nantes Sud 98",
+               "marker-symbol":"circle",
+               "description":"Rue de l'Olivraie, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.1651846,
+                  47.1715269
+               ]
+            },
+            "properties":{  
+               "title":"CN Cormorane",
+               "marker-symbol":"circle",
+               "description":"Bd del'Océan, St Michel Chef Chef"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5808103,
+                  47.2288162
+               ]
+            },
+            "properties":{  
+               "title":"Stade Nantais Rugby",
+               "marker-symbol":"circle",
+               "description":"74, Bd des Anglais, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.553621,
+                  47.218371
+               ]
+            },
+            "properties":{  
+               "title":"Racing Club Nantes Athlétisme",
+               "marker-symbol":"circle",
+               "description":"Bd Maurice Bertin Stade Michel Lecointre, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.553621,
+                  47.218371
+               ]
+            },
+            "properties":{  
+               "title":"Racing Club Nantes Athlétisme",
+               "marker-symbol":"circle",
+               "description":"Bd Maurice Bertin Stade Michel Lecointre, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.569382,
+                  47.190616
+               ]
+            },
+            "properties":{  
+               "title":"ASBR Badminton",
+               "marker-symbol":"circle",
+               "description":"Rue de la Guilarnière, Rezé"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.3489404,
+                  47.2369207
+               ]
+            },
+            "properties":{  
+               "title":"AS Badminton Lorousaine",
+               "marker-symbol":"circle",
+               "description":"Place de Rosmadec, Le Loroux Bottereau"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.642905,
+                  47.036878
+               ]
+            },
+            "properties":{  
+               "title":"USSM Basket St Philbert",
+               "marker-symbol":"circle",
+               "description":"Mairie-Rue de l'Hôtel de Ville, St Philbert de Grand Lieu"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5051622,
+                  47.2386299
+               ]
+            },
+            "properties":{  
+               "title":"ASC St Médard de Doulon Basket Ball",
+               "marker-symbol":"circle",
+               "description":"Rue du Pontereau, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5220919,
+                  47.3324729
+               ]
+            },
+            "properties":{  
+               "title":"Canoë Kayak Club SucéErdre",
+               "marker-symbol":"circle",
+               "description":"158, rue de la Papinière, Sucé/Erdre"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.283218,
+                  47.160811
+               ]
+            },
+            "properties":{  
+               "title":"Vélo Sport Valletais",
+               "marker-symbol":"circle",
+               "description":"La Nouillère, Vallet"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.651444,
+                  47.210335
+               ]
+            },
+            "properties":{  
+               "title":"Association Promotion Equestre",
+               "marker-symbol":"circle",
+               "description":"Rue Jean-Jacques Rousseau Ferme du Houssay, St-Herblain"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.278291,
+                  47.09569
+               ]
+            },
+            "properties":{  
+               "title":"Etoile de Clisson Football",
+               "marker-symbol":"circle",
+               "description":"''Le Cellier'' Route de Bournigal, Clisson"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5079228,
+                  47.2098258
+               ]
+            },
+            "properties":{  
+               "title":"GS St Sébastien Football",
+               "marker-symbol":"circle",
+               "description":"Bd des Pas Enchantés, St Sébastien/Loire"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.344145,
+                  47.235584
+               ]
+            },
+            "properties":{  
+               "title":"LLOSC football (Le Landreau. le Loroux)",
+               "marker-symbol":"circle",
+               "description":"Rue de la Tannerie, Le Loroux Bottereau"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.2282657,
+                  47.2721019
+               ]
+            },
+            "properties":{  
+               "title":"Saint-NazaireAS Football",
+               "marker-symbol":"circle",
+               "description":"Avenue Léo Lagrange, St-Nazaire"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.2329186,
+                  47.2716206
+               ]
+            },
+            "properties":{  
+               "title":"SNVBA",
+               "marker-symbol":"circle",
+               "description":"Bd Pierre de Coubertin, St-Nazaire"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.600736,
+                  47.2577595
+               ]
+            },
+            "properties":{  
+               "title":"Hand Ball Club dOrvault",
+               "marker-symbol":"circle",
+               "description":"Rue d'Auteuil, Orvault"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5189883,
+                  47.2702716
+               ]
+            },
+            "properties":{  
+               "title":"Nantes St Joseph Tennis de Table",
+               "marker-symbol":"circle",
+               "description":"496, route de St joseph, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5401117,
+                  47.2794482
+               ]
+            },
+            "properties":{  
+               "title":"CVNA Voile",
+               "marker-symbol":"circle",
+               "description":"Route de la Jonelière, Chapelle/Erdre"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.544721,
+                  47.380007
+               ]
+            },
+            "properties":{  
+               "title":"Nautisme en Pays Blanc",
+               "marker-symbol":"circle",
+               "description":"Maison de la mer BP 20, Piriac sur Mer"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -2.4297589,
+                  47.328003
+               ]
+            },
+            "properties":{  
+               "title":"Pays Blanc Gymnastique St Aubin",
+               "marker-symbol":"circle",
+               "description":"Place du Marché au Bois – Mairie, Guérande"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5790672,
+                  47.230429
+               ]
+            },
+            "properties":{  
+               "title":"CSC Laëtitia",
+               "marker-symbol":"circle",
+               "description":"Rue de la Chanoine Larose, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5521257,
+                  47.2123649
+               ]
+            },
+            "properties":{  
+               "title":"CD UFOLEP 44",
+               "marker-symbol":"circle",
+               "description":"9, rue des Olivettes BP 74107, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.553621,
+                  47.218371
+               ]
+            },
+            "properties":{  
+               "title":"UGSEL 44",
+               "marker-symbol":"circle",
+               "description":"Rue Leglas Maurice BP, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6012264,
+                  47.2103234
+               ]
+            },
+            "properties":{  
+               "title":"Métallo Sport Chantenaysien Football",
+               "marker-symbol":"circle",
+               "description":"45, route de St Herblain, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.6012264,
+                  47.2103234
+               ]
+            },
+            "properties":{  
+               "title":"Métallo Sport Chantenaysien Football",
+               "marker-symbol":"circle",
+               "description":"45, route de St Herblain, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5360764,
+                  47.2463463
+               ]
+            },
+            "properties":{  
+               "title":"Amicale Don Bosco Omnisport Tennis",
+               "marker-symbol":"circle",
+               "description":"25, Chemin de Bonneville, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.5363633,
+                  47.2466537
+               ]
+            },
+            "properties":{  
+               "title":"Amicale Don Bosco Omnisport (Bad. rando)",
+               "marker-symbol":"circle",
+               "description":"26, Chemin de Bonneville, Nantes"
+            }
+         },
+         {  
+            "type":"Feature",
+            "geometry":{  
+               "type":"Point",
+               "coordinates":[  
+                  -1.486812,
+                  47.296241
+               ]
+            },
+            "properties":{  
+               "title":"Carquefou Hockey Club",
+               "marker-symbol":"circle",
+               "description":"Stade Moulin Boisseau, Carquefou"
+            }
+         }
+      ]
+   }
+}

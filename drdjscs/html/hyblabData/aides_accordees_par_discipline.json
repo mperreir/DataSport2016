@@ -1,0 +1,134 @@
+﻿[
+  {
+    "name": "101-ATHLETISME",
+    "value": 0.04
+  },
+  {
+    "name": "105-BASKET-BALL",
+    "value": 0.09
+  },
+  {
+    "name": "109-EQUITATION",
+    "value": 0.02
+  },
+  {
+    "name": "113-GYMNASTIQUE",
+    "value": 0.02
+  },
+  {
+    "name": "117-JUDO",
+    "value": 0.02
+  },
+  {
+    "name": "123-TENNIS",
+    "value": 0.03
+  },
+  {
+    "name": "128-VOILE",
+    "value": 0.05
+  },
+  {
+    "name": "232-MONTAGNE ESCALADE",
+    "value": 0.01
+  },
+  {
+    "name": "248-RUGBY A XIII",
+    "value": 0.01
+  },
+  {
+    "name": "413-UFOLEP",
+    "value": 0.02
+  },
+  {
+    "name": "605-U.S.E.P.",
+    "value": 0.01
+  },
+  {
+    "name": "102-AVIRON",
+    "value": 0.02
+  },
+  {
+    "name": "106-BOXE",
+    "value": 0.01
+  },
+  {
+    "name": "110-ESCRIME",
+    "value": 0
+  },
+  {
+    "name": "115-HANDBALL",
+    "value": 0.06
+  },
+  {
+    "name": "118-LUTTE",
+    "value": 0.01
+  },
+  {
+    "name": "124-TENNIS DE TABLE",
+    "value": 0.03
+  },
+  {
+    "name": "129-VOLLEY-BALL",
+    "value": 0.04
+  },
+  {
+    "name": "246-ROLLER SPORTS",
+    "value": 0.01
+  },
+  {
+    "name": "402-E.P.G.V.",
+    "value": 0.02
+  },
+  {
+    "name": "420-FEDERATION SPORTIVE DES ASPTT",
+    "value": 0.02
+  },
+  {
+    "name": "719-FETE LE MUR (Non agréée)",
+    "value": 0.02
+  },
+  {
+    "name": "902-CLUBS MULTISPORTS AUTONOMES",
+    "value": 0.07
+  },
+  {
+    "name": "602-U.G.S.E.L",
+    "value": 0.02
+  },
+  {
+    "name": "408-F.S.C.F.",
+    "value": 0.06
+  },
+  {
+    "name": "247-RUGBY",
+    "value": 0.02
+  },
+  {
+    "name": "225-GOLF",
+    "value": 0.01
+  },
+  {
+    "name": "126-TIR A LARC",
+    "value": 0.01
+  },
+  {
+    "name": "119-NATATION",
+    "value": 0.03
+  },
+  {
+    "name": "116-HOCKEY/GAZON",
+    "value": 0.01
+  },
+  {
+    "name": "111-FOOTBALL",
+    "value": 0.15
+  },
+  {
+    "name": "108-CYCLISME",
+    "value": 0.01
+  },
+  {
+    "name": "103-BADMINTON",
+    "value": 0.04
+  }
+]

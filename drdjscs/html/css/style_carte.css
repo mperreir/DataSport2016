@@ -1,0 +1,140 @@
+#map { position:absolute; top:150px; bottom:0; width:100%; }
+
+#menu {
+    background: #fff;
+
+    z-index: -1;
+    top: 0px;
+    right: 10px;
+    border-radius: 3px;
+    width: 160px;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Open Sans', sans-serif;
+}
+
+#menu a {
+    top : 10px;
+    font-size: 18px;
+    color: #00af9B;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+#menu a:last-child {
+    border: none;
+}
+
+#menu a:hover {
+    background-color: #f8f8f8;
+    color: #404040;
+}
+
+#menu a.active {
+    background-color: #65CEC2;
+    color: #00af9B;
+}
+
+#menu a.active:hover {
+    background: #65CEC2;
+}
+
+.mapboxgl-popup {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.marker-title {
+    font-weight: 700;
+}
+
+/////////// BARRE DE RECHERCHE ////////////////
+
+#contenu_rechercher{
+   font-size: 18px;
+    position : absolute;
+    bottom : 100px;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    top : 500px;
+     vertical-align: bottom;
+}
+
+#rechercher{
+    font-size: 18px;
+    color: #00af9B;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 0px;
+    border-radius: 3px;
+    width: 160px;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Open Sans', sans-serif;
+}
+
+///////////// FIN BARRE DE RECHERCHE ///////////////
+.mapboxgl-popup-close-button{
+    font-size: 100%;
+    position : absolute;
+    left : 0;
+    top : 0;
+    border : none;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+    
+}
+
+.mapboxgl-popup-content {
+    width : 100px;
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.1);
+
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+#menu{
+    position : relative;
+    top : 10px;
+}
+
+#recentrer{
+        font-size: 18px;
+    color: #00af9B;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+
+    right: -550px;
+
+    border-radius: 3px;
+    width: 160px;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Open Sans', sans-serif;
+}
+
+

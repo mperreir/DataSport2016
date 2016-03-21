@@ -1,5 +1,5 @@
-*~
-temp
 node_modules
 bower_components
-.c9
+dist
+out
+coverage

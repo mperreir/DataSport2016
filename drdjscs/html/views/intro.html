@@ -1,0 +1,142 @@
+
+<header>
+    <div class="logoLeft">
+         <h1>HYBLAB</h1>
+         
+        
+    </div>
+    <div class="menuRight">
+        <ul>
+            <li class="active"><a href="#intro"><img src="icons/curve_fill.svg"><p>Emploi CNDS</p></a></li>
+            <li><a href="#pageone"><img src="icons/dot_stroke.svg"><p>La carte</p></a></li>
+            <!-- <li><a href="#pagetwo"><img src="icons/map_stroke.svg"><p>Les associations</p></a></li> -->
+            <li><a href="#pagethree"><img src="icons/map_stroke.svg"><p>À propos</p></a></li>
+        </ul>
+    </div>
+    <div class="infosRight">
+
+    </div>
+</header>
+
+<div id="content" class="sideBar animated bounceInRight">
+<div class="sideBartotal">
+<div class="sideBar1">
+    <div class="infos">
+
+        <div class="description">
+
+            <h1>{{courbeDescriptionTitre}}</h1>    
+            <p><strong>Description: </strong>{{courbeDescription}}</p>
+            <br>
+
+            <div class="profile">
+                <div ng-if="activeMe" class="">
+                <p><img src="icons/profile.svg">{{courbeDescriptionAge}}</p>
+                <p><strong>Nature: </strong>{{courbeDescriptionNature}}</p>
+                <br>
+                <p>{{courbeDescriptionAutre}}</p>
+                </div>        
+            </div>
+        </div>
+        <div class="line lineSide"></div>
+        <div class="blocData">
+            <div class="numbersData">
+                <li ng-init="manualStartTarget=0">
+                    <h1><p  counter
+                        value="manualStartVar"
+                        effect="'easeOutQuint'"
+                        duration="5000"
+                        to="emploisCreer">
+                      {{ manualStartVar | number:0 }}
+                    </p></h1>
+                </li>
+                <!--h1>{{emploisCreer}}</h1-->
+                <h2>EMPLOI CRÉES</h2>
+            </div>
+            <div class="miniGraph">
+                <div>   
+                    <nvd3 class="with-3d-shadow with-transitions" options='optionBarChart' data='barData'></nvd3>    
+                </div>
+            </div>
+        </div>
+        <div class="btn btnEnsavoir">Qui béneficie de cette aide ?</div>
+
+     <!--    <div class="btn btnEnsavoir"><a href="#pageone">En savoir plus...</a></div> -->
+    </div>
+    </div>
+    <div class="sideBar2">
+        <h3>Quels sont les sports qui profitent de l'aide CNDS ?</h3>
+    <div style="width : 300px;">
+
+        <canvas id="pie" class="chart chart-pie style="margin-top:40px"
+
+                chart-data="introPieDataReduce" chart-options="introPieChartOptions" chart-labels="introPieListReduce" chart-legend="false" chart-colours="[ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360']">
+        </canvas>
+    </div>
+    <div style="width : 350px; color:#80919B;padding-top:20px;padding-bottom:20px">
+        Cependant, en observant de plus près, on s'apperçoit que le Rugby à XIII est le sport le plus aidé si on regarde par rapport au nombres de clubs dans les comités départementaux.
+    </div>
+    <div style="width : 300px;">
+         <canvas id="pie" class="chart chart-pie"
+                chart-data="introPieDataReduce2" chart-options="introPieChartOptions" chart-labels="introPieListReduce2" chart-legend="false" chart-colours="[ '#4D5360','#00ADF9', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360']">
+        </canvas> 
+    </div>
+    <div style="width : 350px; color:#80919B;padding-top:20px;padding-bottom:20px;">
+        Cependant, en observant de plus près, on s'apperçoit que le Rugby à XIII est le sport le plus aidé si on regarde par rapport au nombres de clubs dans les comités départementaux.
+    </div>
+    </div>
+    </div>
+</div>
+
+<div class="mainContent">
+<div class="mainTitle">
+<h1>Création d'emplois par le CNDS</h1>
+</div>
+<div class="timeIndicator">
+<div class="timeIndicator2">
+    <img src="icons/clock-02-01.png">
+    <p>{{titre}}</p>
+    </div>
+</div>
+<div class="filtersRight">
+    <div class="filtersRightBox">
+        <h1>Financement:</h1>
+        <div class="filtersType">
+        <ul>
+            <li class="etat">État</li>
+            <li class="cnds">CNDS</li>
+            <li class="autres">Autres</li>
+
+
+        </ul>
+        </div>
+
+        </div>
+        <div class="controlTimeline">
+            <div class="goBack" ng-click="reset(); activeMe = false;">Reset</div>
+            <div class="zoom More"><img src="icons/zoom-01.svg"></div>
+            <div class="zoom Less"><img src="icons/zoom-02.svg"></div> 
+        </div>
+    </div>
+
+<div class="deuxCourbes">
+    <div>   
+        <nvd3 class="with-3d-shadow with-transitions" options='options' data='data'></nvd3>    
+    </div>
+
+</div>    
+    <div class="aideTimeline">     
+        <div class="btnTimeline aide2 aide" ng-click="update19972005(); activeMe = true;"><h3>Contrat Emploi Consolidé</h3></div>
+        <div class="btnTimeline aide3 aide" ng-click="update20052010(); activeMe = true;"><h3>Contrat d'Avenir</h3></div>
+        <div class="btnTimeline aide4 aide" ng-click="update19972002(); activeMe = true;"><h3>Emploi Jeune</h3></div>
+        <div class="btnTimeline aide5 aide" ng-click="update20102015(); activeMe = true;"><h3>Emploi à Forte Utilité Sociale</h3></div>
+        <div class="btnTimeline aide6 aide" ng-click="update20042015(); activeMe = true;"><h3>Contrat de Professionnalisation</h3></div>
+        <div class="btnTimeline aide7 aide" ng-click="update20092013(); activeMe = true;"><h3>Emplois PSE 4 ans</h3></div>
+        <div class="btnTimeline aide10 aide" ng-click="update20122015(); activeMe = true;"><h3>Emploi d'Avenir</h3></div>
+        <div class="btnTimeline aide11 aide" ng-click="update20132015g(); activeMe = true;"><h3>Contrat de génération</h3></div>
+        <div class="btnTimeline aide12 aide" ng-click="update20132015c(); activeMe = true;"><h3>Emploi CNDS</h3></div>
+        <div class="btnTimeline aide13 aide" ng-click="update19962009(); activeMe = true;"><h3>Emploi PSE  5 ans</h3></div>
+    </div>    
+ 
+</div>
+<script src="js/scriptFront.js"></script>
