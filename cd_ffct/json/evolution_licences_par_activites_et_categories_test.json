@@ -1,0 +1,68 @@
+[
+    {
+        "label": "ROUTE",
+        "children": [
+            { "label": "Élite professionnel", "men": 5, "women": null },
+            { "label": "1re catégorie", "men": 29, "women": 1 },
+            { "label": "2e catégorie", "men": 59, "women": 3 },
+            { "label": "3e catégorie", "men": 133, "women": 4 },
+            { "label": "Junior", "men": 64, "women": 7 },
+            { "label": "Pass'cyclisme open", "men": 210, "women": null },
+            { "label": "Pass'cyclisme", "men": 464, "women": 8 },
+            { "label": "Cadet", "men": 126, "women": 7 },
+            { "label": "Minime", "men": 114, "women": 11 },
+            { "label": "Benjamin", "men": 85, "women": 10 },
+            { "label": "Pupille", "men": 58, "women": 14 },
+            { "label": "Poussin", "men": 44, "women": 9 },
+            { "label": "Prélicencié", "men": 14, "women": 4 },
+            { "label": "Pass'sport nature", "men": 4, "women": null },
+            { "label": "Pass'cyclosportive", "men": 128, "women": 8 },
+            { "label": "Pass'sport urbain", "men": null, "women": null },
+            { "label": "Pass'loisir", "men": 288, "women": 37 }
+        ]
+    },
+    {
+        "label": "VTT",
+        "children": [
+            { "label": "Élite professionnel", "men": null, "women": null },
+            { "label": "1re catégorie", "men": null, "women": null },
+            { "label": "2e catégorie", "men": 1, "women": null },
+            { "label": "3e catégorie", "men": 9, "women": null },
+            { "label": "Junior", "men": 7, "women": 3 },
+            { "label": "Pass'cyclisme open", "men": 3, "women": null },
+            { "label": "Pass'cyclisme", "men": 19, "women": null },
+            { "label": "Cadet", "men": 33, "women": 1 },
+            { "label": "Minime", "men": 28, "women": 3 },
+            { "label": "Benjamin", "men": 25, "women": 1 },
+            { "label": "Pupille", "men": 16, "women": null },
+            { "label": "Poussin", "men": 6, "women": 1 },
+            { "label": "Prélicencié", "men": null, "women": null },
+            { "label": "Pass'sport nature", "men": 27, "women": 2 },
+            { "label": "Pass'cyclosportive", "men": 2, "women": null },
+            { "label": "Pass'sport urbain", "men": null, "women": null },
+            { "label": "Pass'loisir", "men": 51, "women": 1 }
+        ]
+    },
+    {
+        "label": "BMX",
+        "children": [
+            { "label": "Élite professionnel", "men": null, "women": null },
+            { "label": "1re catégorie", "men": null, "women": 1 },
+            { "label": "2e catégorie", "men": 2, "women": 1 },
+            { "label": "3e catégorie", "men": 17, "women": 3 },
+            { "label": "Junior", "men": 15, "women": 1 },
+            { "label": "Pass'cyclisme open", "men": 3, "women": null },
+            { "label": "Pass'cyclisme", "men": 67, "women": 3 },
+            { "label": "Cadet", "men": 68, "women": 1 },
+            { "label": "Minime", "men": 93, "women": 3 },
+            { "label": "Benjamin", "men": 113, "women": 8 },
+            { "label": "Pupille", "men": 124, "women": 6 },
+            { "label": "Poussin", "men": 109, "women": 8 },
+            { "label": "Prélicencié", "men": 34, "women": 1 },
+            { "label": "Pass'sport nature", "men": null, "women": null },
+            { "label": "Pass'cyclosportive", "men": null, "women": null },
+            { "label": "Pass'sport urbain", "men": null, "women": null },
+            { "label": "Pass'loisir", "men": 27, "women": 6 }
+        ]
+    }
+]

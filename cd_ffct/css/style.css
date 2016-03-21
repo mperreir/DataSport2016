@@ -1,0 +1,441 @@
+/*  **************************************************  */
+/*                      Général                         */
+/*  **************************************************  */
+body {
+    background-color: #FFFFDF;
+}
+
+p {
+    font-family: "source sans pro";
+}
+
+h1{
+    font-family: "source sans pro";
+    color: #494949;
+}
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.section {
+    
+    padding: 60px 60px 60px 60px;
+}
+
+.section h1 {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+    
+    margin: 0;
+}
+
+/*  **************************************************  */
+/*                      Accueil                         */
+/*  **************************************************  */
+#accueil h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;    
+    position: absolute;
+    padding: 0;
+    margin-left: 450px;
+}
+
+#chaine {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-bottom: 60px;
+}
+
+#lampe {
+    position: absolute;
+    margin-top: 312px;
+    margin-left: 820px;
+    margin-bottom: 60px;
+}
+
+#pedale {
+    position: absolute;
+    margin-top: 243px;
+    margin-left: 40px;
+    margin-bottom: 60px;
+}
+
+#roue {
+    position: absolute;
+    margin-top: 180px;
+    margin-left: 202px;
+     -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+#selle {
+    position: absolute;
+    margin-top: 154px;
+    margin-left: 567px;
+    margin-bottom: 60px;
+}
+
+#sonette {
+    position: absolute;
+    margin-top: 337px;
+    margin-left: 600px;
+    margin-bottom: 60px;
+}
+
+
+/*  **************************************************  */
+/*                      Edito                           */
+/*  **************************************************  */
+#edito {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    text-overflow: ellipsis;
+    padding: 60px 80px 60px 80px;
+    background-image: url('../img/edito/sonnette_édito.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+#edito p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#edito a {
+    color: #F56D34;
+}
+
+/*  **************************************************  */
+/*                      Dataviz1                        */
+/*  **************************************************  */
+text {
+    font-family: "source sans pro";
+
+}
+
+foreignObject {
+    font-family: "source sans pro";
+    font-size: 12px;
+    color: #FFFFDF;
+    width: 100px;
+    height: 10px;
+}
+
+rect.child,
+rect.parent {
+    fill: #9BC8D9;
+    stroke: #FFFFDF;
+}
+
+rect.parent,
+.grandparent rect {
+    stroke-width: 1px;
+}
+
+.grandparent rect {
+    width : 40px;
+    fill: rgb(244, 220, 120);
+
+}
+
+.children rect.parent {
+    cursor: pointer;
+}
+
+.grandparent text{
+    cursor: pointer;
+    fill : #C56534;
+}
+
+.children rect.parent {
+    fill: #F56D34;
+    opacity: .9;
+}
+
+#dataviz1 {
+    width: 840px;
+
+}
+
+#titreDataviz1 {
+    width: 600px;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-family: "source sans pro";
+}
+
+#titreDataviz1 p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 62px;
+}
+
+#infos_licencies {
+    display: inline-block;
+    float: right;
+    width: 190px;
+    color: #C56534;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.nombreLicencies {
+    
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.texteLicencies {
+
+    font-size: 29px;
+    font-weight: bold;
+}
+
+#nomRegion {
+    
+    font-size: 15px;
+}
+
+#infosCalcul {
+    color: #494949;
+    font-size: 15px;
+    font-style: italic;
+    text-align: left;
+    margin-top: 30px;
+}
+
+#dataviz1 p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#sep {
+    border-color: #C56534;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border: 1px solid;
+    width: 90px;
+}
+
+/*  **************************************************  */
+/*                      Dataviz2                        */
+/*  **************************************************  */
+#pieChart text {
+    /* Impossible de sélectionner le texte dans le pieChart
+    empeche le texte de se surligner quand on clique deux fois par erreur dessus */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.arc text {
+    text-anchor: middle;
+    color: #FFFFDF;
+}
+
+/* Contours des quartiers du pieChart */
+.arc path {
+  stroke: #FFF;
+}
+
+/* Barre des abscisses */
+.x.axis path {
+    display: none;
+}
+
+#dataviz2 text {
+    color: #494949;
+}
+
+#dataviz2 path,
+.arc text {
+    cursor: pointer;
+}
+
+
+.tooltipPieChart {
+    /*background: #eee;*/
+    /*box-shadow: 0 0 5px #494949;*/
+    color: #494949;
+    display: none;
+    font-size: 12px;
+    left: 130px;
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+    top: 95px;
+    width: 150px;
+    z-index: 10;
+    font-family: "source sans pro";
+}
+
+.tooltipBarChart {
+    /*background: #eee;*/
+    /*box-shadow: 0 0 5px #494949;*/
+    color: #494949;
+    display: none;
+    font-size: 12px;
+    left: 130px;
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+    top: 95px;
+    width: 150px;
+    z-index: 10;
+    font-family: "source sans pro";
+}
+/*  **************************************************  */
+/*                      Dataviz3                        */
+/*  **************************************************  */
+
+
+.section #map {
+    
+    margin-top: 30px;
+}
+
+ #popup {
+
+     width: 100%;
+     height: 100%;
+}
+
+#map p {
+    
+    margin-top : 0px;
+    margin-bottom : 2px;
+    color : #C56534;
+    
+}
+
+/*  **************************************************  */
+/*                      Footer                         */
+/*  **************************************************  */
+#derniere_page {
+    padding-top: 0px;
+}
+.nomEleve {
+    font-style: italic;
+    font-size: 15px;
+    margin: 0px;
+    text-align: center;
+}
+
+#presentation_ecoles {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    top : 5%;
+}
+
+.ecole {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+        
+}
+
+.nom_ecole {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 29px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#staps {
+    margin-left: 50px;
+    margin-bottom: 10px;
+    
+}
+
+#infos_complementaires {
+    text-align: center;
+}
+#infos_complementaires p {
+    font-style: italic;
+    font-size: 15px;
+    margin-top : 2px;
+    margin-bottom: 0px;
+}
+/*Liens de bas de page*/
+#infos_complementaires a {
+    color : #F56D34;
+}
+
+/*  **************************************************  */
+/*                      Autres sports                         */
+/*  **************************************************  */
+
+#pratiques_insolites{
+    
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.sport_inso {
+    
+    width: 30%;
+    display: inline-block;
+    margin-top : 10%;
+}
+
+.nom_sport {
+    
+    font-style: italic;
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+    color: #494949;
+}
+/*  **************************************************  */
+/*                      Bandeau                         */
+/*  **************************************************  */
+#bandeau {
+    padding: 8px;
+}
+
+#bandeau li {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 12px;
+}
+
+#bandeau img {
+    height: 46px;
+}
+
+#bandeau #datasport {
+    margin: 20px 0;
+    height: 100px;
+    float: left;
+}
+
+#bandeau ul {
+    text-align: center;
+}
+
+#bandeau .institutionnel {
+    height: 48px;
+}

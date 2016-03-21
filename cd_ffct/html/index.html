@@ -1,30 +1,146 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
-  <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
-    <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-    <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
-    <div id="container">
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Les pratiques du vélo en Loire-Atlantique</title>
+        
+        <!-- Font -->
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,200italic,300italic,600,400italic,600italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="lib/fullpage/jquery.fullPage.css" />
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.15.0/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="container">
+            
+            <!-- Première page - Accueil -->
+            <div id="accueil" class="section">
+                <h1>Les pratiques du vélo<br/>en Loire-Atlantique</h1>
+                <img id="chaine" class = "floating" src="img/homepage/chaine.png" alt="chaine" />
+                <img id="lampe" class = "floating" src="img/homepage/lampe.png" alt="lampe" />
+                <img id="pedale" class = "floating" src="img/homepage/pedale.png" alt="pédale" />
+                <img id="roue" src="img/homepage/roue.png" alt="roue" />
+                <img id="selle" class = "floating" src="img/homepage/selle.png" alt="selle" />
+                <img id="sonette" class = "floating" src="img/homepage/sonette.png" alt="sonette" />
+            </div>
+            
+            <!-- Deuxième page - Edito -->
+            <div id="edito" class="section">
+                <p>Aujourd'hui, on peut constater une grande popularité du vélo.<br/>La Loire-Atlantique est au cœur de ce phénomène :<br/> elle développe des pistes cyclables, des parkings à vélo,<br/> des événements cycliques et des parcours aménagés.<br/> Les usages sont divers : de l'usage quotidien à la compétition sportive<br/> en passant par le cyclo-tourisme, cette pratique propose des alternatives pour tous les passionnés.</p><br/>
+                <p>Besoin d'un guide ? Nous vous proposons ici de découvrir des chiffres clés sur les pratiques du vélo en Loire-Atlantique.<br/>Vous sentez-vous d'<a href="#3 ">humeur compétitive</a> ?<br/> Ou préférez-vous découvrir le patrimoine de la Loire-Atlantique à vélo grâce au <a href="#5">cyclo-tourisme</a> ?</p>
+            </div>
+            
+            <!-- Troisième page - Dataviz1 : Treemap régions -->
+            <div class="section">
+                <div id="dataviz1">
+                </div>
+            </div>
+            
+            <!-- Quatrième page - Dataviz2 : piechart + barchart -->
+            <div id="dataviz2" class="section"></div>
+            
+            <!-- Cinquième page - Map -->
+            <div class="section" id = "map">
+                <h1>VOUS ÊTES INTERESSÉS PAR LE CYCLISME DE LOISIR ? VOICI LES CLUBS DE CYCLOTOURISME DE LOIRE-ATLANTIQUE !</h1>
+                
+                <div id = "map"></div>
+            
+            </div>
+            
+            <!-- Sixième page - GIFS -->
+            <div class="section">
+                <h1>Pour les curieux, découvrez des pratiques plus insolites du vélo, comme par exemple...</h1>
+                <div id= "pratiques_insolites">                    
+                    <div class = "sport_inso" id = "tandem">
+                        <img class = "img_sport" src = "img/Divers/tandem_anim_2.gif" alt = "tandem"/>
+                        <p class = "nom_sport" >TANDEM</p>
+                    </div>
+                    <div class = "sport_inso" id = "monocycle">
+                        <img class = "img_sport" src = "img/Divers/monocycle_anim_transparent.gif" alt = "monocycle"/>
+                        <p class = "nom_sport">MONOCYCLE</p>
+                    </div>
+                    <div class = "sport_inso" id = "bike_polo">
+                        <img class = "img_sport" src = "img/Divers/bike_polo_anim2.gif" alt = "bike polo"/>
+                        <p class = "nom_sport">BIKE POLO</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dernière page -->
+            <div class="section" id = "derniere_page">
+                <div id= "presentation_ecoles">
+                    <div class = "ecole" id = "polytech">
+                        <img class = "img_ecole" src = "img/footer/pedale.png" alt = "Polytech"/>
+                        <p class = "nom_ecole" >développement</p>
+                        <p class = "nomEleve">Cyril Caron</p>
+                        <p class = "nomEleve">Damien Le Flohic</p>
+                    </div>
+                    <div class = "ecole" id = "staps">
+                        <img class = "img_ecole" src = "img/footer/sonette.png" alt = "Staps"/>
+                        <p class = "nom_ecole">éditorial et communication</p>
+                        <p class = "nomEleve">Floran Provost</p>
+                        <p class = "nomEleve">Antoine Rousseau</p>
+                        <p class = "nomEleve">Valentin Huet</p>
+                        <p class = "nomEleve">Baptiste Zerren</p>
+                        <p class = "nomEleve">Benjamin Petit</p><br/>
+                        <p class = "nomEleve">Beverly Laurans</p>
+                        <p class = "nomEleve">Thomas Rondard</p>                        
+                    </div>
+                    <div class = "ecole" id = "design">
+                        <img class = "img_ecole" src = "img/footer/roue.png" alt = "Ecole de design"/>
+                        <p class = "nom_ecole">design</p>
+                        <p class = "nomEleve">Charline Finster</p>
+                        <p class = "nomEleve">Lola Feldman</p>
+                        <p class = "nomEleve">Thomas Blevin</p>                        
+                    </div>
+                </div>
+                <div id = "infos_complementaires">
+                    <p>Datasport 2016 - Les pratiques du vélo en Loire-Atlantique</p>
+                    <p><a href = "http://www.hyblab.fr/octocycle-3/">En savoir plus</a></p>
+                    <p><a href="https://storify.com/hyblab2016/le-cyclisme">Storify</a></p>
+                </div>
+                <footer>
+                    <div id="bandeau">
+                        <!-- Logo Datasport -->
+                        <a href="http://www.hyblab.fr/"><img id="datasport" src="img/banniere/Hyblab DataSport.png" alt="Hyblab DataSport"></a>
+                        <!-- Les organisateurs -->
+                        <ul>
+                            <li><a href="http://www.ouestmedialab.fr/"><img src="img/banniere/LogoOML.png" alt="Ouest Médialab"></a></li>
+                            <li><a href="http://www.lecolededesign.com/"><img src="img/banniere/logo-EDNA.png" alt="Ecole de Design"></a></li>
+                            <li><a href="http://www.univ-nantes.fr/"><img src="img/banniere/logo_univ_nantes.png" alt="Université de Nantes"></a></li>
+                            <li><a href="http://www.polytech.univ-nantes.fr/"><img src="img/banniere/logo_polytech.png" alt="Polytech Nantes"></a></li>
+                            <li><a href="http://www.iutlaroche.univ-nantes.fr/"><img src="img/banniere/logo_iut.png" alt="IUT La Roche sur Yon"></a></li>
+                            <li><a href="http://www.la-joliverie.com/"><img src="img/banniere/logo_joliverie.png" alt="la Joliverie"></a></li>
+                        </ul>
+                        <!-- Les autres logos -->
+                        <ul>
+                            <!-- Logo de votre partenaire -->
+                            <li><a href="http://www.loire-atlantique.fr/"><img src="img/partenaires/LoireAtlantique/Logo_cg_loire-atlantique.png" alt="loire atlantique"></a></li>
+                            <!-- Partenaires institutionnels -->
+                            <li><a href="http://www.paysdelaloire.fr/"><img class="institutionnel" src="img/banniere/Region-pays-de-la-loire-300x300.png" alt="Pays de La Loire"></a></li>
+                            <li><a href="http://www.territoires-innovation.paysdelaloire.fr/"><img class="institutionnel" src="img/banniere/PDL-Territoires-dInnovation.png" alt="Territoire d'innovation"></a></li>
+                            <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="img/banniere/Nantes-metropole.png" alt="Nantes Métropole"></a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+        <!-- Scripts JS -->
+        <!-- Librairies -->
+        <script src="lib/jquery/jquery-2.2.1.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="lib/fullpage/vendors/jquery.slimscroll.min.js"></script>
+        <script type="text/javascript" src="lib/fullpage/jquery.fullPage.js"></script>
+        <script src="lib/d3/d3.min.js" charset="utf-8"></script>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.15.0/mapbox-gl.js'></script>
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
-
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
-    </div>
-  </body>
+        <!-- Scripts perso -->
+        <script src="js/script.js"></script>
+        <script src="js/dataviz1.js"></script>
+        <script src="js/dataviz2.js"></script>
+        <script src="js/map.js"></script>
+    </body>
 </html>

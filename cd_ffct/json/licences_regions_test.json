@@ -1,0 +1,41 @@
+{
+    "name": "France",
+    "children": [
+        {"name":"ALSACE","value":2159},
+        {"name":"AQUITAINE","value":5005},
+        {"name":"AUVERGNE","value":3107},
+        {"name":"BOURGOGNE","value":3257},
+        {"name":"BRETAGNE","value":11260},
+        {"name":"CHAMPAGNE ARDENNE","value":2032},
+        {"name":"CORSE","value":914},
+        {"name":"PACA","value":9631},
+        {"name":"FRANCHE-COMTE","value":3341},
+        {"name":"ILE-DE-FRANCE","value":7940},
+        {"name":"LANGUEDOC ROUSSILLON","value":4541},
+        {"name":"LIMOUSIN","value":1644},
+        {"name":"LORRAINE","value":3192},
+        {"name":"MIDI-PYRENÉES","value":4603},
+        {"name":"NORD-PAS-DE-CALAIS","value":3885},
+        {"name":"NORMANDIE","value":6927},
+        {
+            "name":"PAYS-DE-LA-LOIRE",
+            "children": [
+                {"name":"LOIRE-ATLANTIQUE", "value":3346},
+                {"name":"MAINE-ET-LOIRE", "value":1898},
+                {"name":"MAYENNE", "value":1380},
+                {"name":"SARTHE", "value":1387},
+                {"name":"VENDÉE", "value":2292}
+            ]
+        },
+        {"name":"PICARDIE","value":2564},
+        {"name":"POITOU-CHARENTES","value":3155},
+        {"name":"CENTRE","value":6401},
+        {"name":"RHÔNE-ALPES","value":12831},
+        {"name":"GUADELOUPE","value":2096},
+        {"name":"GUYANE","value":411},
+        {"name":"LA RÉUNION","value":1307},
+        {"name":"MARTINIQUE","value":1295},
+        {"name":"MAYOTTE","value":65},
+        {"name":"NOUVELLE-CALÉDONIE","value":55}
+    ]
+}
