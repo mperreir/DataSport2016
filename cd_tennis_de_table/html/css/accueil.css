@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html
+{
+    height: 100%;
+    font-family: 'Montserrat', sans-serif; 
+    color: white;
+}
+
+#intro
+{
+    margin-left: 90px;
+}
+
+#container{
+  width: 960px;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+#logo
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 75px;
+    width: 200px;
+    height: auto;
+}
+
+#mon_bouton input
+{
+    border: 3px black solid;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    padding: 10px 50px 10px 50px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+input:hover
+{
+    cursor: pointer;
+}
+
+#movie
+{
+   position: absolute;
+   bottom: 0px;
+   right: 0px;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -1000;
+   overflow: hidden;
+   -webkit-filter: grayscale(100%) blur(5px); /* Chrome, Safari, Opera */
+   -moz-filter: blur(5px);
+   -o-filter: blur(5px);
+   -ms-filter: blur(5px);
+   filter: grayscale(100%) blur(5px);
+}
+
+footer{
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+header + p {
+  text-align: center;
+  display:block;
+  height: 600px;
+  line-height: 600px;
+}
+
+footer p
+{
+  font-size: small;
+}

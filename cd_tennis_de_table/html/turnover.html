@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Notre page est en français -->
+  <head>
+    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
+    <meta charset="utf-8">
+    <title>Turnover</title>
+    <!-- Déclaration de la feuille de style du document-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/turnover.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      <script type="text/javascript" src="js/turnover.js"></script>
+  </head>
+  <body>
+    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
+    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
+    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
+    <div id="container">
+
+        <!-- l'entête de la page: titre, barre de recherche -->
+        <header>
+            <div id="logo">
+                <img src="Ressources/logo_datapong.png" alt=""/>
+            </div>
+            
+            <nav id="menu-principal">
+                <!-- Le menu est une liste de liens -->
+                <ul>
+                    <li><a href="profil_type_sexe.html">PROFIL TYPE</a></li>
+                    <li><a href="">TURN-OVER</a></li>
+                    <li><a href="cartoclubs.html">CARTOGRAPHIE</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="centre-page1">
+              
+            <section id="sectionimage"> 
+                    <img id="titreTurnover" src="Ressources/titre_turnover-01-01.png" alt="titre du graphe" />
+                    
+                    <div id="sectionimage"> 
+                        <img id="turnovercommun" src="Ressources/turnover_adherents-01.png" alt="Graphe du turn-over en N+2" />
+                    </div>
+            </section>  
+            <aside>
+                        
+                         En 2012 il y avait 1873 licenciés en Loire Atlantique, 
+                         dont 1610 hommes (soit 85.96%) et 263 femmes
+                        (soit 14.04%). <br/>En 2014, parmi ces licenciés, seulement 542 
+                        personnes ont renouvelé leur licence à N+2, 
+                        488 pour chez les hommes et 54 chez les femmes. Ces chiffres nous montrent que seulement 20% des femmes 
+                        continues à N+2 et 30.31% d’hommes.
+                       </p>
+                  
+                 
+            </aside>
+                
+        </div>
+        <!-- Notre pied de page -->
+        <footer>
+             <div id="s1">
+				<span>Copyright DATAPONG team 2016</span>
+			</div>
+			<div id="logo_partenaire">
+			    <img src="Ressources/logos_partnaire_banderole-01.png" alt=""/>
+			</div>
+        </footer>
+    </div>
+  </body>
+</html>
+        

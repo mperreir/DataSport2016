@@ -1,25 +1,154 @@
 /* just a sample css rule to show that everything works */
-#container{
-  width: 960px;
-  margin: 0 auto;
-  background-color: #DDDDDD;
-}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-header, footer{
-  text-align: center;
-  background-color: #0066CC;
-  color: white;
-  padding: 10px;
-}
-
-header + p {
-  text-align: center;
-  display:block;
-  height: 600px;
-  line-height: 600px;
-}
-
-footer p
+#container
 {
-  font-size: small;
+  background-color: #27292E;
+  display: flex;
+  flex-direction: column;
 }
+
+html
+{
+  max-width: 960px;
+  margin: auto;
+  background-color: #27292E;
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 0.9em;
+}
+
+#logo img
+{
+  width: 10%;
+  height: auto;
+  position: absolute;
+  top: 0;
+}
+
+header
+{
+  background-color: #27292E;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: -17px;
+  height: 140px;
+}
+
+#menu-principal ul
+{
+  list-style-type: none;
+  display: flex;
+  margin-top: 110px;
+}
+
+#menu-principal li
+{
+  text-align: center;
+}
+
+#menu-principal a
+{
+  font-size: 1.1em;
+  color: rgb(255,255,255);
+  padding: 10px 50px 10px 50px;
+  text-decoration: none;
+}
+
+#menu-principal a:hover
+{
+  color: rgb(124,196,248);
+}
+
+#centre-page
+{
+  position: absolute;
+  top: -50px;
+}
+
+#menu-secondaire
+{
+  float: left;
+  width: 134px;
+  height: auto;
+}
+
+#menu-secondaire ul
+{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  background-color: #27292E;
+  align-content: center;
+  margin-top: -10px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+#menu-secondaire li
+{
+  margin-left: -40px;
+  padding: 10px 10px 10px 10px;
+}
+
+#menu-secondaire li:hover
+{
+  background-color: rgb(29,29,29);
+}
+
+#menu-secondaire img
+{
+  width: 50%;
+  height: auto;
+  margin-left: 30px; 
+}
+
+
+footer
+{
+  background-color: #27292E;
+  margin: auto;
+  width: 960px;
+  margin-top: -17px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+
+#s1 span
+{
+	padding-right: 2px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 50px;
+	font-size: 0.8em;
+	color: white;
+}
+
+#participant
+{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0.8em;
+	margin-left: 720px;
+	margin-top: -50px;
+	color: white;
+}
+
+#logo_partenaire img
+{
+	width: 100%;
+	height: auto;
+}
+
+#logo_partenaire
+{
+  margin-top: -50px; 
+  margin-left: 450px;
+}
+
+
+
+

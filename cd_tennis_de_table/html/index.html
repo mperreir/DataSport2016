@@ -3,28 +3,38 @@
   <head>
     <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-    <title>Hyblab 2016</title>
+    <title>DATAPONG - Hyblab 2016</title>
     <!-- Déclaration de la feuille de style du document-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/accueil.css">
   </head>
   <body>
-    <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
-    <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
-    <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
     <div id="container">
 
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
-
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
+      <!-- l'entête de la page: titre, barre de recherche -->
+      <header>
+        <img id="logo" src="Ressources/logo_datapong_new.png" alt=""/>
+      </header>
+      
+      <div id="intro">
+        <p>
+          Sportifs, jeunes, âgés, handicapés ... : le Tennis de Table, un sport fédérateur et intégrateur !
+        </p>
+      </div>
+      
+      <form id="mon_bouton" action="profil_type_sexe.html">
+        <input type="submit" value="DECOUVRIR">
+      </form>
+      
+     <video id="movie" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <source src="Ressources/ping_pong.mp4" type="video/mp4">
+        <source src="Ressources/ping_pong.avi" type="video/api">
+        <img src="Ressources/ping_pong.JPG" width="100%" height="100%" alt=""/>
+    </video>
+  
+      <!-- Notre pied de page -->
+      <footer>
+        <p>Copyright DATAPONG team 2016</p>
+      </footer>
     </div>
   </body>
 </html>

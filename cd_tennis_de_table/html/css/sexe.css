@@ -1,0 +1,34 @@
+#menu-principal li:nth-child(1)
+{
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+}
+
+#menu-principal li:nth-child(1) a
+{
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+}
+
+#menu-secondaire li:nth-child(1)
+{
+  background-color: rgb(29,29,29);
+}
+
+section
+{
+  margin-top : 40px;
+  height: auto;
+  background-color: white;
+}
+
+#centre-page1
+{
+  margin-left: 134px;
+  background-color: white;
+}
+
+#menu-secondaire
+{
+  margin-left: -134px;
+}

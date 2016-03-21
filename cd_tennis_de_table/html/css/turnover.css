@@ -1,0 +1,62 @@
+
+#container
+{
+  background-color: rgb(65,65,65);
+}
+
+#menu-principal li:nth-child(2)
+{
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+}
+
+#menu-principal li:nth-child(2) a
+{
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
+}
+
+
+
+#turnovercommun{
+    width: 650px;
+    height: auto;
+    margin-top: -20px;
+    float:left;
+}
+
+
+section
+{
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+/*haut gauche droite bas*/
+#titreTurnover{
+  width: 50%;
+  height: auto;
+  margin-left: 250px;
+}
+
+
+
+aside{
+   background-color:white;
+   margin-top: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  
+}
+
+#sectionimage,#centre-page1{
+  background-color: white;
+}
+
+
+
+
+
+
+
