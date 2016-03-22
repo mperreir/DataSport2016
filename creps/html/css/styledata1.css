@@ -18,6 +18,28 @@ body {
   fill: orangered ;
 }
 
+
+button{
+		background-color:black;
+		border:1px solid black;
+		color:#696969;
+		margin-right:5;
+		margin-left: 10;
+		padding-right: 5;
+		padding-left: 5;
+}
+
+button:hover{
+    cursor:pointer;
+    color:#00d68c;
+}
+
+button:focus{
+  color:#00d68c;
+  font-weight:bold;
+}
+
+
 .x.axis path {
   display: none;
 }

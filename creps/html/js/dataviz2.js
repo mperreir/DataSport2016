@@ -59,19 +59,24 @@ function displayMap(data){
 
 function displayDepInfo(event){
     bubbleChart(event.point.sports, '#bubble');
-    //console.log($(".fig")[0].firstChild.firstChild.innerHTML);
+    //displayHisto(event.point.sports, "#bubble");
     var begin = $(".fig")[0].firstChild.firstChild.innerHTML;
     $("#infoDep").empty();
-    $("#infoDep").append("<h2>" + event.point.name + "</h2>");
-    $("#infoDep").append("<figure class='fig'><svg></svg> Sportifs de Haut Niveau</figure>");
-    transitionNum(begin, event.point.nbSportifs, ".fig", 1.5);
+    $("#infoDep").append("<h2 class='LTitre'>" + event.point.name + "</h2>");
+    $("#infoDep").append("<div class='fig'><svg></svg> <p>Sportifs de Haut Niveau</p></div>");
+    displayPodium(event.point.podium);
+    transitionNum(begin, event.point.nbSportifs, ".fig", "black", $( window ).height()*10/100);
 }
 
 function displayRegInfo(data){
     bubbleChart(data.sports, '#bubble');
-    $("#infoDep").append("<h2>Pays de Loire</h2>");
-    $("#infoDep").append("<figure class='fig'><svg></svg> Sportifs de Haut Niveau</figure>");
-    transitionNum(0, data.nbSportifs,'.fig', 1.5);
+    //displayHisto(data.sports, "#bubble");
+    $("#infoDep").append("<div class='bloc1'></div>");
+    $("#infoDep").append("<h2 class='LTitre'>Pays de Loire</h2>");
+    $("#infoDep").append("<div class='fig'><svg></svg> <p>Sportifs de Haut Niveau</p></div>");
+    displayPodium(data.podium);
+    displayPieChart(data.podium[0], "pieChart");
+    transitionNum(0, data.nbSportifs,'.fig', "black", $( window ).height()*10/100);
 }
 
 function bubbleChart(data, selector){
@@ -146,42 +151,180 @@ function bubbleChart(data, selector){
     
 }
 
-function transitionNum(begin, target, selector, size){
+function transitionNum(begin, target, selector, color, size){
     var start_val = begin;
     var duration = 700;
     var end_val = [target];
-    var width = 4;
-    var height = size + 0.7;
+    var width = 2* size + size/2;
+    var height = size;
     var svg = d3.select(selector).select('svg')
-        .attr("width", width+"em")
-        .attr("height", height+"em");
-        
-    /*var rect =svg.append("rect")
-        .attr("x", 100)
-        .attr("y", 50)
-        .attr("height", 100)
-        .attr("width", 200);*/
+        .attr("width", width)
+        .attr("height", height);
 
     svg.selectAll(".txt")
         .data(end_val)
         .enter()
         .append("text")
         .text(start_val)
-        .style("font-size", size+"em")
-        .style("font-weight", "bold")
-        .style("text-anchor", "start")
-        .attr("class", "txt")
-        .attr("x", 0)
-        .attr("y", (size-0.1)+"em")
+        .style("font-size", size+"px")
+        //.style("font-weight", "bold")
+        .style("text-anchor", "middle")
+        .attr("class", "fig")
+        .attr("fill",color)
+        .attr("x", width/2)
+        .attr("y", size - size/10)
         .transition()
         .duration(duration)
         .tween("text", function(d) {
             var i = d3.interpolate(this.textContent, d),
                 prec = (d + "").split("."),
                 round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
-
+                width = d.r;
             return function(t) {
                 this.textContent = Math.round(i(t) * round) / round;
             };
         });
+}
+
+function displayPodium(data){
+    var podium = $("#podiumMap");
+    podium.empty();
+    podium.append("<div id='podiumMap1'></div>");
+    $('#podiumMap1').css('background-image', 'url(img/' + data[0].path + '.jpg)').css('background-size', 'cover').css("background-position", "center");
+    $('#podiumMap1').append("<h2 class='elmtPodiumMap1'>"+data[0].sport+"</h2><div id='fig1'><svg></svg><p>Sportifs de Haut Niveau</p></div><div id='fig2'><svg></svg><span>Hommes<img class='imgL' src='img/homme1.svg' height="+ $( window ).height()*4/100 +"></span></div><div id='fig3'><svg></svg><span>Femmes<img class='imgL' src='img/femme1.svg' height="+ $( window ).height()*4/100 +"></span></div><div id='pieChart'><svg></svg></div>");
+    transitionNum(0,data[0].nb,"#fig1","white",$( window ).height()*5/100);
+    transitionNum(0,data[0].m,"#fig2","white",$( window ).height()*5/100);
+    transitionNum(0,data[0].f,"#fig3","white",$( window ).height()*5/100);
+    if(data.length == 2){
+        podium.append("<div id='podiumMap22'></div>");
+        $('#podiumMap22').css('background-image', 'url(img/' + data[1].path + '.jpg)').css('background-size', 'cover').css("background-position", "center");
+        $('#podiumMap22').append("<h2 class='elmtPodiumMap22'>"+data[1].sport+"</h2><div id='fig4'><svg></svg><p>Sportifs de Haut Niveau</p></div><div id='fig5'><img src='img/homme1.svg' height="+ $( window ).height()*5/100 +"><svg></svg></div><div id='fig6'><img src='img/femme1.svg' height="+ $( window ).height()*5/100 +"><svg></svg></div>");
+        transitionNum(0,data[1].nb,"#fig4","white",$( window ).height()*5/100);
+        transitionNum(0,data[1].m,"#fig5","white",$( window ).height()*5/100);
+        transitionNum(0,data[1].f,"#fig6","white",$( window ).height()*5/100);
+    }
+    else if(data.length == 3){
+        podium.append("<div id='podiumMap2'></div>");
+        podium.append("<div id='podiumMap3'></div>");
+        $('#podiumMap2').css('background-image', 'url(img/' + data[1].path + '.jpg)').css('background-size', 'cover').css("background-position", "center");
+        $('#podiumMap2').append("<h2 class='elmtPodiumMap2'>"+data[1].sport+"</h2><div id='fig4'><svg></svg><p>Sportifs de Haut Niveau</p></div><div id='fig5'><img src='img/homme1.svg' height="+ $( window ).height()*5/100 +"><svg></svg></div><div id='fig6'><img src='img/femme1.svg' height="+ $( window ).height()*5/100 +"><svg></svg></div>");
+        transitionNum(0,data[1].nb,"#fig4","white",$( window ).height()*5/100);
+        transitionNum(0,data[1].m,"#fig5","white",$( window ).height()*5/100);
+        transitionNum(0,data[1].f,"#fig6","white",$( window ).height()*5/100);
+        $('#podiumMap3').css('background-image', 'url(img/' + data[2].path + '.jpg)').css('background-size', 'cover').css("background-position", "center");
+        $('#podiumMap3').css('background-image', 'url(img/' + data[2].path + '.jpg)');
+        $('#podiumMap3').append("<h2 class='elmtPodiumMap3'>"+data[2].sport+"</h2><div id='fig7'><svg></svg><p>Sportifs de Haut Niveau</p></div><div id='fig8'><img src='img/homme1.svg' height="+ $( window ).height()*5/100 +"><svg></svg></div><div id='fig9'><img src='img/femme1.svg' height="+ $( window ).height()*5/100 +"><svg></svg></div>");
+        transitionNum(0,data[1].nb,"#fig7","white",$( window ).height()*5/100);
+        transitionNum(0,data[1].m,"#fig8","white",$( window ).height()*5/100);
+        transitionNum(0,data[1].f,"#fig9","white",$( window ).height()*5/100);
+    }
+}
+
+function displayHisto(data, div){
+    var height = $( window ).height()/3;
+    var width = $( window ).width()/4;
+    $(div).empty();
+    var chart = d3.select(div).append("svg")
+        .attr("width", width)
+        .attr("height", height);
+    
+    displayBars(chart, data, width, height);
+    //displayNumSportifs(chart, data, width, height);
+    //displaySport(chart, data, width, height);
+}
+
+function displayBars(svg, data, width, height){
+    var barPadding = 1;
+    var w = (width - width * 0.1)/ data.length - barPadding;
+    svg.selectAll("rect")
+        .data(data.sort(function(a,b) { return +b.nb - +a.nb; }))
+        .enter()
+        .append("rect")
+        .attr("x", function(d, i) {
+                return i * w + width * 0.2;
+            })
+        .attr("y", function(d) {
+                return height - (d.nb * height/30);
+            })
+        .attr("width", w)
+        .attr("height", function(d) {
+                return (d.nb * height/10);
+            })
+        .attr("fill", "#00d68c");
+        
+}
+
+function displayNumSportifs(svg, data, width, height){
+    svg.selectAll("text")
+        .data(data)
+        .enter()    
+        .append("text")
+        .attr("dy", ".1em")
+        .attr("x", function(d, i) {
+                return i * (width * 0.025 + width * 0.015);
+            })
+        .attr("y", function(d) {
+                return height - (d.nb * height/10)/2 + height*0.01;
+            })
+        .style("text-anchor", "middle")
+        .attr("fill", "white")
+        .text(function(d) { return d.nb });
+}
+
+function displaySport(svg, data, width, height){
+    svg.selectAll(".text")
+        .data(data)
+        .enter()    
+        .append("text")
+        .attr("dy", ".1em")
+        .attr("x", function(d, i) {
+                return i * (width * 0.025 + width * 0.015) + width * 0.1;
+            })
+        .attr("y", function(d) {
+                return height - (d.nb * height/10) - height*0.03;
+            })
+        .style("text-anchor", "start")
+        .attr("fill", "#3d3d3d")
+        .text(function(d) { return d.sport });
+}
+
+function displayPieChart(data, div){
+    var width = 960;
+    var height = 500;
+    var radius = Math.min(width, height) / 2;
+    
+    var dat = [{"nb":data.masculin},{"nb":data.feminin}];
+    
+    var arc = d3.svg.arc()
+        .outerRadius(radius - 10)
+        .innerRadius(0);
+    
+    var labelArc = d3.svg.arc()
+        .outerRadius(radius - 40)
+        .innerRadius(radius - 40);
+    
+    var pie = d3.layout.pie()
+        .sort(null)
+        .value(function(d) { return d.nb; });
+    
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+      .append("g")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    
+    
+    var g = svg.selectAll(".arc")
+        .data(pie(dat))
+        .enter().append("g")
+        .attr("class", "arc");
+    
+    g.append("path")
+      .attr("d", arc)
+      .style("fill", "white");
+    
+    /*g.append("text")
+      .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .text(function(d) { return d.data.age; });*/
 }

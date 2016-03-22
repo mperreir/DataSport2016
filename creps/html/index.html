@@ -30,7 +30,8 @@
       **********************
       -->
       <section class="section" id="slideIntro">
-        <h1 class="titre">le sport de haut niveau<br class=titre/>en pays de loire</h1>
+        <h1 class="titre">le sport de haut niveau<br class=titre/><HR class=titre fill="#00d68c">en pays de loire</h1>
+        <!--<button id="btnDown"  onclick="moveSectionDown()">Down</button>-->
       </section>
       
       <!--
@@ -39,7 +40,47 @@
       **********************
       -->
       <section class="section">
-        <p> Deuxième page </p>
+          <div class="divhisto" id="textehistogramme">
+            <h2 class="divhisto">Datasport 2016</h2>
+            <p id="first" class="divhisto">Jean-Michel EON responsable du haut-niveau au Centre de Ressources et d’Expertise et de Performances Sportives (CREPS), nous a apporté des données sur les sportifs de haut niveau en Pays de la Loire. Après la découverte de ces données et leur analyse, nous avons décidé de présenter un outil informatif dirigé vers les jeunes sportifs.</p>
+            <p class="divhisto">Tout d’abord Nous présentons de manière globale et informative le sport de haut niveau dans la région pour ensuite proposer une analyse plus ciblée par département. Enfin nous sommes sortis de l’analyse d’un point de vue géographique afin de se focaliser sur les caractéristiques des sportifs de Haut Niveau avec une pyramide des âges.</p>
+          </div>
+          <div class="divhisto" id="histogramme">
+            <svg id="histogrammeeffectif"></svg>
+          </div>
+          <!--<div class="divhisto" id="repartition">
+            <svg id="svgderepartition"></svg>
+          </div>-->
+          <div class="divhisto" id="podiumhomme">
+            <svg id="svgdepodiumhomme"></svg>
+          </div>
+          <div class="divhisto" id="podiumfemme">
+            <svg id="svgdepodiumfemme"></svg>
+          </div>
+      </section>
+      
+      <!--
+      **********************
+            Slide Pyramide des ages
+      **********************
+      -->
+      
+      
+      <section id="pagepyramide" class="section">
+        <svg id="svgpyramidedesages"></svg>
+        <button name="button" onclick="specification('Equitation')">Equitation</button>
+        <button name="button" onclick="specification('Natation')">Natation</button>
+        <button name="button" onclick="specification('Aviron')">Aviron</button>
+        <button name="button" onclick="specification('Voile')">Voile</button>
+        <button name="button" onclick="specification('Judo')">Judo</button>
+        <button name="button" onclick="specification('Cyclisme')">Cyclisme</button>
+        <button name="button" onclick="specification('Roller_skating')">Roller Skating</button>
+        <button name="button" onclick="specification('Athletisme')">Athlétisme</button>
+        <button name="button" onclick="specification('Canoe_Kayak')">Canoë-Kayak</button>
+        <button name="button" onclick="specification('Football')">Football</button>
+        <button name="button" onclick="specification('Volley')">Volley Ball</button>
+        <button name="button" onclick="specification('Handball')">Handball</button>
+        <button name="button" onclick="specification('Basketball')">Basketball</button>
       </section>
       
       <!--
@@ -49,15 +90,13 @@
       -->
       
       <section class="section slideMap">
-        <div id="enteteSlideMap">
-          <h2 class="slideMapEntete">Les sports les plus pratiqués par départements</h2>
-          <p class="slideMapEntete">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rutrum nisi sed consectetur imperdiet. Vestibulum euismod, urna id laoreet pulvinar, sapien enim gravida libero, quis fringilla eros leo nec purus. Sed pellentesque, turpis non pretium maximus, urna neque fringilla turpis, at ornare est massa nec justo. Sed quis nibh ac sem pharetra mattis. Fusce maximus mattis lacus eu dignissim. Suspendisse mattis vulputate sem. Maecenas sit amet rutrum nulla, a aliquet enim. Integer id enim enim. Duis lacinia vulputate luctus. Donec tincidunt libero eu magna mollis pretium. Duis scelerisque lacinia pharetra. Nullam fermentum iaculis magna. </p>
-        </div>
+        <h2 class="slideMapEntete">Les sports les plus pratiqués par départements</h2>
         <div id="dataviz2L">
-          <span id='infoDep'></span>
-          <span id="bubble">
+          <div id='infoDep'></div>
+          <div id="bubble">
             <svg></svg>
-          </span>
+          </div>
+          <div id="podiumMap"></div>
         </div>
         <div id="dataviz2M"></div>
       </section>
@@ -79,16 +118,19 @@
           <text id="lHS3">Handisport</text>
         </div>
         <div id='interview'>
-          <div class="col1">
-            <h2 class="interviewt cole">Interview</h2>
-            <h3 class="interviewt cole">Baptiste Bonneau, 23 ans</h3>
-            <ul class="interviewt cole">
-              <li class="interviewt cole">Sportif de haut niveau "listé"</li>
-              <li class="interviewt cole">Hors Structure</li>
-              <li class="interviewt cole">Discipline : Rink hockey</li>
-            </ul>
-            <h3 class="interviewt cole">Qu'est-ce que le rink hockey ?</h3>
-            <p class="interviewt cole">C’est un sport de glisse qui se joue avec des patins "quads" (patins à roulettes). Il s'apparente au roller hockey. Il n’y a pas le droit au contact, donc aucune protection. Les dimensions du terrain sont 40 m par 20m. Sur le terrain, il y a 4 joueurs et un gardien. En France on décompte 5000 licenciés.</p>
+          <div class="col11">
+            <h2 class="interviewt">Interview</h2>
+            <div class="col1">  
+              <img id="bonneau" src="img/bonneau.png">
+              <h3 class="interviewN cole">Baptiste Bonneau, 23 ans</h3>
+              <ul class="interviewt cole">
+                <li class="interviewt cole">Sportif de haut niveau "listé"</li>
+                <li class="interviewt cole">Hors Structure</li>
+                <li class="interviewt cole">Discipline : Rink hockey</li>
+              </ul>
+              <h3 class="interviewt cole">Qu'est-ce que le rink hockey ?</h3>
+              <p class="interviewt cole">C’est un sport de glisse qui se joue avec des patins "quads" (patins à roulettes). Il s'apparente au roller hockey. Il n’y a pas le droit au contact, donc aucune protection. Les dimensions du terrain sont 40 m par 20m. Sur le terrain, il y a 4 joueurs et un gardien. En France on décompte 5000 licenciés.</p>
+            </div>
           </div>
           <div class="col2">
             <h3 class="interviewt colm">Depuis quand as-tu ce statut de haut niveau ?</h3>
@@ -107,10 +149,10 @@
             <p class="interviewt cole">Pour moi un sportif de haut niveau doit s’investir dans sa discipline. Il doit avoir un esprit de compétition pour donner le meilleur de lui-même. Le rôle du sportif de haut niveau est de représenter les valeurs de son sport et également de porter les couleurs de son pays en cas de sélection en équipe de France.</p>
           </div>
         </div>
-      </section>
-      <section class="section">
+      <!--</section>
+      <section class="section" id="lastpage">
         
-      </section>
+      </section>-->
       
       <!-- Notre pied de page -->
       <!--
@@ -143,15 +185,20 @@
     <!-- Déclaration des scripts du document-->
     <script src ="js/dataviz2.js"></script>
     <script src ="js/dataviz3.js"></script>
-
+    <script src="js/effectif.js"></script>
+    <script src="js/pyramide.js"></script>
+    
+    <script type="text/javascript" src="/assets/script/canvasjs.min.js"></script>
+    
+    
     <script>
       $('#container').fullpage({
-          anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage'],
+          anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
           resize: true,
           loopBottom: false,
           css3:true,
           fitToSection: true,
-          paddingTop: '20px',
+          /*paddingTop: '20px',*/
           navigation: true
       });
       $.fn.fullpage.reBuild();
