@@ -1,0 +1,129 @@
+#data_victoire {
+    padding-left: 7vw;
+    padding-right: 7vw;
+    
+    .active, b {
+        color: @marine_blue;
+        font-weight: bold;
+    }
+    
+    #victoire_col_1 {
+        
+        display: inline-block;
+        width: 22vw;
+        margin-right: 7vw;
+        
+        h1 {
+            margin-top: 0;
+            display: inline-block;
+            width: 17vw;
+        }
+        
+        p {
+            text-align: justify;
+        }
+        
+        div {
+            
+            margin-top: 5vh;
+            
+            #victoire_coupe {
+                display: inline-block;
+                width: 6vw;
+                margin-right: 2vw;
+            }
+            
+            p {
+                display: inline-block;
+                text-align: center;
+            }
+            
+            p strong {
+                
+                font-size:18px;
+                
+            }
+            
+        }
+        
+    }
+    
+    #victoire_col_2 {
+        display: inline-block;
+        width: 56vw;
+        
+        h2 {
+            margin-top: 0;
+        }
+        
+        #victoire_data_evolution {
+            
+            height: 30vh;
+            margin-bottom: 4vh;
+            
+            #victoire_data_boat {
+                width: 3vw;
+                display: none;
+            }
+            
+        }
+        
+        
+        #victoire_meilleur_temps {
+            
+            display: inline-block;
+            width: 15vw;
+            margin-top: 6vh;
+            
+            ul {
+                padding: 0;
+                padding-left: 2vw;
+                margin: 0;
+                list-style-type: none;
+                color: @marine_blue;
+                font-weight: bold;
+                font-size: 15pt;
+                
+                li:hover {
+                    color: @carmin_red;
+                    cursor: pointer;
+                }
+                
+                transition: all 0.5s;
+            }
+        
+        }
+        
+        #victoire_podium {
+            width: 38vw;
+            visibility: hidden;
+        }
+        
+    }
+    
+    path { 
+        stroke-width: 3;
+        fill: none;
+    }
+    
+    .axis path, .axis line {
+        fill: none;
+        stroke: @marine_blue;
+        stroke-width: 4;
+    }
+    
+    circle {
+        fill: rgb(190, 21, 34);
+        &:hover {
+            r: 9px;
+            cursor: help;
+        }
+        transition: r 0.25s;
+    }
+    
+    .valori text {
+        fill: #2c4c7d;
+        transition: opacity 0.5s;
+    }
+
+}

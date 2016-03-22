@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" href="libs/yt.css">
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.js"></script>
+        <script src="libs/tooltip.js"></script>
+        <script src="libs/inc.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r74/three.js"></script>
+        <script src="libs/loaders/OBJ.js"></script>
+
+        <script src="libs/yt.js"></script>
+        
+        <script src="app.js" defer></script>
+        
+        <style>
+            body { overflow: hidden; }
+            .wave{ margin-left: -250%; width:40px;height:40px;-webkit-transform:scale(0.5) rotate(-90deg) translateY(-300%);transform:scale(0.5) rotate(-90deg) translateY(-300%)}.wave svg > *{fill:#008BB6}.wave svg:nth-child(1) circle{opacity:.08}.wave svg:nth-child(2) circle{opacity:.16}.wave svg:nth-child(3) circle{opacity:.24}.wave svg:nth-child(4) circle{opacity:.32}.wave svg:nth-child(5) circle{opacity:.4}.wave svg:nth-child(6) circle{opacity:.48}.wave svg:nth-child(7) circle{opacity:.56}.wave svg:nth-child(8) circle{opacity:.64}.wave svg:nth-child(9) circle{opacity:.72}.wave svg:nth-child(10) circle{opacity:.8}.wave svg:nth-child(11) circle{opacity:.88}.wave svg:nth-child(12) circle{opacity:.96}.wave svg:nth-child(13) circle{opacity:1.04}
+            #container{visibility: hidden;}
+            #loader{visibility: hidden; position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color:#2c4c7d; display: flex; z-index: 999;}
+            #waveContainer { margin: auto; }
+        </style>
+        
+        <title>VENDÉE GLOBE - SEULS FACE À L'ENFER</title>
+        
+    </head>
+    
+    <body>
+        
+        <div id="loader">
+                    
+            <div id="waveContainer">
+                <div class="wave">
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                  <svg viewBox="0 0 100 100"><circle cx=50 cy=50 r="42"/></svg>
+                </div>
+            </div>
+        </div>
+        
+        <div id="container">
+            
+            <div id="fullpage">
+    			
+                <div class="inc:html/1_pageDeGarde.html section full-opacity" id="page-de-garde" data-anchor="page-de-garde"></div>
+    		    
+    		    <div class="inc:html/2_page_presentation.html section full-opacity" id="page_presentation" data-anchor="page_presentation"></div>
+    		    
+    		    <div class="section transition" data-anchor="t1"></div> <!-- ZOOM DEPART -->
+    		    
+    			<div class="inc:html/3_video_depart.html section full-opacity video" id="video_depart" data-anchor="video_depart"></div>
+    			<div class="inc:html/4_data_skipper.html section full-opacity data" id="data_skipper" data-anchor="data_skipper"></div>
+    			
+    			<div class="section transition" data-anchor="t2"></div> <!-- DEPART TO POT AU NOIR --> 
+    			
+    			<div class="inc:html/11_video_pot_au_noir.html section full-opacity video" id="video_pot_au_noir" data-anchor="video_pot_au_noir"></div>
+    			
+    			<div class="section transition" data-anchor="t3" ></div> <!-- POT AU NOIR TO CAP BONNE ESP -->
+    			
+    			<div class="inc:html/6_img_cap_bonne_esp.html section full-opacity image" id="img_cap_bonne_esp" data-anchor="img_cap_bonne_esp"></div>
+                <div class="section transition" data-anchor="t4"></div> <!-- CAP BONNE ESP TO CAP LEEUWIN -->
+
+            
+    		    <div class="inc:html/8_img_cap_leewin.html section full-opacity image" id="img_cap_leewin" data-anchor="img_cap_leewin"></div>
+    			<div class="inc:html/7_data_pieges.html section full-opacity data" id="data_pieges" data-anchor="data_pieges"></div>
+    			<div class="section transition" data-anchor="t5"></div>  <!-- CAP LEEUWIN TO CAP HORN -->
+    			
+    			<div class="inc:html/10_img_cap_horn.html section full-opacity image" id="img_cap_horn" data-anchor="img_cap_horn"></div>
+    			<div class="inc:html/9_video_cap_horn.html section full-opacity video" id="video_cap_horn" data-anchor="video_cap_horn"></div>
+                
+                <div class="section transition" data-anchor="t6"></div> <!-- CAP HORN TO POT AU NOIR 2 -->
+                
+                <div class="inc:html/5_video_sommeil.html section full-opacity video" id="video_sommeil" data-anchor="video_sommeil"></div>
+                <div class="section transition" data-anchor="t7"></div> <!-- POT AU NOIR 2 TO DEPART -->
+                
+                <div class="inc:html/14_img_arrivee.html section full-opacity image" id="img_arrivee" data-anchor="img_arrivee"></div>
+                <div class="inc:html/13_video_arrivee.html section full-opacity video" id="video_arrivee" data-anchor="video_arrivee"></div>
+    			
+    			<div class="inc:html/12_data_victoire.html section full-opacity data" id="data_victoire" data-anchor="data_victoire"></div>
+    		
+    			<div class="inc:html/15_data_recomp.html section full-opacity" id="data_recomp" data-anchor="data_recomp"></div>
+    		    
+    			<div class="inc:html/final_page.html section mid-opacity" id="final_page" data-anchor="final_page"></div>
+    			
+    		</div>
+    		
+
+    		
+            <section id="globe-container">
+                <div id="globe"></div>
+            </section>
+            
+        
+            <div id="bottomButton" class="tip" title="Pour passer à la suite, utilise la touche bas du clavier ou fais défiler !"><object data="assets/img/bouton.svg"></object></div>
+
+        
+        </div>
+        
+        <script>
+            
+            d3.select("#loader").style("visibility", "visible");
+            
+            var loader_TL = new TimelineMax({
+                repeat: -1
+            });
+            
+            var bezier = [{ x: 0, y: 0 }, { x: 0, y: 42 }, { x: 42, y: 42 }, { x: 42, y: 0 }, { x: 0, y: 0 }];
+            
+            loader_TL.staggerTo($('.wave > svg'), 0.8, {
+                bezier: {
+                    type: 'thru',
+                    values: bezier,
+                    curviness: 2
+                },
+                ease: Sine.easeOut
+            }, 0.09);
+            
+        </script>
+        
+    </body>
+    
+</html>
