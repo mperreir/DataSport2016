@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<body>
+    
+
+<div id="fullpage">
+    <div class="section">One</div>
+    <div class="section">Two</div>
+    <div class="section">Three</div>
+    <div class="section">Four</div>
+</div>
+<style>
+    .section {
+     text-align:center;
+      font-size: 3em;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="librairies/jquery.fullPage.min.js"></script>
+<script>
+    $('#fullpage').fullpage({
+      anchors: ['page1', 'page2', 'page3'],
+      sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6']
+    });
+</script>
+
+</body>
+</html>

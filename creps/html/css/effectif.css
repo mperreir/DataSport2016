@@ -1,0 +1,114 @@
+body {
+  font: 10px sans-serif;
+  background-color: black;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: orange;
+}
+
+.bar:hover {
+  fill: orangered ;
+}
+
+#textehistogramme{
+    width:33vw;
+    height:59vh;
+    background-image: url("../img/image_1-01.jpg");
+    background-size: cover;
+    background-position: bottom center;
+}
+
+#histogramme{
+    width:64vw;
+    height:59vh;
+    background-color: white;
+}
+
+#histogrammeeffectif{
+    width:64vw;
+    height:59vh;
+}
+
+#effectifhommes{
+   text-align:right; 
+   font-size: 240vh;
+   font-variant: small-caps;
+   margin-right:10vw;
+   margin-bottom: 1vh;
+   margin-top: 3vh;
+}
+
+#effectiffemmes{
+   text-align:right; 
+   font-size: 240vh;
+   font-variant: small-caps;
+   margin-right:10vw;
+   margin-bottom: 1vh;
+}
+
+
+
+
+#repartition{
+    width:33vw;
+    height:38vh;
+    background-color: white;
+}
+
+#podium{
+    width:64vw;
+    height:38vh;
+    background-color: #00FA9A;
+}
+
+#svgdepodium{
+  width:64vw;
+  height:38vh;
+}
+
+
+div{
+/*display:inline-block;*/
+float:left;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}

@@ -1,25 +1,500 @@
-/* just a sample css rule to show that everything works */
-#container{
-  width: 960px;
-  margin: 0 auto;
-  background-color: #DDDDDD;
+/*@font-face {
+  font-family: 'FuturaMedium';
+  src: url('Fonts/FuturaMedium.ttf') format('ttf');
+}*/
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-header, footer{
-  text-align: center;
-  background-color: #0066CC;
+section {
+  font-family: Helvetica Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+/*
+**********************
+  Slide introduction
+**********************
+*/
+
+h1 {
+  font-family: Helvetica Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: #f8e82f;
+}
+
+h1.titre {
+  font-family: Helvetica Light,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 6vh;
+  font-variant: small-caps;
   color: white;
-  padding: 10px;
-}
-
-header + p {
+  line-height: 1.5;
   text-align: center;
-  display:block;
-  height: 600px;
-  line-height: 600px;
+  padding-top: 100vh;
+  transform: translateY(-60%);
 }
 
-footer p
-{
-  font-size: small;
+HR.titre {
+  width: 30vw;
+  margin-left: 35vw;
+  color: #00d68c;
+  background-color: #00d68c;
+  border-color: transparent;
+}
+
+#slideIntro {
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  background-position: bottom center;
+}
+
+/*#btnDown {
+  background-image
+  background-
+}*/
+
+/*
+**********************
+      Slide Pyramide
+**********************
+*/
+
+#pagepyramide{
+  background-image: url("../img/pyramide.png");
+  background-size: cover;
+  margin-left: 100;
+}
+
+
+button{
+		background-color:transparent;
+		border:1px solid transparent;
+		color:#696969;
+		margin-right:20;
+		margin-left: 20;
+		padding-right: 20;
+		padding-left: 20;
+}
+
+button:hover{
+    cursor:pointer;
+    color:#00d68c;
+}
+
+button:focus{
+  color:#00d68c;
+  font-weight:bold;
+}
+
+/*
+**********************
+      Slide Map
+**********************
+*/
+.slideMap{
+  background-color: #E8E8E8;
+}
+
+.slideMapEntete {
+  padding-left: 5vw;
+  background-color: #00d68c;
+  width: 50vw;
+  height: 5vh;
+  font-variant: small-caps;
+  font-size: 3vh;
+  color: #3d3d3d;
+  float: left;
+  margin-top: 4vh;
+}
+
+#dataviz2M {
+  height: 100vh;
+  width: 50vw;
+  margin-left: 50vw;
+  background-color: white;
+}
+
+#dataviz2L {
+  height: 90vh;
+  width: 50vw;
+  float:left;
+  background-color: #E8E8E8;
+}
+
+/*#bubble {
+  float: left;
+  width:30vw;
+}*/
+
+#infoDep{
+  width: 20vw;
+  float:left;
+  padding-left: 5vw;
+  padding-top: 2vh;
+}
+
+.LTitre{
+  font-size: 4vh;
+  color: #00d68c;
+}
+
+.fig{
+  margin-top: 2vh;
+  width: 11vw;
+  text-align: justify;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 2vh;
+  color:#3d3d3d;
+}
+
+#podiumMap {
+  height: 57.2vh;
+  width: 50vw;
+  color: white;
+  font-variant: small-caps;
+}
+
+#podiumMap1{
+  height: 31.8vh;
+  width: 50vw;
+}
+
+#podiumMap2{
+  margin-top: 2.3vh;
+  height: 23vh;
+  width: 32.5vw;
+  float: left;
+}
+#podiumMap22{
+  margin-top: 2.3vh;
+  height: 23vh;
+  width: 50vw;
+}
+#podiumMap3{
+  margin-top: 2.3vh;
+  margin-left: 33.4vw;
+  height: 23vh;
+  width: 16.5vw;
+}
+
+#fig1 {
+  width:15vh;
+  padding-top:2vh;
+  padding-left:8.5vw;
+}
+
+#fig4,#fig7 {
+  width:15vh;
+  float:left;
+}
+
+#fig4 {
+  padding-left:3vw;
+}
+
+#fig7 {
+  padding-left:1vw;
+}
+
+#fig2 {
+  padding-left: 3vw;
+}
+
+#fig3{
+  padding-left: 2vw;
+}
+
+
+#fig2, #fig3{
+  float:left;
+  padding-top:2vh;
+}
+
+#fig2, #fig3, #fig5, #fig6, #fig8, #fig9{
+  width: 9vw;
+}
+
+#fig5, #fig6{
+  padding-left: 20vw;
+}
+
+#fig8, #fig9{
+  padding-left: 10vw;
+}
+
+h2.elmtPodiumMap1,h2.elmtPodiumMap22,h2.elmtPodiumMap2,h2.elmtPodiumMap3 {
+  margin-left:3vw;
+  padding-top:2vh;
+  font-size:4vh;
+}
+
+.imgL {
+  padding-left: 1vw;
+}
+
+/*
+**********************
+      Slide Effectif
+**********************
+*/
+
+h2.divhisto {
+  color: white;
+  font-variant: small-caps;
+  text-align: center;
+  padding-left: 2vw;
+  padding-top:15vh;
+}
+
+p.divhisto {
+  color: white;
+  width:29vw;
+  padding-left: 2vw;
+  padding-top: 2vh;
+}
+
+p#first {
+  padding-top: 9vh;
+}
+
+#textehistogramme{
+    width:33vw;
+    height:100vh;
+    background-image: url("../img/page2.jpg");
+    background-size: contain;
+    background-position: bottom center;
+}
+
+#histogramme{
+    width:64vw;
+    height:59vh;
+    background-color: white;
+}
+
+#histogrammeeffectif{
+    width:64vw;
+    height:59vh;
+}
+
+#titrehisto{
+    font-size: 250%;
+    font-variant: small-caps;
+    text-align: left;
+    margin-left:3%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+#soustitrehisto{
+    font-size: 150%;
+    font-variant: small-caps;
+    text-align: left;
+    margin-left:3%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+#soussoustitrehisto{
+    font-size: 250%;
+    font-variant: small-caps;
+    text-align: left;
+    margin-left:3%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+#effectifhommes{
+   text-align:right; 
+   font-size: 240%;
+   font-variant: small-caps;
+   margin-right:10%;
+   margin-bottom: 1%;
+   margin-top: 3%;
+}
+
+#effectiffemmes{
+   text-align:right; 
+   font-size: 240%;
+   font-variant: small-caps;
+   margin-right:10%;
+   margin-bottom: 1%;
+}
+
+#ligneessai{
+  margin-right: 10%;
+  size:2;
+  
+}
+
+
+#repartition{
+    width:33vw;
+    height:38vh;
+    background-color: white;
+}
+
+#podiumhomme{
+    width:32vw;
+    height:38vh;
+    background-color: #00d68c;
+}
+
+#podiumfemme{
+    width:32vw;
+    height:38vh;
+    background-color: #31ac95;
+}
+
+#svgdepodiumhomme{
+  width:32vw;
+  height:38vh;
+}
+
+#svgdepodiumfemme{
+  width:32vw;
+  height:38vh;
+}
+
+
+.divhisto{
+display:inline-block;
+float:left;
+}
+
+/*
+**********************
+      Slide HS
+**********************
+*/
+.slideHSEntete {
+  padding-left: 5vw;
+  background-color: #00d68c;
+  width: 70vw;
+  height: 4vh;
+  font-variant: small-caps;
+  font-size: 2.5vh;
+  color: #3d3d3d;
+  float: left;
+  margin-top: 4vh;
+}
+
+hr {
+  color: #00d68c;
+  height: 1px;
+  margin-left: 8vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  width: 84vw;
+}
+
+.labelHs{
+  margin-top: 2vh;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #3d3d3d;
+}
+
+#lHS1 {
+  padding-left: 8.5vw;
+}
+
+#lHS2 {
+  padding-left: 22.5vw;
+}
+
+#lHS3 {
+  padding-left: 23.5vw;
+}
+
+#interview {
+  margin-top: 5vh;
+  background-color: #00d68c;
+  width: 100vw;
+  height: 45.5vh;
+}
+
+.col11 {
+  width: 27vw;
+  float:left;
+}
+
+#bonneau {
+  float: left;
+  height: 20vh;
+  padding-top: 2vh;
+}
+
+h2.interviewt {
+  margin-top: 2vh;
+  padding-left: 2vw;
+  background-color:white;
+  width: 8vw;
+  font-variant: small-caps;
+  color: #00d68c;
+}
+
+.interviewt {
+  margin-top: 1em;
+}
+
+.interviewN {
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+  color: black;
+  font-size: 1em;
+}
+
+ul.interviewt {
+  margin-left: 12vw;
+}
+
+p.interviewt ,li.interviewt {
+  color: white;
+  font-size: 0.8em;
+}
+
+p.cole {
+  width: 26vw;
+  text-align: justify;
+}
+
+p.colm {
+  width: 40vw;
+  text-align: justify;
+}
+
+h3.interviewt{
+  color: #3d3d3d;
+  font-size: 0.8em;
+}
+
+.col1, .col3 {
+  padding-left: 1vw;
+  width: 27vw;
+  height: 45vh;
+  float:left;
+}
+
+.col2 {
+  margin-top: 3vh;
+  padding-left: 1vw;
+  width: 41vw;
+  height: 40vh;
+  float:left;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: white;
+}
+
+#lastpage {
+  background-image: "../img/lastpage.png";
+  background-size: cover;
+}
+
+.loading {
+  margin-top: 10em;
+  text-align: center;
+  color: gray;
 }

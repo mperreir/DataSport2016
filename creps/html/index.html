@@ -1,30 +1,209 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Notre page est en français -->
+<html lang="fr">
+
+
   <head>
-    <!-- Il est obligatoire de préciser un encodage de caractères et un titre pour la page -->
     <meta charset="utf-8">
-    <title>Hyblab 2016</title>
-    <!-- Déclaration de la feuille de style du document-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>Hyblab 2016 - Crew Creps</title>
+    
+    <!-- Déclaration de la feuille de style du document -->
+    <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    -->
     <link rel="stylesheet" href="css/style.css">
+    
   </head>
+  
+  
   <body>
     <!-- Ce conteneur est la seule balise div que l'on s'autorise pour effectuer la mise en page du site -->
     <!-- On pourrait bien sûr en ajouter d'autres pour se faciliter la mise en page -->
     <!-- Mais on va s'efforce de respecter et brouiller le moins possible la structure logique du contenu -->
     <div id="container">
-
-    <!-- l'entête de la page: titre, barre de recherche -->
-    <header>
-      <h1>Hyblab 2016</h1>
-    </header>
-
-    <!-- Le contenu du site -->
-    <p>replace this content by your web app !</p>
-
-    <!-- Notre pied de page -->
-    <footer>
-      <p>Copyright Hyblab team 2016</p>
-    </footer>
+      
+      <!-- Le contenu du site -->
+      <!--
+      **********************
+        Slide introduction
+      **********************
+      -->
+      <section class="section" id="slideIntro">
+        <h1 class="titre">le sport de haut niveau<br class=titre/><HR class=titre fill="#00d68c">en pays de loire</h1>
+        <!--<button id="btnDown"  onclick="moveSectionDown()">Down</button>-->
+      </section>
+      
+      <!--
+      **********************
+             Slide 2
+      **********************
+      -->
+      <section class="section">
+          <div class="divhisto" id="textehistogramme">
+            <h2 class="divhisto">Datasport 2016</h2>
+            <p id="first" class="divhisto">Jean-Michel EON responsable du haut-niveau au Centre de Ressources et d’Expertise et de Performances Sportives (CREPS), nous a apporté des données sur les sportifs de haut niveau en Pays de la Loire. Après la découverte de ces données et leur analyse, nous avons décidé de présenter un outil informatif dirigé vers les jeunes sportifs.</p>
+            <p class="divhisto">Tout d’abord Nous présentons de manière globale et informative le sport de haut niveau dans la région pour ensuite proposer une analyse plus ciblée par département. Enfin nous sommes sortis de l’analyse d’un point de vue géographique afin de se focaliser sur les caractéristiques des sportifs de Haut Niveau avec une pyramide des âges.</p>
+          </div>
+          <div class="divhisto" id="histogramme">
+            <svg id="histogrammeeffectif"></svg>
+          </div>
+          <!--<div class="divhisto" id="repartition">
+            <svg id="svgderepartition"></svg>
+          </div>-->
+          <div class="divhisto" id="podiumhomme">
+            <svg id="svgdepodiumhomme"></svg>
+          </div>
+          <div class="divhisto" id="podiumfemme">
+            <svg id="svgdepodiumfemme"></svg>
+          </div>
+      </section>
+      
+      <!--
+      **********************
+            Slide Pyramide des ages
+      **********************
+      -->
+      
+      
+      <section id="pagepyramide" class="section">
+        <svg id="svgpyramidedesages"></svg>
+        <button name="button" onclick="specification('Equitation')">Equitation</button>
+        <button name="button" onclick="specification('Natation')">Natation</button>
+        <button name="button" onclick="specification('Aviron')">Aviron</button>
+        <button name="button" onclick="specification('Voile')">Voile</button>
+        <button name="button" onclick="specification('Judo')">Judo</button>
+        <button name="button" onclick="specification('Cyclisme')">Cyclisme</button>
+        <button name="button" onclick="specification('Roller_skating')">Roller Skating</button>
+        <button name="button" onclick="specification('Athletisme')">Athlétisme</button>
+        <button name="button" onclick="specification('Canoe_Kayak')">Canoë-Kayak</button>
+        <button name="button" onclick="specification('Football')">Football</button>
+        <button name="button" onclick="specification('Volley')">Volley Ball</button>
+        <button name="button" onclick="specification('Handball')">Handball</button>
+        <button name="button" onclick="specification('Basketball')">Basketball</button>
+      </section>
+      
+      <!--
+      **********************
+            Slide Map
+      **********************
+      -->
+      
+      <section class="section slideMap">
+        <h2 class="slideMapEntete">Les sports les plus pratiqués par départements</h2>
+        <div id="dataviz2L">
+          <div id='infoDep'></div>
+          <div id="bubble">
+            <svg></svg>
+          </div>
+          <div id="podiumMap"></div>
+        </div>
+        <div id="dataviz2M"></div>
+      </section>
+      
+      <!--
+      **********************
+            Slide HS
+      **********************
+      -->
+      
+      <section class="section slideHS">
+        <h2 class="slideHSEntete">Les 3 clubs les plus représentés pour les disciplines les plus pratiquées à haut niveau Hors-Structure</h2>
+        <div id='dataviz3'>
+        </div>
+        <HR />
+        <div class="labelHs">
+          <text id="lHS1">Roller Skating</text>
+          <text id="lHS2">Voile</text>
+          <text id="lHS3">Handisport</text>
+        </div>
+        <div id='interview'>
+          <div class="col11">
+            <h2 class="interviewt">Interview</h2>
+            <div class="col1">  
+              <img id="bonneau" src="img/bonneau.png">
+              <h3 class="interviewN cole">Baptiste Bonneau, 23 ans</h3>
+              <ul class="interviewt cole">
+                <li class="interviewt cole">Sportif de haut niveau "listé"</li>
+                <li class="interviewt cole">Hors Structure</li>
+                <li class="interviewt cole">Discipline : Rink hockey</li>
+              </ul>
+              <h3 class="interviewt cole">Qu'est-ce que le rink hockey ?</h3>
+              <p class="interviewt cole">C’est un sport de glisse qui se joue avec des patins "quads" (patins à roulettes). Il s'apparente au roller hockey. Il n’y a pas le droit au contact, donc aucune protection. Les dimensions du terrain sont 40 m par 20m. Sur le terrain, il y a 4 joueurs et un gardien. En France on décompte 5000 licenciés.</p>
+            </div>
+          </div>
+          <div class="col2">
+            <h3 class="interviewt colm">Depuis quand as-tu ce statut de haut niveau ?</h3>
+            <p class="interviewt colm">Cela fait 8 ans que je suis reconnu comme sportif de haut niveau par l’Etat sur les listes ministérielles.</p>
+            <h3 class="interviewt colm">Comment es-tu arrivé au haut niveau ?</h3>
+            <p class="interviewt colm">J’ai pu accéder au haut niveau à partir du moment où j'ai été sélectionné en équipe de France. Nous sommes sélectionnés lors d’un tournoi de championnat de France par région. Les sélectionneurs viennent et détecte les joueurs qui les intéressent. Le statut de sportif de haut niveau nous est attribué pour une durée de 5 ans après la dernière sélection à condition de continuer le sport.</p>
+            <h3 class="interviewt colm">Quels changements as-tu connu dans la pratique de ton sport, depuis que tu es haut niveau ?</h3>
+            <p class="interviewt colm">J’ai vu apparaitre des aménagements d’emploi du temps, des bourses sont délivrées par la région (2500 €/ an par région). Il existe aussi une bourse pour les championnats du monde (env. 500€). Le niveau de pratique de mon sport a évolué. Aujourd’hui des joueurs partent jouer à l’étranger.</p>
+          </div>
+          <div class="col3">
+            <h3 class="interviewt cole">Pourquoi hors structure ?</h3>
+            <p class="interviewt cole">En France, il n’existe aucune structure de formation au haut niveau pour le rink hockey. J’ai donc choisi cette formation par défaut.</p>
+            <h3 class="interviewt cole">Tu es sportif de haut niveau, te considères-tu comme un sportif professionnel ?</h3>
+            <p class="interviewt cole">Pour moi un sportif professionnel est rémunéré. Il doit également avoir une bonne hygiène de vie. En ce qui me concerne je n’ai pas de contrat et je n’ai pas de salaire. En Espagne il existe beaucoup de professionnels en Rink Hockey.</p>
+            <h3 class="interviewt cole">Caractéristiques du sportif de haut niveau ? Qu'est ce que ça veut dire pour toi ?</h3>
+            <p class="interviewt cole">Pour moi un sportif de haut niveau doit s’investir dans sa discipline. Il doit avoir un esprit de compétition pour donner le meilleur de lui-même. Le rôle du sportif de haut niveau est de représenter les valeurs de son sport et également de porter les couleurs de son pays en cas de sélection en équipe de France.</p>
+          </div>
+        </div>
+      <!--</section>
+      <section class="section" id="lastpage">
+        
+      </section>-->
+      
+      <!-- Notre pied de page -->
+      <!--
+      <footer class="row">
+        <p>Copyright Hyblab team 2016</p>
+      </footer>
+      -->
+    
     </div>
+    
+    <!-- Déclaration de la librairie JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    <!-- Déclaration du framework Bootstrap -->
+    <!--
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    -->
+    
+    <!-- Déclaration de la librairie fullPage.js -->
+    <script src="librairies/jquery.fullPage.min.js"></script>
+    
+    <!-- Déclaration de la librairie D3.js -->
+    <script src="librairies/d3.min.js"></script>
+    
+    <!-- Déclaration la librairie Highmaps -->
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <!-- <script src="https://code.highcharts.com/maps/modules/exporting.js"></script> -->
+    <script src="https://code.highcharts.com/mapdata/countries/fr/fr-r-all.js"></script>
+    
+    <!-- Déclaration des scripts du document-->
+    <script src ="js/dataviz2.js"></script>
+    <script src ="js/dataviz3.js"></script>
+    <script src="js/effectif.js"></script>
+    <script src="js/pyramide.js"></script>
+    
+    <script type="text/javascript" src="/assets/script/canvasjs.min.js"></script>
+    
+    
+    <script>
+      $('#container').fullpage({
+          anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage'],
+          resize: true,
+          loopBottom: false,
+          css3:true,
+          fitToSection: true,
+          /*paddingTop: '20px',*/
+          navigation: true
+      });
+      $.fn.fullpage.reBuild();
+      
+    </script>
+    
   </body>
 </html>
