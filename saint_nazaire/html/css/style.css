@@ -1,25 +1,305 @@
-/* just a sample css rule to show that everything works */
-#container{
-  width: 960px;
-  margin: 0 auto;
-  background-color: #DDDDDD;
+@font-face {
+    font-family: "Gotham-bold";
+    src: url('/css/fonts/gotham/copyfonts.com_gotham_bold.ttf');
+}
+@font-face {
+    font-family: "Gotham-book";
+    src: url('/css/fonts/gotham/copyfonts.com_gotham_book.ttf');
+}
+@font-face {
+    font-family: "Gotham-medium";
+    src: url('/css/fonts/gotham/copyfonts.com_gotham_medium.ttf');
+}
+@font-face {
+    font-family: "Gotham-ultra";
+    src: url('/css/fonts/gotham/copyfonts.com_gotham_ultra.ttf');
+}
+@font-face {
+    font-family: "Gotham-light";
+    src: url('/css/fonts/gotham/copyfonts.com_gotham_light.ttf');
+}
+@font-face {
+    font-family: "Gotham-thin";
+    src: url('/css/fonts/gotham/copyfonts.com_gotham_thin.ttf');
+}
+body,
+h1,
+.title{
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+}
+h1{
+    padding:0px;
+}
+body{
+   background-color: #121f32;
+}
+header{
+    margin-bottom: 3%;
+    margin-left: 3%;
+}
+header#nomargin-bottom{
+    margin-bottom: 0px;
 }
 
-header, footer{
-  text-align: center;
-  background-color: #0066CC;
-  color: white;
-  padding: 10px;
+.menu-btn{
+    margin-bottom: 20px;
 }
 
-header + p {
-  text-align: center;
+.bold{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+}
+.main{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+/*section{
+    background: url(../assets/images/background.jpg) no-repeat top left;
+    background-size: cover;
+}*/
+#home{
+    margin: 0px;
+    padding-left: 0%;
+    background: url(../assets/images/HEADER.svg) no-repeat top left;
+    background-size: cover;
+}
+.btn-menu1{
+    width:12%;
+    height: 12%;
+    background: #437299;
+}
+
+
+.btn-menu1{
+    width:12%;
+    border: 30px;
+    height: 12%;
+    background: #437299;
+}
+
+.clcl{
+    width:60%;
+    height: 100%;
+    border-radius:15px;
+    background:#589DE2;
+}
+
+
+/*#btn-voile{
+    background-image: url(../assets/images/picto-menu/VOILE.svg) no-repeat top left;
+    background-size: contain;
+}*/
+.title{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: normal;
+}
+.title-span{
+    font-weight: 100;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.row-offset-10{
+  margin-top: 10%;
+}
+
+.row-offset-3{
+  margin-top: 3%;
+}
+
+.images-particip{
+    background:#C1B8C8;
+    height: 70%;
+
+}
+
+
+
+.titre{
+    color: #E74C3C;
+    font-family: 'Bebas', sans-serif;
+    font-size: 7vw;
+    margin-top: 5vh;
+}
+.titre2{
+    color: #E74C3C;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 3vw;
+    margin-top: 2vh;
+}
+
+.titre4{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 60px;
+    color:#E74C3C;
+}
+
+.prentationTxt{
+    border-top: 50%;
+    border-top: solid white 3px;
+    border-radius: 10px;
+    border-bottom: solid white 3px;
+    font-size: 20px;
+}
+
+.logo{
+    border-top: 20px;
+}
+
+.imageLogo{
+    /*border-top: 20px;
+    min-height: 20px;*/
+    padding-top: 40%;
+}
+
+.arrondie{
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border-radius:50%;
+}
+
+.ecoleEleve{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 20px;
+    color: #121f32;
+    font-family: Oswald-Light;
+}
+
+.nomEleve{
+    font-family: Oswald-Light;
+    font-size: 1vw; 
+}
+.titre3{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 40px;
+    color: #121f32;
+    font-family: Oswald-Light;
+}
+
+.textFinal{
+    font-family: Oswald-Light;
+    font-size: 1.5vw; 
+}
+
+.champTextPodium{
+    border: solid white 2px;
+    border-radius: 10px;
+    background-color:#C1B8C8;
+    width: 80%;
+}
+.highcharts-background{
+    /*fill:#C1B8C8;*/
+    fill:#121f32;
+}
+
+
+#textComparaison{
+    color:#C1B8C8;
+    padding: 6px;
+    border: 6px;
+    margin: 6px;
+}
+button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  
+}
+
+button{
+  text-decoration: none;
+  cursor: pointer;
+  background:rgba(0,0,0,0);
+  border:none;
+  text-shadow: 0px 0px 2px #000000;
+  font-family: Arial;
+  color: #000000;
+  font-size: 20px;
   display:block;
-  height: 600px;
-  line-height: 600px;
+  color:white;
+  
 }
 
-footer p
-{
-  font-size: small;
+button:active{
+    border:none;
 }
+
+#bouton{
+    position:relative;
+    margin-top:5%;
+    
+}
+
+#detail{
+    color:black;
+    border:solid;
+    background-color:#113F59;
+    border-color: #113F59;
+    border-radius:15px;
+    overflow-y:auto;
+    height:9em;
+
+}
+.pictoLabel{
+    float: left;
+    /* width: 30%; */
+    margin-left: -4%;
+    /* margin-top: 6%; */
+    text-align: left;
+    padding-top: 1%;
+}
+.picto{
+    float: left;
+    margin-left: -5%;
+    color:white;
+    width: 65px;
+    margin-top: 5px;
+}
+
+#detail{
+    color: white;
+    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 15px;
+}
+
+
+
+
+
+#bandeau {
+      padding: 8%;
+      text-align: center;
+    }
+
+    #bandeau li{
+      list-style-type: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 12px;
+    }
+
+
+    #bandeau img{
+      height: 46px;
+    }
+
+    #bandeau #datasport{
+      margin: 2% 2%;
+      height: 100px;
+      float: left;
+    }
+
+    #bandeau ul{
+      /*text-align: center;*/
+    }
+
+    #bandeau .institutionnel
+    {
+      height: 48px;
+    }
+    
+    
