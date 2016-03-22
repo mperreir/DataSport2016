@@ -1,0 +1,53 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #fff;
+  width: 960px;
+  height: 700px;
+  margin-top: 0px;
+}
+#dataviz2{
+  width:100%;
+  margin-left:10%;
+}
+#skillmap {
+  margin-top: 0px;
+  overflow: auto;
+}
+#skillmap .skills-sunburst {
+  margin-left: 5%;
+  float: left;
+  width:500px;
+  
+}
+#skillmap .skills-sunburst svg {
+  font: 'Source Sans Pro', sans-serif;
+  cursor: pointer;
+}
+#skillmap .skills-chart {
+  margin-right: 5%;
+  float: right;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+}
+#skillmap .skills-chart .breadcumb-text {
+  font-weight: 700;
+}
+#skillmap .skills-chart-breadcumb {
+  margin-top:50px;
+}
+#skillmap .skills-chart #skills-chart-line {
+  fill: none;
+  stroke-width: 3.5px;
+}
+#skillmap .skills-chart .axis path,
+#skillmap .skills-chart .axis line {
+  fill: none;
+}
+#skillmap .skills-chart .x-axis path,
+#skillmap .skills-chart .y-axis path {
+  stroke: #444;
+  stroke-width: 1px;
+  shape-rendering: geometricPrecision;
+}

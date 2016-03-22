@@ -1,0 +1,34 @@
+
+/*Dataviz1*/
+#dataviz1{
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#dataviz1 .row{
+    margin-top: 2%;
+}
+
+/*Dataviz2*/
+#dataviz2{
+    width: 100%;
+    margin: 0;
+    height:100%;
+}
+#dataviz2 .h1{
+    width: 100%;
+    margin: 0;
+    height:100%;
+}
+#skillmap{
+    padding-top:2%;
+}
+
+/*Dataviz3*/
+#dataviz3{
+    margin-top:2%;
+    padding: 0;
+}
+#dataviz3 img{
+    height:75%;
+}

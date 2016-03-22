@@ -1,0 +1,64 @@
+/*CSS du header de la page*/
+.intro-header {
+    width:100%;
+    background: url(../CSS_Elem/Images/Surfer-debut.jpg) no-repeat center center;
+    background-size: cover;
+    height:100%;
+    margin: 0;
+    padding:0;
+}
+#titre{
+    margin:0;
+    height:100%;
+    width:100%;
+}
+.intro-header img{
+    display:block;
+    height:15%;
+    width:15%;
+}
+.dropdown{
+    height: 100%;
+}
+
+/*Menu*/
+.dropbtn {
+    background: url("../CSS_Elem/Elements/menu.png");
+    background-size: 100% 100%;
+    color: white;
+    width:100%;
+    /*Pb, pas responsive :(...*/
+    height: 75px;
+    border: none;
+    cursor: pointer;
+}
+/*Interieur du menu*/
+.dropdown {
+    position: relative;
+    height:100%;
+    display: inline-block;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
