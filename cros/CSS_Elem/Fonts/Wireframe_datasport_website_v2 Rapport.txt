@@ -1,0 +1,43 @@
+Rapport d'assemblage
+
+-----------------------------------------------------------------------------
+Document :
+Nom : Wireframe_datasport_website_v2.ai
+Mode : Couleurs RVB
+Profil colorimétrique : sRGB IEC61966-2.1
+Unité : pixels
+Dimensions : 960 px x 7000 px
+Afficher les images en mode Tracés : INACTIF
+Mettre en évidence les polices substituées : INACTIF
+Mettre en évidence les glyphes substitués : INACTIF
+Conserver le caractère modifiable du texte
+Simuler le papier couleur : INACTIF
+
+-----------------------------------------------------------------------------
+Objets en tons directs :
+
+-----------------------------------------------------------------------------
+Polices manquantes :SANS
+
+-----------------------------------------------------------------------------
+Polices protégées non assemblées :SANS
+
+-----------------------------------------------------------------------------
+Polices :
+Quicksand Bold Regular (OTF)
+Gill Sans Light (TrueType)
+Gill Sans (TrueType)
+Gill Sans SemiBold (TrueType)
+Gill Sans Bold (TrueType)
+
+-----------------------------------------------------------------------------
+Polices incorporées :
+SANS
+
+-----------------------------------------------------------------------------
+Liens manquants :
+SANS
+
+-----------------------------------------------------------------------------
+Images liées :
+SANS

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <title>Atlantic Games, aide à la décision</title>
+ 
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+ <link rel="stylesheet" type="text/css" href="CSS/jquery.fullPage.css">
+ <link rel="stylesheet" type="text/css" href="CSS/skill.css">
+ <link rel="stylesheet" type="text/css" href="CSS/style_general.css">
+ <link rel="stylesheet" type="text/css" href="CSS/style_header.css">
+ <link rel="stylesheet" type="text/css" href="CSS/style_overview.css">
+ <link rel="stylesheet" type="text/css" href="CSS/style_pres.css">
+ <link rel="stylesheet" type="text/css" href="CSS/style_shortfacts.css">
+ <link rel="stylesheet" type="text/css" href="CSS/style_dataviz.css">
+ <link rel="stylesheet" type="text/css" href="CSS/style_footer.css">
+
+  
+ <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+ <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+ <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+ 
+  
+ <script src="Javascript/AnimCSS.js"></script>
+ <script src="Javascript/menu.js"></script>
+
+ <script src="https://code.highcharts.com/highcharts.js"></script>
+ <script src="https://code.highcharts.com/modules/exporting.js"></script>
+ <script src="https://code.highcharts.com/modules/data.js"></script>
+ <script src="Javascript/datavizProfil.js"></script>
+    
+ <script src="https://d3js.org/d3.v3.min.js"></script>
+ <script src="Javascript/skill.js"></script>
+  
+ <script src="Javascript/jquery.fullPage.js"></script>
+
+  
+ <script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage();
+    });
+ </script>
+  
+</head>
+
+<body onload="genereListe();" onload='album();'>
+  
+  
+  <div id="fullpage">
+     
+  <!-- Header -->
+  <div class="intro-header section active">
+      
+        <div class="row col-xs-12 col-sm-12 col-md-12">
+            <div class="posGauche pull-left col-xs-10 col-sm-10 col-md-10">
+            <img id="titre" src="CSS_Elem/Elements/titre_logo.png"></img>
+            </div>
+            <div class="dropdown pull-right col-xs-2 col-sm-2 col-md-2">
+            	  <button onclick="menu()" class="dropbtn"></button>
+            	  <div id="myDropdown" class="dropdown-content">
+              	      <a href="#overview">Overview</a>
+              	      <a href="#shortfacts">Short Facts</a>
+              	      <a href="#dataviz1">Profil des participants</a>
+              	      <a href="#dataviz2">Nombre de participants</a>
+              	      <a href="#dataviz3">Répartition des participants</a>
+            	  </div>
+          	</div>
+      	</div>
+  </div>
+  <!-- End header-->
+    
+  <!--Overview-->
+  <div id="overview" class="overview section">
+       <!-- <div class="col-xs-6 col-sm-6 col-md-6 col-xs-offset-3 col-sm-offset-3 col-md-offset-3">
+            <h1> OVERVIEW</h1>
+            <p>With the aim of jointly promoting sports, tourism
+             and culture in the regions and nationalities of Atlantic
+             Europe. The best way of doing so is by competing in
+             those specialities with closest ties to the sea.</p>
+        </div>
+        -->
+            <div class="textoverview">
+            <h1 text-align: center> OVERVIEW</h1>
+                <p>With the aim of jointly promoting sports, tourism
+             and culture in the regions and nationalities of Atlantic
+             Europe. The best way of doing so is by competing in
+             those specialities with closest ties to the sea.</p>
+            </div>
+                 
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            	<div class="carousel-inner col-md-10 col-sm-10 col-xs-10 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+                 <div class="item active">
+          			   	<div >
+          				    <div id="slide1" class="masonry">
+              				    <div class="post-box col-md-4 col-sm-4 col-sx-4"><img src="CSS_Elem/Images/open water swimming.jpg"></div>
+          	    			    <div class=" post-box col-md-3 col-sm-3 col-sx-3"><img src="CSS_Elem/Images/Surfer-debut.jpg"></div>
+          		    		    <div class="post-box col-md-3 col-sm-3 col-sx-3"><img src="CSS_Elem/Images/Kayak-21.jpg"></img></div> 
+                  			    <div class="post-box col-md-3 col-sm-3 col-sx-3"><img src="CSS_Elem/Images/Voile-rouge.jpg"></img></div>
+              			    	<div class="post-box col-md-3 col-sm-3 col-sx-3"><img src="CSS_Elem/Images/Kayak-nombreux.jpg"></img></div> 
+                  			    <div class="post-box col-md-4 col-sm-4 col-sx-4"><img src="CSS_Elem/Images/wwdownwind.jpg"></div>
+                  			</div>
+              			</div>
+        			</div>
+        		
+              		<div class="item">
+              			<div >
+              			    <div id="slide2" class="masonry">
+              			       	<div class="post-box col-md-4 col-sm-4 col-sx-4"><img src="CSS_Elem/Images/Voile_bis.jpg"></img></div> 
+              		        	<div class="post-box col-md-3 col-sm-3 col-sx-3"><img src="CSS_Elem/Images/Kayak_bis.jpg"></img></div> 
+              			        <div class="post-box col-md-3 col-sm-3 col-sx-3"><img src="CSS_Elem/Images/Surf_bis.jpg"></img></div> 
+              				    <div class="post-box col-md-3 col-sm-3 col-sx-3"><img src="CSS_Elem/Images/swimming_bis.jpg"></img></div>
+              				    <div class="post-box col-md-3 col-sm-3 col-sx-3"><img src="CSS_Elem/Images/Voile_ter.jpg"></img></div> 
+            				    <div class="post-box col-md-4 col-sm-4 col-sx-4"><img src="CSS_Elem/Images/Surfer2.jpg"></div>
+            				</div>
+              			</div>
+              		</div>
+              	</div>
+            </div>
+            
+            
+    </div>
+      
+     
+  <div id="pres" class="section">
+      <p class="col-xs-6 col-sm-6	col-md-6 col-xs-offset-3 col-sm-offset-3 col-md-offset-3">They emerged fruit of the will of a number of
+          European regions in the Atlantic Arc to promote
+          nautical activities through an international
+         competition for young people : The Atlantic Games.</p>
+      <div class="drapeaux col-xs-12 col-sm-12	col-md-12">
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_1.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_2.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_3.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_4.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_5.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_6.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_7.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_8.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_9.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_10.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_11.png"></img>
+          </div>
+          <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_12.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1 col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_13.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1 col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_14.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1 col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_15.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1 col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_16.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1 col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_17.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1 col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_18.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1 col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_19.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1 col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_20.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1 col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_21.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_22.png"></img>
+          </div>
+           <div class="col-xs-1 col-sm-1	col-md-1">
+            <img src="CSS_Elem/Elements/re%CC%81gion_logo_23.png"></img>
+          </div>
+      </div>
+      <hr class="divider col-xs-10 col-sm-10	col-md-100 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+  </div>
+  
+  <!--Short facts-->
+  <div id="shortfacts" class="section">
+        <h1> SHORT FACTS</h1>
+        <p class="col-xs-6 col-sm-6	col-md-6 col-xs-offset-3 col-sm-offset-3 col-md-offset-3">
+          Every year, in the month of July, between 500 and 800
+          young competitors from 5 countries and
+          approaching 20 regions come together for a week to
+         compete. .
+          The level of the Games grows in each edition, bringing
+          together the best representatives from each of
+          the competing nautical sports federations from the
+          Atlantic Space. This competition is a meeting point
+          and a unique international sporting event involving
+          different sporting categories, classes and distances.</p>
+  
+    
+         <hr class="divider col-xs-10 col-sm-10	col-md-100 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+   </div> 
+ <!--Datavisualitaion-->
+    <!--Couleur des images Dataviz= #CBCBCB-->
+    <!--Dataviz1-->
+    <div id="dataviz1" class="section" >
+    
+        <!--Contient le graphe, l'image et un texte-->
+       
+            <img id="sport" class="pull-left col-xs-1 col-sm-1 col-md-1" src=""></img>
+            <p class="col-xs-6 col-sm-6	col-md-6 col-xs-offset-2 col-sm-offset-2 col-md-offset-2"> 
+                Atlantic games are mainly a place where competitors meet, discover other cultures and could 
+                face other enthusiastic people. Each competitor represents and defends his region. </p>
+        <div id="viz1" class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2"></div>
+        <div class="row col-xs-10 col-sm-10 col-md-10"><select name="choix" id="Pouet" onclick='submitChange(this);'> </select></div>
+        
+      
+       
+     
+    </div>
+    <!--End Dataviz1-->
+  
+    <!--Dataviz2-->
+    <div id="dataviz2" class="section">
+        <h1>Number of participants</h1>
+        <div class="row" id="skillmap">
+            <!--Camembert-->
+            <div class="skills-sunburst"></div>
+            <!--Graphe-->
+            <div class="skills-chart">
+                <div id="skills-chart-breadcrumb"></div>
+            </div>
+        </div>
+    <!--==<hr class="divider col-xs-10 col-sm-10	col-md-100 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+      -->
+    </div>
+    <!--End of dataviz2-->
+    <!--dataviz3-->
+    <div id="dataviz3" class="section">
+            <p class="col-xs-6 col-sm-6 col-md-6 col-xs-offset-3 col-sm-offset-3 col-md-offset-3">
+                Atlantic games are also a regional union during a week. They are the results of a local will and 
+                proud. Each competitors can discover an other place, other cultures and learn to like new places.  
+            </p>
+            <img class="col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2" src="Data/dataviz3.jpg"></img>
+        
+    </div>
+    <!--End of dataviz3-->
+  
+    <!--Footer-->
+    <div id="footer" class="section">
+        <footer class="row col-xs-12 col-sm-12 col-md-12">
+            <div class="imgan1 col-xs-3 col-sm-3 col-md-3">
+                <h3>En lien avec</h3>
+                <img id="im" src="CSS_Elem/partenaires/partenaires/CROS/130bl.png"></img>
+            </div>
+            <img class="col-xs-4 col-sm-4 col-md-4" src="CSS_Elem/Elements/Logo.png"></img>
+            <div class="imgan2 col-xs-5 col-sm-5 col-md-5">
+                <h3>L'équipe</h3>
+                <img src="CSS_Elem/Images/cros-bis.jpeg"></img>
+            </div>
+            <div id="bandeau">
+          <!-- Logo Datasport -->
+            <a href="http://www.hyblab.fr/"><img id="datasport" src="CSS_Elem/partenaires//Hyblab DataSport.png" alt="Hyblab DataSport"></a>
+            <!-- Les organisateurs -->
+            <ul id="deb">
+              <li><a href="http://www.ouestmedialab.fr/"><img src="CSS_Elem/partenaires/LogoOML.png" alt="Ouest Médialab"></a></li>
+              <li><a href="http://www.lecolededesign.com/"><img src="CSS_Elem/partenaires/Logo-EDNA.png" alt="Ecole de Design"></a></li>
+              <li><a href="http://www.univ-nantes.fr/"><img src="CSS_Elem/partenaires/logo_univ_nantes.png" alt="Université de Nantes"></a></li>
+              <li><a href="http://www.polytech.univ-nantes.fr/"><img src="CSS_Elem/partenaires/logo_polytech.png" alt="Polytech Nantes"></a></li>
+              <li><a href="http://www.iutlaroche.univ-nantes.fr/"><img src="CSS_Elem/partenaires/logo_iut.png" alt="IUT La Roche sur Yon"></a></li>
+              <li><a href="http://www.la-joliverie.com/"><img src="CSS_Elem/partenaires/logo_joliverie.png" alt="la Joliverie"></a></li>
+        
+            </ul>
+            <!-- Les autres logos -->
+            <ul>
+              <!-- Logo de votre partenaire -->
+              <li><a href="http://www.creps-pdl.sports.gouv.fr/"><img src="CSS_Elem/partenaires/partenaires/CREPS/LOGO CREPS transparent.png" alt="CREPS"></a></li>
+              <!-- Partenaires institutionnels -->
+              <li><a href="http://www.paysdelaloire.fr/"><img class="institutionnel" src="CSS_Elem/partenaires/Region-pays-de-la-loire-300x300.jpg" alt="Pays de La Loire"></a></li>
+              <li><a href="http://www.territoires-innovation.paysdelaloire.fr/"><img class="institutionnel" src="CSS_Elem/partenaires//PDL-Territoires-dInnovation.png" alt="Territoire d'innovation"></a></li>
+              <li><a href="http://www.nantesmetropole.fr/"><img class="institutionnel" src="CSS_Elem/partenaires//Nantes-metropole.png" alt="Nantes Métropole"></a></li>
+            </ul>
+        </div>
+        </footer>
+        
+    </div>
+
+</div>
+
+
+</body>
+</html>
